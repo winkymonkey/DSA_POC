@@ -1,13 +1,13 @@
-package org.example.dsa.bb_string;
+package org.example.dsa.bb_string.a_basics;
 
 /**
  * ******************************************************************************
  * Check if strings are rotations of each other or not
  * ******************************************************************************
- * Input:	s1 = ABCD	s2 = CDAB
+ * Input:	ABCD	CDAB
  * Output:	TRUE
  * 
- * Input:	s1 = ABCD	s2 = ACBD
+ * Input:	ABCD	ACBD
  * Output:	FALSE
  * 
  * ******************************************************************************
@@ -18,11 +18,14 @@ public class A04_checkIfStringsAreRotationsOfEachOther {
 	public static void main(String[] args) {
 		String str1 = "ABCD";
 		String str2 = "CDAB";
-		System.out.println(isRotation(str1, str2));
+		boolean isRotation = isRotation(str1, str2);
+		System.out.println(isRotation);
 	}
 	
 	private static boolean isRotation(String str1, String str2) {
-		if ((str1.length()==str2.length()) && ((str1+str1).indexOf(str2) != -1))
+		String mergeStr = str1 + str2;
+		
+		if (str1.length()==str2.length() && (mergeStr.indexOf(str2) != -1))
 			return true;
 		else
 			return false;

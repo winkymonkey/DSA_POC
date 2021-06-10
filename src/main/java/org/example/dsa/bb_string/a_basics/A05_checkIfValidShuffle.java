@@ -1,13 +1,13 @@
-package org.example.dsa.bb_string;
+package org.example.dsa.bb_string.a_basics;
 
 /**
  * ******************************************************************************
  * Check whether a string is a valid shuffle of two strings or not
  * ******************************************************************************
- * Input:	first=XY,second=12		result=1XY2 
+ * Input:	first=XY, second=12		result=1XY2 
  * Output:	true
  * 
- * Input:	first=XY,second=12		result=Y12X 
+ * Input:	first=XY, second=12		result=Y12X 
  * Output:	false
  * 
  * ******************************************************************************
@@ -30,16 +30,16 @@ public class A05_checkIfValidShuffle {
 		
 		int i=0, j=0, k=0;
 		while (k != result.length()) {
-			if (i < first.length() && first.charAt(i) == result.charAt(k)) {			// check if 1st char of result matches with 1st char of first
+			if (i < first.length() && first.charAt(i) == result.charAt(k)) {			// check if 1st char of first == 1st char of result 
 				i++;
 			}
-			else if (j < second.length() && second.charAt(j) == result.charAt(k)) {		// check if 1st char of result matches with 1st char of second
+			else if (j < second.length() && second.charAt(j) == result.charAt(k)) {		// check if 1st char of second == 1st char of result 
 				j++;
 			}
-			else {												// if the character doesn't match
-				return false;
+			else {
+				return false;															// if the character doesn't match
 			}
-			k++;												// access next character of result
+			k++;
 		}
 		
 		if (i<first.length() || j<second.length()) {			// after accessing all characters of result if either first or second has some characters left

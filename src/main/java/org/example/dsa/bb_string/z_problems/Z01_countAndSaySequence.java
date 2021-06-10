@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string;
+package org.example.dsa.bb_string.z_problems;
 
 /**
  * ******************************************************************************
@@ -17,7 +17,7 @@ package org.example.dsa.bb_string;
  * ******************************************************************************
  */
 
-public class B01_countAndSaySequence {
+public class Z01_countAndSaySequence {
 	
 	public static void main(String[] args) {
 		String number = "1";

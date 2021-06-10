@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string;
+package org.example.dsa.bb_string.a_basics;
 
 import java.util.HashMap;
 import java.util.Map;

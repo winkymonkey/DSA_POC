@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string;
+package org.example.dsa.bb_string.b_substr_subseq;
 
 /**
  * ******************************************************************************
@@ -13,20 +13,20 @@ package org.example.dsa.bb_string;
  * ******************************************************************************
  */
 
-public class A06_subsequencesOfString {
+public class B01_subsequencesOfString {
 	
 	/*
 	 *                          (abc)+''
 	 *                _____________|_____________
 	 *               /                           \
-	 *           (bc)+''                       (bc)+'a'
-	 *          ____|____                     _____|_____
-	 *         /         \                   /           \
-	 *      (c)+''       (c)+'b'         (c)+'a'        (c)+'ab'
-	 *      __|__         __|__          __|__          ___|___
-	 *     /     \       /     \        /     \        /       \
+	 *           (bc)+''                        (bc)+'a'
+	 *          ____|____                     ______|______
+	 *         /         \                   /             \
+	 *      (c)+''       (c)+'b'         (c)+'a'         (c)+'ab'
+	 *      __|__         __|__           __|__          ___|___
+	 *     /     \       /     \         /     \        /       \
 	 *  ()+''  ()+'c' ()+'b' ()+'bc'  ()+'a' ()+'ac' ()+'ab' ()+'abc'
-	 *  ____   _____  _____  ______   _____  ______  ______  ________
+	 *  _____  _____  _____  ______   _____  ______  ______  ________
 	 * 
 	 * 
 	 */
@@ -38,7 +38,7 @@ public class A06_subsequencesOfString {
 	
 	private static void findSubsequences(String str, String answer) {
 		if (str.length() == 0) {
-			System.out.print("("+answer+")");
+			System.out.println(answer);
 			return;
 		}
 		
