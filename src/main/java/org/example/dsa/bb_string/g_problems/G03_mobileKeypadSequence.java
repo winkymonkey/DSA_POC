@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.z_problems;
+package org.example.dsa.bb_string.g_problems;
 
 /**
  * ******************************************************************************
@@ -11,7 +11,7 @@ package org.example.dsa.bb_string.z_problems;
  * ******************************************************************************
  */
 
-public class Z03_mobileKeypadSequence {
+public class G03_mobileKeypadSequence {
 	/*
 	 * For each character, pre-populate the sequence in an array
 	 */

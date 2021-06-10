@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.z_problems;
+package org.example.dsa.bb_string.g_problems;
 
 /**
  * ******************************************************************************
@@ -12,7 +12,7 @@ package org.example.dsa.bb_string.z_problems;
  * 
  * ******************************************************************************
  */
-public class Z05_countFlipsToMakeBinaryStringAlternative {
+public class G05_countFlipsToMakeBinaryStringAlternative {
 	/*
 	 * As we are supposed to get alternate string, there are only 2 possibilities ---
 	 * 		alternate string starting with 0

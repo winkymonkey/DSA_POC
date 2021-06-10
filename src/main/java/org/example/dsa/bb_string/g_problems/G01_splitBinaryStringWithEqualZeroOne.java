@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.z_problems;
+package org.example.dsa.bb_string.g_problems;
 
 /**
  * ******************************************************************************
@@ -16,7 +16,7 @@ package org.example.dsa.bb_string.z_problems;
  * ******************************************************************************
  */
 
-public class Z01_splitBinaryStringWithEqualZeroOne {
+public class G01_splitBinaryStringWithEqualZeroOne {
 	
 	/*
 	 * Traverse the string by each characters and keep track of the number of 0s and 1s so far

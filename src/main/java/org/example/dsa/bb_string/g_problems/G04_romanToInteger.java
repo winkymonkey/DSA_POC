@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.z_problems;
+package org.example.dsa.bb_string.g_problems;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,7 +19,7 @@ import java.util.Map;
  * ******************************************************************************
  */
 
-public class Z04_romanToInteger {
+public class G04_romanToInteger {
 	/*
 	 * Integer representation
 	 * 		I = 1
