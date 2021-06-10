@@ -16,7 +16,7 @@ import java.util.Map;
  * ****************************************************************************
  */
 
-public class A03_findDuplicateCharacters {
+public class A02_findDuplicateCharacters {
 	
 	/*
 	 * -----------------

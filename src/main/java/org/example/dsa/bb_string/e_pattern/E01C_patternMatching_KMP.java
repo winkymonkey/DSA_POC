@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.c_pattern;
+package org.example.dsa.bb_string.e_pattern;
 
 /**
  * ******************************************************************************
@@ -19,7 +19,7 @@ package org.example.dsa.bb_string.c_pattern;
  * ******************************************************************************
  */
 
-public class C01C_patternMatching_KMP {
+public class E01C_patternMatching_KMP {
 	/*
 	 * -------------------
 	 * ---KMP Algorithm---

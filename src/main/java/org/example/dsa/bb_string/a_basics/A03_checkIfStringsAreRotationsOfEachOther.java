@@ -13,7 +13,7 @@ package org.example.dsa.bb_string.a_basics;
  * ******************************************************************************
  */
 
-public class A04_checkIfStringsAreRotationsOfEachOther {
+public class A03_checkIfStringsAreRotationsOfEachOther {
 	
 	public static void main(String[] args) {
 		String str1 = "ABCD";

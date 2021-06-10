@@ -6,13 +6,6 @@ import java.util.Map;
 /**
  * ******************************************************************************
  * Roman Number to Integer
- * 		I = 1
- * 		V = 5
- * 		X = 10
- * 		L = 50
- * 		C = 100
- * 		D = 500
- * 		M = 1000
  * ******************************************************************************
  * Input:	VIII
  * Output:	8
@@ -26,8 +19,17 @@ import java.util.Map;
  * ******************************************************************************
  */
 
-public class Z03_romanToInteger {
+public class Z04_romanToInteger {
 	/*
+	 * Integer representation
+	 * 		I = 1
+	 * 		V = 5
+	 * 		X = 10
+	 * 		L = 50
+	 * 		C = 100
+	 * 		D = 500
+	 * 		M = 1000
+	 * 
 	 * In Roman Number System, symbols are written in descending order (e.g. M's first, then D's etc)
 	 * Rules:
 	 * 		- upto three consecutive characters, the corresponding count increases

@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.b_substr_subseq;
+package org.example.dsa.bb_string.d_substr_subseq;
 
 /**
  * ******************************************************************************
@@ -13,7 +13,7 @@ package org.example.dsa.bb_string.b_substr_subseq;
  * ******************************************************************************
  */
 
-public class B01_subsequencesOfString {
+public class D01_subsequencesOfString {
 	
 	/*
 	 *                          (abc)+''

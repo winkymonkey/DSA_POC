@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.a_basics;
+package org.example.dsa.bb_string.b_brackets;
 
 /**
  * ******************************************************************************
@@ -13,7 +13,7 @@ package org.example.dsa.bb_string.a_basics;
  * ******************************************************************************
  */
 
-public class A07_checkIfBracketsAreBalanced {
+public class B01_checkIfBracketsAreBalanced {
 	/*
 	 * Push the 1st character in a STACK
 	 * 

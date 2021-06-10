@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.a_basics;
+package org.example.dsa.bb_string.c_palindrome;
 
 /**
  * ****************************************************************************
@@ -16,7 +16,7 @@ package org.example.dsa.bb_string.a_basics;
  * ****************************************************************************
  */
 
-public class A02_checkIfPalindrome {
+public class C01_checkIfPalindrome {
 	
 	public static void main(String[] args) {
 		String str = "malayalam";

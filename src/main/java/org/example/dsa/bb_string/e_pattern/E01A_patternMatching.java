@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.c_pattern;
+package org.example.dsa.bb_string.e_pattern;
 
 /**
  * ******************************************************************************
@@ -16,7 +16,7 @@ package org.example.dsa.bb_string.c_pattern;
  * ******************************************************************************
  */
 
-public class C01A_patternMatching {
+public class E01A_patternMatching {
 	/*
 	 * -------------------------------------
 	 * ---Naive Approach (SLIDING WINDOW)---

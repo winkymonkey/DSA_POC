@@ -17,7 +17,7 @@ package org.example.dsa.bb_string.z_problems;
  * ******************************************************************************
  */
 
-public class Z01_countAndSaySequence {
+public class Z02_countAndSaySequence {
 	
 	public static void main(String[] args) {
 		String number = "1";

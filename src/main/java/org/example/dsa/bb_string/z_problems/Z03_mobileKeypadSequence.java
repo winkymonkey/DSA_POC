@@ -11,7 +11,7 @@ package org.example.dsa.bb_string.z_problems;
  * ******************************************************************************
  */
 
-public class Z02_mobileKeypadSequence {
+public class Z03_mobileKeypadSequence {
 	/*
 	 * For each character, pre-populate the sequence in an array
 	 */

@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.d_prefix;
+package org.example.dsa.bb_string.f_prefix;
 
 /**
  * ******************************************************************************
@@ -14,7 +14,7 @@ package org.example.dsa.bb_string.d_prefix;
  * ******************************************************************************
  */
 
-public class D01_longestPrefixSuffix {
+public class F01_longestPrefixSuffix {
 	/*
 	 * As the prefix and suffix should not overlap,
 	 * We can break the string from the middle and start matching left and right strings (by each character)

@@ -13,7 +13,7 @@ package org.example.dsa.bb_string.a_basics;
  * ******************************************************************************
  */
 
-public class A05_checkIfValidShuffle {
+public class A04_checkIfValidShuffle {
 	
 	public static void main(String[] args) {
 		String first = "XY";

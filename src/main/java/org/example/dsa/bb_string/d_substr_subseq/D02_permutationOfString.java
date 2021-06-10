@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.b_substr_subseq;
+package org.example.dsa.bb_string.d_substr_subseq;
 
 /**
  * ******************************************************************************
@@ -10,7 +10,7 @@ package org.example.dsa.bb_string.b_substr_subseq;
  * ******************************************************************************
  */
 
-public class B02_permutationOfString {
+public class D02_permutationOfString {
 
 	public static void main(String[] args) {
 		String str = "abc";

@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.c_pattern;
+package org.example.dsa.bb_string.e_pattern;
 
 /**
  * ******************************************************************************
@@ -19,7 +19,7 @@ package org.example.dsa.bb_string.c_pattern;
  * ******************************************************************************
  */
 
-public class C01B_patternMatching_RabinKarp {
+public class E01B_patternMatching_RabinKarp {
 	/*
 	 * --------------------------
 	 * ---RABIN-KARP Algorithm---

@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.d_prefix;
+package org.example.dsa.bb_string.f_prefix;
 
 /**
  * ******************************************************************************
@@ -10,7 +10,7 @@ package org.example.dsa.bb_string.d_prefix;
  * ******************************************************************************
  */
 
-public class D02_longestCommonPrefix {
+public class F02_longestCommonPrefix {
 	/*
 	 * -------------------
 	 * ---WORD MATCHING---
