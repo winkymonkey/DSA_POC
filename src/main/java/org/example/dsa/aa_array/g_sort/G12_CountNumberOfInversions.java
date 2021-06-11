@@ -20,7 +20,6 @@ import java.util.Arrays;
  * ******************************************************************************************
  */
 public class G12_CountNumberOfInversions {
-	
 	/* 
 	 * --------------------
 	 * ---NAIVE APPROACH---

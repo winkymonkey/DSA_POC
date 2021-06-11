@@ -17,7 +17,6 @@ import java.util.Map;
  */
 
 public class A02_findDuplicateCharacters {
-	
 	/*
 	 * -----------------
 	 * ---USE HASHING---

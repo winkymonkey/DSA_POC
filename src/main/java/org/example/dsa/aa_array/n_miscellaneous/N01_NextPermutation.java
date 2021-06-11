@@ -15,7 +15,6 @@ import java.util.Arrays;
  * *****************************************************************************
  */
 public class N01_NextPermutation {
-	
 	/* 
 	 * ------------------------
 	 * Any dictionary word always look like this where from right hand side there is an increasing sequence.

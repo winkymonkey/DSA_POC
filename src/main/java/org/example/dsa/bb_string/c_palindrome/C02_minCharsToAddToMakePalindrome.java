@@ -21,5 +21,4 @@ public class C02_minCharsToAddToMakePalindrome {
 	 * In both the cases, the number of characters deleted from the end till now is the answer because those characters can be inserted at the front to make it palindrome.
 	 *   
 	 */
-	
 }

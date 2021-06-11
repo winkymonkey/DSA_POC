@@ -17,10 +17,10 @@ package org.example.dsa.bb_string.g_problems;
  */
 
 public class G01_splitBinaryStringWithEqualZeroOne {
-	
 	/*
 	 * Traverse the string by each characters and keep track of the number of 0s and 1s so far
 	 * Whenever the count of 0s and 1s become equal increment the count
+	 * 
 	 */
 	
 	public static void main(String[] args) {

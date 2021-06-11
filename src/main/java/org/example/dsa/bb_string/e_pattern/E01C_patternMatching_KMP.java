@@ -14,7 +14,7 @@ package org.example.dsa.bb_string.e_pattern;
  * Output:	Pattern found at index 0,9,12
  * 
  * Input:	TEXT[] = "CCACCAACDBA"				PATT[] = "DBA"
- * OUTPUT:	Pattern found at index 8
+ * Output:	Pattern found at index 8
  * 
  * ******************************************************************************
  */

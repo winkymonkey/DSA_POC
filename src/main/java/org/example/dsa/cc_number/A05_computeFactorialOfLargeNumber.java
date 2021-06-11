@@ -15,9 +15,7 @@ package org.example.dsa.cc_number;
  */
 
 public class A05_computeFactorialOfLargeNumber {
-	
 	/*
-	 * ----------------------
 	 * Factorial of 100 has 158 digits.
 	 * It is not possible to store these many digits even if we use any bigger data type
 	 *  

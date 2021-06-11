@@ -13,7 +13,6 @@ package org.example.dsa.aa_array.d_search;
  * *****************************************************************************
  */
 public class D08_findDuplicateElements_specialArray {
-	
 	/*
 	 * Traverse the array
 	 * for each `i`, go to `A[i] th` index
