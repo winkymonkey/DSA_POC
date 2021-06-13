@@ -15,7 +15,7 @@ import java.util.Arrays;
  * *****************************************************************************
  */
 
-public class N02_MergeOverlappingIntervals {
+public class N06_MergeOverlappingIntervals {
 	
 	public static void main(String args[]) {
 		Interval A[] = new Interval[4];

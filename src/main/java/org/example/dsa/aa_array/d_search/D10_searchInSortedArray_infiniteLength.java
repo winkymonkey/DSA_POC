@@ -8,9 +8,9 @@ package org.example.dsa.aa_array.d_search;
 
 public class D10_searchInSortedArray_infiniteLength {
 	/*
-	 * Since array is sorted, the first thing that comes to mind is `binary search`
-	 * But here the concern is we don't know size of array, so we don't have proper bounds to apply binary search
-	 * Hence to find position of `X`, first we find bounds cleverly and then apply binary search algorithm
+	 * Since array is sorted, the obvious choice is `binary search`.
+	 * But here we don't know size of array. Hence we don't have proper bounds to apply binary search.
+	 * Hence to find an element, first we compute the bounds cleverly and then apply binary search algorithm.
 	 * 
 	 * ------------------
 	 * low = 0

@@ -1,4 +1,4 @@
-package org.example.dsa.aa_array.d_search;
+package org.example.dsa.aa_array.n_miscellaneous;
 
 /**
  * *****************************************************************************
@@ -19,7 +19,7 @@ package org.example.dsa.aa_array.d_search;
  * *****************************************************************************
  */
 
-public class D13_nextSmaller_ofNextGreater {
+public class N04_nextSmaller_ofNextGreater {
 	/*
 	 * First find the Next Greater element & store them in an array NGE[]
 	 * But instead of storing the element, let us store the index of next greater element.
