@@ -23,12 +23,13 @@ public class G03_detectLoop_removeLoop {
 	 *    n.isVisited = true;
 	 *    
 	 *    while (n!=null && n.next!=null) {
-	 *       if (n.next.isVisited)				//it's a loop
+	 *       if (n.next.isVisited) {				// it's a loop
 	 *          n.next = null
-	 *          break;							//n.next is the starting point of the loop
-	 *       else
+	 *          break;								// n.next is the starting point of the loop
+	 *       }
+	 *       else {
 	 *          n.isVisited = true;
-	 *       
+	 *       }
 	 *       n = n.next;
 	 *    }
 	 * }

@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.h_palindrome;
 
 /**
  * ********************************************************************************
- * Function to check if a singly linked list is palindrome
+ * Check if a Linked List is palindrome
  * ********************************************************************************
  */
 
@@ -47,7 +47,7 @@ public class H01_checkPalindrome_linkedList {
 	 * ---BY REVERSING SECOND HALF---
 	 * ------------------------------
 	 * Get the middle of the linked list.
-	 * Reverse the second half of the linked list in O(n) time
+	 * Reverse the second half of the linked list in O(n) time.
 	 * Check if the first half and second half are identical.
 	 * Construct the original linked list by reversing the second half again.
 	 * 

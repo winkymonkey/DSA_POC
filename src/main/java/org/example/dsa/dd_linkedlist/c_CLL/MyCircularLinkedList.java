@@ -1,7 +1,7 @@
-package org.example.dsa.dd_linkedlist.a_SLL;
+package org.example.dsa.dd_linkedlist.c_CLL;
 
 
-public class MyLinkedList {
+public class MyCircularLinkedList {
 	public Node head; 			// head of list
 
 	public static class Node { 	// This inner class is made static so that main() can access it

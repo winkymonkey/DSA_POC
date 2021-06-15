@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.c_remove;
 
 /**
  * *****************************************************************************
- * Given a linked list of line segments, remove middle points
+ * Given a Linked List of line segments, remove middle points
  * *****************************************************************************
  * Given a linked list of coordinates where adjacent points either form a vertical line or a horizontal line. 
  * Delete points from the linked list which are in the middle of a horizontal or vertical line.

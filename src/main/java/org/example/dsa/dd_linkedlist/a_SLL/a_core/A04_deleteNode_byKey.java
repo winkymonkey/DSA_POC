@@ -3,6 +3,11 @@ package org.example.dsa.dd_linkedlist.a_SLL.a_core;
 import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList;
 import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList.Node;
 
+/**
+ * ********************************************************************************
+ * Delete a node by key from a Linked List
+ * ********************************************************************************
+ */
 
 public class A04_deleteNode_byKey {
 	
@@ -34,8 +39,6 @@ public class A04_deleteNode_byKey {
 		}
 		System.out.println();
 	}
-	
-	
 	
 	
 	

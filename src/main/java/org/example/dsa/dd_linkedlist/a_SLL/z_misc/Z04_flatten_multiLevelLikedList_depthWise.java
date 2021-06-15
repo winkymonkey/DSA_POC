@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
 
 /**
  * *****************************************************************************
- * Flatten a multilevel linked list | Set 2 (Depth wise)
+ * Flatten a multilevel Linked List (Depth wise)
  * *****************************************************************************
  * Input:   1 - 2 - 3 - 4
  *			    |
@@ -23,7 +23,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
  * *****************************************************************************
  */
 
-public class ZA04_flatten_multiLevelLikedList_depthWise {
+public class Z04_flatten_multiLevelLikedList_depthWise {
 	/*
 	 * static Node last;
 	 * 

@@ -16,21 +16,26 @@ package org.example.dsa.dd_linkedlist.a_SLL.f_rearrange;
 
 public class F04_rearrange_zigzag {
 	/*
-	 * flag = true
+	 * Node n = list.head;
 	 * 
-	 * if (flag) {										//"<" relation expected
-	 *    if (currentNode.data < rightNode.data)
-	 * 	      //nothing to do
-	 * 	  else
-	 * 	     swap currentNode and rightNode
-	 * 	     flag = !flag;
-	 * }
-	 * else {											//">" relation expected
-	 * 	  if (currentNode.data > rightNode.data)
-	 * 	     //nothing to do
-	 * 	  else
-	 * 	     swap currentNode and rightNode
-	 *       flag = !flag;
+	 * while (n != null) {
+	 *    flag = true
+	 *    
+	 *    if (flag) {										//"<" relation expected
+	 *       if (currentNode.data < rightNode.data)
+	 * 	        //nothing to do
+	 * 	     else
+	 * 	        swap currentNode and rightNode
+	 * 	        flag = !flag;
+	 *    }
+	 *    else {											//">" relation expected
+	 * 	     if (currentNode.data > rightNode.data)
+	 * 	        //nothing to do
+	 * 	     else
+	 * 	        swap currentNode and rightNode
+	 *          flag = !flag;
+	 *    }
+	 *    n = n.next;
 	 * }
 	 * 
 	 */

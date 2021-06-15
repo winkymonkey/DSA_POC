@@ -2,17 +2,16 @@ package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
 
 /**
  * *****************************************************************************
- * Clone a linked list with next and random pointer | Set 1
+ * Clone a Linked List with next and random pointer
  * *****************************************************************************
  * You are given a Double Link List with one pointer of each node pointing to the next node just like in a single link list.
  * The second pointer however CAN point to any node in the list and not just the previous node.
  * Now write a program in O(n) time to duplicate this list. That is, write a program which will create a copy of this list.
  * 
  * *****************************************************************************
- * 
  */
 
-public class ZA08_cloneWithNextAndRandomPointer {
+public class Z08_cloneWithNextAndRandomPointer {
 	/*
 	 * --------------------------------------
 	 * ---Method 1 (Uses O(n) extra space)---

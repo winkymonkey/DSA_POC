@@ -8,6 +8,6 @@ package org.example.dsa.dd_linkedlist.b_DLL.a_core;
 
 public class A07_reverseList {
 	/*
-	 * 
+	 * Similar as SLL
 	 */
 }

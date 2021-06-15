@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.e_merge;
 
 /**
  * *****************************************************************************
- * Merge two sorted linked lists such that merged list is in reverse order
+ * Merge two sorted Linked Lists such that merged list is in reverse order
  * *****************************************************************************
  * Input:  5->10->15->40		2->3->20
  * Output: 40->20->15->10->5->3->2

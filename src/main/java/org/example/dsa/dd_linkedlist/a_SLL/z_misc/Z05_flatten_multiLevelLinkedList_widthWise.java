@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
 
 /**
  * *****************************************************************************
- * Flatten a multilevel linked list
+ * Flatten a multilevel Linked List (Breadth wise)
  * *****************************************************************************
  * Input:  10 - 05 - 12 - 07 - 11
  * 	        |              |
@@ -17,7 +17,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
  * *****************************************************************************
  */
 
-public class ZA05_flatten_multiLevelLinkedList_widthWise {
+public class Z05_flatten_multiLevelLinkedList_widthWise {
 	/*
 	 * 
 	 */

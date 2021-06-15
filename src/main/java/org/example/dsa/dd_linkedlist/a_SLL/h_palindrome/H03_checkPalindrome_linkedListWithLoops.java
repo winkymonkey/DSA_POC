@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.h_palindrome;
 
 /**
  * *****************************************************************************
- * Check linked list with a loop is palindrome or not
+ * Check if a Linked List with a loop is palindrome or not
  * *****************************************************************************
  * Input:  1 -> 2 -> 3 -> 2
  * 			   /|\       \|/

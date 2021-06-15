@@ -3,6 +3,11 @@ package org.example.dsa.dd_linkedlist.a_SLL.a_core;
 import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList;
 import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList.Node;
 
+/**
+ * ********************************************************************************
+ * Reverse a Linked List
+ * ********************************************************************************
+ */
 
 public class A07_reverseList {
 	

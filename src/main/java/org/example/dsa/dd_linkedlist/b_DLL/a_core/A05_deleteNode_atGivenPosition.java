@@ -2,11 +2,11 @@ package org.example.dsa.dd_linkedlist.b_DLL.a_core;
 
 /**
  * *****************************************************************************
- * Swap K'th node from beginning with K'th node from end in a Doubly Linked List
+ * Delete a node (at given position) in a Doubly Linked List 
  * *****************************************************************************
  */
 
-public class A06_swapNodes {
+public class A05_deleteNode_atGivenPosition {
 	/*
 	 * Similar as SLL
 	 */

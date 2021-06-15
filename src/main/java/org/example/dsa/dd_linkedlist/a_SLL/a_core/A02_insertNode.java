@@ -3,6 +3,16 @@ package org.example.dsa.dd_linkedlist.a_SLL.a_core;
 import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList;
 import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList.Node;
 
+/**
+ * *****************************************************************************
+ * Insert a node in a Linked List
+ * *****************************************************************************
+ * 		insert at front
+ * 		insert after a given node
+ * 		insert at the end
+ * 		insert before a given node
+ * *****************************************************************************
+ */
 
 public class A02_insertNode {
 	
@@ -10,13 +20,13 @@ public class A02_insertNode {
 		MyLinkedList list = createLinkedList();
 		print(list.head);
 		
-		insertAtFront(list, 25);
+		insertAtFront(list, 25);				// insert 25 at the beginning
 		print(list.head);
 		
-		insertAfterGivenNode(list.head.next.next, 50);
+		insertAfterGivenNode(list, 5, 50);		// insert 50 after the node 5
 		print(list.head);
 		
-		insertAtEnd(list, 99);
+		insertAtEnd(list, 99);					// insert 99 at the end
 		print(list.head);
 	}
 	
@@ -45,24 +55,23 @@ public class A02_insertNode {
 	
 	
 	
-	
-	
 	private static void insertAtFront(MyLinkedList list, int newKey) {
 		Node newHead = new Node(newKey);
 		newHead.next = list.head;
 		list.head = newHead;
 	}
 	
-	private static void insertAfterGivenNode(Node refNode, int newKey) {
-		if (refNode==null)
-			System.out.println("reference node cannot be null");
-		else {
-			Node tmpNode = refNode.next;
-			
-			Node newNode = new Node(newKey);
-			refNode.next = newNode;
-			newNode.next = tmpNode;
-		}
+	private static void insertAfterGivenNode(MyLinkedList list, int refKey, int newKey) {
+		Node n = list.head;
+		while (n.next!=null) {
+			if (n.data == refKey) {
+				Node newNode = new Node(newKey);
+				newNode.next = n.next;
+				n.next = newNode;
+				break;
+			}
+			n = n.next;
+		}		
 	}
 	
 	private static void insertAtEnd(MyLinkedList list, int newKey) {

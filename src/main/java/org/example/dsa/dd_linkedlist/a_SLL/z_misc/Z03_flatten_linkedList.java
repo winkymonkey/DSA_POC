@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
 
 /**
  * *****************************************************************************
- * Flattening a Linked List
+ * Flatten a Linked List
  * *****************************************************************************
  * Given a linked list where every node represents a linked list and contains two pointers of its type:
  * (1) pointer to next node in the main list (we call it 'right' pointer)
@@ -25,14 +25,17 @@ package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
  * *****************************************************************************
  */
 
-public class ZA03_flatten_linkedList {
+public class Z03_flatten_linkedList {
 	/*
 	 * Flatten the list in O(n) time
 	 * After flattening it should look like below:
+	 * 
 	 *    5->7->8->30->10->20->19->22->50->28->35->40->45
+	 * 
 	 * 
 	 * Now sort this flattened list
 	 * After sort it should look like below:
+	 * 
 	 *    5->7->8->10->19->20->22->28->30->35->40->45->50
 	 * 
 	 */

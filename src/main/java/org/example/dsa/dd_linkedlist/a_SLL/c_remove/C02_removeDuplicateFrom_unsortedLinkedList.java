@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.c_remove;
 
 /**
  * ********************************************************************************
- * Remove duplicates from an unsorted linked list
+ * Remove duplicates from an unsorted Linked List
  * ********************************************************************************
  */
 

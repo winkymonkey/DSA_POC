@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.e_merge;
 
 /**
  * *****************************************************************************
- * Merge two sorted linked lists
+ * Merge two sorted Linked Lists
  * *****************************************************************************
  * Input:  5->10->15		2->3->20
  * Output: 2->3->5->10->15->20

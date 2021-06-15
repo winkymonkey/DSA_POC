@@ -6,7 +6,7 @@ package org.example.dsa.dd_linkedlist.c_CLL.z_misc;
  * *****************************************************************************
  */
 
-public class ZA01_splitIntoTwoHalves {
+public class Z01_splitIntoTwoHalves {
 	/*
 	 * Traverse the CLL using 2 pointers.
 	 * In each iteration, slow pointer increment by 1, whereas fast pointer increments by 2

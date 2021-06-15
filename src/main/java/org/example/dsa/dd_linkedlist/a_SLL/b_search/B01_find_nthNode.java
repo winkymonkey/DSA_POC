@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.b_search;
 
 /**
  * ********************************************************************************
- * Write a function to get Nth node in a Linked List
+ * Get Nth node in a Linked List
  * ********************************************************************************
  */
 

@@ -9,7 +9,7 @@ import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList.Node;
  * ********************************************************************************
  */
 
-public class A03_search_byKey {
+public class A03_searchAnElement {
 	
 	public static void main(String[] args) {
 		MyLinkedList list = createLinkedList();
@@ -39,8 +39,6 @@ public class A03_search_byKey {
 		}
 		System.out.println();
 	}
-	
-	
 	
 	
 	

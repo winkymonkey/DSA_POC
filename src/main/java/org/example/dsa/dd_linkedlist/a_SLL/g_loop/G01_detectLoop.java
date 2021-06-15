@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.g_loop;
 
 /**
  * ********************************************************************************
- * Detect loop in a linked list
+ * Detect loop in a Linked List
  * ********************************************************************************
  */
 
@@ -22,8 +22,8 @@ public class G01_detectLoop {
 	 *    n.isVisited = true;
 	 *    
 	 *    while (n!=null && n.next!=null) {
-	 *       if (n.next.isVisited)				//it's a loop
-	 *          break;							//n.next is the starting point of the loop
+	 *       if (n.next.isVisited)				// it is a loop
+	 *          break;							// n.next is the starting point of the loop
 	 *       else
 	 *          n.isVisited = true;
 	 *       

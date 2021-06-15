@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.g_loop;
 
 /**
  * *****************************************************************************
- * Find length of loop in linked list
+ * Find length of loop in Linked List
  * *****************************************************************************
  */
 
@@ -27,13 +27,14 @@ public class G02_detectLoop_findLoopLength {
 	 *    
 	 *    while (n!=null && n.next!=null) {
 	 *       count++;
-	 *       if (n.next.isVisited)					//it's a loop
+	 *       if (n.next.isVisited) {					// it is a loop
 	 *          loopLength = count - n.next.data;
-	 *          break;								//n.next is the starting point of the loop
-	 *       else
+	 *          break;									// n.next is the starting point of the loop
+	 *       }
+	 *       else {
 	 *          n.isVisited = true;
 	 *          n.count = count;
-	 *       
+	 *       }
 	 *       n = n.next;
 	 *    }
 	 * }

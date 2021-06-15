@@ -18,7 +18,7 @@ public class A07_DutchNationalFlagAlgorithm {
 	 * With `0′ and `1′, the array is divided into three sections:
 	 * 		A[1.......L-1] are all 0s
 	 * 		A[L.......H] are all UNKNOWN
-	 * 		A[H+1.....N] are all 2s
+	 * 		A[H+1.....N] are all 1s
 	 * 
 	 * 
 	 * Let us take L=1, H=N
@@ -35,13 +35,14 @@ public class A07_DutchNationalFlagAlgorithm {
 	 * 
 	 * ---------
 	 * L=1, H=N
-	 * while (L<=H) {
-	 *    if (A[L]==0)
+	 * while (L <= H) {
+	 *    if (A[L] == 0)
 	 *       L++
 	 *    else
 	 *       swap A[L], A[H]
 	 *       H--
 	 * }
+	 * 
 	 * TIME --- O(n)
 	 * SPACE -- O(1)
 	 * 
@@ -75,7 +76,7 @@ public class A07_DutchNationalFlagAlgorithm {
 	 * L = 1
 	 * M = 1
 	 * H = N
-	 * while (M<=H) {
+	 * while (M <= H) {
 	 *    if (A[M] == 0)
 	 *       swap A[L], A[M]
 	 *       L++
@@ -86,6 +87,7 @@ public class A07_DutchNationalFlagAlgorithm {
 	 *       swap A[M], A[H]
 	 *       H--
 	 * }
+	 * 
 	 * TIME --- O(n)
 	 * SPACE -- O(1)
 	 * 

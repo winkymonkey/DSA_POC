@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.d_sort;
 
 /**
  * *****************************************************************************
- * Sort a linked list that is sorted alternating ascending and descending orders
+ * Sort a Linked List that is sorted alternating ascending and descending orders
  * *****************************************************************************
  * Input:  10->40->53->30->67->12->89->NULL		(10, 53, 67, 89 are ascending)
  * 												(12, 43, 67 are descending)
@@ -54,9 +54,9 @@ public class D01_sortList_thatIsAlternatingAscendingDescending {
 	 * 
 	 * 
 	 * 
-	 * -------------------------
-	 * ---WITHOUT EXTRA SPACE---
-	 * -------------------------
+	 * ------------------------
+	 * ---Using Another List---
+	 * ------------------------
 	 * traverse the list
 	 * 	  create one list having odd positioned element (ascending) from original list - listASC
 	 *    create one list having odd positioned element (descending) from original list - listDESC
@@ -65,7 +65,7 @@ public class D01_sortList_thatIsAlternatingAscendingDescending {
 	 * merge both the list
 	 * 
 	 * TIME --- O(1)+O(1)+O(n) = O(n)	[1 traversal for separate the list]+[1 traversal for reversal]+[O(n) time to merge]
-	 * SPACE -- O(1)
+	 * SPACE -- O(n)
 	 * 
 	 */
 }

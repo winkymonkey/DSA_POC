@@ -3,8 +3,13 @@ package org.example.dsa.dd_linkedlist.a_SLL.a_core;
 import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList;
 import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList.Node;
 
+/**
+ * ********************************************************************************
+ * Do merge sort in a Linked List
+ * ********************************************************************************
+ */
 
-public class A10_mergeSortList {
+public class A11_mergeSort {
 	
 	public static void main(String[] args) {
 		MyLinkedList list = createLinkedList();
@@ -13,8 +18,6 @@ public class A10_mergeSortList {
         list.head = mergeSort(list.head);
 		print(list.head);
 	}
-	
-	
 	
 	private static MyLinkedList createLinkedList() {
 		MyLinkedList list = new MyLinkedList();
@@ -27,7 +30,6 @@ public class A10_mergeSortList {
 		return list;
 	}
 	
-	
 	private static void print(Node n) {
 		while (n != null) {
 			System.out.print(n.data + " ");
@@ -35,7 +37,6 @@ public class A10_mergeSortList {
 		}
 		System.out.println();
 	}
-	
 	
 	
 	

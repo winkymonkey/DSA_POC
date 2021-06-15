@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.f_rearrange;
 
 /**
  * *****************************************************************************
- * Rearrange a linked list such that all even and odd positioned nodes are together
+ * Rearrange a Linked List such that all even and odd positioned nodes are together
  * *****************************************************************************
  * Input:  1->2->3->4
  * Output: 1->3->2->4
@@ -15,10 +15,14 @@ package org.example.dsa.dd_linkedlist.a_SLL.f_rearrange;
 
 public class F01_rearrange_oddEvenPositionedNodeTogether {
 	/*
-	 * 10->22->30->43->56->70 will become as below
-	 * 10->30->56	AND		22->43->70
+	 * From the given list, create a list that contains even position nodes & another list that contains odd position nodes
+	 * Now connect these two  by connecting first lists' next to second lists's head
 	 * 
-	 * now merge two lists
+	 * 
+	 * 10->22->30->43->56->70
+	 * 
+	 * => 	10->30->56		+		22->43->70
+	 * => 	10->30->56->22->43->70
 	 * 
 	 */
 }
