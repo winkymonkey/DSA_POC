@@ -13,7 +13,7 @@ package org.example.dsa.aa_array.h_merge;
  * *****************************************************************************
  */
 
-public class H04_commonInThreeSubArray {
+public class H05_commonInThreeSubArray {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---

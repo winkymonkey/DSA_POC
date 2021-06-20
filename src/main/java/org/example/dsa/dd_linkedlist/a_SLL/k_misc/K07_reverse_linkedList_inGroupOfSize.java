@@ -1,4 +1,4 @@
-package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
+package org.example.dsa.dd_linkedlist.a_SLL.k_misc;
 
 /**
  * *****************************************************************************
@@ -10,7 +10,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
  * *****************************************************************************
  */
 
-public class Z07_reverse_linkedList_inGroupOfSize {
+public class K07_reverse_linkedList_inGroupOfSize {
 	/*
 	 * Traverse the list
 	 * p1 = head

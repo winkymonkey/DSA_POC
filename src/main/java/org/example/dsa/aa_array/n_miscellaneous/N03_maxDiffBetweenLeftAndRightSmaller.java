@@ -68,7 +68,7 @@ public class N03_maxDiffBetweenLeftAndRightSmaller {
 				stack.push(A[i]);
 			}
 			else {
-				while(!stack.isEmpty() && stack.peek() > A[i]) {
+				while (!stack.isEmpty() && stack.peek() > A[i]) {
 					//System.out.println("NGE of "+stack.peek()+" is "+A[i]);
 					stack.pop();
 				}

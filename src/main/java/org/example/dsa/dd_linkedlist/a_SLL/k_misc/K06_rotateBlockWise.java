@@ -1,4 +1,4 @@
-package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
+package org.example.dsa.dd_linkedlist.a_SLL.k_misc;
 
 /**
  * *****************************************************************************
@@ -25,7 +25,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
  * *****************************************************************************
  */
 
-public class Z06_rotateBlockWise {
+public class K06_rotateBlockWise {
 	/*
 	 * 
 	 */

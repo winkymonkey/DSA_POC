@@ -13,7 +13,7 @@ package org.example.dsa.aa_array.h_merge;
  * *****************************************************************************
  */
 
-public class H03_unionIntersection {
+public class H04_unionIntersection {
 	/*
 	 * i = 0;								//to traverse A[]
 	 * j = 0;								//to traverse B[]

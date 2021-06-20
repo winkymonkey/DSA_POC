@@ -70,7 +70,7 @@ public class N02_nextSmallerElement {
 				stack.push(A[i]);
 			}
 			else {
-				while(!stack.isEmpty() && stack.peek() > A[i]) {
+				while (!stack.isEmpty() && stack.peek() > A[i]) {
 					System.out.println("NSE of "+stack.peek()+" is "+A[i]);
 					stack.pop();
 				}

@@ -3,9 +3,7 @@
 ================
 Using many data structures, we normally perform Insert, Find min/max, Delete min/max operations.
 Let us see how much time these take in different data structures.
-But none of these have optimized time complexity.
-That's why we will use Heap.
-
+----------------------------------------------------------
 						insert		find min	delete min
 ----------------------------------------------------------
 unsorted array			O(1)		O(n)		O(n)
@@ -13,8 +11,13 @@ sorted array			O(n)		O(1)		O(n)
 unsorted linked list	O(1)		O(n)		O(n)
 sorted linked list		O(n)		O(n)		O(1)
 
-heap					O(log n)	O(1)		O(log n)					
 
+From above we can see that none of these data structure provide optimized time complexity.
+That's why we will use Heap.
+----------------------------------------------------------
+						insert		find min	delete min
+----------------------------------------------------------
+heap					O(log n)	O(1)		O(log n)
 
 
 
@@ -23,11 +26,10 @@ heap					O(log n)	O(1)		O(log n)
 ====================
 	WHAT IS HEAP
 ====================
-Heap can be implemented as an ALMOST COMPLETE (i.e. nodes should be filled from left to right) binary/ternary/... tree
+Heap can be implemented as an ALMOST COMPLETE (i.e. nodes should be filled from left to right) binary or ternary or n-ary tree
 
 MAX Heap: where root element is always maximum
 MIN Heap: where root element is always minimum
-
 
 
 
@@ -40,31 +42,39 @@ As heap looks like a binary tree(almost complete), we might think to define its 
 But that will add more unnecessary overhead to operations.
 That's why we will represent heap as an array.
 
-Node at i'th index --- index of its LeftChild  = 2i+1
-Node at i'th index --- index of its RightChild = 2i+2
-Node at i'th index --- index of its Parent     = Floor((i-1)/2)
+
+Advantages of defining heap using array rather than linked list ---
+	> we can easily navigate to child node in O(1) time
+	> it takes lower memory as we don't need to store the next pointer
+	> better locality of reference (items are relatively close together in memory) 
 
 
-If an array is already sorted in ascending order -->it represents a MIN HEAP
-If an array is already sorted in descending order -->it represents a MAX HEAP
+For a Node at i'th index
+	> index of its LeftChild  ---- 2i+1
+	> index of its RightChild ---- 2i+2
+	> index of its Parent     ---- Floor((i-1)/2)
+
+
+If an array is already sorted in ascending order ---> it represents a MIN HEAP
+If an array is already sorted in descending order --> it represents a MAX HEAP
 
 
 So in order to represent an array as heap, we might think to sort the array which indirectly turns out to be a heap.
 But the best possible sorting algorithm (merge sort) takes O(nLogn) time.
-But we can have O(n) time if we use some algorithm to convert an array to heap.
-
+Instead we can have O(n) time if we use some algorithm to convert an array to heap.
 
 
 ------------------------------------------------------------|------------------------------------------------------------------
 			find max	delete max	insert	increase key	|	[find min]	[search random]	[delete random]
 ------------------------------------------------------------|------------------------------------------------------------------
 Max Heap	O(1)		O(Logn)		O(Logn)	  O(Logn)		|		O(n)		O(n)			O(n)
+------------------------------------------------------------|------------------------------------------------------------------
 
 
 We can see that these operations are giving optimized result.
 But if we want to do any operations which are related to minimum element in the Max Heap, then it will take higher time.
 This is because Max Heap is optimized for operations related to maximum element.
-
+In those cases, we should use Min Heap
 
 
 
@@ -73,27 +83,32 @@ This is because Max Heap is optimized for operations related to maximum element.
 ===================================
 	PROPERTIES IN A BINARY TREE
 ===================================
-Height of a Node ------- number of edges from that node to the longest possible leaf
+Height of a Node ------- number of edges from that node to the longest possible leaf (if multiple, take the max)
 Height of a Tree ------- height of the root
 
-
-        1           ---- 1's Height=3
-      /   \
-     2     3        ---- 2's Height=2	3's Height=1
-    / \   / \
-   4   5 6   7      ---- 4's Height=1	5's Height=0	6's Height=0	7's Height=0
-  / \
- 8   9              ---- 8's Height=0	9's Height=0
-
+			   1           ---- 1's Height=3
+			 /   \
+			2     3        ---- 2's Height=2	3's Height=1
+		   / \   / \
+		  4   5 6   7      ---- 4's Height=1	5's Height=0	6's Height=0	7's Height=0
+		 / \
+		8   9              ---- 8's Height=0	9's Height=0
 
 
-Binary tree of height 'h' ----- maximum node count = 2^h+1 - 1
-								minimum node count = h + 1
+Binary tree of height 'h'
+	> there can be maximum of 2^(h+1) - 1 nodes
+	> there can be minimum of h + 1 nodes
 
-Binary tree of 'N' nodes ------ maximum height = N
-								minimum height = Floor(LogN)
+Binary tree of 'N' nodes
+	> maximum height can be N
+	> minimum height can be Floor(logN)
 
-Binary tree of at height 'h' -- maximum number of nodes = CEIL(N / 2^h+1)
+Binary tree of 'N' nodes
+	> non-leaves are from 0 to Floor(N/2)-1
+	> leaves are from Floor(N/2) to N-1
+
+
+Maximum number of nodes at height 'h' is CEIL(N / 2^h+1)
 
 
 

@@ -1,4 +1,4 @@
-package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
+package org.example.dsa.dd_linkedlist.a_SLL.k_misc;
 
 /**
  * *****************************************************************************
@@ -11,7 +11,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
  * *****************************************************************************
  */
 
-public class Z08_cloneWithNextAndRandomPointer {
+public class K08_cloneWithNextAndRandomPointer {
 	/*
 	 * --------------------------------------
 	 * ---Method 1 (Uses O(n) extra space)---

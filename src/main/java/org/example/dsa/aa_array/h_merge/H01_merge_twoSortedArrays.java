@@ -2,7 +2,7 @@ package org.example.dsa.aa_array.h_merge;
 
 /**
  * *****************************************************************************
- * Merge an array of size `n` into another array of size `m+n`
+ * Merge two sorted arrays into one array
  * *****************************************************************************
  * Input:  M[] = {2, 8, -1, -1, -1, 13, -1, 15, 20}		//-1 means empty
  * 		   N[] = {5, 7, 9, 25}
@@ -12,7 +12,7 @@ package org.example.dsa.aa_array.h_merge;
  * *****************************************************************************
  */
 
-public class H01_merge_twoArraysIntoOneArray {
+public class H01_merge_twoSortedArrays {
 	/*
 	 * -------------------------
 	 * ---USING ANOTHER ARRAY---

@@ -1,4 +1,4 @@
-package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
+package org.example.dsa.dd_linkedlist.a_SLL.k_misc;
 
 /**
  * *****************************************************************************
@@ -25,7 +25,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
  * *****************************************************************************
  */
 
-public class Z03_flatten_linkedList {
+public class K03_flatten_linkedList {
 	/*
 	 * Flatten the list in O(n) time
 	 * After flattening it should look like below:

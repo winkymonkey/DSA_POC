@@ -1,4 +1,4 @@
-package org.example.dsa.dd_linkedlist.b_DLL.z_misc;
+package org.example.dsa.dd_linkedlist.b_DLL.b_misc;
 
 /**
  * *****************************************************************************
@@ -10,7 +10,7 @@ package org.example.dsa.dd_linkedlist.b_DLL.z_misc;
  * *****************************************************************************
  */
 
-public class Z03_findTripletsWithGivenSum {
+public class B03_findTripletsWithGivenSum {
 	/*
 	 * Sort the DLL
 	 * Traverse the DLL and for each nodes--

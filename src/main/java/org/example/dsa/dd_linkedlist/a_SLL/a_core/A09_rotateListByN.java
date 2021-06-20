@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.a_core;
 
 /**
  * ********************************************************************************
- * Rotate a Linked list by N nodes
+ * Rotate a Linked List by N nodes
  * ********************************************************************************
  */
 

@@ -53,7 +53,7 @@ public class P07_DoubleHelixProblem {
 		int i = 0;
 		int j = 0;
 		
-		while(i<A.length && j<B.length) {
+		while (i<A.length && j<B.length) {
 			if (A[i] < B[j]) {
 				sum1 = sum1 + A[i];
 				i++;

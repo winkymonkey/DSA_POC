@@ -1,12 +1,12 @@
-package org.example.dsa.ee_heap.b_search;
+package org.example.dsa.ee_heap.c_search;
 
 /**
  * ****************************************************************************************
- * K'th Smallest/Largest Element in Unsorted Array
+ * Find K'th Largest Element in Unsorted Array
  * ****************************************************************************************
  */
 
-public class B01_KthLargestInArray {
+public class C01A_findKthLargestInArray {
 	/*
 	 * Build Max Heap (root is the MAX) 							//O(n) time
 	 * 

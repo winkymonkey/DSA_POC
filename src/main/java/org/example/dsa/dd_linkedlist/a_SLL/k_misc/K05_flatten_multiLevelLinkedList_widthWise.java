@@ -1,4 +1,4 @@
-package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
+package org.example.dsa.dd_linkedlist.a_SLL.k_misc;
 
 /**
  * *****************************************************************************
@@ -17,7 +17,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
  * *****************************************************************************
  */
 
-public class Z05_flatten_multiLevelLinkedList_widthWise {
+public class K05_flatten_multiLevelLinkedList_widthWise {
 	/*
 	 * 
 	 */

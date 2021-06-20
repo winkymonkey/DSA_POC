@@ -1,4 +1,4 @@
-package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
+package org.example.dsa.dd_linkedlist.a_SLL.k_misc;
 
 /**
  * *****************************************************************************
@@ -12,7 +12,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
  * *****************************************************************************
  */
 
-public class Z01_addTwoNums_representedByLinkedList_1 {
+public class K01_addTwoNums_representedByLinkedList_1 {
 	/*
 	 * num1 = 0
 	 * power = 0

@@ -1,4 +1,4 @@
-package org.example.dsa.dd_linkedlist.b_DLL.z_misc;
+package org.example.dsa.dd_linkedlist.b_DLL.b_misc;
 
 /**
  * *****************************************************************************
@@ -15,7 +15,7 @@ package org.example.dsa.dd_linkedlist.b_DLL.z_misc;
  * *****************************************************************************
  */
 
-public class Z01_sort_biotonicDLL {
+public class B01_sort_biotonicDLL {
 	/*
 	 * Find the first node which is smaller than its previous node.
 	 * Let it be CURR

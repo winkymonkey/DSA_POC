@@ -1,4 +1,4 @@
-package org.example.dsa.dd_linkedlist.b_DLL.z_misc;
+package org.example.dsa.dd_linkedlist.b_DLL.b_misc;
 
 /**
  * *****************************************************************************
@@ -10,7 +10,7 @@ package org.example.dsa.dd_linkedlist.b_DLL.z_misc;
  * *****************************************************************************
  */
 
-public class Z02_findPairsWithGivenSum {
+public class B02_findPairsWithGivenSum {
 	/*
 	 * Sort & sliding door
 	 */

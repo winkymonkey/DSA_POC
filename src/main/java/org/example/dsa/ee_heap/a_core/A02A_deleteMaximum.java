@@ -4,26 +4,34 @@ import java.util.Arrays;
 
 /**
  * ************************************************************************************
- * When we have an Max-Heap, it's very easy to say that first element is the maximum.
- * But we can't simply delete that element because if we do so, the resulting tree will no longer be a heap.
+ * Delete MAX from a Max Heap
+ * ************************************************************************************
+ * Input:	{17, 15, 13, 9, 6, 5, 10, 4, 8, 3, 1}
+ * Output:	{15, 9, 13, 8, 6, 5, 10, 4, 1, 3, 1}
+ * 
  * ************************************************************************************
  */
 
 public class A02A_deleteMaximum {
+	/*
+	 * When we have an Max-Heap, it's very easy to say that first element is the maximum.
+	 * But we can't simply delete that element because if we do so, the resulting tree will no longer be a heap.
+	 */
 	
 	public static void main(String[] args) {
-		int A[] = { 17, 15, 13, 9, 6, 5, 10, 4, 8, 3, 1 };		//max-heap structure
+		int A[] = { 17, 15, 13, 9, 6, 5, 10, 4, 8, 3, 1 };		// max-heap structure
 		//index		0   1   2   3  4  5   6  7  8  9  10
 		
-		deleteMax(A, A.length);
+		deleteMax(A);
 		System.out.println(Arrays.toString(A));
 	}
 	
 	
-	private static void deleteMax(int A[], int n) {
-		A[0] = A[n-1];										//set last element as root
-		n = n-1;											//decrease size of heap by 1
-		max_heapify(A, n, 0);								//heapify the root		
+	private static void deleteMax(int A[]) {
+		int n = A.length;
+		A[0] = A[n-1];										// set last element as root
+		n = n-1;											// decrease size of heap by 1
+		max_heapify(A, n, 0);								// heapify the root		
 	}
 	
 	
@@ -38,8 +46,7 @@ public class A02A_deleteMaximum {
 		if (r < n && A[r] > A[largest])
 			largest = r;
 
-		if (largest != i) {
-			// swap A[i] and A[largest]			//if largest and root are not equal, swap them to send largest to root
+		if (largest != i) {									// if `largest` and `current root` are not same, swap `A[largest]` and `A[i]` to send `A[i]` to `largest` index
 			int temp = A[i];
 			A[i] = A[largest];
 			A[largest] = temp;
@@ -47,4 +54,5 @@ public class A02A_deleteMaximum {
 			max_heapify(A, n, largest);
 		}
 	}
+	
 }

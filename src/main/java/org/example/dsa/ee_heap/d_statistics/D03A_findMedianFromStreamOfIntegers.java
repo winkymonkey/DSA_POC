@@ -1,4 +1,4 @@
-package org.example.dsa.ee_heap.b_search;
+package org.example.dsa.ee_heap.d_statistics;
 
 /**
  * *****************************************************************************
@@ -18,7 +18,7 @@ package org.example.dsa.ee_heap.b_search;
  * *****************************************************************************
  */
 
-public class B03A_findMedianFromStreamOfIntegers {
+public class D03A_findMedianFromStreamOfIntegers {
 	/*
 	 * --------------------
 	 * ---INSERTION SORT---
@@ -36,14 +36,21 @@ public class B03A_findMedianFromStreamOfIntegers {
 	 *  - A MinHeap that contains the larger half of the elements, with the minimum element at the root
 	 * 
 	 * 
+	 * ------
+	 * A[]					//length 100
+	 * minHeap[]			//length 100
+	 * maxHeap[]			//length 100
+	 * 
+	 * currentMedian = 0
+	 * 
 	 * FOR each incoming elements {
 	 *    IF (incomingElement < currentMedian) {
-	 *       add it to the end of MaxHeap
+	 *       add incomingElement to the end of MaxHeap
 	 *       if (MaxHeap end element > MaxHeap root)
 	 *          swap them									//making sure the MaxHeap has maximum value at the root
 	 *    }
 	 *    ELSE {
-	 *       add it to the end of MinHeap
+	 *       add incomingElement to the end of MinHeap
 	 *       IF (MinHeap end element < MinHeap root)
 	 *          swap them									//making sure the MinHeap has minimum value at the root
 	 *    }

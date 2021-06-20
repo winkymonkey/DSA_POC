@@ -4,12 +4,19 @@ import java.util.Arrays;
 
 /**
  * ************************************************************************************
- * A given array may not have all its elements in Heap structure.
- * To convert an array to Max Heap we need some algorithm where 'max_heapify()' is the heart of it.
+ * Convert an array into Heap
+ * ************************************************************************************
+ * Input:	{1, 6, 9, 8, 7, 10, 3, 12, 4, 14}
+ * Output:	{14, 12, 10, 8, 7, 9, 3, 1, 4, 6}
+ * 
  * ************************************************************************************
  */
 
 public class A01A_buildMaxHeap {
+	/*
+	 * A given array may not have all its elements in Heap structure.
+	 * To convert an array to Max Heap we need some algorithm where 'max_heapify()' is the heart of it.
+	 */
 
 	public static void main(String[] args) {
 		int A[] = { 1, 6, 9, 8, 7, 10, 3, 12, 4, 14 };
@@ -22,30 +29,29 @@ public class A01A_buildMaxHeap {
 	
 	private static void buildMaxHeap(int A[]) {
 		int n = A.length;
-		for (int i = (n/2)-1; i >= 0; i--) { 			// non-leaves are from 0 to Floor(length/2)-1
-			max_heapify(A, n, i); 						// leaves are from Floor(length/2) to length-1
+		for (int i = (n/2)-1; i >= 0; i--) { 			// non-leaves are from 0 to Floor(n/2)-1
+			max_heapify(A, i); 							// leaves are from Floor(n/2) to n-1
 		}
 	}
 	
 	
-	private static void max_heapify(int A[], int heapsize, int i) {
+	private static void max_heapify(int A[], int i) {
 		int largest = i;
 		int l = 2*i + 1;
 		int r = 2*i + 2;
-
-		if (l < heapsize && A[l] > A[i])		//if l exists and l element > root element
+		
+		if (l < A.length && A[l] > A[i])		// if `l` exists and `A[l]` > `current root`
 			largest = l;
-
-		if (r < heapsize && A[r] > A[largest])	//if r exists and r element > largest element
+		
+		if (r < A.length && A[r] > A[largest])	// if `r` exists and `A[r]` > `largest element`
 			largest = r;
-
-		if (largest != i) {
-			// swap A[i] and A[largest]			//if largest and root are not equal, swap them to send largest to root
+		
+		if (largest != i) {						// if `largest` and `current root` are not same, swap `A[largest]` and `A[i]` to send `A[i]` to `largest` index
 			int temp = A[i];
 			A[i] = A[largest];
 			A[largest] = temp;
 
-			max_heapify(A, heapsize, largest);
+			max_heapify(A, largest);
 		}
 	}
 	

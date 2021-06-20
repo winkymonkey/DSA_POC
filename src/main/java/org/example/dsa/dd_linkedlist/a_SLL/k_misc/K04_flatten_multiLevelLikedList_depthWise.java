@@ -1,4 +1,4 @@
-package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
+package org.example.dsa.dd_linkedlist.a_SLL.k_misc;
 
 /**
  * *****************************************************************************
@@ -23,7 +23,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.z_misc;
  * *****************************************************************************
  */
 
-public class Z04_flatten_multiLevelLikedList_depthWise {
+public class K04_flatten_multiLevelLikedList_depthWise {
 	/*
 	 * static Node last;
 	 * 

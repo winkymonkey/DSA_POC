@@ -4,12 +4,15 @@ import java.util.Arrays;
 
 /**
  * ******************************************************************************************
- * TIME --- O(nLogn)		max_heapify takes O(Logn) time and it happens for each of the n elements 
- * SPACE -- O(Logn)			call stack
+ * Implement Heap Sort
  * ******************************************************************************************
  */
 
 public class A04_heapSort {
+	/*
+	 * TIME --- O(nLogn)		max_heapify takes O(Logn) time and it happens for each of the n elements
+	 * SPACE -- O(Logn)			call stack
+	 */
 	
 	public static void main(String[] args) {
 		int A[] = { 1, 3, 5, 4, 6, 13, 10, 9, 8, 15, 17 };
@@ -21,22 +24,16 @@ public class A04_heapSort {
 	
 	
 	private static void heapSort(int A[], int n) {
-		buildMaxHeap(A, n);
+		for (int i = (n/2)-1; i >= 0; i--) {			// build heap (rearrange array)
+			max_heapify(A, n, i);
+		}
 		
-		for (int i=n-1; i>0; i--) {
-			//swap A[0] and A[i]
+		for (int i=n-1; i>0; i--) {						// One by one extract an element from heap, then move current root to end
 			int temp = A[0];
 			A[0] = A[i];
 			A[i] = temp;
 			
-			max_heapify(A, i, 0);
-		}
-	}
-	
-	
-	private static void buildMaxHeap(int A[], int n) {
-		for (int i = (n/2)-1; i >= 0; i--) { 			// non-leaves are from 0 to Floor(n/2)-1
-			max_heapify(A, n, i); 						// leaves are from Floor(n/2) to n
+			max_heapify(A, i, 0);						// call max heapify on the reduced heap
 		}
 	}
 	
@@ -52,8 +49,7 @@ public class A04_heapSort {
 		if (r < n && A[r] > A[largest])
 			largest = r;
 
-		if (largest != i) {
-			// swap A[i] and A[largest]			//if largest and root are not equal, swap them to send largest to root
+		if (largest != i) {						// if `largest` and `current root` are not same, swap `A[largest]` and `A[i]` to send `A[i]` to `largest` index
 			int temp = A[i];
 			A[i] = A[largest];
 			A[largest] = temp;
