@@ -16,6 +16,7 @@ package org.example.dsa.ee_heap.f_misc;
 public class F03_connectNropesWithMinCost {
 	/*
 	 * Create a minHeap and insert all elements into it
+	 * 
 	 * While number of elements > 1
 	 * 	- Extract the MIN and 2nd MIN from minHeap
 	 *  - Add these two and push the 'sum' in the heap
