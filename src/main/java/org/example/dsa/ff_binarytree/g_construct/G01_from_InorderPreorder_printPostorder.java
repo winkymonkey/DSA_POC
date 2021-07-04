@@ -2,11 +2,11 @@ package org.example.dsa.ff_binarytree.g_construct;
 
 /**
  * *****************************************************************************
- * Print PostOrder traversal from given InOrder and PreOrder traversals
+ * From given InOrder & PreOrder sequence -- Print PostOrder traversal
  * *****************************************************************************
  */
 
-public class G01_from_InorderPreorder_postorder {
+public class G01_from_InorderPreorder_printPostorder {
 	
 	private static int IN[] = {7, 2, 1, 4, 3, 5};
 	private static int PRE[] = {1, 2, 7, 3, 4, 5};

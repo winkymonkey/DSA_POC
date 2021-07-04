@@ -2,7 +2,7 @@ package org.example.dsa.ff_binarytree.g_construct;
 
 /**
  * *****************************************************************************
- * Construct Full Binary Tree from given PreOrder and PostOrder traversals
+ * From given PreOrder & PostOrder sequence -- Construct the tree
  * *****************************************************************************
  */
 

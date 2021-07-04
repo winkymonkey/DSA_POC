@@ -4,7 +4,7 @@ import org.example.dsa.ff_binarytree.Node;
 
 /**
  * *****************************************************************************
- * Construct Tree from given InOrder and PreOrder traversals
+ * From given InOrder & PreOrder sequence -- Construct the tree
  * *****************************************************************************
  */
 

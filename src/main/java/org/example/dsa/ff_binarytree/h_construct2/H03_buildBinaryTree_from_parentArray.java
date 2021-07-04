@@ -8,6 +8,7 @@ package org.example.dsa.ff_binarytree.h_construct2;
  * array indexes are values in tree nodes and array values give the parent node of that particular index (or node).
  * The value of the root node index would always be -1 as there is no parent for root.
  * 
+ * *****************************************************************************
  * Input:	parent[] = {1, 5, 5, 2, 2, -1, 3}
  * 			//index     0  1  2  3  4   5  6
  * 

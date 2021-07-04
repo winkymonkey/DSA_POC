@@ -4,11 +4,11 @@ import java.util.Stack;
 
 /**
  * *****************************************************************************
- * Print PreOrder traversal from given InOrder and PostOrder traversals
+ * From given InOrder & PostOrder sequence -- Print PreOrder traversal
  * *****************************************************************************
  */
 
-public class G03_from_InorderPostorder_preorder {
+public class G03_from_InorderPostorder_printPreorder {
 	
 	private static int IN[] = {7, 2, 1, 4, 3, 5};
 	private static int POST[] = {7, 2, 4, 5, 3, 1};
