@@ -20,7 +20,7 @@ package org.example.dsa.ff_binarytree.f_checking;
  * *****************************************************************************
  */
 
-public class F06_print_cousinsOfNode {
+public class F05_print_cousinsOfNode {
 	/*
 	 * Find the level of the given node & Find its sibling node
 	 * print all nodes (except its sibling) at a given level

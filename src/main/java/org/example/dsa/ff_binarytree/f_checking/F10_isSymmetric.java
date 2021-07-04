@@ -24,7 +24,7 @@ import org.example.dsa.ff_binarytree.Node;
  * ************************************************************************************
  */
 
-public class F11_isSymmetric {
+public class F10_isSymmetric {
 	
 	public static void main(String[] args) {
 		Node root = new Node(1);

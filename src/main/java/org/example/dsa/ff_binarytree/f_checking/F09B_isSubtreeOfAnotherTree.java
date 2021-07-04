@@ -24,7 +24,7 @@ import org.example.dsa.ff_binarytree.Node;
  * *****************************************************************************
  */
 
-public class F10B_isSubtreeOfAnotherTree {
+public class F09B_isSubtreeOfAnotherTree {
 
 	public static void main(String args[]) {
 		Node root1 = new Node(26);

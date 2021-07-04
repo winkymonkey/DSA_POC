@@ -8,7 +8,7 @@ package org.example.dsa.ff_binarytree.f_checking;
  * *****************************************************************************
  */
 
-public class F09_isFullBinaryTree {
+public class F08_isFullBinaryTree {
 	/*
 	 * 
 	 */

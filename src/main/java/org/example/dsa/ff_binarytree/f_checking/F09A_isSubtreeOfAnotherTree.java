@@ -24,7 +24,7 @@ package org.example.dsa.ff_binarytree.f_checking;
  * *****************************************************************************
  */
 
-public class F10A_isSubtreeOfAnotherTree {
+public class F09A_isSubtreeOfAnotherTree {
 	/*
 	 * Tree1: 
 	 * 		InOrder:  IN1[]  = 4 30 10 6 26 3 3

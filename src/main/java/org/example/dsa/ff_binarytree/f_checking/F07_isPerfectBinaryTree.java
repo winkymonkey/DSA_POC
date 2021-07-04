@@ -8,7 +8,7 @@ package org.example.dsa.ff_binarytree.f_checking;
  * *****************************************************************************
  */
 
-public class F08_isPerfectBinaryTree {
+public class F07_isPerfectBinaryTree {
 	/*
 	 * int storedLevel = 0;
 	 * int level = 0;

@@ -22,7 +22,7 @@ package org.example.dsa.ff_binarytree.f_checking;
  * *****************************************************************************
  */
 
-public class F05_isCousin {
+public class F04_isCousin {
 	/*
 	 * find level of both the nodes & check is they are at same level
 	 * if they are at same level, go to next step... otherwise return false...

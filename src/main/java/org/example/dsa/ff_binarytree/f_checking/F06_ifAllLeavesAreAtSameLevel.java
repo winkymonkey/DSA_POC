@@ -6,7 +6,7 @@ package org.example.dsa.ff_binarytree.f_checking;
  * *****************************************************************************
  */
 
-public class F07_ifAllLeavesAreAtSameLevel {
+public class F06_ifAllLeavesAreAtSameLevel {
 	/*
 	 * int storedLevel = 0;
 	 * int level = 0;

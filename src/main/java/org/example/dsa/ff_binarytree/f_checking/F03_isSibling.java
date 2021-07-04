@@ -24,7 +24,7 @@ import org.example.dsa.ff_binarytree.TreeUtilA;
  * ******************************************************************************************
  */
 
-public class F04_isSibling {
+public class F03_isSibling {
 	
 	public static void main(String[] args) {
 		Node root = TreeUtilA.createNewTreeA3();
