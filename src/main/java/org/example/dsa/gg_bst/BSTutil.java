@@ -76,4 +76,41 @@ public class BSTutil {
 		return root;
 	}
 	
+	
+	
+	/**
+	 * *********************************
+	 * BST STRUCTURE
+	 *              25
+	 *         /          \
+	 *      18             50
+	 *     /  \          /    \
+	 *   19    20      35     60
+	 *    \   /  \    /  \   /  \
+	 *    15 19  25  20  40 55   70
+	 *                \
+	 *                25
+	 * *********************************
+	 */
+	public static Node createNewBST4() {
+		Node root = new Node(25);
+		root.left = new Node(18);
+		root.left.left = new Node(19);
+		root.left.right = new Node(20);
+		root.left.left.right = new Node(15);
+		root.left.right.left = new Node(19);
+		root.left.right.right = new Node(25);
+		
+		root.right = new Node(50);
+		root.right.left = new Node(35);
+		root.right.right = new Node(60);
+		root.right.left.left = new Node(20);
+		root.right.left.right = new Node(40);
+		root.right.left.left.right = new Node(25);
+		root.right.right.left = new Node(55);
+		root.right.right.right = new Node(70);
+		
+		return root;
+	}
+	
 }

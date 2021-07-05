@@ -24,7 +24,7 @@ import org.example.dsa.gg_bst.Node;
  * ********************************************************************************
  */
 
-public class B_balanceAnUnbalancedBST {
+public class B_balancingBST {
 	
 	public static void main(String[] args) {
 		Node root = BSTutil.createNewBST3();
