@@ -39,18 +39,18 @@ public class D03_reverseAlternateLevels {
 	}
 	
 	
-	private static void reverse(Node node1, Node node2, int level) {
-		if (node1 == null || node2 == null)
+	private static void reverse(Node leftRoot, Node rightRoot, int level) {
+		if (leftRoot == null || rightRoot == null)
 			return;
 		
 		if (level%2 == 0) {
-			int temp = node1.data;
-			node1.data = node2.data;
-			node2.data = temp;
+			int temp = leftRoot.data;
+			leftRoot.data = rightRoot.data;
+			rightRoot.data = temp;
 		}
 		
-		reverse(node1.left, node2.right, level+1);
-		reverse(node1.right, node2.left, level+1);
+		reverse(leftRoot.left, rightRoot.right, level+1);
+		reverse(leftRoot.right, rightRoot.left, level+1);
 	}
 	
 }
