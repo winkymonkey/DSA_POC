@@ -26,6 +26,7 @@ package org.example.dsa.ff_binarytree.d_traversal_BFS_misc;
 
 public class D01_densityOfBinaryTree {
 	/*
+	 * ------------------
 	 * find height of the tree --- getMaxLevel()
 	 * it will provide the HEIGHT
 	 * 
@@ -33,6 +34,6 @@ public class D01_densityOfBinaryTree {
 	 * at the end, this counter will be the SIZE
 	 * 
 	 * calculate Density = Size / Height
-	 * 
+	 * ------------------
 	 */
 }

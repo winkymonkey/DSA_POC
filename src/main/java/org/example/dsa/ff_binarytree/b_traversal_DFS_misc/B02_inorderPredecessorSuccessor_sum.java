@@ -27,6 +27,7 @@ package org.example.dsa.ff_binarytree.b_traversal_DFS_misc;
 
 public class B02_inorderPredecessorSuccessor_sum {
 	/*
+	 * ------------------
 	 * Do the InOrder traversal and then
 	 * 		A[0]	= 0							// because inorder predecessor of leftmost leaf is not present
 	 * 		A[1...] = inorder sequence
@@ -35,6 +36,6 @@ public class B02_inorderPredecessorSuccessor_sum {
 	 * 
 	 * Now traverse the array from index 1
 	 * For each index i, the sum of inorder predecessor & inorder successor will be A[i-1] + A[i+1]
-	 * 
+	 * ------------------
 	 */
 }

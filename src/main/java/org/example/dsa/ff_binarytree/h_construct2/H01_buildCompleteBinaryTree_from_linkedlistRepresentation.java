@@ -23,6 +23,7 @@ package org.example.dsa.ff_binarytree.h_construct2;
 
 public class H01_buildCompleteBinaryTree_from_linkedlistRepresentation {
 	/*
+	 * ------------------
 	 * Create a queue.
 	 * Pick the 1st node of the list, and set it as root, and enqueue it to the queue.
 	 * Traverse the list
@@ -30,6 +31,6 @@ public class H01_buildCompleteBinaryTree_from_linkedlistRepresentation {
 	 * 		- Traverse two nodes in the list, add them as children of the current parent.
 	 * 		- Enqueue the two nodes into the queue.
 	 * 		- repeat
-	 * 
+	 * ------------------
 	 */
 }

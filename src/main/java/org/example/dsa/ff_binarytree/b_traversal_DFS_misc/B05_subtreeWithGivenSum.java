@@ -23,10 +23,11 @@ import org.example.dsa.ff_binarytree.Node;
 
 public class B05_subtreeWithGivenSum {
 	/*
+	 * ------------------
 	 * Traverse the tree (in/pre/post) 
 	 * In each recursive call, calculate the sum of (value of current root), (value of left subtree), (value of right subtree)
 	 * 	and keep checking whether it matches with the given sum or not
-	 * 
+	 * ------------------
 	 */
 	
 	public static void main(String[] args) {
@@ -60,4 +61,5 @@ public class B05_subtreeWithGivenSum {
 		}
 		return sum;
 	}
+	
 }

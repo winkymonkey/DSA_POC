@@ -10,6 +10,7 @@ package org.example.dsa.ff_binarytree.f_checking;
 
 public class F07_isPerfectBinaryTree {
 	/*
+	 * ------------------
 	 * int storedLevel = 0;
 	 * int level = 0;
 	 * 
@@ -19,6 +20,6 @@ public class F07_isPerfectBinaryTree {
 	 * If yes, then keep going, otherwise break and return.
 	 * If a leaf node is found, and (level!=storedLevel) then break and return.
 	 * Otherwise keep searching.
-	 * 
+	 * ------------------
 	 */
 }

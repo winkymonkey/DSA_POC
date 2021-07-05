@@ -21,6 +21,7 @@ package org.example.dsa.ff_binarytree.e_traversal_misc;
 
 public class E04_sumOfCoveredAndUncoveredNodes {
 	/*
+	 * ------------------
 	 * THIS PROBLEM IS RELATED TO BOUNDARY TRAVERSAL
 	 * 
 	 * TRAVERSE LEFT BOUNDARY (sum_left)
@@ -41,6 +42,6 @@ public class E04_sumOfCoveredAndUncoveredNodes {
 	 * sum_covered = sum_all - sum_uncovered
 	 * 
 	 * check if "sum_covered" is equals to "sum_uncovered"
-	 * 
+	 * ------------------
 	 */
 }

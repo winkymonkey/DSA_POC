@@ -22,6 +22,7 @@ import org.example.dsa.ff_binarytree.Node;
 
 public class E09_maxPathSum {
 	/*
+	 * ------------------
 	 * For each node there can be 4 ways that the max path goes through the node.
 	 * 	- 'Node only'
 	 * 	- 'Max path through Left Child' + 'Node'
@@ -32,6 +33,7 @@ public class E09_maxPathSum {
 	 * 
 	 * NOTE: root of every subtree need to return maximum path sum such that "at most one child of root is involved".
 	 * that's why 'max1' returned from the method, not 'maxSum'
+	 * ------------------
 	 */
 	
 	public static void main(String args[]) {

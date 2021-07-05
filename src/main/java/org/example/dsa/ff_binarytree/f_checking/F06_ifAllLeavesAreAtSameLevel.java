@@ -8,6 +8,7 @@ package org.example.dsa.ff_binarytree.f_checking;
 
 public class F06_ifAllLeavesAreAtSameLevel {
 	/*
+	 * ------------------
 	 * int storedLevel = 0;
 	 * int level = 0;
 	 * 
@@ -16,6 +17,6 @@ public class F06_ifAllLeavesAreAtSameLevel {
 	 * Inside the method, do 'level++'.
 	 * If a leaf node is found, and (level!=storedLevel) then break and return.
 	 * Otherwise keep searching.
-	 * 
+	 * ------------------
 	 */
 }

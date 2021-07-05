@@ -34,6 +34,7 @@ import org.example.dsa.ff_binarytree.TreeUtilA;
 
 public class E06_lowestCommonAncestor {
 	/*
+	 * ------------------
 	 * Traverse the tree starting from the root.
 	 * 
 	 * - If either n1 or n2 matches with the root, then the root is LCA.
@@ -43,7 +44,7 @@ public class E06_lowestCommonAncestor {
 	 * 
 	 * TIME --- O(n)
 	 * SPACE -- O(1)
-	 * 
+	 * ------------------
 	 */
 	
 	public static void main(String[] args) {

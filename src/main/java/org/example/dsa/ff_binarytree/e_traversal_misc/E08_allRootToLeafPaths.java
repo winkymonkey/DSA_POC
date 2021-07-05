@@ -28,13 +28,14 @@ import org.example.dsa.ff_binarytree.Node;
 
 public class E08_allRootToLeafPaths {
 	/*
+	 * ------------------
 	 * Root node appends its name in the array and pass 2 copies of this array to both of its left & right child
 	 * Now each of the children will have independent view of the array
 	 * So the children also appends its name in the array and pass 2 copies of this updated array to both of its left & right child
 	 * this process goes on and on....
 	 * 
 	 * As soon as it's a leaf node, it appends its name in the array and print the array.
-	 * 
+	 * ------------------
 	 */
 	
 	public static void main(String args[]) {

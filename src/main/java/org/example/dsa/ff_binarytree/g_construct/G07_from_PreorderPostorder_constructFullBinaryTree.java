@@ -7,7 +7,9 @@ package org.example.dsa.ff_binarytree.g_construct;
  */
 
 public class G07_from_PreorderPostorder_constructFullBinaryTree {
-	/*             1
+	/* 
+	 * ------------------
+	 *             1
 	 *           /   \
 	 *         2       3
 	 *       /  \     /  \
