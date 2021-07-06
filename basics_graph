@@ -1,0 +1,52 @@
+Type of Graphs:
+	1. Undirected Graph --- used in BFS, DFS, finding connected components
+	2. Directed Graph --- used to find topological ordering
+	3. Edge weighted Undirected Graph --- used in finding Minimum spanning tree which is done in Kruskal & Prim algorithm
+	4. Edge weighted Directed Graph --- used for finding shortest path
+
+
+A graph is a data structure that consists of the following two components: 
+	1. A finite set of vertices also called as nodes.
+	2. A finite set of ordered pair of the form (u,v) called as edge.
+
+The pair of the form (u,v) indicates that there is an edge from vertex u to vertex v.
+The pair is ordered because (u,v) is not the same as (v,u) in case of a directed graph.
+
+
+
+
+
+
+The following two are the most commonly used representations of a graph.
+	1. Adjacency Matrix
+	2. Adjacency List
+The choice of graph representation is situation-specific and totally depends on the type of operations to be performed.
+
+
+-------------------
+Adjacency Matrix
+-------------------
+Adjacency Matrix is a 2D array of size V x V where V is the number of vertices in a graph.
+In this graph, a slot adj[i][j] = 1 indicates that there is an edge from vertex i to vertex j.
+Adjacency matrix for undirected graph is always symmetric.
+
+Advantages:
+	easy to implement and follow
+	any query takes O(1) time
+	removing an edge takes O(1) time
+Disadvantages:
+	consumes more space O(V^2)
+	adding a vertex is O(V^2) time
+
+
+-------------------
+Adjacency List
+-------------------
+Here an array of lists is used whose size is equal to the number of vertices.
+An entry A[i] represents the list of vertices adjacent to the ith vertex.
+
+Advantages:
+	easy to add new vertices
+Disadvantages:
+	any query takes O(V) time
+
