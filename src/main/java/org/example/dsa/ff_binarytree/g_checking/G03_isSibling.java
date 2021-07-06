@@ -5,7 +5,7 @@ import org.example.dsa.ff_binarytree.TreeUtilA;
 
 /**
  * ******************************************************************************************
- * Check if two nodes in a Binary Tree are siblings
+ * Check if two nodes are siblings in a Binary Tree
  * ******************************************************************************************
  * Sibling Nodes -- if two nodes are at same level and have different parents
  * ******************************************************************************************

@@ -19,7 +19,7 @@ package org.example.dsa.ff_binarytree.f_misc;
  * ******************************************************************************************************
  */
 
-public class F04_sumOfCoveredAndUncoveredNodes {
+public class F03_sumOfCoveredAndUncoveredNodes {
 	/*
 	 * ------------------
 	 * THIS PROBLEM IS RELATED TO BOUNDARY TRAVERSAL

@@ -7,7 +7,7 @@ import org.example.dsa.ff_binarytree.Node;
 
 /**
  * **********************************************************************
- * Given a binary tree, print all root-to-leaf paths
+ * Print all root-to-leaf paths in a Binary Tree
  * **********************************************************************
  * Input:
  *     10
@@ -26,7 +26,7 @@ import org.example.dsa.ff_binarytree.Node;
  * **********************************************************************
  */
 
-public class F08_allRootToLeafPaths {
+public class F06_allRootToLeafPaths {
 	/*
 	 * ------------------
 	 * Write a function that appends current root to the list & recursively call for both left subtree and right subtree.

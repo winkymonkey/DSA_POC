@@ -1,4 +1,4 @@
-package org.example.dsa.ff_binarytree.e_otherTraversal;
+package org.example.dsa.ff_binarytree.f_misc;
 
 import org.example.dsa.ff_binarytree.Node;
 
@@ -20,7 +20,7 @@ import org.example.dsa.ff_binarytree.Node;
  * ********************************************************************************
  */
 
-public class E09_maxPathSum {
+public class F07_maxPathSum {
 	/*
 	 * ------------------
 	 * For each node there can be 4 ways that the max path goes through the node.

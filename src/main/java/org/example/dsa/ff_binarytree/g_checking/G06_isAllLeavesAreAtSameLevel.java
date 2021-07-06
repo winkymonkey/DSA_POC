@@ -2,7 +2,7 @@ package org.example.dsa.ff_binarytree.g_checking;
 
 /**
  * *****************************************************************************
- * Check if all leaves are at same level
+ * Check if all leaves are at same level in a Binary Tree
  * *****************************************************************************
  */
 
