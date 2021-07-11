@@ -32,7 +32,7 @@ public class D04_longestSubstringWithAllUniqueChars {
 				map.put(charKey, 1 );
 			
 			
-			if (map.size() < j-i+1) {										// map.size() = unique char count
+			if (map.size() < j-i+1) {										// map.size() = unique char count		j-i+1=window size
 				while (map.size() < j-i+1) {
 					map.put( str.charAt(i), map.get(str.charAt(i))-1 );
 					if ( map.get(str.charAt(i)) == 0 ) {
