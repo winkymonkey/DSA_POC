@@ -8,17 +8,16 @@ import java.util.Arrays;
  * *****************************************************************************
  */
 
-public class G07_sortInSingleLoop {
+public class G04_sortInSingleLoop {
 	
 	public static void main(String[] args) {
 		int A[] = {38, 27, 43, 3, 9, 82, 10};
-		
-		sort(A);
+		sortInSingleLoop(A);
 		System.out.println(Arrays.toString(A));
 	}
 	
 	
-	private static void sort(int A[]) {
+	private static void sortInSingleLoop(int A[]) {
 		for (int i=0, j=i+1; i<A.length && j<A.length; ) {
 			if (A[i] > A[j]) {
 				//swap A[i] and A[j]

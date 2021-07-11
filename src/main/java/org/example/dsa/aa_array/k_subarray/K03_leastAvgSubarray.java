@@ -2,34 +2,34 @@ package org.example.dsa.aa_array.k_subarray;
 
 /**
  * *****************************************************************************
- * Find the SubArray that has the least average
+ * Find the subarray of size `k` that has the least average
  * *****************************************************************************
  * Input:	A[] = {3, 7, 90, 20, 10, 50, 40}
  * 			k = 3
- * Output: index 3,4,5							//{20,10,50}
+ * Output:  index 3,4,5							//{20,10,50}
  * 
  * Input:	A[] = {3, 7, 5, 20, -10, 0, 12}
  * 			k = 2
- * Output: index 4,5							//{-10,0}
+ * Output:  index 4,5							//{-10,0}
  * 
  * *****************************************************************************
  */
 
-public class K03_subarrayHavingLeastAverage {
+public class K03_leastAvgSubarray {
 	/*
 	 * ------------------------------
-	 * ---SLIDING WINDOW TECHNIQUE---
+	 * ---USE FIXED SLIDING WINDOW---
 	 * ------------------------------
 	 * The idea is to use sliding window of size `k`
 	 * Keep track of sum of current `k` elements
-	 * To compute sum of current window, remove first element of previous window & add current element (last element of current window)
+	 * To compute sum of next window, remove first element of current window & add immediate next element
 	 * 
 	 * TIME --- O(n)
 	 * SPACE -- O(1)
 	 * 
 	 * 
 	 * ----------------------
-	 * result_index = 0
+	 * res_index = 0
 	 * sum = 0;
 	 * for (i=0 to k)
 	 * 	  sum += A[i];

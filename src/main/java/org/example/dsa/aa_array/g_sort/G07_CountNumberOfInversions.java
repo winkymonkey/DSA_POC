@@ -1,7 +1,5 @@
 package org.example.dsa.aa_array.g_sort;
 
-import java.util.Arrays;
-
 /**
  * ******************************************************************************************
  * Count number of inversions in an array
@@ -19,7 +17,7 @@ import java.util.Arrays;
  * 
  * ******************************************************************************************
  */
-public class G12_CountNumberOfInversions {
+public class G07_CountNumberOfInversions {
 	/* 
 	 * --------------------
 	 * ---NAIVE APPROACH---
@@ -34,32 +32,24 @@ public class G12_CountNumberOfInversions {
 	 * -------------------------
 	 * ---MODIFIED MERGE SORT---
 	 * -------------------------
-	 * Suppose the number of inversions in the left half and right half of the array (let be inv1 and inv2);
-	 * So what kinds of inversions are not accounted for in Inv1 + Inv2?
-	 *  --- the inversions that need to be counted during the merge step.
-	 * 
-	 * Therefore, to get the total number of inversions that needs to be added are:
-	 * 	--- the number of inversions in the left SubArray
-	 *  --- the number of inversions in the right SubArray
-	 *  --- the number of inversions in the merge()
+	 * Total number of inversions
+	 * = (number of inversions in left subarray) + (number of inversions in right subarray) + (number of inversions in merge())
 	 * 
 	 * 
-	 * So how to get the number of inversions in merge()? 
-	 *  --- In merge process, let i is used for L[] and j for R[]
-	 *  --- At any step in merge(), if (A[i] > A[j]) then all elements at the right side of A[i] is bound to be greater than A[j]. Hence, these many inversion count  
-	 *  --- Hence there are (elemCountInLeft – i) inversions    
-	 * 
+	 * How to get the number of inversions in merge()? 
+	 *  - Let i is used to traverse L[]
+	 *  - Let j is used to traverse R[]
+	 *  - At any step, if A[i] > A[j], then all elements at the right side of A[i] will obviously be greater than A[j].
+	 *  	Hence these many inversion are required whose value is (elemCountInLeft – i)
 	 * 
 	 */
 	
 	public static void main(String[] args) {
 		int A[] = { 38, 27, 43, 3, 9, 82, 10 };
 		//			0   1   2   3  4  5   6
-		
 		int left = 0;
 		int right = A.length-1;
 		System.out.println(mergeSort(A, left, right));
-		System.out.println(Arrays.toString(A));
 	}
 	
 	
@@ -67,9 +57,9 @@ public class G12_CountNumberOfInversions {
 		int inv_count = 0;
 		if (left < right) {
 			int mid = (left+right)/2;
-			inv_count += mergeSort(arr, left, mid);			// Call mergeSort for first half
-			inv_count += mergeSort(arr, mid+1, right);		// Call mergeSort for second half
-			inv_count += merge(arr, left, mid, right);		// Merge the sorted halves (CORE OF MERGE SORT)
+			inv_count += mergeSort(arr, left, mid);
+			inv_count += mergeSort(arr, mid+1, right);
+			inv_count += merge(arr, left, mid, right);
 		}
 		return inv_count;
 	}
@@ -90,7 +80,7 @@ public class G12_CountNumberOfInversions {
 		//smallest from each of L[] and R[] is placed in original array
 		int i = 0;						// to traverse L[]
 		int j = 0;						// to traverse R[]
-		int k = left;					// to track merged array
+		int k = left;					// to traverse merged array
 		int inv_count = 0;
 		
         while (i < n1 && j < n2) {
@@ -103,7 +93,7 @@ public class G12_CountNumberOfInversions {
 				arr[k] = R[j];
 				j++;
 				k++;
-				inv_count = inv_count + (n1-i);
+				inv_count += (n1-i);
 			}
         }
 		

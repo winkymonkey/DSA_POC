@@ -2,7 +2,7 @@ package org.example.dsa.aa_array.b_sum_difference;
 
 /**
  * *****************************************************************************
- * Given an array A[], find a pair whose sum is closest to zero
+ * Find a pair whose sum is closest to zero
  * *****************************************************************************
  * Input:  {1, 60, -10, 70, -80, 85, -72}
  * Output: -72 and 70
@@ -12,9 +12,9 @@ package org.example.dsa.aa_array.b_sum_difference;
 
 public class B02_findPairSum_closestToZero {
 	/*
-	 * -----------------------------------
-	 * ---SORT & SLIDING DOOR TECHNIQUE---
-	 * -----------------------------------
+	 * ------------------------------
+	 * ---USE FIXED SLIDING WINDOW---
+	 * ------------------------------
 	 * Sort the array		{-80, -72, 10, 1, 60, 70, 85}
 	 * 
 	 * min_sum = Integer.MAX

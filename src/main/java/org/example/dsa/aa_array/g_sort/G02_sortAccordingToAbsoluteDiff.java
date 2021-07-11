@@ -18,12 +18,12 @@ package org.example.dsa.aa_array.g_sort;
  * ******************************************************************************************
  */
 
-public class G05_sortAccordingToAbsoluteDiff {
+public class G02_sortAccordingToAbsoluteDiff {
 	/*
 	 * -------------------------
-	 * ---Modified Merge Sort---
+	 * ---MODIFIED MERGE SORT---
 	 * -------------------------
-	 * In the merge(A, l, m, r) method, merge two arrays based on the difference between its elements and X
+	 * In the merge() method, merge two arrays based on the difference between the element and X
 	 * 
 	 */
 }

@@ -20,7 +20,7 @@ package org.example.dsa.aa_array.j_statistics;
 
 public class J02_findMedian_ofTwoSortedArraysOfDifferentSize {
 	/*
-	 * Add the sizes of two arrays:		n=a+b
+	 * Total size of two arrays = n = a+b		=>can be even/odd
 	 * 
 	 * If 'n' is even, median is the average of the elements at 'n/2' and 'n/2 + 1'
 	 * So start merge process of merge sort

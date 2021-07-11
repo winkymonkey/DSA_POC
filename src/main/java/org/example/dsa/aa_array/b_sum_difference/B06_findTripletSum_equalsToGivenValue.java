@@ -10,7 +10,7 @@ package org.example.dsa.aa_array.b_sum_difference;
  * *****************************************************************************
  */
 
-public class B04_findTripletSum_equalsToGivenValue {
+public class B06_findTripletSum_equalsToGivenValue {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---
@@ -27,15 +27,15 @@ public class B04_findTripletSum_equalsToGivenValue {
 	 * 
 	 * 
 	 * 
-	 * -----------------------------------
-	 * ---SORT & SLIDING DOOR TECHNIQUE---
-	 * -----------------------------------
+	 * ------------------------------
+	 * ---USE FIXED SLIDING WINDOW---
+	 * ------------------------------
 	 * Sort the array		{1, 3, 4, 6, 9, 12}
 	 * 
 	 * for (i=0 to n-2) {						//fix the first element A[i] of the possible triplet
 	 *    l = i+1;
 	 *    r = n-1;
-	 *    while (l < r) {						//apply sliding door technique from (i+1) to (end)
+	 *    while (l < r) {						//apply sliding window technique from (i+1) to (end)
 	 *       if (A[i]+A[l]+A[r] == SUM)
 	 *          return true
 	 *       else if (A[i]+A[l]+A[r] < SUM)

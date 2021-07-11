@@ -12,13 +12,15 @@ package org.example.dsa.aa_array.h_merge;
 
 public class H02_merge_kSortedArrays {
 	/*
-	 * It begins with merging arrays into groups of two.
-	 * After the first merge, we have k/2 arrays.
-	 * After the second merge,  we have k/4 arrays.
+	 * ----------------------
+	 * Merge arrays into groups of two (e.g. merge {ARR1,ARR2}, {ARR3,ARR4}, ......)
+	 * 
+	 * After the first merge, we have k/2 arrays
+	 * After the second merge,  we have k/4 arrays
 	 * ...
 	 * ...
-	 * Keep merging arrays in this way in group of twos.
-	 * Finally we have one array where all elements are sorted. 
+	 * Keep merging
+	 * Finally we have one array where all elements are sorted 
 	 * 
 	 */
 }

@@ -15,9 +15,9 @@ package org.example.dsa.aa_array.d_search;
 
 public class D07_findDuplicateElements_anyArray {
 	/*
-	 * -------------
-	 * ---SORTING---
-	 * -------------
+	 * -----------------
+	 * ---USE SORTING---
+	 * -----------------
 	 * A[] = {10, 5, 3, 4, 3, 5, 6}
 	 * TEMP[] = {3, 3, 4, 5, 5, 6, 10}	//sorted version 	//O(nLogn)
 	 * 
@@ -32,9 +32,9 @@ public class D07_findDuplicateElements_anyArray {
 	 * 
 	 * 
 	 * 
-	 * -------------
-	 * ---HASHING---
-	 * -------------
+	 * -----------------
+	 * ---USE HASHING---
+	 * -----------------
 	 * Traverse the given array from right to left
 	 * for each element, if it already exists in Hash, save its index in MIN
 	 * otherwise, add it in HASH

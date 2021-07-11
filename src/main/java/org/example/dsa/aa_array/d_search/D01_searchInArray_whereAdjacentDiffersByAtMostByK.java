@@ -2,7 +2,7 @@ package org.example.dsa.aa_array.d_search;
 
 /**
  * *****************************************************************************
- * Search in an array where adjacent elements differ by at most k
+ * Search a given element in an array where adjacent elements differ by at most K
  * *****************************************************************************
  * Input:  {4, 5, 6, 7, 6}					K=1		ELEM=6
  * Output: 2								//ELEM=6 occurs at index=2
@@ -15,9 +15,9 @@ package org.example.dsa.aa_array.d_search;
 
 public class D01_searchInArray_whereAdjacentDiffersByAtMostByK {
 	/*
-	 * ----------------------
-	 * ---OPTIMAL SOLUTION---
-	 * ----------------------
+	 * ------------------------
+	 * ---EFFICIENT SOLUTION---
+	 * ------------------------
 	 * Instead of doing linear search,
 	 * we can utilize the property which says the adjacent elements can differ at most by K
 	 *  

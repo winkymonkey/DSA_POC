@@ -21,9 +21,9 @@ package org.example.dsa.aa_array.j_statistics;
 
 public class J01_findMedian_ofTwoSortedArraysOfSameSize {
 	/*
-	 * Add the sizes of two arrays:		n+n=2n 		=>always even
+	 * Total size of two arrays = n+n = 2n 		=>always even
 	 * 
-	 * Hence median is the average of the elements at 'n' and 'n+1'
+	 * As total size is even, median is the average of the elements at 'n' and 'n+1'
 	 * So start merge process of merge sort
 	 *  	- while merging keep the count of processed elements
 	 *  	- as soon as the count reaches 'n', it means that we are at middle

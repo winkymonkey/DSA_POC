@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * *****************************************************************************
- * Find the minimum number of swaps required to sort an array containing random numbers
+ * Find the minimum number of swaps required to sort an array
  * *****************************************************************************
  * Input:  {2, 8, 5, 4}
  * Output: 1						// (swap 8 with 4)
@@ -23,7 +23,7 @@ import java.util.List;
  * *****************************************************************************
  */
 
-public class G11_minSwapsRequiredToSortAnArray {
+public class G06_minSwapsRequiredToSortAnArray {
 	/*
 	 * ---------------------------
 	 * ----- SIMPLE SOLUTION -----

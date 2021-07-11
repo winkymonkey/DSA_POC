@@ -2,7 +2,7 @@ package org.example.dsa.aa_array.b_sum_difference;
 
 /**
  * *****************************************************************************
- * Given an array A[], find a pair whose difference is equals to a given value
+ * Find a pair whose difference is equals to a given value
  * *****************************************************************************
  * Input:  {5, 20, 3, 2, 50, 80}		DIFF = 78
  * Output: Yes 							//2, 80
@@ -13,7 +13,7 @@ package org.example.dsa.aa_array.b_sum_difference;
  * *****************************************************************************
  */
 
-public class B06_findPairDifference_ofGivenValue {
+public class B05_findPairDifference_ofGivenValue {
 	/*
 	 * -----------------
 	 * ---USE HASHING---

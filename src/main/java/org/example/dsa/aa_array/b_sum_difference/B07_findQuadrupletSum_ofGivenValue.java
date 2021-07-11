@@ -2,7 +2,7 @@ package org.example.dsa.aa_array.b_sum_difference;
 
 /**
  * *****************************************************************************
- * Given an array A[], find a quadruplet whose sum is equals to a given value
+ * Given an array A[], find a quadruples whose sum is equals to a given value
  * *****************************************************************************
  * Input:  {10, 2, 3, 4, 5, 9, 7, 8}		SUM = 23
  * Output: YES								//3 5 7 8
@@ -10,7 +10,7 @@ package org.example.dsa.aa_array.b_sum_difference;
  * *****************************************************************************
  */
 
-public class B05_findQuadrupletSum_ofGivenValue {
+public class B07_findQuadrupletSum_ofGivenValue {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---
@@ -28,9 +28,9 @@ public class B05_findQuadrupletSum_ofGivenValue {
 	 * 
 	 * 
 	 * 
-	 * -----------------------------------
-	 * ---SORT & SLIDING DOOR TECHNIQUE---
-	 * -----------------------------------
+	 * ------------------------------
+	 * ---USE FIXED SLIDING WINDOW---
+	 * ------------------------------
 	 * Sort the array		{2, 3, 4, 5, 7, 8, 9, 10}
 	 * 
 	 * for (i=0 to n-3) {
@@ -54,9 +54,9 @@ public class B05_findQuadrupletSum_ofGivenValue {
 	 * 
 	 * 
 	 * 
-	 * ------------------------------------------------------
-	 * ---CREATE SUM ARRAY & SORT & SLIDING DOOR TECHNIQUE---
-	 * ------------------------------------------------------
+	 * -------------------------------------------------
+	 * ---CREATE SUM ARRAY & USE FIXED SLIDING WINDOW---
+	 * -------------------------------------------------
 	 * Create an auxiliary array AUX[] and store sum of all possible pairs in AUX[]
 	 *   If size of A[] is n, the size of AUX[] will be = (n-1)+(n-2)+(n-3)+...+1 = n*(n-1)/2
 	 * 
@@ -64,7 +64,7 @@ public class B05_findQuadrupletSum_ofGivenValue {
 	 * 
 	 * Now the problem reduces to find two elements in AUX[] with sum equal to X
 	 * 
-	 * We can now apply 'sliding door' technique
+	 * We can now apply 'sliding window' technique
 	 * 	 but while picking two elements from AUX[], then confirm that these two elements doesn't have an element of A[] in common
 	 *   E.G, if AUX[1]=A[1]+A[2] and AUX[2]=A[2]+A[4], then AUX[1] and AUX[2] don’t represent four distinct elements of A[] 
 	 * 

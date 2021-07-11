@@ -2,7 +2,7 @@ package org.example.dsa.aa_array.b_sum_difference;
 
 /**
  * *****************************************************************************
- * Given an array A[], find a pair whose sum equals to a given value
+ * Find a pair whose sum is equal to a given value
  * *****************************************************************************
  * Input:  {1, 4, 45, 6, 10, -8}		SUM = 16
  * Output: YES							//10+6
@@ -29,9 +29,9 @@ public class B01_findPairSum_equalsToGivenValue {
 	 * 
 	 * 
 	 * 
-	 * -----------------------------------
-	 * ---SORT & SLIDING DOOR TECHNIQUE---
-	 * -----------------------------------
+	 * ------------------------------
+	 * ---USE FIXED SLIDING WINDOW---
+	 * ------------------------------
 	 * Sort the array	{-8, 1, 4, 6, 10, 45}
 	 * 
 	 * l = 0

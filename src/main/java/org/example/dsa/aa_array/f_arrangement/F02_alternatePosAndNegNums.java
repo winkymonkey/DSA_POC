@@ -2,8 +2,7 @@ package org.example.dsa.aa_array.f_arrangement;
 
 /**
  * ******************************************************************************************
- * Rearrange positive and negative numbers alternatively in an array
- *   - NO additional data structure
+ * Rearrange (alternatively) positive & negative numbers in an array (maintain ordering & no extra space)
  *   - If there are more positive numbers, they appear at the end of the array.
  *   - If there are more negative numbers, they too appear in the end of the array.
  * ******************************************************************************************
@@ -35,7 +34,7 @@ public class F02_alternatePosAndNegNums {
 	 * NEG = 0; 		//1st negative number
 	 * POS = k+1;		//1st positive number (i.e. 'k' is pointing to the last negative number)
 	 * 
-	 * while (POS<n && NEG<POS && A[NEG]<0) {
+	 * while (POS<n and NEG<POS and A[NEG]<0) {
 	 *    //swap A[NEG] and A[POS]
 	 *    NEG +=2
 	 *    POS++

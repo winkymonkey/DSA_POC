@@ -12,6 +12,9 @@ package org.example.dsa.dd_linkedlist.b_DLL.b_misc;
 
 public class B02_findPairsWithGivenSum {
 	/*
-	 * Sort & sliding door
+	 * ---------------------------
+	 * ---SORT & SLIDING WINDOW---
+	 * ---------------------------
+	 * 
 	 */
 }

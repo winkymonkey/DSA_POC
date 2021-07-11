@@ -2,7 +2,7 @@ package org.example.dsa.aa_array.k_subarray;
 
 /**
  * ****************************************************************************************
- * Find the SubArray that has K'th Largest sum
+ * Find the subarray that has K'th Largest sum
  * ****************************************************************************************
  * Input:	{20, -5, -1}		k=3
  * Output:	14
@@ -13,7 +13,7 @@ package org.example.dsa.aa_array.k_subarray;
  * ****************************************************************************************
  */
 
-public class K06_subarrayHavingKthLargestSum {
+public class K06_kthLargestSumSubarray {
 	/*
 	 * use min-heap
 	 */

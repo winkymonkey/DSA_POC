@@ -24,9 +24,9 @@ package org.example.dsa.cc_number;
 
 public class A03_sumOfSquareNumbers {
 	/*
-	 * ----------------------------
-	 * ---SLIDING DOOR TECHNIQUE---
-	 * ----------------------------
+	 * ------------------------
+	 * ---USE SLIDING WINDOW---
+	 * ------------------------
 	 * public boolean judgeSquareSum(int c) {
 	 *    l = 0
 	 *    r = (int)Math.sqrt(c)			//when a^2 + b^2 = c then the b cannot be greater than (sqrt(c))

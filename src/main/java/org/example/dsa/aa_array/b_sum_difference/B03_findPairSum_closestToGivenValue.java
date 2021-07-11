@@ -2,7 +2,7 @@ package org.example.dsa.aa_array.b_sum_difference;
 
 /**
  * *****************************************************************************
- * Given an array A[], find a pair whose sum is closest to a given value
+ * Find a pair whose sum is closest to a given value
  * *****************************************************************************
  * Input:  {10, 22, 28, 29, 30, 40}		X = 54
  * Output: 22 and 30
@@ -15,9 +15,9 @@ package org.example.dsa.aa_array.b_sum_difference;
 
 public class B03_findPairSum_closestToGivenValue {
 	/*
-	 * -----------------------------------
-	 * ---SORT & SLIDING DOOR TECHNIQUE---
-	 * -----------------------------------
+	 * ------------------------------
+	 * ---USE FIXED SLIDING WINDOW---
+	 * ------------------------------
 	 * DIFF = Integer.Max
 	 * min_l = 0
 	 * min_r = n-1

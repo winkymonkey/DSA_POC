@@ -10,10 +10,10 @@ package org.example.dsa.aa_array.d_search;
  * *****************************************************************************
  * Input:  {1, 2, 8, 10, 10, 12, 19}
  * 
- * Output: For X = 0:		FLOOR--n/a	CEILING--1
- * Output: For X = 1:		FLOOR--1	CEILING--1
- * Output: For X = 5:		FLOOR--2	CEILING--8
- * Output: For X = 20:		FLOOR--19	CEILING--n/a
+ * Output: For X=0:		FLOOR--n/a	CEILING--1
+ * Output: For X=1:		FLOOR--1	CEILING--1
+ * Output: For X=5:		FLOOR--2	CEILING--8
+ * Output: For X=20:	FLOOR--19	CEILING--n/a
  * 
  * *****************************************************************************
  */

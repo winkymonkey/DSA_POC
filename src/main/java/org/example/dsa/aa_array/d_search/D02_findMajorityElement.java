@@ -13,7 +13,7 @@ package org.example.dsa.aa_array.d_search;
  * *****************************************************************************
  */
 
-public class D02A_findMajorityElement {
+public class D02_findMajorityElement {
 	/*
 	 * -----------------
 	 * ---USE HASHING---
@@ -81,27 +81,48 @@ public class D02A_findMajorityElement {
 	 *   Otherwise --> this step will return candidate for majority element.
 	 *  
 	 * -- Step2 --
-	 *   Check if the element obtained from the above step is majority element.
+	 *   Check if the element obtained from the above step is really a majority element or not.
 	 *   This step is necessary as there might be no majority element.
-	 * 
-	 * ---------
-	 * ALGORITHM
-	 * ---------
-	 * count = 1		//the count of majority element
-	 * majIndex = 0		//the majority index
-	 *  
-	 * Traverse the array from i=1 till end
-	 *   - If A[i] is same as A[majIndex] ---> then 'count++', else 'count--'
-	 *   - If the count reaches 0 then update 'majIndex = i' and 'count = 1'
-	 *   - Finally A[majIndex] is considered as a candidate
-	 *  
-	 * Again traverse the array from i=0 till end
-	 *   - find the occurrences of the candidate
-	 *   - If 'occurrence > length/2' then declare the candidate as majority element
-	 *   - Else declare that no majority element is found
 	 * 
 	 * TIME --- O(n)
 	 * SPACE -- O(1)
 	 * 
 	 */
+	
+	public static void main(String[] args) {
+		int A[] = { 3, 3, 4, 2, 4, 4, 2, 4, 4 };
+		//		    0  1  2  3  4  5  6  7  8
+		printMajority(A);
+	}
+	
+	
+	private static void printMajority(int A[]) {
+		int majIndex = 0;
+		int count = 1;
+		
+		for (int i=1; i<A.length; i++) {
+			if (A[i] == A[majIndex])
+				count++;
+			else
+				count--;
+			
+			if (count == 0) {
+				majIndex = i;
+				count = 1;
+			}
+		}
+		int candidate = A[majIndex];
+		
+		int countMajority = 0;
+		for (int i=0; i<A.length; i++) {
+			if (A[i] == candidate)
+				countMajority++;
+		}
+		
+		if (countMajority > A.length/2)
+			System.out.println(candidate);
+		else
+			System.out.println("No Majority Element");
+		
+	}
 }

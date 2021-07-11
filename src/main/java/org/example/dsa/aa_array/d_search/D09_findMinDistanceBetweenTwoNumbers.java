@@ -2,8 +2,7 @@ package org.example.dsa.aa_array.d_search;
 
 /**
  * *****************************************************************************
- * Find the minimum distance between two distinct numbers in an array
- * The array may contain duplicates
+ * Find the minimum distance between two distinct numbers in an array (may contain duplicates)
  * *****************************************************************************
  * Input:  {1, 2}		 							X=1, Y=2
  * Output: 1
@@ -25,11 +24,10 @@ package org.example.dsa.aa_array.d_search;
 
 public class D09_findMinDistanceBetweenTwoNumbers {
 	/*
-	 * So the basic approach is to check only consecutive pairs of X and Y.
-	 * For every X or Y, check the index of the previous occurrence of X or Y.
-	 * And if the previous element is not same as current element, then update the minimum distance.
+	 * For every X or Y, we can compare current index with the index of the next occurrence of Y or X.
+	 * And if the next element is not same as current element, then compute the distance and compare with the minimum distance till now.
 	 * 
-	 * But what if an X is preceded by another X and that is preceded by a Y, then how to get the minimum distance between pairs.
+	 * But what if an X is followed by another X and that is followed by a Y, then how to get the minimum distance between pairs.
 	 * After close observation, we can say that every X followed by a Y or vice versa can only be the closest pair (minimum distance) so ignore all other pairs.
 	 * 
 	 * -----------
@@ -38,10 +36,10 @@ public class D09_findMinDistanceBetweenTwoNumbers {
 	 * 
 	 * for (i=0 to n) {
 	 * 	  if (A[i] == X || A[i] == Y) {
-	 *       if (prev!=-1 && A[i]!=A[prev])				// current element is not same as previous
+	 *       if (prev != -1 && A[i] != A[prev])			// current element is not same as previous
 	 *          min_dist = MIN(min_dist, i-prev)
 	 *       
-	 *       prev = i									// advance prev
+	 *       prev = i									// point prev to current which is either X or Y
 	 * 	  }
 	 * }
 	 * 
@@ -49,6 +47,7 @@ public class D09_findMinDistanceBetweenTwoNumbers {
 	 *    print "not found"
 	 * else
 	 *    print min_dist
+	 * 
 	 * 
 	 * TIME --- O(n)
 	 * SPACE -- O(1)

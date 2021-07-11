@@ -1,9 +1,9 @@
 package org.example.dsa.aa_array.k_subarray;
 
 /**
- * *****************************************************************************
- * Find the SubArray (excluding a few elements) that has the largest sum
- * *****************************************************************************
+ * *************************************************************************************
+ * Find the subarray of A[] that has the largest sum ((excluding all elements of B[])
+ * *************************************************************************************
  * Input:  A[] = {1, 7, -10, 6, 2}
  * 		   B[] = {5, 6, 7, 1}
  * Output: 2						//{2}
@@ -12,17 +12,16 @@ package org.example.dsa.aa_array.k_subarray;
  * 		   B[] = {1, 8, 5}
  * Output: 7						//{3,4}
  * 
- * *****************************************************************************
+ * *************************************************************************************
  */
 
-public class K02_subarrayHavingLargestSum_excludingFew {
+public class K02_largestSumSubarray_excludingFew {
 	/*
 	 * ---------------------------------
 	 * ---MODIFIED KADANE'S ALGORITHM---
 	 * ---------------------------------
-	 * It's modified version of Kadane's algorithm.
 	 * In legacy approach -----> We reset sum=0; when sum<0
-	 * In this problem --------> We will reset sum=0; when sum<0 OR A[i] exists in B[]
+	 * In this problem --------> We reset sum=0; when sum<0 OR A[i] exists in B[]
 	 * 
 	 * 
 	 * ----------

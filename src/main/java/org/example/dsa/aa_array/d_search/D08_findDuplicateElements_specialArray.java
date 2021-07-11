@@ -29,7 +29,8 @@ public class D08_findDuplicateElements_specialArray {
 		System.out.println("The repeating elements are : ");
 		printRepeating(arr);
 	}
-
+	
+	
 	private static void printRepeating(int A[]) {
 		for (int i=0; i<A.length; i++) {
 			int val = Math.abs(A[i]);
