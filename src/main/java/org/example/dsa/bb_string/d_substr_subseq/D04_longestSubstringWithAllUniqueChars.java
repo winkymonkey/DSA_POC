@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * *********************************************************************************
- * Find the longest substring With K unique characters
+ * Find the longest substring With All unique characters
  * *********************************************************************************
  */
 
