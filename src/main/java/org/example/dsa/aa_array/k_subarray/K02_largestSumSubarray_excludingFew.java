@@ -2,7 +2,7 @@ package org.example.dsa.aa_array.k_subarray;
 
 /**
  * *************************************************************************************
- * Find the subarray of A[] that has the largest sum ((excluding all elements of B[])
+ * Find the subarray that has the largest sum (excluding all elements of B[])
  * *************************************************************************************
  * Input:  A[] = {1, 7, -10, 6, 2}
  * 		   B[] = {5, 6, 7, 1}

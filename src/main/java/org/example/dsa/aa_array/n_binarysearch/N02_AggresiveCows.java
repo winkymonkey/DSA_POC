@@ -1,4 +1,4 @@
-package org.example.dsa.aa_array.p_hd;
+package org.example.dsa.aa_array.n_binarysearch;
 
 /**
  * *****************************************************************************
@@ -18,7 +18,7 @@ package org.example.dsa.aa_array.p_hd;
  * *****************************************************************************
  */
 
-public class P04_AggresiveCows {
+public class N02_AggresiveCows {
 	/*
 	 * Our objective is to adjust the cows among stalls in such a way that cows stay at maximum possible distance.
 	 * and if we try to further increase the distance between cows, we will fall short of stalls.

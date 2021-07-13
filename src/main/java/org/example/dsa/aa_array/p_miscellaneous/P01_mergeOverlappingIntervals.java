@@ -1,4 +1,4 @@
-package org.example.dsa.aa_array.n_miscellaneous;
+package org.example.dsa.aa_array.p_miscellaneous;
 
 import java.util.Arrays;
 
@@ -15,7 +15,7 @@ import java.util.Arrays;
  * *****************************************************************************
  */
 
-public class N06_MergeOverlappingIntervals {
+public class P01_mergeOverlappingIntervals {
 	
 	public static void main(String args[]) {
 		Interval A[] = new Interval[4];

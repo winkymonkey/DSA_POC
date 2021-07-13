@@ -2,7 +2,7 @@ package org.example.dsa.aa_array.k_subarray;
 
 /**
  * *****************************************************************************
- * Find the subarray (non negative numbers) that has the given sum
+ * Find the subarray that has the given sum
  * *****************************************************************************
  * Input:	A[] = {1, 4, 20, 3, 10, 5}
  * 			SUM = 33
@@ -21,9 +21,9 @@ package org.example.dsa.aa_array.k_subarray;
 
 public class K04_givenSumSubarray {
 	/*
-	 * ------------------------------
-	 * ---USE FIXED SLIDING WINDOW---
-	 * ------------------------------
+	 * ---------------------------------
+	 * ---USE VARIABLE SLIDING WINDOW---
+	 * ---------------------------------
 	 * A[] = {1, 4, 20, 3, 10, 5}			SUM=33
 	 * 
 	 * step-1:

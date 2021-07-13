@@ -1,4 +1,4 @@
-package org.example.dsa.aa_array.n_miscellaneous;
+package org.example.dsa.aa_array.d_search;
 
 import java.util.Arrays;
 
@@ -12,10 +12,13 @@ import java.util.Arrays;
  * Input:	{1, 3, 5, 4, 2}
  * Output:	{1, 4, 2, 3, 5}
  * 
+ * Input:	{5, 3, 4, 9, 7, 6}
+ * Output:	{5, 3, 6, 4, 7, 9}
+ * 
  * *****************************************************************************
  */
 
-public class N05_NextPermutation {
+public class D15_findNextPermutation {
 	/* 
 	 * ------------------------
 	 * Any dictionary word always look like this where from right hand side there is an increasing sequence.
@@ -32,28 +35,32 @@ public class N05_NextPermutation {
 	 * 1
 	 * 
 	 * Here the `increasing sequence from right` is {3}
+	 * 
+	 * 
+	 * 
+	 * 
 	 * ------------------------
-	 * So our objectives are:
-	 *    1. Starting from the right side, find out where the 'increasing sequence` breaks. Let us call this element as breakpoint.
-	 *       In the array {1, 3, 5, 4, 2} --- the breakpoint is {3}
-	 *       So, if we can replace this element with some other element in the array, then it's done
-	 *       But which element should it be replaced with?
-	 *    
-	 *    2. For that, we should look at the `increasing sequence from right` and find the immediate higher element as the `nextGreater`
-	 *    
-	 *    3. So, we should swap these elements
-	 *    
-	 *    4. But did we reach our goal? NOT YET!! 
-	 *       Because now the array is obviously greater than the given array, but it is not the NEXT GREATER.
-	 *    
-	 *    5. Hence, to get the NEXT GREATER sequence, we should take the right side of the `breakpoint` and take the lowest ranking sequence (of dictionary)
-	 *       For that, reversing the above sequence can do the job.
+	 * 1. Traverse the array from right side, keep traversing till we find a digit "breakpoint" which is smaller than its right side digit
+	 *    For {5, 3, 4, 9, 7, 6}
+	 *    We stop at 4 as it is smaller than 9. So breakpoint=2 (2nd index)
+	 * 
+	 * 2. Now search the right side of "breakpoint" and look for the NGE of the "breakpoint"
+	 *    So the right side of "breakpoint" contains 976, where the NGE is 6
+	 * 
+	 * 3. swap above two digits
+	 *    So we swap 4 and 6
+	 *    So it becomes {5, 3, 6, 9, 7, 4}
+	 * 
+	 * 4. Now sort all right side digits of "breakpoint's" index
+	 *    So it becomes {5, 3, 6, 4, 7, 9}
+	 * 
+	 * This is the desired number
 	 * 
 	 * ------------------------
 	 */
 
 	public static void main(String args[]) {
-		int A[] = {1, 3, 5, 4, 2};
+		int A[] = {5, 3, 4, 9, 7, 6};
 		boolean isPossible = findNextPermutation(A);
 		
 		if (isPossible)
@@ -87,7 +94,7 @@ public class N05_NextPermutation {
 			}
 		}
 		
-		A = swap(A, nextGreater, breakpoint);			// swap the nextGreater and the breakpoint
+		A = swap(A, nextGreater, breakpoint);			// swap the NGE and the breakpoint
 		A = reverse(A, breakpoint+1, A.length-1);		// Reverse entire array after the breakpoint element
 		return true;
 	}

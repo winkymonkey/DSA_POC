@@ -1,10 +1,10 @@
-package org.example.dsa.aa_array.n_miscellaneous;
+package org.example.dsa.aa_array.d_search;
 
 import java.util.Stack;
 
 /**
  * *****************************************************************************
- * Find maximum absolute difference between left smaller and right smaller elements of every element in the array of integers.
+ * Find maximum absolute difference between LSE & RSE of every element in the array
  * If there is no smaller element on right/left side of any element then we take 0 as the smaller element.
  * *****************************************************************************
  * Input:	{2, 1, 8}
@@ -18,7 +18,7 @@ import java.util.Stack;
  * *****************************************************************************
  */
 
-public class N03_maxDiffBetweenLeftAndRightSmaller {
+public class D13_maxDiffBetweenLSEandRSE {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---
@@ -35,9 +35,9 @@ public class N03_maxDiffBetweenLeftAndRightSmaller {
 	 * ------------------------
 	 * ---EFFICIENT APPROACH---
 	 * ------------------------
-	 * Find the NSE of all elements in regular way & keep tracking of such smaller elements in an array LSE[]
+	 * Find the NSE of all elements in regular way & store those in an array LSE[]
 	 * Reverse the input array
-	 * Find the NSE of all elements in regular way & keep tracking of such smaller elements in an array RSE[]
+	 * Find the NSE of all elements in regular way & store those in an array RSE[]
 	 * Now traverse both LSE[] and RSE[].. compare each elements and keep tracking of the max
 	 * 
 	 * 
@@ -58,7 +58,7 @@ public class N03_maxDiffBetweenLeftAndRightSmaller {
 	}
 	
 	
-	private static void findNSE(int A[], int SE[]) {
+	private static void findNSE(int A[], int output[]) {
 		Stack<Integer> stack = new Stack<>();
 		int i=0;
 		stack.push(A[i]);
@@ -73,9 +73,9 @@ public class N03_maxDiffBetweenLeftAndRightSmaller {
 					stack.pop();
 				}
 				if (!stack.empty())
-					SE[i] = stack.peek();
+					output[i] = stack.peek();
 				else
-					SE[i] = 0;
+					output[i] = 0;
 				
 				stack.push(A[i]);
 			}

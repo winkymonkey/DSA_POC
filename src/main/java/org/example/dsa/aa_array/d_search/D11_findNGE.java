@@ -1,10 +1,10 @@
-package org.example.dsa.aa_array.n_miscellaneous;
+package org.example.dsa.aa_array.d_search;
 
 import java.util.Stack;
 
 /**
  * *****************************************************************************
- * Find Next Smaller Element (NSE) of each element in array
+ * Find Next Greater Element (NGE) of each element in array
  * Elements for which no greater element exist, consider the next greater element as -1.
  * *****************************************************************************
  * Input:	{4, 5, 2, 25}
@@ -19,13 +19,13 @@ import java.util.Stack;
  * *****************************************************************************
  */
 
-public class N02_nextSmallerElement {
+public class D11_findNGE {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---
 	 * --------------------
 	 * Traverse the array
-	 * for each element, traverse the entire array to find out the NSE and store it in another array
+	 * for each element, traverse the entire array to find out the NGE and store it in another array
 	 * 
 	 * TIME --- O(n^2)
 	 * SPACE -- O(1)
@@ -35,19 +35,19 @@ public class N02_nextSmallerElement {
 	 * ------------------------
 	 * ---EFFICIENT APPROACH---
 	 * ------------------------
+	 * TIP:
+	 * NEVER STORE A HEAVY ELEMENT OVER A SMALL ELEMENT
+	 * 
 	 * Push the first element to stack
-	 * Traverse the array. For each elements in the array:
-	 * 		- If CURRENT <= stack-top:
-	 * 			- keep popping from stack till the CURRENT is less than or equal to the stack-top (or stack is empty)
-	 * 			- each popped element, the next greater element is CURRENT
+	 * For each elements in the array:
 	 * 		- If CURRENT > stack-top:
+	 * 			- keep popping from stack until the CURRENT is less than or equal to the stack-top (or stack is empty)
+	 * 			- each popped element, the next greater element is CURRENT
+	 * 		- If CURRENT <= stack-top:
 	 * 			- push CURRENT in stack
 	 * 
 	 * Once the array is empty, if there are elements left in the stack, then for all of those elements the next greater element is -1
 	 * 
-	 * 
-	 * TIP:
-	 * never store small element over a heavy element :D
 	 * 
 	 * TIME --- O(n)
 	 * SPACE -- O(1)
@@ -55,23 +55,23 @@ public class N02_nextSmallerElement {
 	 */
 	
 	public static void main(String[] args) {
-		int A[] = {11, 13, 21, 3};
-		findNextSmallerElement(A);
+		int arr[] = {11, 13, 21, 3};
+		findNextGreaterElement(arr);
 	}
 	
 	
-	private static void findNextSmallerElement(int A[]) {
+	private static void findNextGreaterElement(int A[]) {
 		Stack<Integer> stack = new Stack<>();
 		int i=0;
 		stack.push(A[i]);
 		
 		for (i=1; i<A.length; i++) {
-			if (stack.isEmpty() || stack.peek() < A[i]) {
+			if (stack.isEmpty() || stack.peek() > A[i]) {
 				stack.push(A[i]);
 			}
 			else {
-				while (!stack.isEmpty() && stack.peek() > A[i]) {
-					System.out.println("NSE of "+stack.peek()+" is "+A[i]);
+				while (!stack.isEmpty() && stack.peek() < A[i]) {
+					System.out.println("NGE of "+stack.peek()+" is "+A[i]);
 					stack.pop();
 				}
 				stack.push(A[i]);
@@ -79,7 +79,7 @@ public class N02_nextSmallerElement {
 		}
 		
 		while (!stack.isEmpty()) {
-			System.out.println("NSE of "+stack.peek()+" is -1");
+			System.out.println("NGE of "+stack.peek()+" is -1");
 			stack.pop();
 		}
 	}

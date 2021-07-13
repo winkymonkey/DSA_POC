@@ -2,7 +2,7 @@ package org.example.dsa.aa_array.k_subarray;
 
 /**
  * *****************************************************************************
- * Find the subarray of size `k` that has the least average
+ * Find the subarray that has the least average of size `k`
  * *****************************************************************************
  * Input:	A[] = {3, 7, 90, 20, 10, 50, 40}
  * 			k = 3

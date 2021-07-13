@@ -1,4 +1,4 @@
-package org.example.dsa.aa_array.p_hd;
+package org.example.dsa.aa_array.n_binarysearch;
 
 /**
  * *****************************************************************************
@@ -21,7 +21,7 @@ package org.example.dsa.aa_array.p_hd;
  * *****************************************************************************
  */
 
-public class P06_RotiParataProblem {
+public class N04_RotiParataProblem {
 	/*
 	 * Ranking = {1, 2, 3, 4}
 	 * 

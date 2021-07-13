@@ -1,4 +1,4 @@
-package org.example.dsa.aa_array.p_hd;
+package org.example.dsa.aa_array.n_binarysearch;
 
 import java.util.Arrays;
 
@@ -34,7 +34,7 @@ import java.util.Arrays;
  * *****************************************************************************
  */
 
-public class P03_BookAllocationProblem {
+public class N01_BookAllocationProblem {
 	/*
 	 * Theoretically, we can allocate 0 books to student1 and ALL books to student2.
 	 * As each student has to be allocated atleast with one book ---> hence we cannot allocate 0 books to student1

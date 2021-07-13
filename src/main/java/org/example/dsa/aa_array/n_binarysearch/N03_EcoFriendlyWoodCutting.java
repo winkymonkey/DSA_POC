@@ -1,4 +1,4 @@
-package org.example.dsa.aa_array.p_hd;
+package org.example.dsa.aa_array.n_binarysearch;
 
 /**
  * *****************************************************************************
@@ -26,7 +26,7 @@ package org.example.dsa.aa_array.p_hd;
  * *****************************************************************************
  */
 
-public class P05_EcoFriendlyWoodCutting {
+public class N03_EcoFriendlyWoodCutting {
 	/*
 	 * Our objective is to keep the saw blade as high as possible so that the the required wood is collected.
 	 * and if we increase the saw blade height further, we will not be able to collect the desired quantity of wood.
