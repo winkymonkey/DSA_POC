@@ -6,7 +6,7 @@ import org.example.dsa.ff_binarytree.Node;
  * *****************************************************************************
  * Find largest subtree sum in a Binary Tree
  * *****************************************************************************
- * Given a binary tree, task is to find subtree with maximum sum in tree.
+ * Given a Binary Tree, task is to find subtree with maximum sum in tree.
  * *****************************************************************************
  * Input :       
  *      1

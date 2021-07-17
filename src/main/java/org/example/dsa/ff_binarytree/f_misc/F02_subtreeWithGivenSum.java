@@ -6,7 +6,7 @@ import org.example.dsa.ff_binarytree.Node;
  * *****************************************************************************
  * Subtree with given sum in a Binary Tree
  * *****************************************************************************
- * You are given a binary tree and a given sum.
+ * You are given a Binary Tree and a given sum.
  * The task is to check if there exist a subtree whose sum of all nodes is equal to the given sum.
  * *****************************************************************************
  *      1

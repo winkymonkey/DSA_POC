@@ -29,29 +29,29 @@ public class A01A_buildMaxHeap {
 	
 	private static void buildMaxHeap(int A[]) {
 		int n = A.length;
-		for (int i = (n/2)-1; i >= 0; i--) { 			// non-leaves are from 0 to Floor(n/2)-1
-			max_heapify(A, i); 							// leaves are from Floor(n/2) to n-1
+		for (int i = (n/2)-1; i>=0; i--) { 			// non-leaves are from 0 to Floor(n/2)-1   and   leaves are from Floor(n/2) to n-1
+			max_heapify(A, n, i);
 		}
 	}
 	
 	
-	private static void max_heapify(int A[], int i) {
+	private static void max_heapify(int A[], int n, int i) {
 		int largest = i;
 		int l = 2*i + 1;
 		int r = 2*i + 2;
 		
-		if (l < A.length && A[l] > A[i])		// if `l` exists and `A[l]` > `current root`
+		if (l < n && A[l] > A[i])		// if left child exists and left child > current root
 			largest = l;
 		
-		if (r < A.length && A[r] > A[largest])	// if `r` exists and `A[r]` > `largest element`
+		if (r < n && A[r] > A[largest])	// if right child exists and right child > largest element
 			largest = r;
 		
-		if (largest != i) {						// if `largest` and `current root` are not same, swap `A[largest]` and `A[i]` to send `A[i]` to `largest` index
+		if (largest != i) {				// if `largest` != `current root`, swap `largest` & `current root` to send `current root` to `largest` index
 			int temp = A[i];
 			A[i] = A[largest];
 			A[largest] = temp;
 
-			max_heapify(A, largest);
+			max_heapify(A, n, largest);
 		}
 	}
 	

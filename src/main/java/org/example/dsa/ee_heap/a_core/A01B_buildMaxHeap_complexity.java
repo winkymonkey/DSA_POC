@@ -17,7 +17,7 @@ public class A01B_buildMaxHeap_complexity {
 	 * 
 	 * Hence the total Work Done at height 'h' 
 	 * = (time taken by max_heapify at height 'h') * (number of nodes at height 'h')
-	 *                   n
+	 *                    n
 	 * = O(h) * CEIL(-----------)
 	 *                 2^(h+1)
 	 * 

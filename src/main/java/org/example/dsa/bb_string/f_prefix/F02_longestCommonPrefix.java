@@ -4,7 +4,7 @@ package org.example.dsa.bb_string.f_prefix;
  * ******************************************************************************
  * Find the Longest Common Prefix from a group of words 
  * ******************************************************************************
- * Input:	INDIA	IND		INDONESIA	INDIANA
+ * Input:	INDIA	INDIANA		IND		INDONESIA
  * Output:	IND
  * 
  * ******************************************************************************

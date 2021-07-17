@@ -5,8 +5,8 @@ import org.example.dsa.ff_binarytree.Node;
 /**
  * ************************************************************************************
  * Symmetric Tree (Mirror Image of itself)
+ * Given a Binary Tree, check whether it is a mirror of itself.
  * ************************************************************************************
- * Given a binary tree, check whether it is a mirror of itself.
  * 
  *      1
  *    /   \

@@ -24,8 +24,8 @@ public class D02_permutationOfString {
 		}
 		
 		for (int i=0; i<str.length(); i++) {
-	        String leftPart = str.substring(0, i);		//left part of i'th character
-	        String rightPart = str.substring(i+1);		//right part of i'th character
+	        String leftPart = str.substring(0, i);		//left part of i'th character (0 to i-1 index)
+	        String rightPart = str.substring(i+1);		//right part of i'th character (i+1 to end index)
 	        String rest = leftPart + rightPart;
 	        
 	        permute(rest, answer+str.charAt(i));

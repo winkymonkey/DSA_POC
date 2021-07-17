@@ -5,7 +5,7 @@ import org.example.dsa.ff_binarytree.TreeUtilA;
 
 /**
  * *****************************************************************************
- * Boundary Traversal of binary tree
+ * Boundary Traversal of Binary Tree
  * *****************************************************************************
  * Input:
  * 		  1

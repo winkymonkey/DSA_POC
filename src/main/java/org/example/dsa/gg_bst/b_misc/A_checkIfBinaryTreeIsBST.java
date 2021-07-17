@@ -22,7 +22,7 @@ public class A_checkIfBinaryTreeIsBST {
 	 * ---------------
 	 * Write a function that recursively checks whether the left & right subtrees are BST or not.
 	 * In each recursive call, we MUST pass the allowed MIN & MAX value that can occur in that subtree.
-	 * If any subtree violates the constraint, then we can conclude that the entire binary tree is not a BST.
+	 * If any subtree violates the constraint, then we can conclude that the entire Binary Tree is not a BST.
 	 * --------------- 
 	 */
 	

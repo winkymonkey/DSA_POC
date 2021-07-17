@@ -5,7 +5,7 @@ import org.example.dsa.ff_binarytree.TreeUtilA;
 
 /**
  * *****************************************************************************
- * Reverse alternate levels of a perfect binary tree
+ * Reverse alternate levels of a perfect Binary Tree
  * *****************************************************************************
  * Input:
  *            1

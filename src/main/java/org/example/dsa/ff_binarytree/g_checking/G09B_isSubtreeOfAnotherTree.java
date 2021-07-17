@@ -4,7 +4,7 @@ import org.example.dsa.ff_binarytree.Node;
 
 /**
  * *****************************************************************************
- * Check if a binary tree is subtree of another binary tree
+ * Check if a Binary Tree is subtree of another Binary Tree
  * *****************************************************************************
  * Tree1:    26
  *          /  \

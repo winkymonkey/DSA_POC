@@ -28,7 +28,7 @@ public class A04_heapSort {
 			max_heapify(A, n, i);
 		}
 		
-		for (int i=n-1; i>0; i--) {						// One by one extract an element from heap, then move current root to end
+		for (int i=n-1; i>0; i--) {						// One by one extract an element from heap, then move current node to root
 			int temp = A[0];
 			A[0] = A[i];
 			A[i] = temp;

@@ -4,7 +4,7 @@ package org.example.dsa.ff_binarytree.g_checking;
  * *****************************************************************************
  * Print cousins of a given node in a Binary Tree
  * *****************************************************************************
- * Given a binary tree and a node, print all cousins of given node.
+ * Given a Binary Tree and a node, print all cousins of given node.
  * Note that siblings should not be printed.
  * *****************************************************************************
  * Given node is 5

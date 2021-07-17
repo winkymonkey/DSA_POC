@@ -2,7 +2,7 @@ package org.example.dsa.ff_binarytree.g_checking;
 
 /**
  * *****************************************************************************
- * Check if a given Binary Tree is a perfect binary tree (all internal nodes have two children and all leaves are at same level)
+ * Check if a given Binary Tree is a Perfect Binary Tree (all internal nodes have two children and all leaves are at same level)
  * *****************************************************************************
  */
 

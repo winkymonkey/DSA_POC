@@ -32,7 +32,7 @@ public class D04_longestSubstringWithAllUniqueChars {
 				map.put(charKey, 1 );
 			
 			
-			if (map.size() < j-i+1) {										// map.size() = unique char count		j-i+1=window size
+			if (map.size() < j-i+1) {				// map.size() a.k.a unique char count < window size (=j-i+1), it means some duplicates exist in the window. So remove those.
 				while (map.size() < j-i+1) {
 					map.put( str.charAt(i), map.get(str.charAt(i))-1 );
 					if ( map.get(str.charAt(i)) == 0 ) {
@@ -42,11 +42,11 @@ public class D04_longestSubstringWithAllUniqueChars {
 				}
 				j++;
 			}
-			else if (map.size() == j-i+1) {
+			else if (map.size() == j-i+1) {			// map.size() a.k.a unique char count == window size (=j-i+1), so evaluate current window(=j-i+1) against "ans" & store the maximum
 				ans = Math.max(ans, j-i+1);
 				j++;
 			}
-			else if (map.size() > j-i+1) {
+			else if (map.size() > j-i+1) {			// map.size() a.k.a unique char count > window size (=j-i+1), it will never happen
 				j++;
 			}
 		}

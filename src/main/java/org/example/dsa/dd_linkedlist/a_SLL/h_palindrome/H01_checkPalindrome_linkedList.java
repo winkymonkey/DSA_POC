@@ -11,11 +11,12 @@ public class H01_checkPalindrome_linkedList {
 	 * -----------------
 	 * ---USING STACK---
 	 * -----------------
-	 * Traverse the list
-	 * push current node's data field into a stack
-	 * Now traverse the list again
-	 * if stack top's data field matches with current node's data, pop top from stack and proceed one node in list
-	 * otherwise break and print "not palindrome"
+	 * Traverse the list.
+	 * And keep pushing all nodes in a stack.
+	 * 
+	 * Traverse the list again.
+	 *  - if stack.top == currentNode.data --> pop from stack
+	 *  - else STOP IMMEDIATELY as it cannot be a palindrome
 	 * 
 	 * 
 	 * 

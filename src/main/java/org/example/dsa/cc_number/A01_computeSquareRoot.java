@@ -2,7 +2,7 @@ package org.example.dsa.cc_number;
 
 /**
  * *****************************************************************************
- * Compute the square root of a non-negative integer
+ * Compute the square root of a non-negative integer (truncate decimal digits)
  *    - the decimal digits should be truncated and only the integer part to be returned
  * *****************************************************************************
  * Input:  4

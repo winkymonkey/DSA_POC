@@ -2,7 +2,7 @@ package org.example.dsa.ff_binarytree.g_checking;
 
 /**
  * *****************************************************************************
- * Check if a binary tree is subtree of another binary tree
+ * Check if a Binary Tree is subtree of another Binary Tree
  * *****************************************************************************
  * Tree1:
  *     26

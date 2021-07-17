@@ -2,7 +2,7 @@ package org.example.dsa.ff_binarytree.b_DFS_misc;
 
 /**
  * *********************************************************************************************
- * Replace each node in binary tree with the sum of its InOrder predecessor and successor
+ * Replace each node in Binary Tree with the sum of its InOrder predecessor and successor
  * *********************************************************************************************
  * Input:
  *        1
