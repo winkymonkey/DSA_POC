@@ -6,7 +6,7 @@ package org.example.dsa.gg_bst.b_misc;
  * *******************************************************
  */
 
-public class C_mergeTwoBST {
+public class B03_mergeTwoBST {
 	/*
 	 * ------------------
 	 * Store inorder traversal of both the BSTs in two different arrays/linkedLists

@@ -32,7 +32,7 @@ import org.example.dsa.ff_binarytree.TreeUtilA;
  * ************************************************************************************************************
  */
 
-public class F05_lowestCommonAncestor {
+public class F05_findLCA {
 	/*
 	 * ------------------
 	 * Traverse the tree starting from the root.

@@ -1,4 +1,4 @@
-package org.example.dsa.gg_bst.b_misc;
+package org.example.dsa.gg_bst.c_find;
 
 import org.example.dsa.gg_bst.BSTutil;
 import org.example.dsa.gg_bst.Node;
@@ -22,7 +22,7 @@ import org.example.dsa.gg_bst.Node;
  * ********************************************************************************
  */
 
-public class D_largestBSTinBinaryTree {
+public class C04_findLargestBSTinBinaryTree {
 	/*
 	 * ---------------
 	 * We should traverse the tree in bottom-up fashion (recursively).

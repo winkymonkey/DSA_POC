@@ -17,7 +17,7 @@ import org.example.dsa.gg_bst.Node;
  * ************************************************************************
  */
 
-public class A_checkIfBinaryTreeIsBST {
+public class B01_checkIfBST {
 	/*
 	 * ---------------
 	 * Write a function that recursively checks whether the left & right subtrees are BST or not.

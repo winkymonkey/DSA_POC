@@ -9,10 +9,10 @@ import org.example.dsa.gg_bst.Node;
  * *********************************************************************************
  */
 
-public class B_insertInBST {
+public class A02_insertInBST {
 	/*
 	 * ------------------
-	 * A new element is always inserted at the leaf.
+	 * A new element is always inserted at the leaf, but we need to find that leaf.
 	 * Start searching from the root.
 	 * if the new element is smaller than current node, then recursively search in left subtree until we hit a leaf
 	 * if the new element is greater than current node, then recursively search in right subtree until we hit a leaf

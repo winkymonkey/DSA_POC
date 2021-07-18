@@ -9,7 +9,7 @@ import org.example.dsa.gg_bst.Node;
  * *********************************************************************************
  */
 
-public class A_searchInBST {
+public class A01_searchInBST {
 	/*
 	 * ------------------
 	 * Start searching from the root.
