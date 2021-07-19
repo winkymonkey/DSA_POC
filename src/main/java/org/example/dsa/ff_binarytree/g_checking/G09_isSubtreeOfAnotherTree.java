@@ -24,7 +24,32 @@ import org.example.dsa.ff_binarytree.Node;
  * *****************************************************************************
  */
 
-public class G09B_isSubtreeOfAnotherTree {
+public class G09_isSubtreeOfAnotherTree {
+	/*
+	 * --------------------
+	 * ---NAIVE APPROACH---
+	 * --------------------
+	 * Tree1: 
+	 * 		InOrder:  IN1[]  = 4 30 10 6 26 3 3
+	 * 		PreOrder: PRE1[] = 26 10 4 30 6 3 3
+	 * 
+	 * Tree2:
+	 * 		InOrder:  IN2[]  = 4 30 10 6
+	 * 		PreOrder: PRE2[] = 10 4 30 6
+	 * 
+	 * If IN2[] is subarray of IN1[] and PRE2[] is subarray of PRE1[]
+	 * then Tree2 is a subtree of Tree1
+	 * 
+	 * 
+	 * 
+	 * ------------------------
+	 * ---EFFICIENT APPROACH---
+	 * ------------------------
+	 * If "root1" & "root2" are identical, then both the trees are identical.
+	 * Otherwise compare "root2" with "root1.left" and "root1.right" to decide whether they are identical or not.
+	 * While checking for identity, both the subtrees must be equal by each nodes.
+	 * 
+	 */
 
 	public static void main(String args[]) {
 		Node root1 = new Node(26);

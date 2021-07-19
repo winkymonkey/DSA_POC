@@ -18,7 +18,7 @@ package org.example.dsa.ff_binarytree.g_checking;
  * *****************************************************************************
  */
 
-public class G01_isChildrenSumPropertyMaintained {
+public class G01_hasChildrenSumProperty {
 	/*
 	 * ------------------
 	 * Traverse the given Binary Tree.
