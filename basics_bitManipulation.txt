@@ -1,0 +1,37 @@
+***************************************************************************************************************
+Number of bits in Decimal Number ------ Floor(Logn)+1	= (int)(Math.log(n) / Math.log(2)) + 1
+
+
+
+
+***************************************************************************************************************
+
+--------------------------------------------------------------------------------
+Flip rightmost 0 		(n | (n+1))
+Flip rightmost 1 		(n & (n-1))
+Flip rightmost bit 		(n ^ 1)
+Extract rightmost bit 	(n & 1)
+Set k'th bit			(n | (1<<k))
+
+--------------------------------------------------------------------------------
+Plus 1 					Toggle all bits after rightmost 0 (inclusive)
+Minus 1					Toggle all bits after rightmost 1 (inclusive)
+Multiply by 2			(n << 1)
+Divide by 2				(n >> 1)
+
+--------------------------------------------------------------------------------
+Check If Even number		(n & 1) == 0
+Check If Odd number			(n & 1) == 1
+Check If All Bits Set		(n & (n+1)) == 0
+
+Check If Positive number	(n >> 31)==(0)  and (-n >> 31)==(-1)
+Check If Negative number	(n >> 31)==(-1) and (-n >> 31)==(0)
+Check If Zero number		(n >> 31)==(0)  and (-n >> 31)==(0)
+
+
+
+
+***************************************************************************************************************
+	TODO
+https://www.geeksforgeeks.org/xor-encryption-shifting-plaintext/
+Minimum digits to remove to make a number Perfect Square
