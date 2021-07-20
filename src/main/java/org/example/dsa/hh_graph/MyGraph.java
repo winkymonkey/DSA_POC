@@ -1,28 +1,28 @@
 package org.example.dsa.hh_graph;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
+@SuppressWarnings("unchecked")
 public class MyGraph {
-	public List<List<Integer>> adjList;
+	
+	public ArrayList<Integer> adj[];
 	
 	public MyGraph(int vertices) {
-		adjList = new ArrayList<>(vertices);
+		adj = new ArrayList[vertices];
 		for (int i=0; i<vertices; i++) {
-			adjList.add(new ArrayList<Integer>());
+			adj[i] = new ArrayList<>();
 		}
 	}
 	
 	public void addEdge(int u, int v) {
-		adjList.get(u).add(v);
-		adjList.get(v).add(u);
+		adj[u].add(v);
 	}
 	
 	public void printGraph() {
-		for (int i=0; i<adjList.size(); i++) {
+		for (int i=0; i<adj.length; i++) {
 			System.out.print(i+"--->");
-			adjList.get(i).forEach(elem -> System.out.print(elem+"->") );
+			adj[i].forEach(elem -> System.out.print(elem+"->") );
 			System.out.println();
 		}
 	}
