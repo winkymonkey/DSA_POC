@@ -1,4 +1,4 @@
-package org.example.dsa.zz1_stack.z_misc;
+package org.example.dsa.zz1_stack.e_misc;
 
 /**
  * ********************************************************************************
@@ -15,7 +15,7 @@ package org.example.dsa.zz1_stack.z_misc;
  * ********************************************************************************
  */
 
-public class Z01_overlappingIntervals {
+public class E01_overlappingIntervals {
 	/*
 	 * class Interval implements Comparable<Interval> {
 	 *    int startTime;

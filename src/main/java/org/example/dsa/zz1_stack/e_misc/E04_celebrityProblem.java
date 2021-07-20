@@ -1,4 +1,4 @@
-package org.example.dsa.zz1_stack.z_misc;
+package org.example.dsa.zz1_stack.e_misc;
 
 /**
  * *****************************************************************************
@@ -15,7 +15,7 @@ package org.example.dsa.zz1_stack.z_misc;
  * *****************************************************************************
  */
 
-public class Z05_celebrityProblem {
+public class E04_celebrityProblem {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---

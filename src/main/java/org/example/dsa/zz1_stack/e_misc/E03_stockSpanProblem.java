@@ -1,4 +1,4 @@
-package org.example.dsa.zz1_stack.z_misc;
+package org.example.dsa.zz1_stack.e_misc;
 
 import java.util.Arrays;
 import java.util.Stack;
@@ -28,7 +28,7 @@ import java.util.Stack;
  * *****************************************************************************
  */
 
-public class Z03_stockSpanProblem {
+public class E03_stockSpanProblem {
 	/*
 	 * Maintain the sequence of indexes in Stack where "Prices" are in decreasing order.
 	 * Stack will store indexes of most recent decreasing sequence
