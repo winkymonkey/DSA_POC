@@ -89,7 +89,7 @@ public class B01_searchInMaze {
 	
 	
 	private static boolean isValidMove(int row, int col, int A[][], boolean visited[][]) {
-		if (row == -1 || row == A.length || col == -1 || col == A.length || visited[row][col] || A[row][col] == 0)	// 0 means BLOCKER
+		if (row == -1 || row == A.length || col == -1 || col == A[0].length || visited[row][col] || A[row][col] == 0)	// 0 means BLOCKER
 			return false;
 		else
 			return true;
