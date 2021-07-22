@@ -42,9 +42,9 @@ public class A01_undirected_DFS {
 		visited[current] = true;
 		System.out.print(current + " ");
 		
-		for (int node : adj[current]) {
-			if (!visited[node]) {				// if current node is not visited earlier
-				printDFS(node, visited);
+		for (int adjNode : adj[current]) {
+			if (!visited[adjNode]) {				// if current node is not visited earlier
+				printDFS(adjNode, visited);
 			}
 		}
 	}

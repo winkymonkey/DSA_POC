@@ -50,10 +50,10 @@ public class A02_undirected_BFS {
 			int polled = queue.poll();
 			System.out.print(polled + " ");
 
-			for (int node : adj[polled]) {
-				if (!visited[node]) {
-					visited[node] = true;
-					queue.add(node);
+			for (int adjNode : adj[polled]) {
+				if (!visited[adjNode]) {
+					visited[adjNode] = true;
+					queue.add(adjNode);
 				}
 			}
 		}
