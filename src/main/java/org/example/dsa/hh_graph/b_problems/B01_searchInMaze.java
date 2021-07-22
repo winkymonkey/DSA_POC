@@ -40,12 +40,12 @@ public class B01_searchInMaze {
 					  { 0, 0, 0, 0, 1 } };
 		boolean[][] visited = new boolean[A.length][A[0].length];
 
-		findPath(0, 0, A, visited);
+		findPathDFS(0, 0, A, visited);
 		possiblePaths.forEach(str -> System.out.print(str+" "));
 	}
 	
 	
-	private static void findPath(int row, int col, int A[][], boolean visited[][]) {
+	private static void findPathDFS(int row, int col, int A[][], boolean visited[][]) {
 		if (row == -1 || row == A.length || col == -1 || col == A.length || visited[row][col] || A[row][col] == 0)
 			return;
 		
@@ -58,25 +58,25 @@ public class B01_searchInMaze {
 		
 		if (isValidMove(row+1, col, A, visited)) {			// Check if the DOWN move is valid
 			path += 'D';
-			findPath(row+1, col, A, visited);
+			findPathDFS(row+1, col, A, visited);
 			path = path.substring(0, path.length()-1);
 		}
 
 		if (isValidMove(row, col-1, A, visited)) {			// Check if the LEFT move is valid
 			path += 'L';
-			findPath(row, col-1, A, visited);
+			findPathDFS(row, col-1, A, visited);
 			path = path.substring(0, path.length()-1);
 		}
 
 		if (isValidMove(row, col+1, A, visited)) {			// Check if the RIGHT move is valid
 			path += 'R';
-			findPath(row, col+1, A, visited);
+			findPathDFS(row, col+1, A, visited);
 			path = path.substring(0, path.length()-1);
 		}
 
 		if (isValidMove(row-1, col, A, visited)) {			// Check if the UP move is valid
 			path += 'U';
-			findPath(row-1, col, A, visited);
+			findPathDFS(row-1, col, A, visited);
 			path = path.substring(0, path.length()-1);
 		}
 		
