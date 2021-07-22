@@ -26,8 +26,8 @@ import java.util.concurrent.LinkedBlockingQueue;
  *    - - - - - - - -
  *    - - - K - - - -
  *    - - - - - - - -
- *    - - - - - - - -
- *    - - - - - - - -
+ *    - - - - * - - -
+ *    - - * - - - - -
  *    D - - - - - - -
  * 
  * Ans:
@@ -42,7 +42,8 @@ public class B02_minStepsToReachTargetByKnight {
 	 * Therefore we use BFS to solve this problem. 
 	 */
 	
-	private static final int size = 30;
+	private static final int xSize = 30;
+	private static final int ySize = 30;
 	
 	public static void main(String[] args) {
 		Cell knightPos = new Cell(1,1, -1);
@@ -59,7 +60,7 @@ public class B02_minStepsToReachTargetByKnight {
 		Queue<Cell> queue = new LinkedBlockingQueue<>();
 		queue.add(new Cell(knightPos.x, knightPos.y, 0));
 
-		boolean visited[][] = new boolean[size+1][size+1];
+		boolean visited[][] = new boolean[xSize+1][ySize+1];
 		visited[knightPos.x][knightPos.y] = true;				// visit starting position
 
 		while (!queue.isEmpty()) {
@@ -72,7 +73,7 @@ public class B02_minStepsToReachTargetByKnight {
 				int x = current.x + dx[i];
 				int y = current.y + dy[i];
 
-				if (x >= 1 && x <= size && y >= 1 && y <= size && !visited[x][y]) {
+				if (x >= 1 && x <= xSize && y >= 1 && y <= ySize && !visited[x][y]) {
 					visited[x][y] = true;
 					queue.add(new Cell(x, y, current.dist+1));
 				}
