@@ -8,27 +8,26 @@ import java.util.concurrent.LinkedBlockingQueue;
  * Minimum steps to reach target by a Knight
  * *************************************************************************************
  * A knight has below valid moves
- *    - - - - - - - -
- *    - - - - - - - -
- *    - - G - F - - -
- *    - H - - - E - -
- *    - - - K - - - -
- *    - A - - - D - -
- *    - - B - C - - -
- *    - - - - - - - -
+ *    - - - - - - -
+ *    - - G - F - -
+ *    - H - - - E -
+ *    - - - K - - -
+ *    - A - - - D -
+ *    - - B - C - -
+ *    - - - - - - -
  * And the positions are (starting from A) ---- {-2,-1},{-1,-2},{1,-2},{2,-1},{2,1},{1,2},{-1,2},{-2,1}
  * 
  * 
  * The Knight 'K' starts from (4,5) and it has to reach the destination 'D' (1,1)
  * 
- *    - - - - - - - -
- *    - - - - - - - -
- *    - - - - - - - -
- *    - - - K - - - -
- *    - - - - - - - -
- *    - - - - * - - -
- *    - - * - - - - -
- *    D - - - - - - -
+ *    - - - - - - - - -
+ *    - - - - - - - - -
+ *    - - - - - - - - -
+ *    - - - - K - - - -
+ *    - - - - - - - - -
+ *    - - - - - * - - -
+ *    - - - * - - - - -
+ *    - D - - - - - - -
  * 
  * Ans:
  * (4,5) -> (5,3) -> (3,2) -> (1,1)
@@ -46,8 +45,8 @@ public class B02_minStepsToReachTargetByKnight {
 	private static final int ySize = 30;
 	
 	public static void main(String[] args) {
-		Cell knightPos = new Cell(1,1, -1);
-		Cell targetPos = new Cell(30,30, -1);
+		Cell knightPos = new Cell(0, 0, -1);
+		Cell targetPos = new Cell(29, 29, -1);
 		System.out.println(minStepToReachTarget(knightPos, targetPos));
 	}
 	
@@ -60,7 +59,7 @@ public class B02_minStepsToReachTargetByKnight {
 		Queue<Cell> queue = new LinkedBlockingQueue<>();
 		queue.add(new Cell(knightPos.x, knightPos.y, 0));
 
-		boolean visited[][] = new boolean[xSize+1][ySize+1];
+		boolean visited[][] = new boolean[xSize][ySize];
 		visited[knightPos.x][knightPos.y] = true;				// visit starting position
 
 		while (!queue.isEmpty()) {
@@ -73,7 +72,7 @@ public class B02_minStepsToReachTargetByKnight {
 				int x = current.x + dx[i];
 				int y = current.y + dy[i];
 
-				if (x >= 1 && x <= xSize && y >= 1 && y <= ySize && !visited[x][y]) {
+				if (x >= 0 && x < xSize && y >= 0 && y < ySize && !visited[x][y]) {
 					visited[x][y] = true;
 					queue.add(new Cell(x, y, current.dist+1));
 				}
