@@ -42,11 +42,11 @@ public class A03_undirected_detectCycle_DFS {
 		visited[current] = true;
 		
 		for (int adjNode : adj[current]) {
-			if (!visited[adjNode]) {				// if current node is not visited earlier
+			if (!visited[adjNode]) {				// if the adjacent node is not visited earlier
 				if (isCyclic(adjNode, visited, current))
 					return true;
 			}
-			else if (adjNode != parent) {			// if current node's any adjacent node is parent node then that's fine... Else if the adjacent node is not parent node then it's cycle
+			else if (adjNode != parent) {			// if the adjacent node is already visited but it's not the parent node, then it's a cycle
 				return true;
 			}
 		}

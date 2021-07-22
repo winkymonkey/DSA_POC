@@ -52,12 +52,12 @@ public class A04_undirected_detectCycle_BFS {
 			int polled = queue.poll();
 
 			for (int adjNode : adj[polled]) {
-				if (!visited[adjNode]) {					// if current node is not visited earlier
+				if (!visited[adjNode]) {					// if the adjacent node is not visited earlier
 					visited[adjNode] = true;
 					queue.add(adjNode);
 					parent[adjNode] = polled;
 				}
-				else if (adjNode != parent[polled]) {
+				else if (adjNode != parent[polled]) {		// if the adjacent node is already visited but it's not the parent node, then it's a cycle
 					return true;
 				}
 			}

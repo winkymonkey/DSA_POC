@@ -43,7 +43,7 @@ public class A01_undirected_DFS {
 		System.out.print(current + " ");
 		
 		for (int adjNode : adj[current]) {
-			if (!visited[adjNode]) {				// if current node is not visited earlier
+			if (!visited[adjNode]) {				// if the adjacent node is not visited earlier
 				printDFS(adjNode, visited);
 			}
 		}
