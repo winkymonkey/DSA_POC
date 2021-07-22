@@ -30,68 +30,65 @@ public class B01_searchInMaze {
 	
 	private static Vector<String> possiblePaths = new Vector<>();
 	private static String path = "";
-	private static final int MAX = 5;
 	
 	
 	public static void main(String[] args) {
-		int arr[][] = { { 1, 0, 0, 0, 0 }, 
-						{ 1, 1, 1, 1, 1 }, 
-						{ 1, 1, 1, 0, 1 }, 
-						{ 0, 0, 0, 0, 1 }, 
-						{ 0, 0, 0, 0, 1 } };
-		int n = arr.length;
-		boolean[][] visited = new boolean[n][MAX];
+		int A[][] = { { 1, 0, 0, 0, 0 }, 
+					  { 1, 1, 1, 1, 1 }, 
+					  { 1, 1, 1, 0, 1 }, 
+					  { 0, 0, 0, 0, 1 }, 
+					  { 0, 0, 0, 0, 1 } };
+		boolean[][] visited = new boolean[A.length][A[0].length];
 
-		findPath(0, 0, arr, n, visited);
+		findPath(0, 0, A, visited);
 		possiblePaths.forEach(str -> System.out.print(str+" "));
 	}
 	
 	
-	private static void findPath(int row, int col, int arr[][], int n, boolean visited[][]) {
-		if (row == -1 || row == n || col == -1 || col == n || visited[row][col] || arr[row][col] == 0)
+	private static void findPath(int row, int col, int A[][], boolean visited[][]) {
+		if (row == -1 || row == A.length || col == -1 || col == A.length || visited[row][col] || A[row][col] == 0)
 			return;
 		
-		if (row == n-1 && col == n-1) {
+		if (row == A.length-1 && col == A.length-1) {
 			possiblePaths.add(path);
 			return;
 		}
 		
-		visited[row][col] = true;								// Mark the cell as visited
+		visited[row][col] = true;							// Mark the cell as visited
 		
-		if (isValidMove(row+1, col, arr, n, visited)) {			// Check if downward move is valid
+		if (isValidMove(row+1, col, A, visited)) {			// Check if the DOWN move is valid
 			path += 'D';
-			findPath(row+1, col, arr, n, visited);
+			findPath(row+1, col, A, visited);
 			path = path.substring(0, path.length()-1);
 		}
 
-		if (isValidMove(row, col-1, arr, n, visited)) {			// Check if the left move is valid
+		if (isValidMove(row, col-1, A, visited)) {			// Check if the LEFT move is valid
 			path += 'L';
-			findPath(row, col-1, arr, n, visited);
+			findPath(row, col-1, A, visited);
 			path = path.substring(0, path.length()-1);
 		}
 
-		if (isValidMove(row, col+1, arr, n, visited)) {			// Check if the right move is valid
+		if (isValidMove(row, col+1, A, visited)) {			// Check if the RIGHT move is valid
 			path += 'R';
-			findPath(row, col+1, arr, n, visited);
+			findPath(row, col+1, A, visited);
 			path = path.substring(0, path.length()-1);
 		}
 
-		if (isValidMove(row-1, col, arr, n, visited)) {			// Check if the upper move is valid
+		if (isValidMove(row-1, col, A, visited)) {			// Check if the UP move is valid
 			path += 'U';
-			findPath(row-1, col, arr, n, visited);
+			findPath(row-1, col, A, visited);
 			path = path.substring(0, path.length()-1);
 		}
 		
-		visited[row][col] = false;								// Mark the cell as unvisited for other possible paths
+		visited[row][col] = false;							// Mark the cell as unvisited for other possible paths. Otherwise you will get only 1 possible path as once a path is traversed, it cannot be traversed again
 	}
 	
 	
-	// It returns true if the move taken is valid else it will return false
-	private static boolean isValidMove(int row, int col, int arr[][], int n, boolean visited[][]) {
-		if (row == -1 || row == n || col == -1 || col == n || visited[row][col] || arr[row][col] == 0)
+	private static boolean isValidMove(int row, int col, int A[][], boolean visited[][]) {
+		if (row == -1 || row == A.length || col == -1 || col == A.length || visited[row][col] || A[row][col] == 0)	// 0 means BLOCKER
 			return false;
-		
-		return true;
+		else
+			return true;
 	}
 	
 }

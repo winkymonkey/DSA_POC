@@ -2,30 +2,34 @@ package org.example.dsa.hh_graph.a_core;
 
 import java.util.ArrayList;
 
-import org.example.dsa.hh_graph.MyGraph;
+import org.example.dsa.hh_graph.UndirectedGraph;
 
 /**
  * ***************************************************************************************
- * BFS for a Graph
+ * Undirected Graph: Print DFS
  * ***************************************************************************************
- * https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/
+ * 
+ *    1 -- 0 -- 3
+ *    |  /      |
+ *    | /       |
+ *    2         4
+ * 
  * ***************************************************************************************
  */
 
-public class A02_undirected_DFS {
+public class A01_undirected_DFS {
 	
-	private static final int vertices = 4;
+	private static final int vertices = 5;
 	private static ArrayList<Integer> adj[];
 	
 	
 	public static void main(String[] args) {
-		MyGraph graph = new MyGraph(vertices);
+		UndirectedGraph graph = new UndirectedGraph(vertices);
 		graph.addEdge(0, 1);
 		graph.addEdge(0, 2);
-		graph.addEdge(1, 2);
-		graph.addEdge(2, 0);
-		graph.addEdge(2, 3);
-		graph.addEdge(3, 3);
+		graph.addEdge(2, 1);
+		graph.addEdge(0, 3);
+		graph.addEdge(3, 4);
 		graph.printGraph();
 		adj = graph.adj;
 		
@@ -34,13 +38,14 @@ public class A02_undirected_DFS {
 	}
 	
 	
-	private static void printDFS(int start, boolean visited[]) {
-		visited[start] = true;
-		System.out.print(start + " ");
+	private static void printDFS(int current, boolean visited[]) {
+		visited[current] = true;
+		System.out.print(current + " ");
 		
-		for (int num : adj[start]) {
-			if (!visited[num])
-				printDFS(num, visited);
+		for (int node : adj[current]) {
+			if (!visited[node]) {				// if current node is not visited earlier
+				printDFS(node, visited);
+			}
 		}
 	}
 	
