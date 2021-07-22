@@ -36,7 +36,7 @@ public class A02_undirected_BFS {
 		adj = graph.adj;
 		
 		boolean visited[] = new boolean[vertices];
-		printBFS(2, visited);
+		printBFS(0, visited);
 	}
 	
 	

@@ -37,12 +37,12 @@ public class A04_undirected_detectCycle_BFS {
 		adj = graph.adj;
 		
 		boolean visited[] = new boolean[vertices];
-		System.out.println(isCyclic(2, visited));
+		int parent[] = new int[vertices];			Arrays.fill(parent, -1);		// stores parent of each node
+		System.out.println(isCyclic(2, visited, parent));
 	}
 	
 	
-	private static boolean isCyclic(int current, boolean visited[]) {
-		int parent[] = new int[vertices];			Arrays.fill(parent, -1);		// stores parent of each node
+	private static boolean isCyclic(int current, boolean visited[], int parent[]) {
 		Queue<Integer> queue = new LinkedBlockingQueue<>();
 
 		visited[current] = true;

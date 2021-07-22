@@ -46,7 +46,7 @@ public class A03_undirected_detectCycle_DFS {
 				if (isCyclic(adjNode, visited, current))
 					return true;
 			}
-			else if (adjNode != parent) {			// if currentNode's any adjacentNode is parentNode then that's fine... Else if the adjacentNode is not parentNode then it's cycle
+			else if (adjNode != parent) {			// if current node's any adjacent node is parent node then that's fine... Else if the adjacent node is not parent node then it's cycle
 				return true;
 			}
 		}

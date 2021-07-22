@@ -34,7 +34,7 @@ public class A01_undirected_DFS {
 		adj = graph.adj;
 		
 		boolean visited[] = new boolean[vertices];
-		printDFS(2, visited);
+		printDFS(0, visited);
 	}
 	
 	
