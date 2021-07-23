@@ -38,7 +38,7 @@ public class A04_undirected_detectCycle_BFS {
 		
 		boolean visited[] = new boolean[vertices];
 		int parent[] = new int[vertices];			Arrays.fill(parent, -1);		// stores parent of each node
-		System.out.println(isCyclic(2, visited, parent));
+		System.out.println(isCyclic(0, visited, parent));
 	}
 	
 	
