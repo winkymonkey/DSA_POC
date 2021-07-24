@@ -47,10 +47,10 @@ public class A02_undirected_BFS {
 		queue.add(current);
 
 		while (queue.size() != 0) {
-			int polled = queue.poll();
-			System.out.print(polled + " ");
+			current = queue.poll();
+			System.out.print(current + " ");
 
-			for (int adjNode : adj[polled]) {
+			for (int adjNode : adj[current]) {
 				if (!visited[adjNode]) {				// if the adjacent node is not visited earlier
 					visited[adjNode] = true;
 					queue.add(adjNode);
