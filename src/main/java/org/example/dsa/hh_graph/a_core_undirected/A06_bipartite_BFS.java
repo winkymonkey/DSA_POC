@@ -37,7 +37,7 @@ public class A06_bipartite_BFS {
 		adj = graph.adj;
 		
 		int color[] = new int[vertices];		Arrays.fill(color, -1);
-		bfs(0, color);
+		System.out.println(bfs(0, color));
 	}
 	
 	
@@ -49,7 +49,6 @@ public class A06_bipartite_BFS {
 
 		while (queue.size() != 0) {
 			current = queue.poll();
-			System.out.print(current + " ");
 
 			for (int adjNode : adj[current]) {
 				if (color[adjNode] == -1) {						// if the adjacent node is not colored earlier
