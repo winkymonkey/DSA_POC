@@ -52,8 +52,8 @@ public class A02_undirected_BFS {
 
 			for (int adjNode : adj[current]) {
 				if (!visited[adjNode]) {				// if the adjacent node is not visited earlier
-					visited[adjNode] = true;
 					queue.add(adjNode);
+					visited[adjNode] = true;
 				}
 			}
 		}
