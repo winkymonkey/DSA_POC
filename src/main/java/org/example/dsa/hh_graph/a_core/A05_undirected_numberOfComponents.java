@@ -17,7 +17,7 @@ import org.example.dsa.hh_graph.UndirectedGraph;
  * ***************************************************************************************
  */
 
-public class A05_numberOfComponents {
+public class A05_undirected_numberOfComponents {
 	
 	private static final int vertices = 5;
 	private static ArrayList<Integer> adj[];
