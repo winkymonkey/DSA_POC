@@ -44,9 +44,8 @@ public class A04_undirected_detectCycle_BFS {
 	
 	private static boolean isCyclic(int current, boolean visited[], int parent[]) {
 		Queue<Integer> queue = new LinkedBlockingQueue<>();
-
-		visited[current] = true;
 		queue.add(current);
+		visited[current] = true;
 
 		while (queue.size() != 0) {
 			current = queue.poll();

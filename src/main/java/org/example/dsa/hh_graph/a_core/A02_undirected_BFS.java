@@ -42,9 +42,8 @@ public class A02_undirected_BFS {
 	
 	private static void printBFS(int current, boolean visited[]) {
 		Queue<Integer> queue = new LinkedBlockingQueue<>();
-
-		visited[current] = true;
 		queue.add(current);
+		visited[current] = true;
 
 		while (queue.size() != 0) {
 			current = queue.poll();
