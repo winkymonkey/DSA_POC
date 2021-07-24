@@ -53,8 +53,8 @@ public class A06_bipartite_BFS {
 
 			for (int adjNode : adj[current]) {
 				if (color[adjNode] == -1) {						// if the adjacent node is not colored earlier
-					color[adjNode] = 1-color[current];
 					queue.add(adjNode);
+					color[adjNode] = 1-color[current];
 				}
 				else if (color[adjNode] == color[current]) {	// if the adjacent node is already colored but it's the same color as current, then it's not bipartite
 					return false;
