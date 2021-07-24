@@ -28,18 +28,19 @@ public class A05_bipartite_DFS {
 		adj = graph.adj;
 		
 		int color[] = new int[vertices];		Arrays.fill(color, -1);
-		printDFS(0, color);
+		dfs(0, color);
 	}
 	
 	
-	private static boolean printDFS(int current, int color[]) {
+	// check if bipartite using DFS
+	private static boolean dfs(int current, int color[]) {
 		if (color[current] == -1)
 			color[current] = 1;
 		
 		for (int adjNode : adj[current]) {
 			if (color[adjNode] == -1) {						// if the adjacent node is not visited earlier
 				color[adjNode] = 1-color[current];
-				if (!printDFS(adjNode, color)) {
+				if (!dfs(adjNode, color)) {
 					return false;
 				}
 			}

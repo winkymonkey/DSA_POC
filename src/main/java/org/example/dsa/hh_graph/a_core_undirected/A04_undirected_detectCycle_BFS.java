@@ -38,11 +38,12 @@ public class A04_undirected_detectCycle_BFS {
 		
 		boolean visited[] = new boolean[vertices];
 		int parent[] = new int[vertices];			Arrays.fill(parent, -1);		// stores parent of each node
-		System.out.println(isCyclic(0, visited, parent));
+		System.out.println(bfs(0, visited, parent));
 	}
 	
 	
-	private static boolean isCyclic(int current, boolean visited[], int parent[]) {
+	// detect cycle using BFS
+	private static boolean bfs(int current, boolean visited[], int parent[]) {
 		Queue<Integer> queue = new LinkedBlockingQueue<>();
 		queue.add(current);
 		visited[current] = true;

@@ -34,17 +34,18 @@ public class A01_undirected_DFS {
 		adj = graph.adj;
 		
 		boolean visited[] = new boolean[vertices];
-		printDFS(0, visited);
+		dfs(0, visited);
 	}
 	
 	
-	private static void printDFS(int current, boolean visited[]) {
+	// prints the DFS sequence
+	private static void dfs(int current, boolean visited[]) {
 		visited[current] = true;
 		System.out.print(current + " ");
 		
 		for (int adjNode : adj[current]) {
 			if (!visited[adjNode]) {				// if the adjacent node is not visited earlier
-				printDFS(adjNode, visited);
+				dfs(adjNode, visited);
 			}
 		}
 	}

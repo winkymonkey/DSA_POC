@@ -34,16 +34,17 @@ public class A03_undirected_detectCycle_DFS {
 		adj = graph.adj;
 		
 		boolean visited[] = new boolean[vertices];
-		System.out.println(isCyclic(0, visited, -1));
+		System.out.println(dfs(0, visited, -1));
 	}
 	
 	
-	private static boolean isCyclic(int current, boolean visited[], int parent) {
+	// detect cycle using DFS
+	private static boolean dfs(int current, boolean visited[], int parent) {
 		visited[current] = true;
 		
 		for (int adjNode : adj[current]) {
 			if (!visited[adjNode]) {				// if the adjacent node is not visited earlier
-				if (isCyclic(adjNode, visited, current))
+				if (dfs(adjNode, visited, current))
 					return true;
 			}
 			else if (adjNode != parent) {			// if the adjacent node is already visited but it's not the parent node, then it's a cycle

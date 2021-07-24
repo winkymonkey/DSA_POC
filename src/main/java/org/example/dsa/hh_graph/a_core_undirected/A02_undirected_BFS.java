@@ -36,11 +36,12 @@ public class A02_undirected_BFS {
 		adj = graph.adj;
 		
 		boolean visited[] = new boolean[vertices];
-		printBFS(0, visited);
+		bfs(0, visited);
 	}
 	
 	
-	private static void printBFS(int current, boolean visited[]) {
+	// prints the BFS sequence
+	private static void bfs(int current, boolean visited[]) {
 		Queue<Integer> queue = new LinkedBlockingQueue<>();
 		queue.add(current);
 		visited[current] = true;

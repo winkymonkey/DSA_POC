@@ -30,11 +30,12 @@ public class A06_bipartite_BFS {
 		adj = graph.adj;
 		
 		int color[] = new int[vertices];		Arrays.fill(color, -1);
-		printBFS(0, color);
+		bfs(0, color);
 	}
 	
 	
-	private static boolean printBFS(int current, int color[]) {
+	// check if bipartite using BFS
+	private static boolean bfs(int current, int color[]) {
 		Queue<Integer> queue = new LinkedBlockingQueue<>();
 		queue.add(current);
 		color[current] = 1;
