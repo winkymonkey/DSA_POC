@@ -11,7 +11,7 @@ import org.example.dsa.hh_graph.DirectedGraph;
  * ***************************************************************************************
  */
 
-public class B05_DAG_topologicalSort_DFS {
+public class B03_DAG_topologicalSort_DFS {
 	
 	private static final int vertices = 5;
 	private static ArrayList<Integer> adj[];
