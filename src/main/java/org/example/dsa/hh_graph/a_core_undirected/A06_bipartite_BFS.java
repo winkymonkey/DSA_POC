@@ -11,6 +11,13 @@ import org.example.dsa.hh_graph.UndirectedGraph;
  * ***************************************************************************************
  * Undirected Graph: bipartite graph using BFS (graph coloring)
  * ***************************************************************************************
+ * 
+ *    1 -- 0 -- 3		This graph has is NOT bipartite
+ *    |  /      |
+ *    | /       |
+ *    2         4
+ * 
+ * ***************************************************************************************
  */
 
 public class A06_bipartite_BFS {

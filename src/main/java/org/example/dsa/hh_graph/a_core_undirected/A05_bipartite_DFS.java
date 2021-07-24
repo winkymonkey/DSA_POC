@@ -9,6 +9,13 @@ import org.example.dsa.hh_graph.UndirectedGraph;
  * ***************************************************************************************
  * Undirected Graph: bipartite graph using DFS (graph coloring)
  * ***************************************************************************************
+ * 
+ *    1 -- 0 -- 3		This graph has is NOT bipartite
+ *    |  /      |
+ *    | /       |
+ *    2         4
+ * 
+ * ***************************************************************************************
  */
 
 public class A05_bipartite_DFS {
@@ -28,7 +35,7 @@ public class A05_bipartite_DFS {
 		adj = graph.adj;
 		
 		int color[] = new int[vertices];		Arrays.fill(color, -1);
-		dfs(0, color);
+		System.out.println(dfs(0, color));
 	}
 	
 	
