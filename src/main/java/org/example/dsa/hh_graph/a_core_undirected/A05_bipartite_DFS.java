@@ -51,7 +51,7 @@ public class A05_bipartite_DFS {
 					return false;
 				}
 			}
-			else if (color[adjNode] == color[current]) {	// if the adjacent node is already colored but it's the same color as current, then it's not bipartite
+			else if (color[adjNode] == color[current]) {	// if the adjacent node is already colored & it's the same color as current, then it's not bipartite
 				return false;
 			}
 		}
