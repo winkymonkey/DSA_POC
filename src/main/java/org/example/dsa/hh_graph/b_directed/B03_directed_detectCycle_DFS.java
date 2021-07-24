@@ -10,7 +10,7 @@ import org.example.dsa.hh_graph.DirectedGraph;
  * ***************************************************************************************
  */
 
-public class B01_directed_detectCycle_DFS {
+public class B03_directed_detectCycle_DFS {
 	
 	private static final int vertices = 4;
 	private static ArrayList<Integer> adj[];
