@@ -29,17 +29,18 @@ public class B03_directed_detectCycle_DFS {
 		
 		boolean visited[] = new boolean[vertices];
 		boolean dfsVisited[] = new boolean[vertices];			// to track if the node is visited in current dfs recursion call
-		System.out.println(isCyclic(0, visited, dfsVisited));
+		System.out.println(dfs(0, visited, dfsVisited));
 	}
 	
 	
-	private static boolean isCyclic(int current, boolean visited[], boolean dfsVisited[]) {
+	// detect cycle using DFS
+	private static boolean dfs(int current, boolean visited[], boolean dfsVisited[]) {
 		visited[current] = true;
 		dfsVisited[current] = true;
 		
 		for (int adjNode : adj[current]) {
 			if (!visited[adjNode]) {							// if the adjacent node is not visited earlier
-				if (isCyclic(adjNode, visited, dfsVisited))
+				if (dfs(adjNode, visited, dfsVisited))
 					return true;
 			}
 			else if (dfsVisited[adjNode]) {
