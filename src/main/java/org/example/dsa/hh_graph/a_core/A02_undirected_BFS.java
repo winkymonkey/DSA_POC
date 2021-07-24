@@ -21,7 +21,7 @@ import org.example.dsa.hh_graph.UndirectedGraph;
 
 public class A02_undirected_BFS {
 	
-	private static final int vertices = 4;
+	private static final int vertices = 5;
 	private static ArrayList<Integer> adj[];
 	
 	
