@@ -7,6 +7,11 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 import org.example.dsa.hh_graph.UndirectedGraph;
 
+/**
+ * ***************************************************************************************
+ * Undirected Graph: bipartite graph using BFS (graph coloring)
+ * ***************************************************************************************
+ */
 
 public class A06_bipartite_BFS {
 	

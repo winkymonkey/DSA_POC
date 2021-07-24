@@ -7,7 +7,7 @@ import org.example.dsa.hh_graph.UndirectedGraph;
 
 /**
  * ***************************************************************************************
- * Undirected Graph: bipartite graph (graph coloring)
+ * Undirected Graph: bipartite graph using DFS (graph coloring)
  * ***************************************************************************************
  */
 
