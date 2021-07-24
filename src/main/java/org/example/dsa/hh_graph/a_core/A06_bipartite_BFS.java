@@ -8,7 +8,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import org.example.dsa.hh_graph.UndirectedGraph;
 
 
-public class A07_bipartite_BFS {
+public class A06_bipartite_BFS {
 	
 	private static final int vertices = 5;
 	private static ArrayList<Integer> adj[];

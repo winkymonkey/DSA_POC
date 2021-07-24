@@ -5,8 +5,13 @@ import java.util.Arrays;
 
 import org.example.dsa.hh_graph.UndirectedGraph;
 
+/**
+ * ***************************************************************************************
+ * Undirected Graph: bipartite graph (graph coloring)
+ * ***************************************************************************************
+ */
 
-public class A06_bipartite_DFS {
+public class A05_bipartite_DFS {
 	
 	private static final int vertices = 5;
 	private static ArrayList<Integer> adj[];
@@ -32,13 +37,13 @@ public class A06_bipartite_DFS {
 			color[current] = 1;
 		
 		for (int adjNode : adj[current]) {
-			if (color[adjNode] == -1) {				// if the adjacent node is not visited earlier
+			if (color[adjNode] == -1) {						// if the adjacent node is not visited earlier
 				color[adjNode] = 1-color[current];
 				if (!printDFS(adjNode, color)) {
 					return false;
 				}
 			}
-			else if (color[adjNode] == color[current]) {
+			else if (color[adjNode] == color[current]) {	// if the adjacent node is already colored but it's the same color as current, then it's not bipartite
 				return false;
 			}
 		}
