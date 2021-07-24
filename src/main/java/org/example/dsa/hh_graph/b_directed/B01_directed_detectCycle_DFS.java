@@ -1,4 +1,4 @@
-package org.example.dsa.hh_graph.a_core;
+package org.example.dsa.hh_graph.b_directed;
 
 import java.util.ArrayList;
 
@@ -10,7 +10,7 @@ import org.example.dsa.hh_graph.DirectedGraph;
  * ***************************************************************************************
  */
 
-public class A10_directed_detectCycle_DFS {
+public class B01_directed_detectCycle_DFS {
 	
 	private static final int vertices = 4;
 	private static ArrayList<Integer> adj[];

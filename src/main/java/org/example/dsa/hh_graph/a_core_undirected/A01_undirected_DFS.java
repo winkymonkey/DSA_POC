@@ -1,4 +1,4 @@
-package org.example.dsa.hh_graph.a_core;
+package org.example.dsa.hh_graph.a_core_undirected;
 
 import java.util.ArrayList;
 
@@ -6,18 +6,18 @@ import org.example.dsa.hh_graph.UndirectedGraph;
 
 /**
  * ***************************************************************************************
- * Undirected Graph: Count number of components
+ * Undirected Graph: Print DFS
  * ***************************************************************************************
  * 
- *     3 --- 4   1
- *     |         |
- *     |         |
- *     2         0
+ *    1 -- 0 -- 3
+ *    |  /      |
+ *    | /       |
+ *    2         4
  * 
  * ***************************************************************************************
  */
 
-public class A07_undirected_numberOfComponents {
+public class A01_undirected_DFS {
 	
 	private static final int vertices = 5;
 	private static ArrayList<Integer> adj[];
@@ -25,19 +25,16 @@ public class A07_undirected_numberOfComponents {
 	
 	public static void main(String[] args) {
 		UndirectedGraph graph = new UndirectedGraph(vertices);
-		graph.addEdge(1, 0);
-		graph.addEdge(2, 3);
+		graph.addEdge(0, 1);
+		graph.addEdge(0, 2);
+		graph.addEdge(2, 1);
+		graph.addEdge(0, 3);
 		graph.addEdge(3, 4);
 		graph.printGraph();
 		adj = graph.adj;
 		
 		boolean visited[] = new boolean[vertices];
-		for (int i=0; i<vertices; i++) {
-			if (!visited[i]) {
-				printDFS(i, visited);
-				System.out.println();
-			}
-		}
+		printDFS(0, visited);
 	}
 	
 	

@@ -1,4 +1,4 @@
-package org.example.dsa.hh_graph.a_core;
+package org.example.dsa.hh_graph.a_core_undirected;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,18 +9,11 @@ import org.example.dsa.hh_graph.UndirectedGraph;
 
 /**
  * ***************************************************************************************
- * Undirected Graph: Detect cycle using DFS
- * ***************************************************************************************
- * 
- *    1 -- 0 -- 3			This graph has a cycle 1-0-2-1
- *    |  /      |
- *    | /       |
- *    2         4
- * 
+ * Undirected Graph: bipartite graph using BFS (graph coloring)
  * ***************************************************************************************
  */
 
-public class A04_undirected_detectCycle_BFS {
+public class A06_bipartite_BFS {
 	
 	private static final int vertices = 5;
 	private static ArrayList<Integer> adj[];
@@ -36,32 +29,32 @@ public class A04_undirected_detectCycle_BFS {
 		graph.printGraph();
 		adj = graph.adj;
 		
-		boolean visited[] = new boolean[vertices];
-		int parent[] = new int[vertices];			Arrays.fill(parent, -1);		// stores parent of each node
-		System.out.println(isCyclic(0, visited, parent));
+		int color[] = new int[vertices];		Arrays.fill(color, -1);
+		printBFS(0, color);
 	}
 	
 	
-	private static boolean isCyclic(int current, boolean visited[], int parent[]) {
+	private static boolean printBFS(int current, int color[]) {
 		Queue<Integer> queue = new LinkedBlockingQueue<>();
 		queue.add(current);
-		visited[current] = true;
+		color[current] = 1;
 
 		while (queue.size() != 0) {
 			current = queue.poll();
+			System.out.print(current + " ");
 
 			for (int adjNode : adj[current]) {
-				if (!visited[adjNode]) {					// if the adjacent node is not visited earlier
-					visited[adjNode] = true;
+				if (color[adjNode] == -1) {						// if the adjacent node is not colored earlier
+					color[adjNode] = 1-color[current];
 					queue.add(adjNode);
-					parent[adjNode] = current;
 				}
-				else if (adjNode != parent[current]) {		// if the adjacent node is already visited but it's not the parent node, then it's a cycle
-					return true;
+				else if (color[adjNode] == color[current]) {	// if the adjacent node is already colored but it's the same color as current, then it's not bipartite
+					return false;
 				}
 			}
 		}
-		return false;
+		return true;
 	}
 	
 }
+

@@ -1,4 +1,4 @@
-package org.example.dsa.hh_graph.b_problems;
+package org.example.dsa.hh_graph.c_problems;
 
 /**
  * *************************************************************************************
@@ -29,7 +29,7 @@ package org.example.dsa.hh_graph.b_problems;
  * *************************************************************************************
  */
 
-public class B03_floodFill {
+public class C03_floodFill {
 	
 	public static void main(String[] args) {
 		int screen[][] =   {{1, 1, 1, 1, 1, 1, 1, 1},

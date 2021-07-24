@@ -1,17 +1,15 @@
-package org.example.dsa.hh_graph.a_core;
+package org.example.dsa.hh_graph.a_core_undirected;
 
 import java.util.ArrayList;
-import java.util.Queue;
-import java.util.concurrent.LinkedBlockingQueue;
 
 import org.example.dsa.hh_graph.UndirectedGraph;
 
 /**
  * ***************************************************************************************
- * Undirected Graph: Print BFS
+ * Undirected Graph: Detect cycle using DFS
  * ***************************************************************************************
  * 
- *    1 -- 0 -- 3
+ *    1 -- 0 -- 3		This graph has a cycle 1-0-2-1
  *    |  /      |
  *    | /       |
  *    2         4
@@ -19,7 +17,7 @@ import org.example.dsa.hh_graph.UndirectedGraph;
  * ***************************************************************************************
  */
 
-public class A02_undirected_BFS {
+public class A03_undirected_detectCycle_DFS {
 	
 	private static final int vertices = 5;
 	private static ArrayList<Integer> adj[];
@@ -36,26 +34,23 @@ public class A02_undirected_BFS {
 		adj = graph.adj;
 		
 		boolean visited[] = new boolean[vertices];
-		printBFS(0, visited);
+		System.out.println(isCyclic(0, visited, -1));
 	}
 	
 	
-	private static void printBFS(int current, boolean visited[]) {
-		Queue<Integer> queue = new LinkedBlockingQueue<>();
-		queue.add(current);
+	private static boolean isCyclic(int current, boolean visited[], int parent) {
 		visited[current] = true;
-
-		while (queue.size() != 0) {
-			current = queue.poll();
-			System.out.print(current + " ");
-
-			for (int adjNode : adj[current]) {
-				if (!visited[adjNode]) {				// if the adjacent node is not visited earlier
-					visited[adjNode] = true;
-					queue.add(adjNode);
-				}
+		
+		for (int adjNode : adj[current]) {
+			if (!visited[adjNode]) {				// if the adjacent node is not visited earlier
+				if (isCyclic(adjNode, visited, current))
+					return true;
+			}
+			else if (adjNode != parent) {			// if the adjacent node is already visited but it's not the parent node, then it's a cycle
+				return true;
 			}
 		}
+		return false;
 	}
 	
 }

@@ -1,7 +1,6 @@
-package org.example.dsa.hh_graph.a_core;
+package org.example.dsa.hh_graph.a_core_undirected;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -9,11 +8,18 @@ import org.example.dsa.hh_graph.UndirectedGraph;
 
 /**
  * ***************************************************************************************
- * Undirected Graph: bipartite graph using BFS (graph coloring)
+ * Undirected Graph: Print BFS
+ * ***************************************************************************************
+ * 
+ *    1 -- 0 -- 3
+ *    |  /      |
+ *    | /       |
+ *    2         4
+ * 
  * ***************************************************************************************
  */
 
-public class A06_bipartite_BFS {
+public class A02_undirected_BFS {
 	
 	private static final int vertices = 5;
 	private static ArrayList<Integer> adj[];
@@ -29,32 +35,27 @@ public class A06_bipartite_BFS {
 		graph.printGraph();
 		adj = graph.adj;
 		
-		int color[] = new int[vertices];		Arrays.fill(color, -1);
-		printBFS(0, color);
+		boolean visited[] = new boolean[vertices];
+		printBFS(0, visited);
 	}
 	
 	
-	private static boolean printBFS(int current, int color[]) {
+	private static void printBFS(int current, boolean visited[]) {
 		Queue<Integer> queue = new LinkedBlockingQueue<>();
 		queue.add(current);
-		color[current] = 1;
+		visited[current] = true;
 
 		while (queue.size() != 0) {
 			current = queue.poll();
 			System.out.print(current + " ");
 
 			for (int adjNode : adj[current]) {
-				if (color[adjNode] == -1) {						// if the adjacent node is not colored earlier
-					color[adjNode] = 1-color[current];
+				if (!visited[adjNode]) {				// if the adjacent node is not visited earlier
+					visited[adjNode] = true;
 					queue.add(adjNode);
-				}
-				else if (color[adjNode] == color[current]) {	// if the adjacent node is already colored but it's the same color as current, then it's not bipartite
-					return false;
 				}
 			}
 		}
-		return true;
 	}
 	
 }
-

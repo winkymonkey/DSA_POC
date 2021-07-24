@@ -1,4 +1,4 @@
-	package org.example.dsa.hh_graph.b_problems;
+	package org.example.dsa.hh_graph.c_problems;
 
 import java.util.*;
 
@@ -26,7 +26,7 @@ import java.util.*;
  * *************************************************************************************
  */
 
-public class B01_searchInMaze {
+public class C01_searchInMaze {
 	/*
 	 * Form a recursive function which will follow a path and check if the path reaches the destination or not.
 	 * If the path does not reach the destination then backtrack and try other paths.

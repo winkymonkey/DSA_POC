@@ -1,4 +1,4 @@
-package org.example.dsa.hh_graph.a_core;
+package org.example.dsa.hh_graph.a_core_undirected;
 
 import java.util.ArrayList;
 
@@ -6,18 +6,18 @@ import org.example.dsa.hh_graph.UndirectedGraph;
 
 /**
  * ***************************************************************************************
- * Undirected Graph: Detect cycle using DFS
+ * Undirected Graph: Count number of components
  * ***************************************************************************************
  * 
- *    1 -- 0 -- 3		This graph has a cycle 1-0-2-1
- *    |  /      |
- *    | /       |
- *    2         4
+ *     3 --- 4   1
+ *     |         |
+ *     |         |
+ *     2         0
  * 
  * ***************************************************************************************
  */
 
-public class A03_undirected_detectCycle_DFS {
+public class A07_undirected_numberOfComponents {
 	
 	private static final int vertices = 5;
 	private static ArrayList<Integer> adj[];
@@ -25,32 +25,31 @@ public class A03_undirected_detectCycle_DFS {
 	
 	public static void main(String[] args) {
 		UndirectedGraph graph = new UndirectedGraph(vertices);
-		graph.addEdge(0, 1);
-		graph.addEdge(0, 2);
-		graph.addEdge(2, 1);
-		graph.addEdge(0, 3);
+		graph.addEdge(1, 0);
+		graph.addEdge(2, 3);
 		graph.addEdge(3, 4);
 		graph.printGraph();
 		adj = graph.adj;
 		
 		boolean visited[] = new boolean[vertices];
-		System.out.println(isCyclic(0, visited, -1));
+		for (int i=0; i<vertices; i++) {
+			if (!visited[i]) {
+				printDFS(i, visited);
+				System.out.println();
+			}
+		}
 	}
 	
 	
-	private static boolean isCyclic(int current, boolean visited[], int parent) {
+	private static void printDFS(int current, boolean visited[]) {
 		visited[current] = true;
+		System.out.print(current + " ");
 		
 		for (int adjNode : adj[current]) {
 			if (!visited[adjNode]) {				// if the adjacent node is not visited earlier
-				if (isCyclic(adjNode, visited, current))
-					return true;
-			}
-			else if (adjNode != parent) {			// if the adjacent node is already visited but it's not the parent node, then it's a cycle
-				return true;
+				printDFS(adjNode, visited);
 			}
 		}
-		return false;
 	}
 	
 }

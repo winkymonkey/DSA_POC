@@ -1,4 +1,4 @@
-package org.example.dsa.hh_graph.b_problems;
+package org.example.dsa.hh_graph.c_problems;
 
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -35,7 +35,7 @@ import java.util.concurrent.LinkedBlockingQueue;
  * *************************************************************************************
  */
 
-public class B02_minStepsToReachTargetByKnight {
+public class C02_minStepsToReachTargetByKnight {
 	/*
 	 * This problem can be seen as shortest path in unweighted graph.
 	 * Therefore we use BFS to solve this problem. 
