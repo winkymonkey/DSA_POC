@@ -52,8 +52,8 @@ public class A04_undirected_detectCycle_BFS {
 
 			for (int adjNode : adj[pair.current]) {
 				if (!visited[adjNode]) {					// if the adjacent node is not visited earlier
-					queue.add(new Pair(adjNode, pair.current));
 					visited[adjNode] = true;
+					queue.add(new Pair(adjNode, pair.current));
 				}
 				else if (adjNode != pair.parent) {			// if the adjacent node is already visited but it's not the parent node, then it's a cycle
 					return true;

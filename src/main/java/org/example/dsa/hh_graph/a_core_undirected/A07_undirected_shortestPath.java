@@ -42,6 +42,7 @@ public class A07_undirected_shortestPath {
 	}
 	
 	
+	// for each element find adjacency list. In BFS style, for each adjacent element, update the distance array with min possible value
 	private static void bfs(int current, int distance[]) {
 		Queue<Integer> queue = new LinkedBlockingQueue<>();
 		queue.add(current);
@@ -51,8 +52,8 @@ public class A07_undirected_shortestPath {
 			current = queue.poll();
 			for (int adjNode : adj[current]) {
 				if (distance[current]+1 < distance[adjNode]) {
-					queue.add(adjNode);
 					distance[adjNode] = distance[current]+1;
+					queue.add(adjNode);
 				}
 			}
 		}
