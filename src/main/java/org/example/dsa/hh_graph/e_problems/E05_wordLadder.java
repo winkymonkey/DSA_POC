@@ -1,4 +1,4 @@
-package org.example.dsa.hh_graph.c_problems;
+package org.example.dsa.hh_graph.e_problems;
 
 import java.util.HashSet;
 import java.util.Queue;
@@ -12,7 +12,7 @@ import java.util.concurrent.LinkedBlockingQueue;
  * 
  */
 
-public class C05_wordLadder {
+public class E05_wordLadder {
 	
 	public static void main(String[] args) {
 		Set<String> dictionary = new HashSet<>();

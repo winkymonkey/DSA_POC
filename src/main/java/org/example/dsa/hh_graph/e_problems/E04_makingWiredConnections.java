@@ -1,4 +1,4 @@
-package org.example.dsa.hh_graph.c_problems;
+package org.example.dsa.hh_graph.e_problems;
 
 /**
  * *************************************************************************************
@@ -12,7 +12,7 @@ package org.example.dsa.hh_graph.c_problems;
  * ************************************************************************************* 
  */
 
-public class C04_makingWiredConnections {
+public class E04_makingWiredConnections {
 	/*
 	 * -------------------
 	 * Min edges to connect all nodes in a single component graph = (N-1)			// N = number of nodes in a graph
