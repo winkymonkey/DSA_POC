@@ -9,7 +9,7 @@ import org.example.dsa.hh_graph.UndirectedWeightedGraph;
 
 /**
  * ***************************************************************************************
- * [Undirected] Shortest Path (with weight)
+ * [Undirected] Shortest Path (with weight) (Dijkstra algorithm)
  * ***************************************************************************************
  *        2     5
  *     0 --- 1 --- 4
