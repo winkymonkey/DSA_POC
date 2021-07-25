@@ -2,11 +2,11 @@ package org.example.dsa.dd_linkedlist.a_SLL.j_union_intersection;
 
 /**
  * ********************************************************************************
- * Intersection point of two Linked Lists
+ * Intersection point of 2 SLL
  * ********************************************************************************
  */
 
-public class J01_intersectingPointOfTwoLinkedList {
+public class J01_intersectionOf_twoLists {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---

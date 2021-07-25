@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.g_loop;
 
 /**
  * *****************************************************************************
- * Find length of loop in Linked List
+ * Find length of loop in a SLL
  * *****************************************************************************
  */
 

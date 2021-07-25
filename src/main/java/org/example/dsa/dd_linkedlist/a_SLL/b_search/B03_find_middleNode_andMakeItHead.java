@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.b_search;
 
 /**
  * *****************************************************************************
- * Make middle node head in a Linked List
+ * Make middle node head in a SLL
  * *****************************************************************************
  * Input:  1 2 3 4 5
  * Output: 3 1 2 4 5

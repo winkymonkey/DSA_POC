@@ -2,11 +2,11 @@ package org.example.dsa.dd_linkedlist.a_SLL.a_core;
 
 /**
  * ********************************************************************************
- * Rotate a Linked List in group of Given Size
+ * Rotate a SLL by K
  * ********************************************************************************
  */
 
-public class A10_rotateListByBlockOfN {
+public class A10_rotateList_byK {
 	/*
 	 * 
 	 */

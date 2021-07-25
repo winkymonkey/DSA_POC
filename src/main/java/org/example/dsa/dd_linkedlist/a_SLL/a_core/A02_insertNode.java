@@ -5,7 +5,7 @@ import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList.Node;
 
 /**
  * *****************************************************************************
- * Insert a node in a Linked List
+ * Insert node in a SLL
  * *****************************************************************************
  * 		insert at front
  * 		insert after a given node

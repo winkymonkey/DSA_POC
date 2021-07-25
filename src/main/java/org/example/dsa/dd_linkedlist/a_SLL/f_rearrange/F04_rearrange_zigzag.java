@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.f_rearrange;
 
 /**
  * *****************************************************************************
- * Rearrange a Linked List in Zig-Zag fashion
+ * Rearrange a SLL in Zig-Zag fashion
  * *****************************************************************************
  * Given a linked list, rearrange it such that the converted list should be of the form a < b > c < d > e < f .. 
  * (where a, b, c.. are consecutive data node of linked list)

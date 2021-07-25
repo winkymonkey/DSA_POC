@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.f_rearrange;
 
 /**
  * *****************************************************************************
- * Rearrange a Linked List such that all even and odd positioned nodes are together
+ * Rearrange a SLL such that all even and odd positioned nodes are together
  * *****************************************************************************
  * Input:  1->2->3->4
  * Output: 1->3->2->4

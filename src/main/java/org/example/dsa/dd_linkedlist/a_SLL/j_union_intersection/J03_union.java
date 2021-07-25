@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.j_union_intersection;
 
 /**
  * *****************************************************************************
- * Union and Intersection of two Linked Lists
+ * Union and Intersection of 2 SLL
  * *****************************************************************************
  * Input:  list1 --- 1->2->3->4->6
  * 		   list2 --- 2->4->6->8

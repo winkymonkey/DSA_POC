@@ -5,7 +5,7 @@ import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList.Node;
 
 /**
  * ********************************************************************************
- * Create a Linked List & traverse
+ * Create & traverse a SLL
  * ********************************************************************************
  */
 

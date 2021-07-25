@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.h_palindrome;
 
 /**
  * *****************************************************************************
- * Check if a Linked List of strings forms a palindrome
+ * Check if a SLL of strings forms a palindrome
  * *****************************************************************************
  * Input:  a -> bc -> d -> dcb -> a -> NULL
  * Output: true									//String "abcddcba" is palindrome.

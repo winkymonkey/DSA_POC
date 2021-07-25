@@ -1,10 +1,10 @@
-package org.example.dsa.dd_linkedlist.b_DLL.b_misc;
+package org.example.dsa.dd_linkedlist.b_DLL.a_sort;
 
 /**
  * *****************************************************************************
- * Sort the biotonic Doubly Linked List
+ * Sort the bitonic DLL
  * (i.e, a DLL which is first increasing and then decreasing)
- * (a strictly increasing or a strictly decreasing list is also a biotonic)
+ * (a strictly increasing or a strictly decreasing list is also a bitonic)
  * *****************************************************************************
  * Input:  2 <-> 5 <-> 7 <-> 12 <-> 10 <-> 6 <-> 4 <-> 1 
  * Output: 1 <-> 2 <-> 4 <-> 5 <-> 6 <-> 7 <-> 10 <-> 12 
@@ -15,7 +15,7 @@ package org.example.dsa.dd_linkedlist.b_DLL.b_misc;
  * *****************************************************************************
  */
 
-public class B01_sort_biotonicDLL {
+public class A01_sort_bitonicDLL {
 	/*
 	 * Find the first node which is smaller than its previous node.
 	 * Let it be CURR

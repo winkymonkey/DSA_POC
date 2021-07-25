@@ -2,7 +2,7 @@ package org.example.dsa.aa_array.n_binarysearch;
 
 /**
  * *****************************************************************************
- * EcoFriendlyWoodCutting
+ * EcoFriendly Wood Cutting
  * *****************************************************************************
  * Mirko needs to chop down M meters of wood. (1 ≤ M ≤ 2 000 000 000)
  * Mirko is only allowed to cut N number of trees. (1 ≤ N ≤ 1 000 000)

@@ -2,9 +2,9 @@ package org.example.dsa.dd_linkedlist.a_SLL.f_rearrange;
 
 /**
  * *****************************************************************************
- * Segregate even and odd nodes in a Linked List
+ * Segregate even and odd nodes in a SLL
  * *****************************************************************************
- * Given a Linked List of integers, write a function to modify the linked list 
+ * Given a SLL of integers, write a function to modify the linked list 
  * such that all even numbers appear before all the odd numbers in the modified linked list
  * 
  * *****************************************************************************

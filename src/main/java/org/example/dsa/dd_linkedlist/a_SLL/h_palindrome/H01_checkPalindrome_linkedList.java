@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.h_palindrome;
 
 /**
  * ********************************************************************************
- * Check if a Linked List is palindrome
+ * Check if a SLL is palindrome
  * ********************************************************************************
  */
 

@@ -5,11 +5,11 @@ import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList.Node;
 
 /**
  * ********************************************************************************
- * Do merge sort in a Linked List
+ * Merge sort in a SLL
  * ********************************************************************************
  */
 
-public class A11_mergeSort {
+public class A12_mergeSort {
 	
 	public static void main(String[] args) {
 		MyLinkedList list = createLinkedList();

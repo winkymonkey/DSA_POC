@@ -5,7 +5,7 @@ import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList.Node;
 
 /**
  * ********************************************************************************
- * Swap nodes in a Linked List without swapping data
+ * Swap nodes in a SLL (without swapping data)
  * ********************************************************************************
  */
 

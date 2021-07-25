@@ -1,4 +1,4 @@
-package org.example.dsa.dd_linkedlist.c_CLL.b_misc;
+package org.example.dsa.dd_linkedlist.c_CLL.a_misc;
 
 /**
  * *****************************************************************************
@@ -6,7 +6,7 @@ package org.example.dsa.dd_linkedlist.c_CLL.b_misc;
  * *****************************************************************************
  */
 
-public class B01_splitIntoTwoHalves {
+public class A01_splitIntoTwoHalves {
 	/*
 	 * Traverse the CLL using 2 pointers.
 	 * In each iteration, slow pointer increment by 1, whereas fast pointer increments by 2

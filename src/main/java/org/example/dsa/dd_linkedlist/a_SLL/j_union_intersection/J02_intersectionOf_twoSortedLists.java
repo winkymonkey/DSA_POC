@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.j_union_intersection;
 
 /**
  * *****************************************************************************
- * Intersection of two Sorted Linked Lists
+ * Intersection of 2 Sorted SLL
  * *****************************************************************************
  * Input:  list1 --- 1->2->3->4->6
  * 		   list2 --- 2->4->6->8
@@ -12,7 +12,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.j_union_intersection;
  * *****************************************************************************
  */
 
-public class J02_intersection {
+public class J02_intersectionOf_twoSortedLists {
 	/*
 	 * Node p1 = list1.head;		// to traverse list1
 	 * Node p2 = list2.head;		// to traverse list2

@@ -12,6 +12,10 @@ public class MyLinkedList {
 			this.data = data;
 			this.next = null;
 		}
+		
+		public String toString() {
+			return String.valueOf(data);
+		}
 	}
 	
 }

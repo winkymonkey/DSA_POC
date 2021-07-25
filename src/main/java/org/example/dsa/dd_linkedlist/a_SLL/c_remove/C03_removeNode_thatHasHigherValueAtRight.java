@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.c_remove;
 
 /**
  * *****************************************************************************
- * Delete nodes having greater value on right
+ * Delete nodes having greater value on right in a SLL
  * *****************************************************************************
  * Input:	12->15->10->11->5->6->2->3
  * Output:	    15----->11---->6---->3

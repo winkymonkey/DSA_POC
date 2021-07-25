@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.b_search;
 
 /**
  * *****************************************************************************
- * Find a triplet from 3 Linked Lists with sum equal to a given number
+ * Find a triplet from 3 SLLs with sum equal to a given number
  * *****************************************************************************
  * Input:  	12->6->29	23->5->8	90->20->59		X=101
  * Output: 	6,5,90

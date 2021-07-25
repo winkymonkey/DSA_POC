@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.d_sort;
 
 /**
  * *****************************************************************************
- * Sort a Linked List which is already sorted on absolute values
+ * Sort a SLL which is already sorted on absolute values
  * *****************************************************************************
  * Input:  1 -> -2 -> -3 -> 4 -> -5
  * Output: -5 -> -3 -> -2 -> 1 -> 4

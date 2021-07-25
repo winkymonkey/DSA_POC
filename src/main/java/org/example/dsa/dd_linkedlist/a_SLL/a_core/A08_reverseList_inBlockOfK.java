@@ -4,18 +4,20 @@ import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList;
 import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList.Node;
 
 /**
- * ********************************************************************************
- * Reverse a SLL
- * ********************************************************************************
+ * *****************************************************************************
+ * Reverse a SLL in block of K
+ * *****************************************************************************
+ * Input:  1->2->3->4->5->6->7->8->NULL		k = 3 (every group of 3 elements will be reversed)
+ * Output: 3->2->1->6->5->4->8->7->NULL
+ * 
+ * *****************************************************************************
  */
 
-public class A07_reverseList {
+public class A08_reverseList_inBlockOfK {
 	
 	public static void main(String[] args) {
 		MyLinkedList list = createLinkedList();
-		print(list.head);
-		
-		Node currentHead = reverse(list);
+		Node currentHead = reverse(list.head, 3);
 		print(currentHead);
 	}
 	
@@ -43,18 +45,27 @@ public class A07_reverseList {
 	
 	
 	
-	private static Node reverse(MyLinkedList list) {
+	private static Node reverse(Node head, int k) {
+		if (head == null)
+			return null;
+		
 		Node PREV = null;
-		Node CURR = list.head;
+		Node CURR = head;
 		Node NEXT = null;
-
-		while (CURR != null) {
+		
+		int count = 0;
+		while (count < k && CURR != null) {
 			NEXT = CURR.next;
 			CURR.next = PREV;
 			PREV = CURR;
 			CURR = NEXT;
+			count++;
 		}
-		return PREV; 			// PREV is the new head
+		
+		if (NEXT != null)						// at the end both CURR & NEXT will be null, so we can check either of these to be non-null
+			head.next = reverse(NEXT, k);
+		
+		return PREV;
 	}
 	
 }

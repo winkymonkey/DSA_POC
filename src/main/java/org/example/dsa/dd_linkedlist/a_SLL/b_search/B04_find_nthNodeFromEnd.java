@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.b_search;
 
 /**
  * ********************************************************************************
- * Find Nth node from the end of a Linked List
+ * Find Nth node from the end of a SLL
  * ********************************************************************************
  */
 

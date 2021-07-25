@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.h_palindrome;
 
 /**
  * *****************************************************************************
- * Length of longest palindrome list in a Linked List using O(1) extra space
+ * Length of longest palindrome list in a SLL using O(1) extra space
  * *****************************************************************************
  * Input:  2->3->7->3->2->12->24
  * Output: 5						//The longest palindrome list is 2->3->7->3->2

@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.b_search;
 
 /**
  * ********************************************************************************
- * Print the middle of a given Linked List
+ * Print the middle of a SLL
  * ********************************************************************************
  */
 

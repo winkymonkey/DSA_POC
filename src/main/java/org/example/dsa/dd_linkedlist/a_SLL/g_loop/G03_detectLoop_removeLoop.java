@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.g_loop;
 
 /**
  * *****************************************************************************
- * Detect and Remove Loop in a Linked List
+ * Detect and Remove Loop in a SLL
  * *****************************************************************************
  */
 

@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.k_misc;
 
 /**
  * *****************************************************************************
- * Add two numbers represented by Linked Lists | Set 1
+ * Add two numbers represented by SLL
  * *****************************************************************************
  * Input:  First List: 	5->6->3  	//represents number 365
  * 		   Second List: 8->4->2 	//represents number 248
@@ -12,7 +12,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.k_misc;
  * *****************************************************************************
  */
 
-public class K01_addTwoNums_representedByLinkedList_1 {
+public class K01A_addTwoNums_representedByLinkedList {
 	/*
 	 * num1 = 0
 	 * power = 0

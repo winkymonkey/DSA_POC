@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.d_sort;
 
 /**
  * *****************************************************************************
- * Sort a Linked List that is sorted alternating ascending and descending orders
+ * Sort a SLL that is sorted alternating ascending and descending orders
  * *****************************************************************************
  * Input:  10->40->53->30->67->12->89->NULL		(10, 53, 67, 89 are ascending)
  * 												(12, 43, 67 are descending)

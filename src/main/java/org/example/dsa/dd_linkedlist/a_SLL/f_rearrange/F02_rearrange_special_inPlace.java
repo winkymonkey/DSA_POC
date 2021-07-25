@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.f_rearrange;
 
 /**
  * *****************************************************************************
- * Rearrange a Linked List in-place
+ * Rearrange a SLL in-place
  * *****************************************************************************
  * Given a singly linked list L0 -> L1 -> ... -> Ln-1 -> Ln
  * Rearrange the nodes in the list so that the new formed list is: L0 -> Ln -> L1 -> Ln-1 -> L2 -> Ln-2 ...

@@ -2,7 +2,7 @@ package org.example.dsa.dd_linkedlist.a_SLL.d_sort;
 
 /**
  * *****************************************************************************
- * Sort a Linked List that contains 0s, 1s and 2s
+ * Sort a SLL that contains 0s, 1s and 2s
  * *****************************************************************************
  */
 

@@ -5,17 +5,18 @@ import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList.Node;
 
 /**
  * ********************************************************************************
- * Delete a node by key from a Linked List
+ * Reversely Print a SLL (without actually reversing the list)
  * ********************************************************************************
  */
 
-public class A04_deleteNode_byKey {
+public class A09_reverselyPrint {
 	
 	public static void main(String[] args) {
 		MyLinkedList list = createLinkedList();
 		print(list.head);
 		
-		deleteNodeByKey(list, 5);
+		reverselyPrint(list, list.head);
+		System.out.println();
 		print(list.head);
 	}
 	
@@ -33,7 +34,7 @@ public class A04_deleteNode_byKey {
 	}
 	
 	private static void print(Node n) {
-		while (null != n) {
+		while (n != null) {
 			System.out.print(n.data + " ");
 			n = n.next;
 		}
@@ -44,12 +45,12 @@ public class A04_deleteNode_byKey {
 	
 	
 	
-	private static void deleteNodeByKey(MyLinkedList list, int key) {
-		Node n = list.head;
-		while (n != null && n.next.data!=key) {
-			n = n.next;								//it will stop at node having key=4
-		}
-		n.next = n.next.next;
+	private static void reverselyPrint(MyLinkedList list, Node node) {
+		if (node == null)
+			return;
+		
+		reverselyPrint(list, node.next);
+		System.out.print(node.data + " ");
 	}
 	
 }
