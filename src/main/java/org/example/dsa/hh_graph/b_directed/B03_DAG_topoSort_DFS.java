@@ -7,11 +7,11 @@ import org.example.dsa.hh_graph.DirectedGraph;
 
 /**
  * ***************************************************************************************
- * DAG: Topological Sort using DFS
+ * [DAG] Topo Sort using DFS
  * ***************************************************************************************
  */
 
-public class B03_DAG_topologicalSort_DFS {
+public class B03_DAG_topoSort_DFS {
 	
 	private static final int vertices = 5;
 	private static ArrayList<Integer> adj[];

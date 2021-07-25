@@ -9,7 +9,7 @@ import org.example.dsa.hh_graph.UndirectedGraph;
 
 /**
  * ***************************************************************************************
- * Undirected Graph: find Shortest Path
+ * [Undirected] Shortest Path (without weight)
  * ***************************************************************************************
  * 
  *    1 -- 0 -- 3
@@ -20,7 +20,7 @@ import org.example.dsa.hh_graph.UndirectedGraph;
  * ***************************************************************************************
  */
 
-public class A07_undirected_shortestPath {
+public class A07_undirected_shortestPath_withoutWeight {
 	
 	private static final int vertices = 5;
 	private static ArrayList<Integer> adj[];

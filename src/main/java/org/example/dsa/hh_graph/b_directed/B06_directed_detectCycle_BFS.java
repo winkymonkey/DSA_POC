@@ -2,7 +2,7 @@ package org.example.dsa.hh_graph.b_directed;
 
 /**
  * ***************************************************************************************
- * Directed Graph: Detect cycle using BFS
+ * [Directed] Detect cycle using BFS
  * ***************************************************************************************
  */
 

@@ -9,11 +9,11 @@ import org.example.dsa.hh_graph.Node;
 
 /**
  * ***************************************************************************************
- * Weighted DAG: find Shortest path
+ * [DAG] Shortest path (with weight)
  * ***************************************************************************************
  */
 
-public class B07_DAGweighted_shortestPath {
+public class B07_DAG_shortestPath_withWeight {
 	
 	private static final int vertices = 6;
 	private static ArrayList<Node> adj[];

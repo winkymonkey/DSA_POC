@@ -7,7 +7,7 @@ import org.example.dsa.hh_graph.UndirectedGraph;
 
 /**
  * ***************************************************************************************
- * Undirected Graph: bipartite graph using DFS (graph coloring)
+ * [Undirected] Bipartite graph using DFS - graph coloring
  * ***************************************************************************************
  * 
  *    1 -- 0 -- 3		This graph has is NOT bipartite
@@ -18,7 +18,7 @@ import org.example.dsa.hh_graph.UndirectedGraph;
  * ***************************************************************************************
  */
 
-public class A05_bipartite_DFS {
+public class A05_undirected_bipartite_DFS {
 	
 	private static final int vertices = 5;
 	private static ArrayList<Integer> adj[];

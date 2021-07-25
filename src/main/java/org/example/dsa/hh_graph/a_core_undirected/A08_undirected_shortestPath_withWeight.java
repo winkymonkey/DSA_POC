@@ -9,7 +9,7 @@ import org.example.dsa.hh_graph.UndirectedWeightedGraph;
 
 /**
  * ***************************************************************************************
- * Undirected Weighted Graph: find Shortest Path
+ * [Undirected] Shortest Path (with weight)
  * ***************************************************************************************
  *        2     5
  *     0 --- 1 --- 4
@@ -21,7 +21,7 @@ import org.example.dsa.hh_graph.UndirectedWeightedGraph;
  * ***************************************************************************************
  */
 
-public class A08_undirectedWeighted_shortestPath {
+public class A08_undirected_shortestPath_withWeight {
 	
 	private static final int vertices = 5;
 	private static ArrayList<Node> adj[];

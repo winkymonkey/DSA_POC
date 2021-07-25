@@ -9,7 +9,7 @@ import org.example.dsa.hh_graph.UndirectedGraph;
 
 /**
  * ***************************************************************************************
- * Undirected Graph: Detect cycle using DFS
+ * [Undirected] Detect cycle using DFS
  * ***************************************************************************************
  * 
  *    1 -- 0 -- 3			This graph has a cycle 1-0-2-1

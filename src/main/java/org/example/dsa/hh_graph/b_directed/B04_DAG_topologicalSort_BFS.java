@@ -8,9 +8,10 @@ import org.example.dsa.hh_graph.DirectedGraph;
 
 /**
  * ***************************************************************************************
- * DAG: Topological Sort using BFS
+ * [DAG] Topo Sort using BFS
  * ***************************************************************************************
  */
+
 public class B04_DAG_topologicalSort_BFS {
 	
 	private static final int vertices = 5;

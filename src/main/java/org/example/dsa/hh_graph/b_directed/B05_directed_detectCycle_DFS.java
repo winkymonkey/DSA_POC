@@ -6,7 +6,7 @@ import org.example.dsa.hh_graph.DirectedGraph;
 
 /**
  * ***************************************************************************************
- * Directed Graph: Detect cycle using DFS
+ * [Directed] Detect cycle using DFS
  * ***************************************************************************************
  */
 
