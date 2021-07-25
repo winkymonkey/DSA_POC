@@ -42,6 +42,7 @@ public class B07_DAGweighted_shortestPath {
 	}
 	
 	
+	// populates the topological sequence using DFS
 	private static void dfs(int current, boolean visited[], Stack<Integer> stack) {
 		visited[current] = true;
 		
@@ -54,6 +55,7 @@ public class B07_DAGweighted_shortestPath {
 	}
 	
 	
+	// for each element in topological sequence, find adjacency list. For each adjacent element, update the distance array with min possible value
 	private static void shortestPath(int current, int distance[], Stack<Integer> stack) {
 		distance[current] = 0;
 		
