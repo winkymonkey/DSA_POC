@@ -13,7 +13,7 @@ import org.example.dsa.hh_graph.Node;
  * ***************************************************************************************
  */
 
-public class B07_DAG_shortestPath {
+public class B07_DAGweighted_shortestPath {
 	
 	private static final int vertices = 6;
 	private static ArrayList<Node> adj[];
