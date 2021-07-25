@@ -2,11 +2,11 @@ package org.example.dsa.hh_graph.c_mst;
 
 /**
  * ***************************************************************************************
- * Find minimum spanning tree - Prim's Algorithm
+ * Disjoint Set - Union By Rank (path compression) & Find Parent
  * ***************************************************************************************
  */
 
-public class C01_findMST_PrimsAlgo {
+public class C02_disjointSet_unionByRank_findParent {
 	/*
 	 * 
 	 */
