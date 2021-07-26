@@ -3,9 +3,9 @@ package org.example.dsa.ff_binarytree.b_DFS_misc;
 import org.example.dsa.ff_binarytree.Node;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * InOrder Successor of a node in Binary Tree
- * *****************************************************************************
+ * ***************************************************************************************
  * InOrder Successor of a node is the next node in InOrder traversal.
  * InOrder Successor is NULL for the last node in InOrder traversal.
  * 
@@ -21,7 +21,7 @@ import org.example.dsa.ff_binarytree.Node;
  * InOrder successor of node 5 is 1
  * InOrder successor of node 6 is NULL
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class B01_inorderSuccessor_ofOneNode {

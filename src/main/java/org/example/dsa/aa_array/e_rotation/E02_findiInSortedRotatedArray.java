@@ -1,11 +1,11 @@
 package org.example.dsa.aa_array.e_rotation;
 
 /**
- * *************************************************************************
+ * ***************************************************************************************
  * Find the PIVOT element in a sorted & rotated array
  * Find the MIN element in a sorted & rotated array
  * Find the GIVEN element in a sorted & rotated array
- * *************************************************************************
+ * ***************************************************************************************
  */
 
 public class E02_findiInSortedRotatedArray {

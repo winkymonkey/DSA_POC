@@ -5,9 +5,9 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * Median in a stream of integers (running integers)
- * *****************************************************************************
+ * ***************************************************************************************
  * Median means ---
  *   if the input size is odd --- Median = middle element of sorted stream
  *   if the input size is even -- Median = average of two middle elements of sorted stream
@@ -19,7 +19,7 @@ import java.util.Scanner;
  * 		After reading 3rd element of stream -- 5, 15, 1    -> median -- 5
  * 		After reading 4th element of stream -- 5, 15, 1, 3 -> median -- 4
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class C04_findMedianFromStreamOfIntegers {

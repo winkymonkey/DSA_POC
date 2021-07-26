@@ -3,10 +3,10 @@ package org.example.dsa.aa_array.d_search;
 import java.util.Stack;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * Find maximum absolute difference between LSE & RSE of every element in the array
  * If there is no smaller element on right/left side of any element then we take 0 as the smaller element.
- * *****************************************************************************
+ * ***************************************************************************************
  * Input:	{2, 1, 8}
  * Output:	1						// Left smaller  LS[] = {0, 0, 1}
  * 									// Right smaller RS[] = {1, 0, 0}		=> Max_diff of abs(LS[i]-RS[i]) = 1
@@ -15,7 +15,7 @@ import java.util.Stack;
  * Output:	4						// Left smaller  LS[] = {0, 2, 4, 4, 4, 7, 2}
  * 									// Right smaller RS[] = {0, 3, 7, 3, 3, 3, 0}		=> Max_diff of abs(LS[i]-RS[i]) = 7-3 = 4
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class D13_maxDiffBetweenLSEandRSE {

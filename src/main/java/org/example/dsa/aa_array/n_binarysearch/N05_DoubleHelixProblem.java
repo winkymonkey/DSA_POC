@@ -1,9 +1,9 @@
 package org.example.dsa.aa_array.n_binarysearch;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * The Double HeLiX
- * *****************************************************************************
+ * ***************************************************************************************
  * Two finite, strictly increasing, integer sequences are given.
  * Any common integer between the two sequences constitute an intersection point.
  * 
@@ -18,14 +18,14 @@ package org.example.dsa.aa_array.n_binarysearch;
  * The objective is finding a path that produces the maximum sum of data you walked over.
  * In the above example, the largest possible sum is 450, which is the result of adding 3, 5, 7, 9, 20, 25, 44, 47, 55, 56, 57, 60, and 62
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  * Input:	{3 5 7 9 20 25 30 40 55 56 57 60 62} and {1 4 7 11 14 25 44 47 55 57 100}
  * Output:	450
  * 
  * Input:	{-5 100 1000 1005} and {-12 1000 1001}
  * Output:	2100
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class N05_DoubleHelixProblem {

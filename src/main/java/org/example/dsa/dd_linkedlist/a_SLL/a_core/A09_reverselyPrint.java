@@ -4,9 +4,9 @@ import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList;
 import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList.Node;
 
 /**
- * ********************************************************************************
+ * ***************************************************************************************
  * Reversely Print a SLL (without actually reversing the list)
- * ********************************************************************************
+ * ***************************************************************************************
  */
 
 public class A09_reverselyPrint {

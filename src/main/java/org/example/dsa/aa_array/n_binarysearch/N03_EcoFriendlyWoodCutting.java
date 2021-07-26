@@ -1,9 +1,9 @@
 package org.example.dsa.aa_array.n_binarysearch;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * EcoFriendly Wood Cutting
- * *****************************************************************************
+ * ***************************************************************************************
  * Mirko needs to chop down M meters of wood. (1 ≤ M ≤ 2 000 000 000)
  * Mirko is only allowed to cut N number of trees. (1 ≤ N ≤ 1 000 000)
  * 
@@ -16,14 +16,14 @@ package org.example.dsa.aa_array.n_binarysearch;
  * That‟s why he wants to set his saw blade as high as possible.
  * Help Mirko find the maximum integer height of the saw blade that still allows him to cut off at least M meters of wood.
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  * Input:	Trees = {20, 15, 10, 17}		Required Wood(M) = 7
  * Output:	15
  * 
  * Input:	Trees = {4, 42, 40, 26, 46}		Required Wood(M) = 20
  * Output:	36
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class N03_EcoFriendlyWoodCutting {

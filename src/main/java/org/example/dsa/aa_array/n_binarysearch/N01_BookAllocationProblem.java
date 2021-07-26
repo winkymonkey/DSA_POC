@@ -3,15 +3,15 @@ package org.example.dsa.aa_array.n_binarysearch;
 import java.util.Arrays;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * Allocate Minimum Number Of Pages
- * *****************************************************************************
+ * ***************************************************************************************
  * Given number of pages in n different books and m students.
  * The books are arranged in ascending order of number of pages.
  * Every student must be allocated at least one book.
  * Every student is assigned to read some consecutive books.
  * The task is to assign books in such a way that the maximum number of pages assigned to a student is minimum. 
- * *****************************************************************************
+ * ***************************************************************************************
  * Input:	pages[] = {10, 20, 30, 40}		k = 2
  * Output:	113
  * 
@@ -31,7 +31,7 @@ import java.util.Arrays;
  * 
  * Out of the 3 cases, Option 3 has the minimum pages = 60
  *  
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class N01_BookAllocationProblem {

@@ -1,14 +1,14 @@
 package org.example.dsa.aa_array.a_core;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * Sort N objects colored red, white or blue in such a way that 
  * 	 objects of the same color are adjacent, with the colors in the order red, white & blue.
  * The problem is closely related to the partition operation of quick sort.
  * The attribute need not be a 'color',
  * 	 but can be 'greater than the median'/'leading digit is zero'/whatever property you care to choose.
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 public class A07_DutchNationalFlagAlgorithm {
 	/*

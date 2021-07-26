@@ -1,19 +1,19 @@
 package org.example.dsa.bb_string.e_pattern;
 
 /**
- * ******************************************************************************
+ * ***************************************************************************************
  * Find out the occurrences of a given pattern in another string
  * TEXT length = n
  * PATTERN length = m
  * n > m
- * ******************************************************************************
+ * ***************************************************************************************
  * Input:	TEXT[] = "THIS IS A TEST TEXT"		PATT[] = "TEST"
  * Output:	Pattern found at index 10
  * 
  * Input:	TEXT[] = "AABAACAADAABAABA"			PATT[] = "AABA"
  * Output:	Pattern found at index 0,9,12
  *  
- * ******************************************************************************
+ * ***************************************************************************************
  */
 
 public class E01_patternMatching {

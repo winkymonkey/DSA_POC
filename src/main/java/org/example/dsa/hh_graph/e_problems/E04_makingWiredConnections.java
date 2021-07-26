@@ -1,15 +1,15 @@
 package org.example.dsa.hh_graph.e_problems;
 
 /**
- * *************************************************************************************
+ * ***************************************************************************************
  * Making wired Connections
- * *************************************************************************************
+ * ***************************************************************************************
  * Given an integer N, denoting the number of computers connected by cables forming a network 
  * and a 2D array connections[][] where each row (i, j) representing a connection between i-th and j-th computer
  * Your task is to connect all the computers either directly or indirectly by removing any of the given connections and connecting two disconnected computers.
  * If it’s not possible to connect all the computers, print -1. 
  * Otherwise, print the minimum number of such operations required.
- * ************************************************************************************* 
+ * ***************************************************************************************
  */
 
 public class E04_makingWiredConnections {

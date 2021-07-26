@@ -1,9 +1,9 @@
 package org.example.dsa.ff_binarytree.g_checking;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * Check if a given Binary Tree is SumTree
- * *****************************************************************************
+ * ***************************************************************************************
  * In a SumTree "the value of a node" is equal to "sum of the nodes present in its left & right subtree". 
  * An empty tree is SumTree. 
  * A leaf node is also SumTree.
@@ -14,7 +14,7 @@ package org.example.dsa.ff_binarytree.g_checking;
  *       /  \    \
  *      4    6    3
  *      
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class G02_isSumTree {

@@ -1,9 +1,9 @@
 package org.example.dsa.aa_array.n_binarysearch;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * Aggressive cows
- * *****************************************************************************
+ * ***************************************************************************************
  * Farmer John has built a new long barn, with N (2 <= N <= 100,000) stalls.
  * The stalls are located along a straight line at positions x1,...,xN (0 <= xi <= 1,000,000,000).
  * 
@@ -12,10 +12,10 @@ package org.example.dsa.aa_array.n_binarysearch;
  * John wants to assign the cows to the stalls such that the minimum distance between any two of them is as large as possible.
  * What is the largest minimum distance?  
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  * Input:	Barn = 17		Stalls(N) = 6 //{1, 5, 8, 11, 13, 16}		Cows(C) = 4
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class N02_AggresiveCows {

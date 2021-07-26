@@ -4,9 +4,9 @@ import org.example.dsa.ff_binarytree.Node;
 import org.example.dsa.ff_binarytree.TreeUtilA;
 
 /**
- * ******************************************************************************************
+ * ***************************************************************************************
  * Find the Longest Consecutive Sequence Path (comprises consecutive values) in a Binary Tree
- * ******************************************************************************************
+ * ***************************************************************************************
  * Input:
  * 		  1
  *      /   \
@@ -20,7 +20,7 @@ import org.example.dsa.ff_binarytree.TreeUtilA;
  * 
  * Output: 4			// the longest consecutive sequence path is 5->6->7->8 
  * 
- * ******************************************************************************************
+ * ***************************************************************************************
  */
 
 public class F04_longestConsecutiveSequence {

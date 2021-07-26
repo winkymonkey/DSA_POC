@@ -1,11 +1,11 @@
 package org.example.dsa.aa_array.f_arrangement;
 
 /**
- * *******************************************************************************************************
+ * ***************************************************************************************
  * Find the minimum swaps required to bring all elements <= K together
  *   - it is not asked to bring all such elements at the beginning of the array.
  *   - those elements can be brought together anywhere within the array (i.e. start/middle/end/anywhere)
- * *******************************************************************************************************
+ * ***************************************************************************************
  * Input:  {2, 1, 5, 6, 3}				K=3
  * Output: 1							//5,3 swapped	{2, 1, 3, 6, 5}
  * 														 <  <  <
@@ -13,7 +13,7 @@ package org.example.dsa.aa_array.f_arrangement;
  * Input:  {2, 7, 9, 5, 8, 7, 4}		K=5
  * Output: 2							//2,9 swapped 8,4 swapped	{9, 7, 2, 5, 4, 7, 8}
  * 																	       <  <  <
- * *******************************************************************************************************
+ * ***************************************************************************************
  */
 
 public class F05_minimumSwapsToBringElementsLessOrEqualsToK {

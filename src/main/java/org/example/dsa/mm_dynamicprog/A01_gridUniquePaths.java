@@ -3,14 +3,14 @@ package org.example.dsa.mm_dynamicprog;
 import java.util.Arrays;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * Grid unique paths
- * *****************************************************************************
+ * ***************************************************************************************
  * A robot is located at top-left corner of a m*n grid.
  * The robot can only move in either right or down at any point of time.
  * The robot is trying to reach bottom-right corner of the grid.
  * How many possible unique paths are there.
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class A01_gridUniquePaths {

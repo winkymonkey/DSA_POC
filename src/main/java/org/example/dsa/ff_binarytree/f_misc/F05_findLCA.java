@@ -4,9 +4,9 @@ import org.example.dsa.ff_binarytree.Node;
 import org.example.dsa.ff_binarytree.TreeUtilA;
 
 /**
- * ************************************************************************************************************
+ * ***************************************************************************************
  * Find the LCA (lowest common ancestor) between two given nodes n1 and n2 in a Binary Tree
- * ************************************************************************************************************
+ * ***************************************************************************************
  * The LCA between two nodes n1 and n2 is defined as the lowest node in the tree that has both n1 & n2 as descendants 
  * The LCA of n1 & n2 in the tree is the shared ancestor of n1 & n2 that is located farthest from the root
  * 
@@ -14,7 +14,7 @@ import org.example.dsa.ff_binarytree.TreeUtilA;
  * The distance from n1 to n2 can be computed as 
  * = (the distance from the root to n1) + (the distance from the root to n2) + (twice the distance from the root to their LCA)
  * 
- * ************************************************************************************************************
+ * ***************************************************************************************
  * Input:
  * 		  1
  *      /   \
@@ -29,7 +29,7 @@ import org.example.dsa.ff_binarytree.TreeUtilA;
  * LCA(3, 4) = 1
  * LCA(2, 4) = 2
  * 
- * ************************************************************************************************************
+ * ***************************************************************************************
  */
 
 public class F05_findLCA {

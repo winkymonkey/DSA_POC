@@ -1,13 +1,13 @@
 package org.example.dsa.nn_bitManipulation.e_toggling;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * Toggle bits in the given range
- * *****************************************************************************
+ * ***************************************************************************************
  * Given a non-negative number N and two values L and R.
  * The problem is to toggle bits from the rightmost L'th bit to the rightmost R'th bit.
  * A toggle operation flips a bit 0 to 1 and a bit 1 to 0. 
- * *****************************************************************************
+ * ***************************************************************************************
  * Input:  n=17, L=2, R=3
  * Output: 23
  * 
@@ -18,7 +18,7 @@ package org.example.dsa.nn_bitManipulation.e_toggling;
  * BEFORE TOGGLE: bits in range 2nd to 3rd --> 00 		Number was --> 10001	//17
  * AFTER TOGGLE:  bits in range 2nd to 3rd --> 11		Number is ---> 10111	//23
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class E02_toggleAllBits_givenRange {

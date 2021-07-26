@@ -1,9 +1,9 @@
 package org.example.dsa.aa_array.n_binarysearch;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * Roti Parata Problem
- * *****************************************************************************
+ * ***************************************************************************************
  * IEEE is having its AGM next week and the president wants to serve cheese prata after the meeting.
  * The subcommittee members are asked to go to food connection and get P(P<=1000) pratas packed for the function.
  * The stall has L cooks(L<=50) and each cook has a rank R(1<=R<=8).
@@ -11,14 +11,14 @@ package org.example.dsa.aa_array.n_binarysearch;
  * (he can only cook a complete prata, no partial prata possible)
  * The webmaster wants to know the minimum time to get the order done.
  * Please write a program to help him out.
- * *****************************************************************************
+ * ***************************************************************************************
  * Input:	{1, 2, 3, 4}		P = 10
  * Output:	12								//for 10 prata, min time is 12
  * 
  * Input:	{1}					P = 8
  * Output:	8								//for 8 prata, min time is 8
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class N04_RotiParataProblem {

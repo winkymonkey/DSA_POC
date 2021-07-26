@@ -1,9 +1,9 @@
 package org.example.dsa.ff_binarytree.g_checking;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * Check if the Children Sum Property is followed in a Binary Tree
- * *****************************************************************************
+ * ***************************************************************************************
  * For every node, data value must be equal to sum of data values in left and right children.
  * 
  * Input:
@@ -15,7 +15,7 @@ package org.example.dsa.ff_binarytree.g_checking;
  * 
  * Output: YES
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class G01_hasChildrenSumProperty {

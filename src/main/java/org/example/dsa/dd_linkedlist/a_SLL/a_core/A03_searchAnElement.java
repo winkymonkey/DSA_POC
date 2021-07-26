@@ -4,9 +4,9 @@ import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList;
 import org.example.dsa.dd_linkedlist.a_SLL.MyLinkedList.Node;
 
 /**
- * ********************************************************************************
+ * ***************************************************************************************
  * Search an element in a SLL (Iterative and Recursive)
- * ********************************************************************************
+ * ***************************************************************************************
  */
 
 public class A03_searchAnElement {
