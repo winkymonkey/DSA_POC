@@ -1,15 +1,14 @@
 package org.example.dsa.zz1_stack.a_designstack;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * Design and Implement Special Stack Data Structure
- * *****************************************************************************
+ * ***************************************************************************************
  * Design a Data Structure SpecialStack that supports all the stack operations (e.g. push(), pop(), isEmpty(), isFull()) 
  * and an additional operation getMin() which should return minimum element from the SpecialStack.
  * All these operations of SpecialStack must be O(1).
  * To implement SpecialStack, you should only use standard Stack data structure and no other data structure like arrays, list etc. 
- * 
- * *****************************************************************************
+ * ***************************************************************************************
  * Consider the following SpecialStack
  * 16  --> TOP
  * 15
@@ -26,7 +25,7 @@ package org.example.dsa.zz1_stack.a_designstack;
  * 
  * When getMin() is called, it should return 18 which is the minimum in the current stack.
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class A04_designStack_getMin_timeO1_spaceO1 {

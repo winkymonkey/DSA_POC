@@ -1,9 +1,9 @@
 package org.example.dsa.nn_bitManipulation.f_misc;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * Unique element in an array where all elements occur k times except one
- * *****************************************************************************
+ * ***************************************************************************************
  * Input:  A[] = {6, 2, 5, 2, 2, 6, 6}
  * 		   k = 3
  * Output: 5				//Every element appears 3 times accept 5
@@ -12,7 +12,7 @@ package org.example.dsa.nn_bitManipulation.f_misc;
  * 		   k = 4
  * Output: 10				//Every element appears 4 times accept 10
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class F08_findElementWhichOccursOnce_whereAllOtherOccursKtimes {

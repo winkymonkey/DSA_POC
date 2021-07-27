@@ -1,9 +1,9 @@
 package org.example.dsa.zz1_stack.a_designstack;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * Implement two stacks in an array
- * *****************************************************************************
+ * ***************************************************************************************
  * Create a data structure twoStacks that represents two stacks.
  * Implementation of twoStacks should use only one array
  * (i.e. both stacks should use the same array for storing elements)
@@ -16,7 +16,7 @@ package org.example.dsa.zz1_stack.a_designstack;
  * 
  * Implementation of twoStack should be space efficient.
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class A09_design_TwoStacksInOneArray {

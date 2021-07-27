@@ -4,16 +4,16 @@ import java.util.Arrays;
 import java.util.Stack;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * The Stock Span Problem
- * *****************************************************************************
+ * ***************************************************************************************
  * It is a financial problem where we have a series of n daily price quotes for a stock. 
  * We need to calculate span of stock’s price for all n days.
  * 
  * The span Si of the stock’s price on a given day i is defined as:
  * the maximum number of consecutive days just before the given day, for which the stock price on the current day is <= its price on the given day.
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  * If an array of 7 days prices is given as {100, 80, 60, 70, 60, 75, 85}
  * then the span values for corresponding 7 days are {1, 1, 1, 2, 1, 4, 6}
  * 
@@ -25,7 +25,7 @@ import java.util.Stack;
  * For day-6: 	stock price is 75		number of days prior to it where price was lesser or equal is 4 (day3:60, day4:70, day5:60, day6:75)
  * For day-7: 	stock price is 85		number of days prior to it where price was lesser or equal is 1 (day2"80, day3:60, day4:70, day5:60, day6:75)
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class E03_stockSpanProblem {

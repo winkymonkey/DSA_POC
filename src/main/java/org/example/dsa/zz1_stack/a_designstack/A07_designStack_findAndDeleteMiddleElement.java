@@ -1,9 +1,9 @@
 package org.example.dsa.zz1_stack.a_designstack;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * Design a stack with operations on middle element
- * *****************************************************************************
+ * ***************************************************************************************
  * How to implement a stack which will support following operations in O(1) time complexity?
  * 
  * 1) push() which adds an element to the top of stack --------------- do it in O(1) time
@@ -11,7 +11,7 @@ package org.example.dsa.zz1_stack.a_designstack;
  * 3) findMiddle() which will return middle element of the stack ----- do it in O(1) time
  * 4) deleteMiddle() which will delete the middle element ------------ do it in O(1) time
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class A07_designStack_findAndDeleteMiddleElement {

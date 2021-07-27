@@ -1,5 +1,10 @@
 package org.example.dsa.zz1_stack.a_designstack;
 
+/**
+ * ***************************************************************************************
+ * Design Stack using array
+ * ***************************************************************************************
+ */
 
 public class A01_designStack_usingArray {
 	

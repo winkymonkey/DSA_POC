@@ -1,9 +1,9 @@
 package org.example.dsa.zz1_stack.a_designstack;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * How to create mergeable stack
- * *****************************************************************************
+ * ***************************************************************************************
  * Design a stack with following operations.
  *  - push(Stack s, x)------------ Adds an item x to stack s
  *  - pop(Stack s)---------------- Removes the top item from stack s
@@ -11,7 +11,7 @@ package org.example.dsa.zz1_stack.a_designstack;
  * 
  * Time Complexity of all above operations should be O(1).
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class A11_design_mergableStack {

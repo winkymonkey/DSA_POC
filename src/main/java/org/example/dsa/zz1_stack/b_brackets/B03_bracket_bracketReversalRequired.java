@@ -1,13 +1,13 @@
 package org.example.dsa.zz1_stack.b_brackets;
 
 /**
- * *****************************************************************************
+ * ***************************************************************************************
  * Minimum number of bracket reversals needed to make an expression balanced
- * *****************************************************************************
+ * ***************************************************************************************
  * Given an expression with only ‘}’ and ‘{‘.
  * The expression may not be balanced.
  * Find minimum number of bracket reversals to make the expression balanced.
- * *****************************************************************************
+ * ***************************************************************************************
  * Input:  "}{"
  * Output: 2		//We need to change '}' to '{' and '{' to '}' so that the expression becomes balanced
  * 
@@ -23,7 +23,7 @@ package org.example.dsa.zz1_stack.b_brackets;
  * Input:  "}{{}}{{{"
  * Output: 3
  * 
- * *****************************************************************************
+ * ***************************************************************************************
  */
 
 public class B03_bracket_bracketReversalRequired {

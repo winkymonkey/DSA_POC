@@ -2,6 +2,11 @@ package org.example.dsa.zz2_queue.b_misc;
 
 import org.example.dsa.zz2_queue.MyCircularQueue;
 
+/**
+ * ***************************************************************************************
+ * Design circular queue using array
+ * ***************************************************************************************
+ */
 
 public class B02_designCircularQueue_usingArray {
 	

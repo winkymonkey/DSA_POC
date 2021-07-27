@@ -2,6 +2,11 @@ package org.example.dsa.zz1_stack.a_designstack;
 
 import org.example.dsa.zz1_stack.a_designstack.MyStack2.MyLinkedList.Node;
 
+/**
+ * ***************************************************************************************
+ * Design Stack using LinkedList
+ * ***************************************************************************************
+ */
 
 public class A02_designStack_usingLinkedList {
 	

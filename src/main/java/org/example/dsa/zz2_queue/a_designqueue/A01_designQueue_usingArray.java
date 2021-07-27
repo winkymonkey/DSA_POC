@@ -2,6 +2,11 @@ package org.example.dsa.zz2_queue.a_designqueue;
 
 import org.example.dsa.zz2_queue.MyQueue;
 
+/**
+ * ***************************************************************************************
+ * Design queue using array
+ * ***************************************************************************************
+ */
 
 public class A01_designQueue_usingArray {
 	
