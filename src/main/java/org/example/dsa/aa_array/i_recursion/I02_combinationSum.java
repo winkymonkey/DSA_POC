@@ -1,7 +1,6 @@
 package org.example.dsa.aa_array.i_recursion;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -24,7 +23,7 @@ import java.util.List;
  * ***************************************************************************************
  */
 
-public class I02_CombinationSum {
+public class I02_combinationSum {
 	/*
 	 * --------------------
 	 * When we need to prepare a combination from a set of elements, the obvious way to follow is -- PICK or NOT PICK
