@@ -22,7 +22,7 @@ import java.util.Arrays;
  * ***************************************************************************************
  */
 
-public class I03_minimumJumpsToReachEnd {
+public class I05_minimumJumpsToReachEnd {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---

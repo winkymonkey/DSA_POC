@@ -35,18 +35,18 @@ public class I01_allSubsetSums {
 	
 	public static void main(String[] args) {
 		int A[] = {3, 1, 2};
-		findSubsets(0, A, 0);
+		findSubsets(A, 0, 0);
 	}
 	
 	
-	private static void findSubsets(int index, int A[], int sum) {
-		if (index == A.length) {
+	private static void findSubsets(int A[], int i, int sum) {
+		if (i == A.length) {									// we reached the end
 			System.out.print(sum + " ");
 			return;
 		}
 		
-		findSubsets(index+1, A, sum+A[index]);							// when we pick A[i]
-		findSubsets(index+1, A, sum);									// when we don't pick
+		findSubsets(A, i+1, sum+A[i]);							// when we pick A[i]
+		findSubsets(A, i+1, sum);								// when we don't pick A[i]
 	}
 	
 }
