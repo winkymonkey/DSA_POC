@@ -28,7 +28,7 @@ package org.example.dsa.aa_array.p_optimize;
  * ***************************************************************************************
  */
 
-public class Q01_maximumProfitByByingSellingShareAtMostTwice {
+public class P01_maximumProfitByByingSellingShareAtMostTwice {
 	/*
 	 * min = 0
 	 * for (i=0 to n) {

@@ -18,7 +18,7 @@ package org.example.dsa.aa_array.n_binarysearch;
  * ***************************************************************************************
  */
 
-public class P02_AggresiveCows {
+public class N02_AggresiveCows {
 	/*
 	 * Our objective is to adjust the cows among stalls in such a way that cows stay at maximum possible distance.
 	 * and if we try to further increase the distance between cows, we will fall short of stalls.

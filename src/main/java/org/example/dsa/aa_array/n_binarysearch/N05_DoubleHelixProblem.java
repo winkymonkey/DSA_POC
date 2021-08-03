@@ -28,7 +28,7 @@ package org.example.dsa.aa_array.n_binarysearch;
  * ***************************************************************************************
  */
 
-public class P05_DoubleHelixProblem {
+public class N05_DoubleHelixProblem {
 	/*
 	 * Traverse both the array independently using two pointers (one pointer for each array)
 	 *  - for each array keep one temporary sum (sum1 & sum2)

@@ -21,7 +21,7 @@ package org.example.dsa.aa_array.n_binarysearch;
  * ***************************************************************************************
  */
 
-public class P04_RotiParataProblem {
+public class N04_RotiParataProblem {
 	/*
 	 * Ranking = {1, 2, 3, 4}
 	 * 

@@ -34,7 +34,7 @@ import java.util.Arrays;
  * ***************************************************************************************
  */
 
-public class P01_BookAllocationProblem {
+public class N01_BookAllocationProblem {
 	/*
 	 * Theoretically, we can allocate 0 books to student1 and ALL books to student2.
 	 * As each student has to be allocated atleast with one book ---> hence we cannot allocate 0 books to student1
