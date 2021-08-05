@@ -54,9 +54,9 @@ public class F06_findQuadrupletSum_ofGivenValue {
 	 * 
 	 * 
 	 * 
-	 * -------------------------------------------------
-	 * ---CREATE SUM ARRAY & USE FIXED SLIDING WINDOW---
-	 * -------------------------------------------------
+	 * ------------------------------------------------
+	 * ---CREATE SUM ARRAY & USE TWO POINTER APROACH---
+	 * ------------------------------------------------
 	 * Create an auxiliary array AUX[] and store sum of all possible pairs in AUX[]
 	 *   If size of A[] is n, the size of AUX[] will be = (n-1)+(n-2)+(n-3)+...+1 = n*(n-1)/2
 	 * 
@@ -64,11 +64,11 @@ public class F06_findQuadrupletSum_ofGivenValue {
 	 * 
 	 * Now the problem reduces to find two elements in AUX[] with sum equal to X
 	 * 
-	 * We can now apply 'sliding window' technique
+	 * We can now apply 'two pointer' technique
 	 * 	 but while picking two elements from AUX[], then confirm that these two elements doesn't have an element of A[] in common
 	 *   E.G, if AUX[1]=A[1]+A[2] and AUX[2]=A[2]+A[4], then AUX[1] and AUX[2] don’t represent four distinct elements of A[] 
 	 * 
-	 * NOTE: easy to do in C using pointers but tough to do in java
+	 * NOTE: easy to do in C using pointers but tough to do in Java
 	 * 
 	 * TIME --- O(n^2) + O(n^2 * Log n^2) = O(n^2 Log n) -------- (to store sum of all pairs)+(to sort AUX[] of size O(n^2))
 	 * SPACE -- O(n*(n-1)/2) = O(n^2)

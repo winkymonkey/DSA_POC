@@ -21,22 +21,31 @@ public class B02_findPivot_inSortedRotated {
 	 */
 	
 	public static void main(String[] args) {
-		int A[] = { 12, 14, 16, 2, 4, 6, 8, 10 };
+		int A[] = { 8, 10, 12, 14, 16, 18, 20, 22, 2, 4, 6 };
 		int pivot = findPivot(A, 0, A.length-1);
 		System.out.println(pivot);
 	}
 	
 	
-	private static int findPivot(int A[], int start, int end) {
-		int mid = (start+end)/2;
-		if (A[mid] > A[mid+1]) {				// it means A[mid] is pivot
+	private static int findPivot(int A[], int low, int high) {
+		if (high < low)
+            return -1;
+        if (high == low)
+            return low;
+		
+		int mid = (low+high)/2;
+		
+		if (mid < high && A[mid] > A[mid+1]) {				// it means A[mid] is pivot
 			return mid;
 		}
-		else if (A[mid] >= A[start]) {			// it means pivot lies in the left half, so recursively search pivot in the left half
-			return findPivot(A, mid+1, end);
+		else if (mid > low && A[mid-1] > A[mid]) {			// it means A[mid-1] is pivot
+			return (mid-1);
+		}
+		else if (A[low] >= A[mid]) {
+			return findPivot(A, low, mid-1);
 		}
 		else {
-			return findPivot(A, start, mid-1);	// it means pivot lies in the right half, so recursively search pivot in the right half
+			return findPivot(A, mid+1, high);
 		}
 	}
 	

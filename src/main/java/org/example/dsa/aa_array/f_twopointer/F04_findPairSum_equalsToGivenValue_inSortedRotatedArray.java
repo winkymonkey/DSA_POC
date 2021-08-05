@@ -24,6 +24,11 @@ public class F04_findPairSum_equalsToGivenValue_inSortedRotatedArray {
 	 * 
 	 * Now consider Smallest as Left and Largest as Right
 	 * Now apply the same algorithm, but here the indexes should be incremented/decremented in rotational manner using modular arithmetic
+	 * It means, 
+	 * 		instead of doing l++, do it as l = (l+1)%n
+	 * 		instead of doing r--, do it as r = (r-1+n)%n
+	 * 		instead of running "while(l < r)" run it as "while(l != r)"
+	 * 
 	 * 
 	 * TIME --- O(n)
 	 * SPACE -- O(1)
