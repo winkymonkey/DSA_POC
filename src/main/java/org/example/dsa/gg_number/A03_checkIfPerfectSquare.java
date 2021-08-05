@@ -14,7 +14,7 @@ package org.example.dsa.gg_number;
  * ***************************************************************************************
  */
 
-public class A02_checkIfPerfectSquare {
+public class A03_checkIfPerfectSquare {
 	/*
 	 * ------------------------
 	 * ---O(n) TIME SOLUTION---

@@ -1,4 +1,4 @@
-package org.example.dsa.aa_array.q_miscellaneous;
+package org.example.dsa.aa_array.g_nge_nse;
 
 /**
  * ***************************************************************************************
@@ -6,7 +6,7 @@ package org.example.dsa.aa_array.q_miscellaneous;
  * ***************************************************************************************
  */
 
-public class Q02_trappingRainWater {
+public class G06_trappingRainWater {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---
@@ -17,7 +17,7 @@ public class Q02_trappingRainWater {
 	 * 		The amount of water that will be stored in this column is ----- min(leftMax,rightMax) - A[i]
 	 * 		Add this value to the total amount of water stored
 	 * 
-	 * TIME --- O(N^2)
+	 * TIME --- O(n^2)
 	 * SPACE -- O(1)
 	 * 
 	 * 
@@ -42,8 +42,11 @@ public class Q02_trappingRainWater {
 	 * 		RIGHT[i] = max(RIGHT[i+1], A[i])
 	 * 
 	 * Traverse the main array
-	 * The amount of water that will be stored in this column is ----- min(LEFT[i], RIGHT[i]) - A[i]
+	 * The amount of water that will be stored in this column is ----- min(LEFT[i],RIGHT[i]) - A[i]
 	 * Add this value to total amount of water stored
+	 * 
+	 * TIME --- O(n)
+	 * SPACE -- O(1)
 	 * 
 	 */
 	
@@ -57,7 +60,6 @@ public class Q02_trappingRainWater {
 		int n = A.length;
 		int left[] = new int[n];
 		int right[] = new int[n];
-		int water = 0;
 		
 		left[0] = A[0];
 		for (int i=1; i<n; i++)
@@ -67,8 +69,9 @@ public class Q02_trappingRainWater {
 		for (int i=n-2; i>=0; i--)
 			right[i] = Math.max(right[i+1], A[i]);
 		
+		int water = 0;
 		for (int i=0; i<n; i++)
-			water += Math.min(left[i], right[i]) - A[i];
+			water += Math.min(left[i],right[i]) - A[i];
 		
 		return water;
 	}

@@ -16,7 +16,7 @@ package org.example.dsa.gg_number;
  * ***************************************************************************************
  */
 
-public class A06_trailiingZeroesInFactorial {
+public class A07_trailiingZeroesInFactorial {
 	/*
 	 * We can think of calculating the factorial and then counting the trailing zeros
 	 * But it is not feasible because for bigger inputs, it can easily cause overflow

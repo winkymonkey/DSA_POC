@@ -15,7 +15,7 @@ package org.example.dsa.aa_array.m_subarray;
  * ***************************************************************************************
  */
 
-public class M03_leastAvgSubarray {
+public class M05_leastAvgSubarray {
 	/*
 	 * ------------------------------
 	 * ---USE FIXED SLIDING WINDOW---

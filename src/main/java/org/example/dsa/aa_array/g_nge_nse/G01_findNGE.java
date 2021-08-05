@@ -35,22 +35,21 @@ public class G01_findNGE {
 	 * ------------------------
 	 * ---EFFICIENT APPROACH---
 	 * ------------------------
-	 * TIP:
 	 * NEVER STORE A HEAVY ELEMENT OVER A SMALL ELEMENT
 	 * 
 	 * Push the first element to stack
 	 * For each elements in the array:
-	 * 		- If CURRENT > stack-top:
-	 * 			- keep popping from stack until the CURRENT is less than or equal to the stack-top (or stack is empty)
-	 * 			- each popped element, the next greater element is CURRENT
-	 * 		- If CURRENT <= stack-top:
-	 * 			- push CURRENT in stack
+	 * 	  - If CURRENT > stack-top:
+	 * 	       - keep popping from stack until the CURRENT is lesser than or equal to the stack-top (or stack is empty)
+	 * 	       - each popped element, the NGE is CURRENT
+	 * 	  - If CURRENT <= stack-top:
+	 * 	       - push CURRENT in stack
 	 * 
-	 * Once the array is empty, if there are elements left in the stack, then for all of those elements the next greater element is -1
+	 * Once the array is empty, if there are elements left in the stack, then for all of those elements the NGE is -1
 	 * 
 	 * 
 	 * TIME --- O(n)
-	 * SPACE -- O(1)
+	 * SPACE -- O(n)
 	 * 
 	 */
 	

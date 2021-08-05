@@ -16,7 +16,7 @@ import java.util.PriorityQueue;
  * ***************************************************************************************
  */
 
-public class M05_kthLargestSumSubarray {
+public class M04_kthLargestSumSubarray {
 	/*
 	 * ---------------------------------
 	 * ---USE SUBARRAY SUM & MIN HEAP---

@@ -21,7 +21,7 @@ package org.example.dsa.gg_number;
  * ***************************************************************************************
  */
 
-public class A04_findNthUglyNumber {
+public class A05_nthUglyNumber {
 	/*
 	 * As every number can only be divided by 2, 3, 5 
 	 * we can look at the sequence is to split the sequence to three groups as below:

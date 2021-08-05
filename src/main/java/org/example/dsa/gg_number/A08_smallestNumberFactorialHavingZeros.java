@@ -13,7 +13,7 @@ package org.example.dsa.gg_number;
  * ***************************************************************************************
  */
 
-public class A07_smallestNumberFactorialHavingZeros {
+public class A08_smallestNumberFactorialHavingZeros {
 	/*
 	 * We already know that the number of zeroes is equal to number of 5’s in prime factors of x!
 	 * 

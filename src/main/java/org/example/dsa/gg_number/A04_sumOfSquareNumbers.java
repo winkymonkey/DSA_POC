@@ -22,7 +22,7 @@ package org.example.dsa.gg_number;
  * ***************************************************************************************
  */
 
-public class A03_sumOfSquareNumbers {
+public class A04_sumOfSquareNumbers {
 	/*
 	 * ------------------------
 	 * ---USE SLIDING WINDOW---
