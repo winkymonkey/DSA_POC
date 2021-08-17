@@ -1,6 +1,5 @@
 package org.example.dsa.aa_array.m_subarray;
 
-import java.util.Arrays;
 import java.util.PriorityQueue;
 
 /**
@@ -18,12 +17,15 @@ import java.util.PriorityQueue;
 
 public class M04_kthLargestSumSubarray {
 	/*
-	 * ---------------------------------
-	 * ---USE SUBARRAY SUM & MIN HEAP---
-	 * ---------------------------------
-	 * We first create a prefix sum array SUM[] from the given array A[]
-	 * Then we run two nested loops to find the subarraySum as SUM[j] - SUM[i-1]
-	 * We put all subarraySums in a MinHeap (priority queue)
+	 * -------------------------------
+	 * ---USE PREFIX SUM & MIN HEAP---
+	 * -------------------------------
+	 * From the given array, create a prefix sum array PrefixSum[] 
+	 * Then we run two nested loops (i, j) to find the subarray sum from i to j = PrefixSum[j] - PrefixSum[i-1]
+	 * We keep putting these subarray sums in a MinHeap (priority queue) to find the k'th maximum among them.
+	 * 
+	 * TIME --- O(n^2 log(k))
+	 * SPACE -- O(k)
 	 * 
 	 */
 
@@ -34,18 +36,18 @@ public class M04_kthLargestSumSubarray {
 	}
 
 	private static void kthLargestSum(int A[], int k) {
-		int sum[] = new int[A.length+1];
-		sum[0] = 0;
-		sum[1] = A[0];
-		for (int i=2; i<=A.length; i++) {
-			sum[i] = sum[i-1] + A[i-1];						// prefix sum array		{0, 10, 0, 20, -20}
+		int prefixSum[] = new int[A.length+1];
+		prefixSum[0] = 0;
+		
+		for (int i=1; i<prefixSum.length; i++) {
+			prefixSum[i] = prefixSum[i-1] + A[i-1];						// prefixSum = {0, 10, 0, 20, -20}
 		}
-		System.out.println(Arrays.toString(sum));
 		
 		PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
-		for (int i=1; i<sum.length; i++) {
-			for (int j=i; j<sum.length; j++) {
-				int subarraySum = sum[j] - sum[i-1];		// subarray sum from index i to j
+		
+		for (int i=1; i<prefixSum.length; i++) {
+			for (int j=i; j<prefixSum.length; j++) {
+				int subarraySum = prefixSum[j] - prefixSum[i-1];		// subarray sum from i to j
 				
 				if (queue.size() < k) {
 					queue.add(subarraySum);

@@ -4,9 +4,10 @@ package org.example.dsa.aa_array.a_core;
  * ***************************************************************************************
  * Sort N objects colored red, white or blue in such a way that 
  * 	 objects of the same color are adjacent, with the colors in the order red, white & blue.
+ * ***************************************************************************************
  * The problem is closely related to the partition operation of quick sort.
- * The attribute need not be a 'color',
- * 	 but can be 'greater than the median'/'leading digit is zero'/whatever property you care to choose.
+ * The attribute need not be always a 'color',
+ * It can be 'greater than the median'/'leading digit is zero'/whatever property you care to choose.
  * 
  * ***************************************************************************************
  */
@@ -26,7 +27,7 @@ public class A07_DutchNationalFlagAlgorithm {
 	 * 
 	 * 
 	 * Our objective is to examine the `L′ element and
-	 * 	- if `L′ is 0 --> all good, L++
+	 * 	- if `L′ is 0 --> all is well, L++
 	 *  - if `L′ is 1 --> swap it with `H′, H--
 	 * 
 	 * 
@@ -34,7 +35,8 @@ public class A07_DutchNationalFlagAlgorithm {
 	 * Thus in each step the UNKNOWN section shrinks
 	 * 
 	 * ---------
-	 * L=1, H=N
+	 * L=1
+	 * H=N
 	 * while (L <= H) {
 	 *    if (A[L] == 0)
 	 *       L++
@@ -46,9 +48,11 @@ public class A07_DutchNationalFlagAlgorithm {
 	 * TIME --- O(n)
 	 * SPACE -- O(1)
 	 * 
-	 * 
-	 * 
-	 * 
+	 */
+
+	
+	
+	/* 
 	 * -----------------------------------
 	 * ---THREE COLORS (zero, one, two)---
 	 * -----------------------------------
@@ -65,7 +69,7 @@ public class A07_DutchNationalFlagAlgorithm {
 	 * 
 	 * Our objective is to examine the `M′ element and
 	 * 	- if `M′ is 0 --> swap it with `L′, L++, M++
-	 *  - if `M′ is 1 --> all good, M++
+	 *  - if `M′ is 1 --> all is well, M++
 	 *  - if `M′ is 2 --> swap it with `H′, H--
 	 * 
 	 * 

@@ -4,8 +4,6 @@ package org.example.dsa.aa_array.e_arrangement;
  * ***************************************************************************************
  * Move all zeroes to the end of an array
  * ***************************************************************************************
- * Given an array of random numbers, Push all the zero’s of a given array to the end of the array
- * ***************************************************************************************
  * Input:  {1, 2, 0, 4, 3, 0, 5, 0}
  * Output: {1, 2, 4, 3, 5, 0, 0, 0}
  * 

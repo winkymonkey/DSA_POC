@@ -9,6 +9,29 @@ import java.util.Arrays;
  */
 
 public class A04_InsertionSort {
+	/*
+	 * --------------------
+	 * Traverse from 1 to n-1
+	 *    - copy A[i] in KEY
+	 *    - starting from (i-1) go towards left and keep shifting each elements at right as long as they are greater than KEY
+	 *    - as soon as you stop, place the KEY in the newly opened slot
+	 *    
+	 * Traverse from 2 to n-1
+	 *    - repeat
+	 *    - repeat
+	 *    - repeat
+	 * 
+	 * Traverse from 3 to n-1
+	 *    - repeat
+	 *    - repeat
+	 *    - repeat
+	 * .....
+	 * .....
+	 * 
+	 * This works fine because,
+	 * when we start shifting elements towards right, all elements before KEY (0'th index to i'th index) are already sorted 
+	 * --------------------
+	 */
 	
 	public static void main(String[] args) {
 		int A[] = { 38, 27, 43, 3, 9, 82, 10 };
@@ -19,32 +42,16 @@ public class A04_InsertionSort {
 	}
 	
 	
-	/**
-	 * Traverse from 1 to end
-	 *  - save current element in KEY
-	 *  - right shift all greater elements before it to create a slot for KEY		//this works fine because when we start shifting the elements, all elements before the current element is already sorted.
-	 *  - place KEY at the slot
-	 * Traverse from 2 to end
-	 *  - repeat
-	 *  - repeat
-	 *  - repeat
-	 * Traverse from 3 to end
-	 *  - repeat
-	 *  - repeat
-	 *  - repeat
-	 * .....
-	 * .....
-	 */
 	private static void insertionSort(int A[]) {
-		for (int i=1; i<A.length; i++) {		//Traverse from start+1 to end
+		for (int i=1; i<A.length; i++) {		// Traverse from 1 to n-1
 			int KEY = A[i];
 			int k = i-1;
 			
 			while (k>=0 && A[k]>KEY) {
-				A[k+1] = A[k];					//right shift the elements
+				A[k+1] = A[k];					// right shift the elements
 				k--;
 			}
-			A[k+1] = KEY;						//place KEY at the slot
+			A[k+1] = KEY;						// place KEY at the slot
 		}
 	}
 	

@@ -1,4 +1,4 @@
-package org.example.dsa.jj_binarytree.h_constructTree;
+package org.example.dsa.jj_binarytree.k_constructTree;
 
 import java.util.Stack;
 
@@ -8,7 +8,7 @@ import java.util.Stack;
  * ***************************************************************************************
  */
 
-public class H02_printPre_fromInPost {
+public class K02_printPre_fromInPost {
 
 	private static int IN[]   = {7, 2, 1, 4, 3, 5};
 	private static int POST[] = {7, 2, 4, 5, 3, 1};

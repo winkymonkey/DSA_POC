@@ -1,4 +1,4 @@
-package org.example.dsa.jj_binarytree.h_constructTree;
+package org.example.dsa.jj_binarytree.k_constructTree;
 
 /**
  * ***************************************************************************************
@@ -6,7 +6,7 @@ package org.example.dsa.jj_binarytree.h_constructTree;
  * ***************************************************************************************
  */
 
-public class H01_printPost_fromInPre {
+public class K01_printPost_fromInPre {
 	
 	private static int IN[]  = {4, 2, 5, 1, 3, 6};
 	private static int PRE[] = {1, 2, 4, 5, 3, 6};

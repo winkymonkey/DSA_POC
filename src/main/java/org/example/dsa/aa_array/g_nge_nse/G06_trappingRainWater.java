@@ -27,7 +27,10 @@ public class G06_trappingRainWater {
 	 * -----------------------
 	 * The above approach has a serious drawback
 	 * To find the highest bar on the left and right, array traversal is needed which reduces the efficiency of the solution.
-	 * To make this efficient we must pre-compute the highest bar on the left & right of every bar in linear time.
+	 * 
+	 * To make this efficient 
+	 * For every bar A[i], we pre-compute the highest bar on the left in linear time.
+	 * For every bar A[i], we pre-compute the highest bar on the right in linear time.
 	 * Then we can use these pre-computed values to find the amount of water in every array element.
 	 * 
 	 * -------
@@ -63,11 +66,11 @@ public class G06_trappingRainWater {
 		
 		left[0] = A[0];
 		for (int i=1; i<n; i++)
-			left[i] = Math.max(left[i-1], A[i]);
+			left[i] = Math.max(left[i-1], A[i]);			// 0, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3
 		
 		right[n-1] = A[n-1];
 		for (int i=n-2; i>=0; i--)
-			right[i] = Math.max(right[i+1], A[i]);
+			right[i] = Math.max(right[i+1], A[i]);			// 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 1
 		
 		int water = 0;
 		for (int i=0; i<n; i++)

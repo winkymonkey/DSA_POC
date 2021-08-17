@@ -1,10 +1,10 @@
-package org.example.dsa.jj_binarytree.f_misc;
+package org.example.dsa.jj_binarytree.f_path;
 
 import org.example.dsa.jj_binarytree.Node;
 
 /**
  * ***************************************************************************************
- * Maximum Path Sum in a Binary Tree
+ * Find the maximum Path Sum
  * ***************************************************************************************
  * Input:
  *     10
@@ -20,7 +20,7 @@ import org.example.dsa.jj_binarytree.Node;
  * ***************************************************************************************
  */
 
-public class F07_maxPathSum {
+public class F02_maxPathSum {
 	/*
 	 * ------------------
 	 * For each node there can be 4 ways that the max path goes through the node.

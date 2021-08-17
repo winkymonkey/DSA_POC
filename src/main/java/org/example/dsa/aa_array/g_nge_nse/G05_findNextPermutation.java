@@ -40,21 +40,21 @@ public class G05_findNextPermutation {
 	 * 
 	 * 
 	 * ------------------------
-	 * 1. Traverse the array from right side, keep traversing till we find a digit "breakpoint" which is smaller than its right side digit
-	 *    For {5, 3, 4, 9, 7, 6}
-	 *    We stop at 4 as it is smaller than 9. So breakpoint=2 (2nd index)
+	 * Traverse the array from right side, keep traversing till we find a digit "breakpoint" which is smaller than the previously traversed digit.
+	 * If we do not find such a digit, then output is “Not Possible”.
+	 *    E.g. For {5, 3, 4, 9, 7, 6} we stop at 4 because it is smaller than 9.
 	 * 
-	 * 2. Now search the right side of "breakpoint" and look for the NGE of the "breakpoint"
-	 *    So the right side of "breakpoint" contains 976, where the NGE is 6
+	 * Now search the right side of the "breakpoint" and find the smallest digit greater than "breakpoint".
+	 *    The right side of "breakpoint" contains 976.
+	 *    So the smallest digit greater than 4 is 6.
 	 * 
-	 * 3. swap above two digits
+	 * Swap above two digits
 	 *    So we swap 4 and 6
 	 *    So it becomes {5, 3, 6, 9, 7, 4}
 	 * 
-	 * 4. Now sort all right side digits of "breakpoint's" index
-	 *    So it becomes {5, 3, 6, 4, 7, 9}
-	 * 
+	 * Now sort all digits at right side of "breakpoint".
 	 * This is the desired number
+	 *    So it becomes {5, 3, 6, 4, 7, 9}
 	 * 
 	 * ------------------------
 	 */
@@ -94,7 +94,7 @@ public class G05_findNextPermutation {
 			}
 		}
 		
-		A = swap(A, nextGreater, breakpoint);			// swap the NGE and the breakpoint
+		A = swap(A, nextGreater, breakpoint);			// swap the nextGreater & the breakpoint
 		A = reverse(A, breakpoint+1, A.length-1);		// Reverse entire array after the breakpoint element
 		return true;
 	}

@@ -1,4 +1,4 @@
-package org.example.dsa.jj_binarytree.g_checking;
+package org.example.dsa.jj_binarytree.j_checking;
 
 /**
  * ***************************************************************************************
@@ -22,7 +22,7 @@ package org.example.dsa.jj_binarytree.g_checking;
  * ***************************************************************************************
  */
 
-public class G04_isCousin {
+public class J04_isCousin {
 	/*
 	 * ------------------
 	 * find level of both the nodes & check is they are at same level

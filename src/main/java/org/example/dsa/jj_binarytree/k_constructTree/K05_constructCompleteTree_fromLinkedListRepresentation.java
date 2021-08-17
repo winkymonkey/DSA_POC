@@ -1,4 +1,4 @@
-package org.example.dsa.jj_binarytree.h_constructTree;
+package org.example.dsa.jj_binarytree.k_constructTree;
 
 /**
  * ***************************************************************************************
@@ -21,7 +21,7 @@ package org.example.dsa.jj_binarytree.h_constructTree;
  * ***************************************************************************************
  */
 
-public class H05_constructCompleteTree_fromLinkedListRepresentation {
+public class K05_constructCompleteTree_fromLinkedListRepresentation {
 	/*
 	 * ------------------
 	 * Create a queue.

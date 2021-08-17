@@ -1,10 +1,10 @@
-package org.example.dsa.jj_binarytree.f_misc;
+package org.example.dsa.jj_binarytree.g_subtree;
 
 import org.example.dsa.jj_binarytree.Node;
 
 /**
  * ***************************************************************************************
- * Subtree with given sum in a Binary Tree
+ * Find subtree with given sum
  * ***************************************************************************************
  * You are given a Binary Tree and a given sum.
  * The task is to check if there exist a subtree whose sum of all nodes is equal to the given sum.
@@ -21,7 +21,7 @@ import org.example.dsa.jj_binarytree.Node;
  * ***************************************************************************************
  */
 
-public class F02_subtreeWithGivenSum {
+public class G02_subtreeWithGivenSum {
 	/*
 	 * ------------------
 	 * Traverse the tree (in/pre/post) 

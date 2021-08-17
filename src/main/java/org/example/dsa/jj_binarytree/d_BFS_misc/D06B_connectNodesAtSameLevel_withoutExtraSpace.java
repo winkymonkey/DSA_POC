@@ -56,7 +56,7 @@ public class D06B_connectNodesAtSameLevel_withoutExtraSpace {
 		if (root == null)
 			return;
 
-		if (root.next != null)
+		if (root.next != null)							// Before setting next of left & right children, set next of children of other nodes at same level
 			connect(root.next);
 
 		if (root.left != null) {						// if ROOT has a left child

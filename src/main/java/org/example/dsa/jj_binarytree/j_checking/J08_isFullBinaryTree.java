@@ -1,4 +1,4 @@
-package org.example.dsa.jj_binarytree.g_checking;
+package org.example.dsa.jj_binarytree.j_checking;
 
 /**
  * ***************************************************************************************
@@ -6,7 +6,7 @@ package org.example.dsa.jj_binarytree.g_checking;
  * ***************************************************************************************
  */
 
-public class G08_isFullBinaryTree {
+public class J08_isFullBinaryTree {
 	/*
 	 * 
 	 */

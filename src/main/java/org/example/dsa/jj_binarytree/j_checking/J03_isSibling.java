@@ -1,4 +1,4 @@
-package org.example.dsa.jj_binarytree.g_checking;
+package org.example.dsa.jj_binarytree.j_checking;
 
 import org.example.dsa.jj_binarytree.Node;
 import org.example.dsa.jj_binarytree.TreeUtilA;
@@ -24,7 +24,7 @@ import org.example.dsa.jj_binarytree.TreeUtilA;
  * ***************************************************************************************
  */
 
-public class G03_isSibling {
+public class J03_isSibling {
 	
 	public static void main(String[] args) {
 		Node root = TreeUtilA.createNewTreeA3();

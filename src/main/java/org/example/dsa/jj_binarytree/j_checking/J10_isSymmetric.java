@@ -1,4 +1,4 @@
-package org.example.dsa.jj_binarytree.g_checking;
+package org.example.dsa.jj_binarytree.j_checking;
 
 import org.example.dsa.jj_binarytree.Node;
 
@@ -24,7 +24,7 @@ import org.example.dsa.jj_binarytree.Node;
  * ***************************************************************************************
  */
 
-public class G10_isSymmetric {
+public class J10_isSymmetric {
 	
 	public static void main(String[] args) {
 		Node root = new Node(1);

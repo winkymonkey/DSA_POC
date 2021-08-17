@@ -1,4 +1,4 @@
-package org.example.dsa.jj_binarytree.h_constructTree;
+package org.example.dsa.jj_binarytree.k_constructTree;
 
 /**
  * ***************************************************************************************
@@ -6,7 +6,7 @@ package org.example.dsa.jj_binarytree.h_constructTree;
  * ***************************************************************************************
  */
 
-public class H04_constructFullTree_fromPrePost {
+public class K04_constructFullTree_fromPrePost {
 	/* 
 	 * ------------------
 	 *             1

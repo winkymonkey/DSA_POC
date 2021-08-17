@@ -5,7 +5,7 @@ package org.example.dsa.aa_array.m_subarray;
  * Find the subarray that has the largest sum
  * ***************************************************************************************
  * Input:  {-2, -3, 4, -1, -2, 1, 5, -3}
- * 		     0   1  2   3   4  5  6   7
+ * //	     0   1  2   3   4  5  6   7
  * Output: 7								//sum of elements in {4, -1, -2, 1, 5} is 7
  * 
  * Input:  {-5, 4, 6, -3, 4, -1}
@@ -17,32 +17,52 @@ package org.example.dsa.aa_array.m_subarray;
 
 public class M01_largestSumSubarray {
 	/*
+	 * --------------------
+	 * ---NAIVE APPROACH---
+	 * --------------------
+	 * We look at each index and calculate the maximum subarray ending at that index.
+	 * 
+	 * {-2, -3, 4, -1, -2, 1, 5, -3}
+	 *   0   1  2   3   4  5  6   7
+	 * 
+	 * maximum subarray ending at index 0 ----- maximum of (index0)
+	 * maximum subarray ending at index 1 ----- maximum of (index1, index 1to0)
+	 * maximum subarray ending at index 2 ----- maximum of (index2, index 2to1, index 2to0)
+	 * maximum subarray ending at index 3 ----- maximum of (index3, index 3to2, index 3to1, index 3to0)
+	 * .....
+	 * .....
+	 * 
+	 * TIME --- O(n^2)
+	 * SPACE -- O(1)
+	 * 
+	 * 
+	 * 
 	 * ------------------------
 	 * ---KADANE'S ALGORITHM---
 	 * ------------------------
-	 * maxSoFar = Integer.MIN;
-	 * sum = 0;
+	 * It says that,
+	 * maximum subarray ending at index 'i' is --- either of "current element" OR "current element + previous maximum subarray"
+	 * Hence we can compare these two and ignore all other subarrays.
 	 * 
-	 * for (i=0 to length) {
-	 * 	  sum = sum + A[i]
-	 *    
-	 *    if (sum < 0)
-	 *       sum = 0;
-	 *    
-	 *    maxSoFar = max(maxSoFar, sum)
-	 * }
-	 * return maxSoFar;
-	 * 
-	 * 
-	 * 
-	 * for i=0	-->	sum = sum+A[0] = 0+(-2) = -2 ~~ 0	// maxSoFar = 0
-	 * for i=1	-->	sum = sum+A[1] = 0+(-3) = -3 ~~ 0 	// maxSoFar = 0
-	 * for i=2	-->	sum = sum+A[2] = 0+(4)  = 4			// maxSoFar = 4 (maxSoFar is updated as current sum > maxSoFar) 
-	 * for i=3	-->	sum = sum+A[3] = 4+(-1) = 3			// maxSoFar = 4
-	 * for i=4	-->	sum = sum+A[4] = 3+(-2) = 1			// maxSoFar = 4
-	 * for i=5	-->	sum = sum+A[5] = 1+(1)  = 2			// maxSoFar = 4
-	 * for i=6	-->	sum = sum+A[6] = 2+(5)  = 7			// maxSoFar = 7 (maxSoFar is updated as current sum > maxSoFar)
-	 * for i=7	-->	sum = sum+A[7] = 7+(-3) = 4			// maxSoFar = 7
+	 * TIME --- O(n)
+	 * SPACE -- O(1)
 	 * 
 	 */
+	
+	public static void main(String[] args) {
+		int A[] = {-2, -3, 4, -1, -2, 1, 5, -3};
+		System.out.println(maxSubArraySum(A));
+	}
+
+	private static int maxSubArraySum(int A[]) {
+		int localMax = A[0];
+		int globalMax = A[0];
+
+		for (int i=1; i<A.length; i++) {
+			localMax = Math.max(A[i], localMax+A[i]);
+			globalMax = Math.max(globalMax, localMax);
+		}
+		return globalMax;
+	}
+	
 }

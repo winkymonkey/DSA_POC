@@ -1,4 +1,4 @@
-package org.example.dsa.jj_binarytree.g_checking;
+package org.example.dsa.jj_binarytree.j_checking;
 
 /**
  * ***************************************************************************************
@@ -20,7 +20,7 @@ package org.example.dsa.jj_binarytree.g_checking;
  * ***************************************************************************************
  */
 
-public class G05_printCousins {
+public class J05_printCousins {
 	/*
 	 * ------------------
 	 * Find the level of the given node & Find its sibling node

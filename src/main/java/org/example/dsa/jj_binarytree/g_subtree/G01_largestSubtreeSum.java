@@ -1,10 +1,10 @@
-package org.example.dsa.jj_binarytree.f_misc;
+package org.example.dsa.jj_binarytree.g_subtree;
 
 import org.example.dsa.jj_binarytree.Node;
 
 /**
  * ***************************************************************************************
- * Find largest subtree sum in a Binary Tree
+ * Find largest subtree sum
  * ***************************************************************************************
  * Given a Binary Tree, task is to find subtree with maximum sum in tree.
  * ***************************************************************************************
@@ -30,7 +30,7 @@ import org.example.dsa.jj_binarytree.Node;
  * ***************************************************************************************
  */
 
-public class F01_largestSubtreeSum {
+public class G01_largestSubtreeSum {
 	/*
 	 * ------------------
 	 * maxTillNow = 0

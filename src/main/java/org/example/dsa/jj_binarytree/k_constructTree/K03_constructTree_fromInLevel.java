@@ -1,4 +1,4 @@
-package org.example.dsa.jj_binarytree.h_constructTree;
+package org.example.dsa.jj_binarytree.k_constructTree;
 
 import org.example.dsa.jj_binarytree.Node;
 
@@ -8,7 +8,7 @@ import org.example.dsa.jj_binarytree.Node;
  * ***************************************************************************************
  */
 
-public class H03_constructTree_fromInLevel {
+public class K03_constructTree_fromInLevel {
 	
 	private static int IN[]    = {4, 8, 10, 12, 14, 20, 22};
 	private static int LEVEL[] = {20, 8, 22, 4, 12, 10, 14};

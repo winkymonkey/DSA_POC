@@ -1,4 +1,4 @@
-package org.example.dsa.jj_binarytree.g_checking;
+package org.example.dsa.jj_binarytree.j_checking;
 
 /**
  * ***************************************************************************************
@@ -11,6 +11,6 @@ package org.example.dsa.jj_binarytree.g_checking;
  * ***************************************************************************************
  */
 
-public class G12_isHeap {
+public class J12_isHeap {
 	
 }

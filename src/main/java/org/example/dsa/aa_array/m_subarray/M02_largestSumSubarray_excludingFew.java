@@ -20,22 +20,22 @@ public class M02_largestSumSubarray_excludingFew {
 	 * ---------------------------------
 	 * ---MODIFIED KADANE'S ALGORITHM---
 	 * ---------------------------------
-	 * In legacy approach -----> We reset sum=0; when sum<0
-	 * In this problem --------> We reset sum=0; when sum<0 OR A[i] exists in B[]
+	 * In legacy approach -----> We reset the sum when (sum<0)
+	 * In this problem --------> We reset the sum when (sum<0 OR A[i] exists in B[])
 	 * 
 	 * 
 	 * ----------
-	 * MAX = 0;
+	 * maxSoFar = 0;
 	 * sum = 0;
 	 * for (i=0 to length) {
 	 * 	  sum = sum + A[i]
+	 * 	  
+	 *    maxSoFar = max(maxSoFar, sum)
 	 *    
 	 *    if (sum < 0 || A[i] belongs to B[])	----> //only modification is in this line
 	 *       sum = 0;
-	 *    
-	 *    MAX = max(MAX, sum)
 	 * }
-	 * return MAX;
+	 * return maxSoFar;
 	 * 
 	 */
 }

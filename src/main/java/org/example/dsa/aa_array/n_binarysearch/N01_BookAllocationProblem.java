@@ -6,11 +6,15 @@ import java.util.Arrays;
  * ***************************************************************************************
  * Allocate Minimum Number Of Pages
  * ***************************************************************************************
- * Given number of pages in n different books and m students.
- * The books are arranged in ascending order of number of pages.
- * Every student must be allocated at least one book.
- * Every student is assigned to read some consecutive books.
- * The task is to assign books in such a way that the maximum number of pages assigned to a student is minimum. 
+ * An array is given which denotes the number of pages in "n" different books.
+ * These books has to be distributes among "k" students in such a way that the maximum number of pages assigned to a student is minimum.
+ * 
+ * NOTE:
+ *    (1) The books are arranged in ascending order of number of pages.
+ *    (2) Pages from a book cannot be divided across students.
+ *    (3) Every student must be allocated at least one book.
+ * 	  (4) Every student must be assigned to read consecutive books.
+ * 
  * ***************************************************************************************
  * Input:	pages[] = {10, 20, 30, 40}		k = 2
  * Output:	113
@@ -36,15 +40,15 @@ import java.util.Arrays;
 
 public class N01_BookAllocationProblem {
 	/*
-	 * Theoretically, we can allocate 0 books to student1 and ALL books to student2.
-	 * As each student has to be allocated atleast with one book ---> hence we cannot allocate 0 books to student1
-	 * As our objective is to minimize the allocated books to anyone ---> hence we cannot allocate ALL books to student2
+	 * Can we allocate 0 books to a student?
+	 * - No (as per the problem statement we cannot do that)
 	 * 
-	 * So, the optimal value of the allocated books must lie between 0 to ALL.
+	 * Can we allocate ALL books to a student?
+	 * - No (because in that case others will receive 0 books and as per the problem statement we cannot do that)
+	 * 
+	 * Hence the optimal value of the allocated books must lie between 0 to ALL.
 	 * And this is what we need figure out.
-	 * 
-	 * As per above example, 60 will be the optimal value. 
-	 * But how to find that value in the range of 0 to ALL??????
+	 * But how to find that value in the range of 0 to ALL?
 	 * Binary Search is a very good option.
 	 * 
 	 * Note: 
@@ -62,7 +66,7 @@ public class N01_BookAllocationProblem {
 	}
 	
 	
-	private static int find(int A[], int k) {		//sorted array
+	private static int find(int A[], int k) {
 		if (A.length < k)
 			return -1;
 
@@ -75,30 +79,30 @@ public class N01_BookAllocationProblem {
 			
 			if (isValid(A, k, mid)) {
 				result = mid;
-				end = mid-1;
+				end = mid-1;				// optimal value lies in the range of 0 to mid-1
 			}
 			else {
-				start = mid+1;
+				start = mid+1;				// optimal value lies in the range of mid+1 to end
 			}
 		}
 		return result;
 	}
 	
 	
-	private static boolean isValid(int A[], int k, int maxPages) {
-		int student = 1;
+	private static boolean isValid(int A[], int k, int maxPagesStudentCanRead) {
+		int studentsReqd = 1;
 		int sum = 0;
 
 		for (int i=0; i<A.length; i++) {
-			if (A[i] > maxPages)
+			if (A[i] > maxPagesStudentCanRead)
 				return false;
 			
 			sum = sum + A[i];
-			if (sum > maxPages) {
-				student++;
+			if (sum > maxPagesStudentCanRead) {
+				studentsReqd++;
 				sum = A[i];
 			}
-			if (student > k)
+			if (studentsReqd > k)
 				return false;
 		}
 		return true;

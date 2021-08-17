@@ -1,4 +1,4 @@
-package org.example.dsa.jj_binarytree.g_checking;
+package org.example.dsa.jj_binarytree.j_checking;
 
 /**
  * ***************************************************************************************
@@ -6,7 +6,7 @@ package org.example.dsa.jj_binarytree.g_checking;
  * ***************************************************************************************
  */
 
-public class G07_isPerfectBinaryTree {
+public class J07_isPerfectBinaryTree {
 	/*
 	 * ------------------
 	 * int storedLevel = 0;

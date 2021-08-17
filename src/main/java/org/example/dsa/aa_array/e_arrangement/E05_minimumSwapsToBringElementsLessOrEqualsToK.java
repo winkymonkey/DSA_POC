@@ -18,9 +18,9 @@ package org.example.dsa.aa_array.e_arrangement;
 
 public class E05_minimumSwapsToBringElementsLessOrEqualsToK {
 	/*
-	 * ----------------------------------------
-	 * ---TWO POINTER & FIXED SLIDING WINDOW---
-	 * ----------------------------------------
+	 * --------------------------
+	 * ---FIXED SLIDING WINDOW---
+	 * --------------------------
 	 * Traverse the array and COUNT the number of elements <= 'K'
 	 * 
 	 * Traverse the array again by maintaining a window of length 'count'

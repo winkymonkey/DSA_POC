@@ -1,4 +1,4 @@
-package org.example.dsa.jj_binarytree.g_checking;
+package org.example.dsa.jj_binarytree.j_checking;
 
 /**
  * ***************************************************************************************
@@ -17,7 +17,7 @@ package org.example.dsa.jj_binarytree.g_checking;
  * ***************************************************************************************
  */
 
-public class G02_isSumTree {
+public class J02_isSumTree {
 	/*
 	 * ----METHOD--1----
 	 * Get the sum of nodes in left subtree and right subtree.

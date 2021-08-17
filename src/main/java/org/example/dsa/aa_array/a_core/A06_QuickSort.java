@@ -21,21 +21,21 @@ public class A06_QuickSort {
 	}
 	
 	
-	private static void quickSort(int A[], int left, int right) {
-		if (left < right) {
-			int pi = partition(A, left, right);	//pi is partitioning index, A[pi] is now at right place
-			quickSort(A, left, pi-1);			//Call quickSort for first part
-			quickSort(A, pi+1, right);			//Call quickSort for second part
+	private static void quickSort(int A[], int low, int high) {
+		if (low < high) {
+			int pi = partition(A, low, high);		// pi is partitioning index, A[pi] is now at right place
+			quickSort(A, low, pi-1);				// Call quickSort for first part
+			quickSort(A, pi+1, high);				// Call quickSort for second part
 		}
 	}
 	
 	
-	private static int partition(int A[], int left, int right) {
-		int pivot = A[right];
-		int k = left-1; 						//index of smaller element
+	private static int partition(int A[], int low, int high) {
+		int pivot = A[high];					// pick last element as pivot
+		int k = low-1; 							// index of smaller element
 		
-		for (int i=left; i<right; i++) {
-			if (A[i] <= pivot) {				//if current element is smaller than or equal to pivot
+		for (int i=low; i<high; i++) {
+			if (A[i] <= pivot) {				// if A[i] is smaller than pivot, our objective is to push A[i] as left as possible
 				k++;
 				//swap A[i] and A[k]
 				int temp = A[k];
@@ -44,10 +44,10 @@ public class A06_QuickSort {
 			}
 		}
 		
-		//swap A[k+1] and pivot
+		//swap A[k+1] and pivot			// once all elements lesser than pivot are pushed towards left, pivot is placed by swapping it with A[k+1]
 		int temp = A[k+1];
-		A[k+1] = A[right];
-		A[right] = temp;
+		A[k+1] = A[high];
+		A[high] = temp;
 
 		return k+1;
 	}

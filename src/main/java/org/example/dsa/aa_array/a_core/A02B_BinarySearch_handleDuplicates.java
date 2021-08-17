@@ -2,10 +2,10 @@ package org.example.dsa.aa_array.a_core;
 
 /**
  * ***************************************************************************************
- * This problem can be extended as
  * Find how many times a given element X occurs in a sorted array
  * ***************************************************************************************
  */
+
 public class A02B_BinarySearch_handleDuplicates {
 	
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package org.example.dsa.jj_binarytree.g_checking;
+package org.example.dsa.jj_binarytree.j_checking;
 
 import org.example.dsa.jj_binarytree.Node;
 
@@ -26,7 +26,7 @@ import org.example.dsa.jj_binarytree.Node;
  * ***************************************************************************************
  */
 
-public class G11_isBalanced {
+public class J11_isBalanced {
 
 	public static void main(String[] args) {
 		Node root = new Node(1);

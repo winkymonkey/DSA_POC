@@ -15,14 +15,14 @@ package org.example.dsa.aa_array.m_subarray;
  * ***************************************************************************************
  */
 
-public class M05_leastAvgSubarray {
+public class M05_leastAvgSubarrayOfSizeK {
 	/*
 	 * ------------------------------
 	 * ---USE FIXED SLIDING WINDOW---
 	 * ------------------------------
 	 * The idea is to use sliding window of size `k`
 	 * Keep track of sum of current `k` elements
-	 * To compute sum of next window, remove first element of current window & add immediate next element
+	 * To compute sum of next window, remove first element of current window & add next element
 	 * 
 	 * TIME --- O(n)
 	 * SPACE -- O(1)
@@ -44,7 +44,7 @@ public class M05_leastAvgSubarray {
 	 * 	  }
 	 * }
 	 * 
-	 * The range is 'res_index' and '(res_index + k - 1)'
+	 * The range is between 'res_index' and 'res_index + k - 1'
 	 * 
 	 */
 }

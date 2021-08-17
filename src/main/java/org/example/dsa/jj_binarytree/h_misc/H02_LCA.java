@@ -1,11 +1,11 @@
-package org.example.dsa.jj_binarytree.f_misc;
+package org.example.dsa.jj_binarytree.h_misc;
 
 import org.example.dsa.jj_binarytree.Node;
 import org.example.dsa.jj_binarytree.TreeUtilA;
 
 /**
  * ***************************************************************************************
- * Find the LCA (lowest common ancestor) between two given nodes n1 and n2 in a Binary Tree
+ * Find LCA (lowest common ancestor) between two given nodes n1 and n2 in a Binary Tree
  * ***************************************************************************************
  * The LCA between two nodes n1 and n2 is defined as the lowest node in the tree that has both n1 & n2 as descendants 
  * The LCA of n1 & n2 in the tree is the shared ancestor of n1 & n2 that is located farthest from the root
@@ -32,7 +32,7 @@ import org.example.dsa.jj_binarytree.TreeUtilA;
  * ***************************************************************************************
  */
 
-public class F05_findLCA {
+public class H02_LCA {
 	/*
 	 * ------------------
 	 * Traverse the tree starting from the root.

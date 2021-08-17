@@ -1,4 +1,4 @@
-package org.example.dsa.jj_binarytree.g_checking;
+package org.example.dsa.jj_binarytree.j_checking;
 
 import org.example.dsa.jj_binarytree.Node;
 
@@ -24,7 +24,7 @@ import org.example.dsa.jj_binarytree.Node;
  * ***************************************************************************************
  */
 
-public class G09_isSubtreeOfAnotherTree {
+public class J09_isSubtreeOfAnotherTree {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---

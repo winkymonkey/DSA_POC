@@ -1,8 +1,8 @@
-package org.example.dsa.jj_binarytree.f_misc;
+package org.example.dsa.jj_binarytree.h_misc;
 
 /**
  * ***************************************************************************************
- * Check sum of Covered and Uncovered nodes (appears either on left / right boundary) of Binary Tree
+ * Find sum of Covered and Uncovered nodes (appears either on left / right boundary)
  * ***************************************************************************************
  * Input:
  *           9
@@ -19,7 +19,7 @@ package org.example.dsa.jj_binarytree.f_misc;
  * ***************************************************************************************
  */
 
-public class F03_sumOfCoveredAndUncoveredNodes {
+public class H01_sumOfCoveredAndUncoveredNodes {
 	/*
 	 * ------------------
 	 * THIS PROBLEM IS RELATED TO BOUNDARY TRAVERSAL

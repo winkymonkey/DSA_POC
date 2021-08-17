@@ -17,28 +17,35 @@ package org.example.dsa.aa_array.h_sort;
 
 public class H05_smallestUnsortedSubarray {
 	/*
+	 * --------------------
 	 * {10, 12, 20, 30, 25, 40, 32, 31, 35, 50, 60}
 	 *   0  1   2   3   4   5   6   7   8   9   10
 	 * 
 	 * 
 	 * Scan from left to right and find the first element which is greater than the next element. Let it be START.
-	 * e.g START = 3
+	 * e.g START = 3 (because 30 is greater than 25)
 	 * 
 	 * Scan from right to left and find the first element which is smaller than the next element. Let it be END.
-	 * e.g. END = 7
+	 * e.g. END = 7 (because 31 is smaller than 32)
 	 * 
-	 * Find the minimum and maximum values in ARR[START......END]
-	 * e.g. in the range [30, 25, 40, 32, 31]
-	 * MIN = 25, MAX = 40
 	 * 
-	 * Find the first element (if any) in ARR[0.....START-1] which is greater than MIN, change START to index of this element.
-	 * Find the last element (if any) in ARR[END+1.....n-1] which is smaller than MAX, change END to index of this element.
+	 *              |               |
+	 * {10, 12, 20, 30, 25, 40, 32, 31, 35, 50, 60}
+	 *   0  1   2   3   4   5   6   7   8   9   10
+	 * 
+	 * 
+	 * Find the min and max values in that range of A[START....END]
+	 * e.g. MIN=25, MAX=40 in the range [30, 25, 40, 32, 31]
+	 * 
+	 * 
+	 * Find the first element (if any) in A[0.....start-1] which is greater than MIN, change START to this index.
+	 * Find the last element (if any) in A[end+1.....n-1] which is smaller than MAX, change END to this index.
 	 * 
 	 * Print START and END
 	 * 
 	 * 
 	 * TIME:  O(n)
 	 * SPACE: O(1)
-	 * 
+	 * --------------------
 	 */
 }

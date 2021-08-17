@@ -1,4 +1,4 @@
-package org.example.dsa.jj_binarytree.f_misc;
+package org.example.dsa.jj_binarytree.f_path;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -7,7 +7,7 @@ import org.example.dsa.jj_binarytree.Node;
 
 /**
  * ***************************************************************************************
- * Print all root-to-leaf paths in a Binary Tree
+ * Print all root-to-leaf paths
  * ***************************************************************************************
  * Input:
  *     10
@@ -26,7 +26,7 @@ import org.example.dsa.jj_binarytree.Node;
  * ***************************************************************************************
  */
 
-public class F06_allRootToLeafPaths {
+public class F01_allRootToLeafPaths {
 	/*
 	 * ------------------
 	 * Write a function that appends current root to the list & recursively call for both left subtree and right subtree.

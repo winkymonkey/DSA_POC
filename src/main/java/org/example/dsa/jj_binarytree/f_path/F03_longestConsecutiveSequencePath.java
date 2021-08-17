@@ -1,11 +1,11 @@
-package org.example.dsa.jj_binarytree.f_misc;
+package org.example.dsa.jj_binarytree.f_path;
 
 import org.example.dsa.jj_binarytree.Node;
 import org.example.dsa.jj_binarytree.TreeUtilA;
 
 /**
  * ***************************************************************************************
- * Find the Longest Consecutive Sequence Path (comprises consecutive values) in a Binary Tree
+ * Find the Longest Consecutive Sequence Path (comprises consecutive values)
  * ***************************************************************************************
  * Input:
  * 		  1
@@ -23,7 +23,7 @@ import org.example.dsa.jj_binarytree.TreeUtilA;
  * ***************************************************************************************
  */
 
-public class F04_longestConsecutiveSequence {
+public class F03_longestConsecutiveSequencePath {
 	
 	public static void main(String[] args) {
 		Node root = TreeUtilA.createNewTreeA8();
