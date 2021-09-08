@@ -28,50 +28,72 @@ public class E05_minimumSwapsToBringElementsLessOrEqualsToK {
 	 *  - it is nothing but the number of swaps required for this range
 	 *  - so after each step, we must compare the current value of 'BAD' and the minimum of 'BAD' tracked till now
 	 * 
-	 * Example:
-	 *  <        <        <  <        <  <  <  <     <           --- which are less than K(=5)
+	 * 
+	 * -------------------------------------
+	 * {2, 7, 9, 5, 8, 7, 4, 2, 6, 7, 1, 3, 5, 6, 9, 2, 6, 7}
+	 * number of elements <= K(5) ----> 8 (2, 5, 4, 2, 1, 3, 5, 2)
+	 * 
+	 * So we want these 8 elements together.
+	 * Let us check all windows of size 8 that has least elements > K(5)
+	 * 
+	 * 
+	 * 
+	 *  <        <        <  <        <  <  <        <           --- which are less than K(=5)
 	 * {2, 7, 9, 5, 8, 7, 4, 2, 6, 7, 1, 3, 5, 6, 9, 2, 6, 7}
 	 *  0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17
-	 *  |                       |								5 elements are greater than K in this range. So 5 swaps are required in this range.
-	 *     |                       |							6 elements are greater than K in this range. So 6 swaps are required in this range.
-	 *        |                       |							5 elements are greater than K in this range. So 5 swaps are required in this range.
-	 *           |                       |						4 elements are greater than K in this range. So 4 swaps are required in this range.
-	 *              |                       |					4 elements are greater than K in this range. So 4 swaps are required in this range.
-	 *                 |                       |				3 elements are greater than K in this range. So 3 swaps are required in this range.
-	 *                    |                       |				3 elements are greater than K in this range. So 3 swaps are required in this range.
-	 *                       |                       |			3 elements are greater than K in this range. So 3 swaps are required in this range.
-	 *                          |                       |		4 elements are greater than K in this range. So 4 swaps are required in this range.
-	 *                             |                       |	4 elements are greater than K in this range. So 4 swaps are required in this range.
-	 * 
-	 * 															So minimum of all above is --- 3 swaps
-	 * 
+	 *  |                    |									4 elements > K
+	 *     |                    |								5 elements > K
+	 *        |                    |							5 elements > K
+	 *           |                    |							4 elements > K
+	 *              |                    |						4 elements > K
+	 *                 |                    |					3 elements > K
+	 *                    |                    |				3 elements > K
+	 *                       |                    |				4 elements > K
+	 *                          |                    |			4 elements > K
+	 *                             |                    |		4 elements > K
+	 *                                |                    |	4 elements > K
+	 * 															
+	 * So minimum of all above is --- 3 swaps
+	 * -------------------------------------
 	 */
+	
 	
 	public static void main(String args[]) {
 		int A[] = {2, 7, 9, 5, 8, 7, 4, 2, 6, 7, 1, 3, 5, 6, 9, 2, 6, 7};
-		
-		int K = 5;
-		minSwaps(A, K);
+		minSwaps(A, 5);
 	}
 	
+	
 	private static void minSwaps(int A[], int K) {
-		int count = 0; 						// number of elements less than or equals to 'K'
-	    for (int i=0; i<A.length; ++i) 
+		/*
+		 * count the elements less than k
+		 */
+		int count = 0;
+	    for (int i=0; i<A.length; i++) 
 	    if (A[i] <= K) 
 	        count++;
 	    
-	    int bad = 0;						// unwanted elements in current window of size 'count' 
+	    /*
+	     * count the elements greater then k in first window of size=count
+	     */
+	    int num_elem_greater_then_k = 0; 
 	    for (int i=0; i<count; i++) 
 	    	if (A[i] > K) 
-	    		bad++;
+	    		num_elem_greater_then_k++;
 	    
-	    int ans = bad;
-	    for (int i=0, j=count; j<A.length; ++i, ++j) {
+	    /*
+	     * Now we have the sliding window size=count
+	     * We slide the window keep track of element going out from left and coming from right
+	     */
+	    int ans = num_elem_greater_then_k;
+	    for (int i=0, j=count; j<A.length; i++, j++) {
 	        if (A[i] > K)
-	            bad--;
+	            num_elem_greater_then_k--;
+	        
 	        if (A[j] > K)
-	            bad++;
-	        ans = Math.min(ans, bad);
+	            num_elem_greater_then_k++;
+	        
+	        ans = Math.min(ans, num_elem_greater_then_k);
 	    }
 	    System.out.println(ans);
 	}

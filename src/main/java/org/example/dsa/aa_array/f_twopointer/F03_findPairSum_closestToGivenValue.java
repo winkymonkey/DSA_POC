@@ -17,6 +17,10 @@ public class F03_findPairSum_closestToGivenValue {
 	 * -----------------------------
 	 * ---USE TWO POINTER APROACH---
 	 * -----------------------------
+	 * Sort the array ----- { 10, 22, 28, 29, 30, 40 }
+	 * Now use two pointer approach
+	 * 
+	 * 
 	 * TIME --- O(nLogn)+O(n) = O(nLogn)
 	 * SPACE -- O(1)
 	 * 
@@ -55,4 +59,5 @@ public class F03_findPairSum_closestToGivenValue {
 		
 		System.out.println(A[minLeft] + " and " + A[minRight]);
 	}
+	
 }

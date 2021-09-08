@@ -1,5 +1,7 @@
 package org.example.dsa.aa_array.g_nge_nse;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 /**
@@ -37,15 +39,17 @@ public class G01_findNGE {
 	 * ------------------------
 	 * NEVER STORE A HEAVY ELEMENT OVER A SMALL ELEMENT
 	 * 
-	 * Push the first element to stack
-	 * For each elements in the array:
-	 * 	  - If CURRENT > stack-top:
-	 * 	       - keep popping from stack until the CURRENT is lesser than or equal to the stack-top (or stack is empty)
-	 * 	       - each popped element, the NGE is CURRENT
-	 * 	  - If CURRENT <= stack-top:
-	 * 	       - push CURRENT in stack
+	 * Push A[0] in stack
 	 * 
-	 * Once the array is empty, if there are elements left in the stack, then for all of those elements the NGE is -1
+	 * For each elements in the array:
+	 * 	  - If A[i] <= stackTop || stack is empty:
+	 * 	       - push A[i] in stack
+	 * 	  
+	 *    - If A[i] > stackTop:
+	 *         - the NGE of stackTop is A[i]
+	 * 	       - keep popping from stack as long as (A[i] > stackTop) && (stack not empty)
+	 * 
+	 * Once the array is traversed, if there are elements left in the stack, then for all of those elements the NGE is -1
 	 * 
 	 * 
 	 * TIME --- O(n)
@@ -54,22 +58,22 @@ public class G01_findNGE {
 	 */
 	
 	public static void main(String[] args) {
-		int arr[] = {11, 13, 21, 3};
-		findNextGreaterElement(arr);
+		int A[] = {11, 13, 21, 3};
+		findNextGreaterElement(A);
+		findNextGreaterElement_sameOrderAsInput(A);
 	}
 	
 	
 	private static void findNextGreaterElement(int A[]) {
 		Stack<Integer> stack = new Stack<>();
-		int i=0;
-		stack.push(A[i]);
+		stack.push(A[0]);
 		
-		for (i=1; i<A.length; i++) {
-			if (stack.isEmpty() || stack.peek() > A[i]) {
+		for (int i=1; i<A.length; i++) {
+			if (stack.isEmpty() || A[i] <= stack.peek()) {
 				stack.push(A[i]);
 			}
 			else {
-				while (!stack.isEmpty() && stack.peek() < A[i]) {
+				while (!stack.isEmpty() && A[i] > stack.peek()) {
 					System.out.println("NGE of "+stack.peek()+" is "+A[i]);
 					stack.pop();
 				}
@@ -80,6 +84,42 @@ public class G01_findNGE {
 		while (!stack.isEmpty()) {
 			System.out.println("NGE of "+stack.peek()+" is -1");
 			stack.pop();
+		}
+	}
+	
+	
+	/*
+	 * Instead of printing the output, save the elements along with its NGE in a map
+	 * at the end, traverse A[] and for each element do a lookup in the map and prints corresponding NGE
+	 */
+	private static void findNextGreaterElement_sameOrderAsInput(int A[]) {
+		Map<Integer,Integer> map = new HashMap<>();
+		
+		Stack<Integer> stack = new Stack<>();
+		stack.push(A[0]);
+		
+		for (int i=1; i<A.length; i++) {
+			if (stack.isEmpty() || A[i] <= stack.peek()) {
+				stack.push(A[i]);
+			}
+			else {
+				while (!stack.isEmpty() && A[i] > stack.peek()) {
+					//System.out.println("NGE of "+stack.peek()+" is "+A[i]);
+					map.put(stack.peek(), A[i]);
+					stack.pop();
+				}
+				stack.push(A[i]);
+			}
+		}
+		
+		while (!stack.isEmpty()) {
+			//System.out.println("NGE of "+stack.peek()+" is -1");
+			map.put(stack.peek(), -1);
+			stack.pop();
+		}
+		
+		for (int i=0; i<A.length; i++) {
+			System.out.println(A[i] + " ---> " + map.get(A[i]));
 		}
 	}
 	

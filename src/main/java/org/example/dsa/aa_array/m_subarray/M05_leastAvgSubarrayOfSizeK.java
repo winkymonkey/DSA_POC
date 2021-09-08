@@ -29,22 +29,22 @@ public class M05_leastAvgSubarrayOfSizeK {
 	 * 
 	 * 
 	 * ----------------------
-	 * res_index = 0
+	 * startIndex = 0
 	 * sum = 0;
-	 * for (i=0 to k)
+	 * for (i=0 to k-1)
 	 * 	  sum += A[i];
 	 * 
-	 * min_sum = sum;
+	 * minSum = sum;
 	 * 
-	 * for (i=k to n) {
-	 * 	  sum += A[i] - A[i-k];		//Add current item and remove first item of previous subarray
-	 * 	  if (sum < min_sum) {
-	 *       min_sum = sum;
-	 *       res_index = (i+1)-k;
+	 * for (i=k to n-1) {
+	 * 	  sum = sum + A[i] - A[i-k];		//Add current item & remove first item of previous subarray
+	 * 	  if (sum < minSum) {
+	 *       minSum = sum;
+	 *       startIndex = i-k+1;
 	 * 	  }
 	 * }
 	 * 
-	 * The range is between 'res_index' and 'res_index + k - 1'
+	 * The range is between 'startIndex' and 'startIndex + k - 1'
 	 * 
 	 */
 }

@@ -33,14 +33,14 @@ public class G06_trappingRainWater {
 	 * For every bar A[i], we pre-compute the highest bar on the right in linear time.
 	 * Then we can use these pre-computed values to find the amount of water in every array element.
 	 * 
-	 * -------
-	 * LEFT[n]
-	 * Traverse A[] (from 0 to n-1)
+	 * ----------
+	 * LEFT[0] = A[0]
+	 * Traverse A[] (from 1 to n-1)
 	 * For every i,
 	 * 		LEFT[i] = max(LEFT[i-1], A[i])
 	 * 
-	 * RIGHT[n]
-	 * Traverse A[] (from n-1 to 0)
+	 * RIGHT[n-1] = A[n-1]
+	 * Traverse A[] (from n-2 to 0)
 	 * For every i,
 	 * 		RIGHT[i] = max(RIGHT[i+1], A[i])
 	 * 
@@ -51,6 +51,11 @@ public class G06_trappingRainWater {
 	 * TIME --- O(n)
 	 * SPACE -- O(1)
 	 * 
+	 * ----------
+	 * Don't confuse it with NGE,NSE.
+	 * Because here we are NOT finding NGE,NSE.
+	 * Rather we are finding HighestElemAtLeft, HighestElemAtRight
+	 * ----------
 	 */
 	
 	public static void main(String[] args) {

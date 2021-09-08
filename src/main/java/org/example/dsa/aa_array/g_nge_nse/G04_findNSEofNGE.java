@@ -22,8 +22,9 @@ package org.example.dsa.aa_array.g_nge_nse;
 public class G04_findNSEofNGE {
 	/*
 	 * -------------------
-	 * First find the Next Greater element & store their index in an array NGE[]
-	 * Now according those index, find the "Next Smaller Element" & store them in an array NSE[]
+	 * For all elements in the array, find the NGE & store their index in an array NGE[]
+	 * 
+	 * Now traverse the given array A[] and only if current index exists in the NGE[] array then only go for finding its NSE
 	 * 
 	 */
 }

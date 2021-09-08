@@ -8,6 +8,7 @@ import java.util.Arrays;
  * ***************************************************************************************
  * An array is given which denotes the number of pages in "n" different books.
  * These books has to be distributes among "k" students in such a way that the maximum number of pages assigned to a student is minimum.
+ * You need to find the maximum number of pages that can be assigned to any students.
  * 
  * NOTE:
  *    (1) The books are arranged in ascending order of number of pages.
@@ -17,13 +18,13 @@ import java.util.Arrays;
  * 
  * ***************************************************************************************
  * Input:	pages[] = {10, 20, 30, 40}		k = 2
- * Output:	113
+ * Output:	60
  * 
  * Explanation:
  * Books can be distributed between 2 students in following fashion:
  * 		- S1 = [10]
  * 		  S2 = [20+30+40] = [90]
- * 		  Max allocated pages to someone is 90 
+ * 		  Max allocated pages to someone is 90
  * 		
  * 		- S1 = [10+20] = [30]
  * 		  S2 = [30+40] = [70]

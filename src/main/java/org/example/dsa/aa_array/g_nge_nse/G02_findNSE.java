@@ -1,5 +1,7 @@
 package org.example.dsa.aa_array.g_nge_nse;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 /**
@@ -37,15 +39,17 @@ public class G02_findNSE {
 	 * ------------------------
 	 * NEVER STORE A SMALL ELEMENT OVER A HEAVY ELEMENT
 	 * 
-	 * Push the first element to stack
-	 * For each elements in the array:
-	 * 	  - If CURRENT <= stack-top:
-	 * 	       - keep popping from stack until the CURRENT is greater than or equal to the stack-top (or stack is empty)
-	 * 	       - each popped element, the NSE is CURRENT
-	 * 	  - If CURRENT > stack-top:
-	 * 	       - push CURRENT in stack
+	 * Push A[0] in stack
 	 * 
-	 * Once the array is empty, if there are elements left in the stack, then for all of those elements the NSE is -1
+	 * For each elements in the array:
+	 *    - If A[i] > stackTop || stack is empty:
+	 * 	       - push A[i] in stack
+	 *    
+	 * 	  - If A[i] <= stackTop:
+	 *         - the NSE of stackTop is A[i]
+	 * 	       - keep popping from stack as long as (A[i] <= stackTop) && (stack not empty)
+	 * 
+	 * Once the array is traversed, if there are elements left in the stack, then for all of those elements the NSE is -1
 	 * 
 	 * 
 	 * TIME --- O(n)
@@ -54,22 +58,22 @@ public class G02_findNSE {
 	 */
 	
 	public static void main(String[] args) {
-		int A[] = {11, 13, 21, 3};
+		int A[] = {4, 11, 13, 21, 3};
 		findNextSmallerElement(A);
+		findNextSmallerElement_sameOrderAsInput(A);
 	}
 	
 	
 	private static void findNextSmallerElement(int A[]) {
 		Stack<Integer> stack = new Stack<>();
-		int i=0;
-		stack.push(A[i]);
+		stack.push(A[0]);
 		
-		for (i=1; i<A.length; i++) {
-			if (stack.isEmpty() || stack.peek() < A[i]) {
+		for (int i=1; i<A.length; i++) {
+			if (stack.isEmpty() || A[i] > stack.peek()) {
 				stack.push(A[i]);
 			}
 			else {
-				while (!stack.isEmpty() && stack.peek() > A[i]) {
+				while (!stack.isEmpty() && A[i] <= stack.peek()) {
 					System.out.println("NSE of "+stack.peek()+" is "+A[i]);
 					stack.pop();
 				}
@@ -80,6 +84,42 @@ public class G02_findNSE {
 		while (!stack.isEmpty()) {
 			System.out.println("NSE of "+stack.peek()+" is -1");
 			stack.pop();
+		}
+	}
+	
+	
+	/*
+	 * Instead of printing the output, save the elements along with its NSE in a map
+	 * at the end, traverse A[] and for each element do a lookup in the map and prints corresponding NSE
+	 */
+	private static void findNextSmallerElement_sameOrderAsInput(int A[]) {
+		Map<Integer,Integer> map = new HashMap<>();
+		
+		Stack<Integer> stack = new Stack<>();
+		stack.push(A[0]);
+		
+		for (int i=1; i<A.length; i++) {
+			if (stack.isEmpty() || A[i] > stack.peek()) {
+				stack.push(A[i]);
+			}
+			else {
+				while (!stack.isEmpty() && A[i] <= stack.peek()) {
+					//System.out.println("NSE of "+stack.peek()+" is "+A[i]);
+					map.put(stack.peek(), A[i]);
+					stack.pop();
+				}
+				stack.push(A[i]);
+			}
+		}
+		
+		while (!stack.isEmpty()) {
+			//System.out.println("NSE of "+stack.peek()+" is -1");
+			map.put(stack.peek(), -1);
+			stack.pop();
+		}
+		
+		for (int i=0; i<A.length; i++) {
+			System.out.println(A[i] + " ---> " + map.get(A[i]));
 		}
 	}
 	

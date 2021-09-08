@@ -17,6 +17,10 @@ public class F02_findPairSum_closestToZero {
 	 * -----------------------------
 	 * ---USE TWO POINTER APROACH---
 	 * -----------------------------
+	 * Sort the array ----- { -80, -72, -10, 1, 60, 70, 85 }
+	 * Now use two pointer approach
+	 * 
+	 * 
 	 * TIME --- O(nLogn)+O(n) = O(nLogn)
 	 * SPACE -- O(1)
 	 * 
@@ -24,6 +28,7 @@ public class F02_findPairSum_closestToZero {
 	
 	public static void main(String[] args) {
 		int A[] = { 1, 60, -10, 70, -80, 85, -72 };
+		
 		minPairSumClosestToZero(A);
 	}
 	
@@ -40,8 +45,8 @@ public class F02_findPairSum_closestToZero {
 		int minRight = n-1;
 		
 		while (l < r) {
-			int dist = A[l] + A[r];								// dist = distance from pivot (=0)
-			if (Math.abs(dist) < Math.abs(minDist)) {			// if current sum closer to pivot (=0) than the previous
+			int dist = A[l] + A[r];									// dist = distance from pivot (=0)
+			if (Math.abs(dist) < Math.abs(minDist)) {				// if current sum closer to pivot (=0) than the previous
 				minDist = dist;
 				minLeft = l;
 				minRight = r;

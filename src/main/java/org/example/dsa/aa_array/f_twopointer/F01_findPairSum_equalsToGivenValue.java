@@ -18,7 +18,7 @@ public class F01_findPairSum_equalsToGivenValue {
 	 * -----------------------------
 	 * ---USE TWO POINTER APROACH---
 	 * -----------------------------
-	 * Sort the array	{-8, 1, 4, 6, 10, 45}
+	 * Sort the array ----- { -8, 1, 4, 6, 10, 45 }
 	 * 
 	 * l = 0
 	 * r = n-1

@@ -21,7 +21,9 @@ public class B02_findPivot_inSortedRotated {
 	 */
 	
 	public static void main(String[] args) {
-		int A[] = { 8, 10, 12, 14, 16, 18, 20, 22, 2, 4, 6 };
+		int A[] = { 8, 10, 12, 14, 16, 18, 20, 22, 2, 4, 6 };		// 22 is pivot
+		
+		// int A[] = { 16, 18, 20, 22, 2, 4, 6, 8, 10, 12, 14 };
 		int pivot = findPivot(A, 0, A.length-1);
 		System.out.println(pivot);
 	}

@@ -41,8 +41,8 @@ public class J03_merge_twoSortedArraysIntoTwoArrays {
 			int a = A[n-1];
 			int b = B[0];
 			
-			insertInA_byRightShift(A, A.length-1, b);
-			insertInB_byLeftShift(B, B.length-1, a);
+			insertInA_byRightShift(A, b);
+			insertInB_byLeftShift(B, a);
 			System.out.println(Arrays.toString(A));
 			System.out.println(Arrays.toString(B));
 			System.out.println("-------");
@@ -50,23 +50,27 @@ public class J03_merge_twoSortedArraysIntoTwoArrays {
 	}
 	
 	
-	private static void insertInA_byRightShift(int A[], int end, int b) {
+	private static void insertInA_byRightShift(int A[], int b) {
+		int n = A.length;
+		
 		int i;
-		for (i=0; i<=end; i++) {
+		for (i=0; i<n; i++) {
 			if (b < A[i]) {
 				break;
 			}
 		}
-		for (int k=end; k>=i; k--) {
+		for (int k=n-1; k>=i; k--) {
 			A[k] = A[k-1];
 		}
 		A[i] = b;
 	}
 	
 	
-	private static void insertInB_byLeftShift(int B[], int end, int a) {
+	private static void insertInB_byLeftShift(int B[], int a) {
+		int n = B.length;
+		
 		int i;
-		for (i=end; i>=0; i--) {
+		for (i=n-1; i>=0; i--) {
 			if (a > B[i]) {
 				break;
 			}

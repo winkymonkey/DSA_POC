@@ -17,11 +17,25 @@ import java.util.PriorityQueue;
 
 public class M04_kthLargestSumSubarray {
 	/*
+	 * --------------------
+	 * ---NAIVE SOLUTION---
+	 * --------------------
+	 * Run two nested loops (i, j) and find out all possible subarray sums and store those in an array.
+	 * Now sort the array and print the k'th largest.
+	 * This solution can run into problems because if N is large, then possible combinations will also be quadratic (n+ n-1 + n-2 + ..... + 3 + 2 + 1)
+	 * Hence storage can be a problem.
+	 * 
+	 * TIME --- O(n^2)
+	 * SPACE -- O(n^2)
+	 * 
+	 * 
+	 * 
 	 * -------------------------------
 	 * ---USE PREFIX SUM & MIN HEAP---
 	 * -------------------------------
+	 * Space can be optimized in this approach
 	 * From the given array, create a prefix sum array PrefixSum[] 
-	 * Then we run two nested loops (i, j) to find the subarray sum from i to j = PrefixSum[j] - PrefixSum[i-1]
+	 * Then we run two nested loops (i, j) to find the "subarray sum from i to j" = PrefixSum[j] - PrefixSum[i-1]
 	 * We keep putting these subarray sums in a MinHeap (priority queue) to find the k'th maximum among them.
 	 * 
 	 * TIME --- O(n^2 log(k))
@@ -35,7 +49,7 @@ public class M04_kthLargestSumSubarray {
 		kthLargestSum(arr, k);
 	}
 
-	private static void kthLargestSum(int A[], int k) {
+	private static void kthLargestSum(int A[], int k) {						   // A = {10, -10, 20, -40}
 		int prefixSum[] = new int[A.length+1];
 		prefixSum[0] = 0;
 		

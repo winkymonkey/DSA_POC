@@ -16,26 +16,38 @@ package org.example.dsa.aa_array.m_subarray;
  */
 
 public class M02_largestSumSubarray_excludingFew {
-	/*
-	 * ---------------------------------
-	 * ---MODIFIED KADANE'S ALGORITHM---
-	 * ---------------------------------
-	 * In legacy approach -----> We reset the sum when (sum<0)
-	 * In this problem --------> We reset the sum when (sum<0 OR A[i] exists in B[])
-	 * 
-	 * 
-	 * ----------
-	 * maxSoFar = 0;
-	 * sum = 0;
-	 * for (i=0 to length) {
-	 * 	  sum = sum + A[i]
-	 * 	  
-	 *    maxSoFar = max(maxSoFar, sum)
-	 *    
-	 *    if (sum < 0 || A[i] belongs to B[])	----> //only modification is in this line
-	 *       sum = 0;
-	 * }
-	 * return maxSoFar;
-	 * 
-	 */
+	
+	public static void main(String[] args) {
+		int A[] = {3, 4, 5, -4, 6};
+		int B[] = {1, 8, 5};
+		int ans = maxSubarraySum(A, B);
+		System.out.println(ans);
+	}
+	
+	
+	private static int maxSubarraySum(int A[], int B[]) {
+		int localMax = A[0];
+		int globalMax = A[0];
+
+		for (int i=1; i<A.length; i++) {
+			if (isPresent(B, A[i])) {
+				localMax = 0;
+			}
+			else {
+				localMax = Math.max(A[i], localMax+A[i]);
+				globalMax = Math.max(globalMax, localMax);
+			}
+		}
+		return globalMax;
+	}
+	
+	
+	private static boolean isPresent(int B[], int elem) {
+		for (int i=0; i<B.length; i++)
+			if (B[i] == elem)
+				return true;
+
+		return false;
+	}
+	
 }
