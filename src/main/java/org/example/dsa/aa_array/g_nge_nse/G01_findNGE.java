@@ -16,7 +16,7 @@ import java.util.Stack;
  * Output:	{-1, 12, 12, -1}
  * 
  * Input:	{5, 3, 2, 10, 6, 8, 1, 4, 12, 7, 4}
- * Output:	{-1, 12, 12, -1}
+ * Output:	{10, 10, 10, 12, 8, 12, 4, 12, -1, -1, -1}
  * 
  * ***************************************************************************************
  */
@@ -58,7 +58,7 @@ public class G01_findNGE {
 	 */
 	
 	public static void main(String[] args) {
-		int A[] = {11, 13, 21, 3};
+		int A[] = {5, 3, 2, 10, 6, 8, 1, 4, 12, 7, 4};
 		findNextGreaterElement(A);
 		findNextGreaterElement_sameOrderAsInput(A);
 	}
