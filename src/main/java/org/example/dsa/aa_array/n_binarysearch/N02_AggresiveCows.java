@@ -1,5 +1,7 @@
 package org.example.dsa.aa_array.n_binarysearch;
 
+import java.util.Arrays;
+
 /**
  * ***************************************************************************************
  * Aggressive cows
@@ -55,44 +57,48 @@ public class N02_AggresiveCows {
 	public static void main(String[] args) {
 		int A[] = {1, 5, 8, 11, 13, 16};
 		int cows = 4;
+		
+		Arrays.sort(A);
 		System.out.println(find(A, cows));
 	}
 	
 	
-	private static int find(int A[], int cows) {	//sorted array
+	private static int find(int A[], int cows) {
 		if (cows > A.length)
 			return -1;
 		
-		int low = 0;
-		int high = A[A.length-1] - A[0];			//gap between last & 1st
+		int low = 0;								// 0
+		int high = A[A.length-1] - A[0];			// gap between last & 1st
+		int result = -1;
 		
 		while (low <= high) {
 			int mid = low + (high-low)/2;
 			
 			if (isPossible(A, cows, mid)) {
-				low = mid+1;
+				result = mid;
+				low = mid+1;						// even though it's a valid possibility, we should try to maximize "minDist"
 			}
 			else {
-				high = mid-1;
+				high = mid-1;						// decrease "minDist" between cows, so that all cows can be fitted in stalls
 			}
 		}
-		return high;
+		return result;
 	}
 	
 	
 	private static boolean isPossible(int A[], int cows, int minDist) {
-		int count = 1;						// count of required cows
-		int lastPos = A[0];
+		int count = 1;								// count of required cows
+		int prevCowPos = A[0];
 		
 		for (int i=1; i<A.length; i++) {
-			if (A[i]-lastPos < minDist)
-				continue;
-			
-			count++;
-			lastPos = A[i];
-			if (count == cows) {			//as soon as we find that we have accommodated all cows (doesn't matter if more stalls are left or not), it means it's POSSIBLE
-				return true;
-			}			
+			if (A[i] - prevCowPos >= minDist) {		// if distance between previously placed cow and current cow >= min allowed distance.
+				count++;							// cow can be placed at this position.
+				prevCowPos = A[i];					// update cow position
+				
+				if (count == cows) {				// as soon as we accommodate all cows (doesn't matter if more stalls are left or not), it means it's POSSIBLE
+					return true;
+				}
+			}
 		}
 		return false;
 	}

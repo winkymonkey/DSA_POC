@@ -71,38 +71,40 @@ public class N03_EcoFriendlyWoodCutting {
 	}
 	
 	
-	private static int find(int A[], int required) {	//sorted array
-		int low = 0;
-		int high = A[A.length-1];
-		int mid = -1; 
+	private static int find(int A[], int required) {
+		if (required > Arrays.stream(A).sum())
+			return -1;
+		
+		int low = 0;										// 0
+		int high = Arrays.stream(A).max().getAsInt();		// max height
+		int result = -1; 
 		
 		while (low <= high) {
-			mid = low + (high-low)/2;
-			int collected = collectWood(A, mid);
+			int mid = low + (high-low)/2;
 			
-			if (collected == required) {
-				return mid;
+			if (isSufficientWoodCollected(A, required, mid)) {
+				result = mid;
+				low = mid+1;								// even though sufficient wood is collected, we should try to minimize "maxBladeHeight"
 			}
-			else if (collected > required) {		// excess wood is collected, so we can increase blade height further.
-				low = mid;
-			}
-			else {									// collected wood is less than required ,so we can decrease the blade height further.
-				high = mid;
+			else {
+				high = mid-1;								// decrease "maxBladeHeight", so that more wood can be collected
 			}
 		}
-		return mid;
+		return result;
 	}
 	
 	
-	private static int collectWood(int A[], int bladeHeight) {
-		int sum = 0;
+	private static boolean isSufficientWoodCollected(int A[], int required, int maxBladeHeight) {
+		int totalWood = 0;										// total collected wood
 		for (int i=0; i<A.length; i++) {
-			if (A[i] > bladeHeight) {
-				int collectedWood = A[i] - bladeHeight;
-				sum += collectedWood;
+			if (A[i] > maxBladeHeight) {						// if current tree is taller than blade's height
+				totalWood = totalWood + (A[i]-maxBladeHeight);	// add excess wood in your collection
 			}
 		}
-		return sum;
+		if (totalWood >= required)								// if collected wood is equal/more than that is required, we are good 
+			return true;
+		else
+			return false;
 	}
 	
 }

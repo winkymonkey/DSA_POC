@@ -44,6 +44,7 @@ public class H06_minSwapsRequiredToSortAnArray {
 		int A[] = {17, 15, 9, 11, 7, 13};
 		System.out.println(findMinSwap(A));
 	}
+	
 
 	private static int findMinSwap(int A[]) {
 		List<MyPair> list = new ArrayList<>();
@@ -51,7 +52,7 @@ public class H06_minSwapsRequiredToSortAnArray {
 			list.add(new MyPair(A[i], i));
 		}
 		
-		Collections.sort(list);								// Sort the list w.r.t the first element (i.e VAL) of pair
+		Collections.sort(list);								// Sort the list w.r.t the value of the element
 		
 		int swap = 0;
 		for (int i=0; i<A.length; i++) {
@@ -74,16 +75,20 @@ public class H06_minSwapsRequiredToSortAnArray {
 	
 	
 	private static class MyPair implements Comparable<MyPair> {
-		public int val;
+		public int value;
 		public int pos;
 
-		public MyPair(int val, int pos) {
-			this.val = val;
+		public MyPair(int value, int pos) {
+			this.value = value;
 			this.pos = pos;
 		}
 
 		public int compareTo(MyPair other) {
-			return this.val - other.val;
+			return this.value - other.value;
+		}
+		
+		public String toString() {
+			return "{value="+value+", pos="+pos+ "}";
 		}
 	}
 	

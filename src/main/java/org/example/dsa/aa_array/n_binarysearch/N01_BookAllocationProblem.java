@@ -63,49 +63,50 @@ public class N01_BookAllocationProblem {
 	
 	public static void main(String[] args) {
 		int A[] = { 12, 34, 67, 90 };
-		int k = 2;
-		System.out.println(findMaxPagesCanBeAllocated(A, k));
+		int students = 2;
+		
+		Arrays.sort(A);
+		System.out.println(findMaxPagesCanBeAllocated(A, students));
 	}
 	
 	
 	private static int findMaxPagesCanBeAllocated(int A[], int students) {
-		if (A.length < students)
+		if (students > A.length)
 			return -1;
 
-		int start = Arrays.stream(A).max().getAsInt();
-		int end = Arrays.stream(A).sum();
+		int low = Arrays.stream(A).max().getAsInt();	// books having max pages
+		int high = Arrays.stream(A).sum();				// all books
 		int result = -1;
 
-		while (start <= end) {
-			int mid = start + (end-start)/2;
+		while (low <= high) {
+			int mid = low + (high-low)/2;
 			
 			if (isValid(A, students, mid)) {
 				result = mid;
-				end = mid-1;				// optimal value lies in the range of 0 to mid-1
+				high = mid-1;					// even though it's a valid possibility, we should try to minimize "maxAllotablePages"
 			}
 			else {
-				start = mid+1;				// optimal value lies in the range of mid+1 to end
+				low = mid+1;					// increase "maxAllotablePages" so that no extra students are required
 			}
 		}
 		return result;
 	}
 	
 	
-	private static boolean isValid(int A[], int students, int maxPagesStudentCanRead) {
-		int count = 1;						// count of required students
+	private static boolean isValid(int A[], int students, int maxAllotablePages) {
+		int count = 1;							// count of required students
 		int sum = 0;
 
 		for (int i=0; i<A.length; i++) {
-			if (A[i] > maxPagesStudentCanRead)
-				return false;
+			sum = sum + A[i];					// total books that are allocated to current student
 			
-			sum = sum + A[i];
-			if (sum > maxPagesStudentCanRead) {
-				count++;
-				sum = A[i];
+			if (sum > maxAllotablePages) {		// if allocated pages become higher than the max can be allocated
+				count++;						// we need one more student
+				sum = A[i];						// allocate this book to the new student
 			}
-			if (count > students)
+			if (count > students) {				// if required students become total available students, then this scheme fails.
 				return false;
+			}
 		}
 		return true;
 	}
