@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.c_substring;
+package org.example.dsa.bbbbbbb_slidingWindow.variable;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,7 +9,7 @@ import java.util.Map;
  * ***************************************************************************************
  */
 
-public class C02_longestSubstringWithAllUniqueChars {
+public class B03_longestSubstringWithAllUniqueChars {
 	
 	public static void main(String[] args) {
 		String str = "aabacbebebe";

@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.c_substring;
+package org.example.dsa.bb_string.a_basics;
 
 /**
  * ***************************************************************************************
@@ -16,7 +16,7 @@ package org.example.dsa.bb_string.c_substring;
  * ***************************************************************************************
  */
 
-public class C03_longestPalindromicSubstring {
+public class A05_longestPalindromicSubstring {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---
@@ -69,9 +69,6 @@ public class C03_longestPalindromicSubstring {
 	 * 
 	 * TIME --- O(n^2)
 	 * SPACE -- O(1)
-	 * 
-	 * Reference:
-	 * https://www.youtube.com/watch?v=y2BD4MJqV20
 	 * 
 	 */
 	

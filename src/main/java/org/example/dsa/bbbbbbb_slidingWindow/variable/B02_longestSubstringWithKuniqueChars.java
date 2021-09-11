@@ -1,15 +1,15 @@
-package org.example.dsa.bb_string.c_substring;
+package org.example.dsa.bbbbbbb_slidingWindow.variable;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * ***************************************************************************************
- * Find the longest substring With K unique characters
+ * Find the size of the longest substring With K unique characters
  * ***************************************************************************************
  */
 
-public class C01_longestSubstringWithKuniqueChars {
+public class B02_longestSubstringWithKuniqueChars {
 	
 	public static void main(String[] args) {
 		String str = "aabacbebebe";
