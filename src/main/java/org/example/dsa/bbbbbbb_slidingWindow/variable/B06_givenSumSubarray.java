@@ -1,4 +1,4 @@
-package org.example.dsa.aa_array.m_subarray;
+package org.example.dsa.bbbbbbb_slidingWindow.variable;
 
 /**
  * ***************************************************************************************
@@ -19,7 +19,7 @@ package org.example.dsa.aa_array.m_subarray;
  * ***************************************************************************************
  */
 
-public class M06_givenSumSubarray {
+public class B06_givenSumSubarray {
 	/*
 	 * ---------------------------------
 	 * ---USE VARIABLE SLIDING WINDOW---

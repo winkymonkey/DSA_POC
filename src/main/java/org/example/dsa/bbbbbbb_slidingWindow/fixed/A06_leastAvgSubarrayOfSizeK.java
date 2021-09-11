@@ -1,4 +1,4 @@
-package org.example.dsa.aa_array.m_subarray;
+package org.example.dsa.bbbbbbb_slidingWindow.fixed;
 
 /**
  * ***************************************************************************************
@@ -15,7 +15,7 @@ package org.example.dsa.aa_array.m_subarray;
  * ***************************************************************************************
  */
 
-public class M05_leastAvgSubarrayOfSizeK {
+public class A06_leastAvgSubarrayOfSizeK {
 	/*
 	 * ------------------------------
 	 * ---USE FIXED SLIDING WINDOW---
