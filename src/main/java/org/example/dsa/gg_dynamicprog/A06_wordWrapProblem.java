@@ -36,7 +36,7 @@ package org.example.dsa.gg_dynamicprog;
  * ***************************************************************************************
  */
 
-public class A05_wordWrapProblem {
+public class A06_wordWrapProblem {
 	
 	/*
 	 * --------------------

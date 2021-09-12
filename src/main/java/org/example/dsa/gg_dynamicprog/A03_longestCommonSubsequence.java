@@ -125,59 +125,65 @@ public class A03_longestCommonSubsequence {
 
 		char arr1[] = s1.toCharArray();
 		char arr2[] = s2.toCharArray();
-		int len1 = arr1.length;
-		int len2 = arr2.length;
+		int m = arr1.length;
+		int n = arr2.length;
 		
-		int subseqLength = findLcs(arr1, arr2, len1, len2);
+		int subseqLength = findLcs(arr1, arr2, m, n);
 		System.out.println(subseqLength);
 		
-		int subseqLength2 = findLcs_dynamic(arr1, arr2, len1, len2);
+		int subseqLength2 = findLcs_dynamic(arr1, arr2, m, n);
 		System.out.println(subseqLength2);
 	}
 	
 	
-	private static int findLcs(char arr1[], char arr2[], int len1, int len2) {
-		if (len1 == 0 || len2 == 0)
+	
+	
+	/*
+	 * RECURSIVE APPROACH
+	 */
+	private static int findLcs(char arr1[], char arr2[], int m, int n) {
+		if (m == 0 || n == 0)
 			return 0;
 		
-		if (arr1[len1-1] == arr2[len2-1]) {						// If last characters of both the strings are same
-			return 1 + findLcs(arr1, arr2, len1-1, len2-1);		// Ignore last characters of both the strings & recur for remaining strings of lengths m-1 and n-1
+		if (arr1[m-1] == arr2[n-1]) {						// If last characters of both the strings are same
+			return 1 + findLcs(arr1, arr2, m-1, n-1);		// Ignore last characters of both the strings & recur for remaining strings of lengths m-1 and n-1
 		}
 		else {
-			int length1 = findLcs(arr1, arr2, len1, len2-1);	// find length of the longest subsequence while ignoring the last character of str1
-			int length2 = findLcs(arr1, arr2, len1-1, len2);	// find length of the longest subsequence while ignoring the last character of str2
-			return Math.max(length1, length2);					// pick the longest among these two because we are asked to find out the Longest Common Subsequence
+			int length1 = findLcs(arr1, arr2, m, n-1);		// find length of the longest subsequence while ignoring the last character of str1
+			int length2 = findLcs(arr1, arr2, m-1, n);		// find length of the longest subsequence while ignoring the last character of str2
+			return Math.max(length1, length2);				// pick the longest among these two because we are asked to find out the Longest Common Subsequence
 		}
 	}
 	
 	
 	
 	
-	
+	/*
+	 * DYNAMIC PROGRAMMING APPROACH
+	 */
 	private static final int lookup[][];
 	static {
-		lookup = new int[1000][1000];							// should be of size "len1+1" * "len2+1"
+		lookup = new int[1000][1000];							// it should be of size m*n
 		for (int i=0; i<lookup.length; i++) {
 			Arrays.fill(lookup[i], -1);
 		}
 	}
-	
-	private static int findLcs_dynamic(char arr1[], char arr2[], int len1, int len2) {
-		if (len1 == 0 || len2 == 0)
+	private static int findLcs_dynamic(char arr1[], char arr2[], int m, int n) {
+		if (m == 0 || n == 0)
 			return 0;
 		
-		if (lookup[len1-1][len2-1] != -1)
-			return lookup[len1][len2];
-		
-		if (arr1[len1-1] == arr2[len2-1]) {										// If last characters of both the strings are same
-			lookup[len1-1][len2-1] = 1 + findLcs(arr1, arr2, len1-1, len2-1);	// Ignore last characters of both the strings & recur for remaining strings of lengths m-1 and n-1
-			return lookup[len1-1][len2-1];
+		if (lookup[m-1][n-1] != -1) {
+			return lookup[m-1][n-1];
 		}
 		else {
-			int length1 = findLcs(arr1, arr2, len1, len2-1);					// find length of the longest subsequence while ignoring the last character of str1
-			int length2 = findLcs(arr1, arr2, len1-1, len2);					// find length of the longest subsequence while ignoring the last character of str2
-			lookup[len1-1][len2-1] = Math.max(length1, length2);				// pick the longest among these two because we are asked to find out the Longest Common Subsequence
-			return lookup[len1-1][len2-1];
+			if (arr1[m-1] == arr2[n-1]) {										// If last characters of both the strings are same
+				return lookup[m-1][n-1] = 1 + findLcs(arr1, arr2, m-1, n-1);	// Ignore last characters of both the strings & recur for remaining strings of lengths m-1 and n-1
+			}
+			else {
+				int length1 = findLcs(arr1, arr2, m, n-1);						// find length of the longest subsequence while ignoring the last character of str1
+				int length2 = findLcs(arr1, arr2, m-1, n);						// find length of the longest subsequence while ignoring the last character of str2
+				return lookup[m-1][n-1] = Math.max(length1, length2);			// pick the longest among these two because we are asked to find out the Longest Common Subsequence
+			}
 		}
 	}
 	

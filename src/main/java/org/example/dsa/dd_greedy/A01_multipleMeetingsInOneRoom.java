@@ -44,7 +44,7 @@ public class A01_multipleMeetingsInOneRoom {
 		
 		List<Meeting> list = new ArrayList<>();
 		for(int i=0; i<S.length; i++) {
-			list.add(new Meeting(S[i], F[i], i+1));					// as the meeting index is 1 based so (i+1)
+			list.add(new Meeting(S[i], F[i], i+1));				// as the meeting index is 1 based so (i+1)
 		}
 		
 		findMaxMeetings(list);
@@ -54,12 +54,12 @@ public class A01_multipleMeetingsInOneRoom {
 	private static void findMaxMeetings(List<Meeting> list) {
 		Collections.sort(list, (m1,m2)-> m1.end-m2.end);
 		
-		int endTime = -1;
+		int lastMeetingEndTime = -1;
 		
 		for (Meeting meet : list) {
-			if (meet.start > endTime) {
+			if (meet.start > lastMeetingEndTime) {				// if current meeting start time is greater than last meeting's end time
 				System.out.println(meet.pos);
-				endTime = meet.end;
+				lastMeetingEndTime = meet.end;					// update lastMeetingEndTime as current meeting's end time
 			}
 		}
 	}

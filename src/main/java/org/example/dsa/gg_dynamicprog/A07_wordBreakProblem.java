@@ -31,7 +31,7 @@ import java.util.stream.Collectors;
  * ***************************************************************************************
  */
 
-public class A06_wordBreakProblem {
+public class A07_wordBreakProblem {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---
