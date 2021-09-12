@@ -23,19 +23,24 @@ public class A02_firstNegativeOfEveryWindowSizeK {
 	 * 
 	 * 
 	 * -------------
-	 * ■ Initial Calculation
-	 * For each "j",
+	 * ■ INDEPENDENT CALCULATION
+	 *    For each "j",
 	 *    - if A[j] is -ve then we put in the refQueue.
 	 * 
-	 * ■ Answer Calculation
-	 * As soon as we hit window size,
-	 *    - refQueue's top element is added in the answer
-	 * 
-	 * ■ Slide Ahead
-	 * As A[i] will be removed in next window,
-	 *    - if A[i] is -ve, then remove it from refQueue before leaving the current window
-	 *    - i++
+	 * ■ If windowSize < K
 	 *    - j++
+	 * 
+	 * ■ If windowSize == K
+	 *    ■ ANSWER CALCULATION
+	 *       - refQueue's top element is added in the answer
+	 *    
+	 *    ■ REVERT CALCULATION FOR i
+	 *       As A[i] will be removed in next window,
+	 *       - if A[i] is -ve, then remove it from refQueue before leaving the current window
+	 *    
+	 *    ■ SLIDE AHEAD
+	 *       - i++
+	 *       - j++
 	 * 
 	 * 
 	 * -------------
@@ -51,10 +56,10 @@ public class A02_firstNegativeOfEveryWindowSizeK {
 	}
 	
 	
-	private static final Queue<Integer> refQueue = new LinkedList<>();	// store all negative numbers in current widnow
-	private static final Queue<Integer> answer = new LinkedList<>();
-	
 	private static void solution(int A[], int K) {
+		Queue<Integer> refQueue = new LinkedList<>();	// store all negative numbers in current widnow
+		Queue<Integer> answer = new LinkedList<>();
+		
 		int i = 0, j = 0;
 		
 		while (j < A.length) {

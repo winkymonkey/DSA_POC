@@ -15,7 +15,7 @@ package org.example.dsa.cc_slidingWindow.fixed;
  * ***************************************************************************************
  */
 
-public class A06_leastAvgSubarrayOfSizeK {
+public class A05_leastAvgSubarrayOfSizeK {
 	/*
 	 * ------------------------------
 	 * ---USE FIXED SLIDING WINDOW---

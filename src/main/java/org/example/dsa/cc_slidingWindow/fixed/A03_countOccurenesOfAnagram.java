@@ -29,38 +29,52 @@ public class A03_countOccurenesOfAnagram {
 	 * 
 	 * 
 	 * -------------
-	 * ■ Initial Calculation
-	 * For each "j"
+	 * ■ INDEPENDENT CALCULATION
+	 *    For each "j"
 	 *    - if A[j] exists in the map, then decrement its count
 	 * 
-	 * ■ Answer Calculation
-	 * As soon as we hit window size
-	 *    - if all elements in the map has its count as 0, that means current window is an anagram of the given pattern.
+	 * ■ if windowSize < K
+	 *    - j++
+	 * 
+	 * ■ if windowSize == K
+	 *    ■ ANSWER CALCULATION
+	 *       - if all elements in the map has its count as 0, that means current window is an anagram of the given pattern.
+	 * 
+	 *    ■ REVERT CALCULATION FOR i
+	 *       - if the map contains A[i], increment its count (-> it's just the reverse of what we did in first step)
+	 * 
+	 *    ■ SLIDE AHEAD
+	 *       - i++
+	 *       - j++
 	 * 
 	 * 
 	 * -------------
-	 * But in order to check whether each element in a map has a value 0, we have to traverse the map.
+	 * In the "Answer Calculation" step, in order to check whether each element in a map has a value 0, we have to traverse the map.
 	 * To avoid that we can have a counter.
 	 * Whenever the count of any character becomes 0, we decrement the counter.
-	 * Whenever the count of any character changes to non zero, we increment the counter.
+	 * Whenever the count of any character becomes 1, we increment the counter.
 	 * So out previous two conditions should be updated as below.
 	 * 
-	 * ■ Initial Calculation
-	 * For each "j"
+	 * ■ INDEPENDENT CALCULATION
+	 *    For each "j"
 	 *    - if A[j] exists in the map, then decrement its count
 	 *    - if this count becomes 0, decrement the COUNTER
 	 * 
-	 * ■ Answer Calculation
-	 * As soon as we hit window size
-	 *    - if COUNTER is 0, that means current window is an anagram of the given pattern. Hence increment the COUNTER.
-	 *    - 
-	 * 
-	 * ■ Slide Ahead
-	 * As A[i] will be removed in next window,
-	 *    - if the map contains A[i], increment its count (-> it's just the reverse of what we did in first step)
-	 *    - after incrementing, if the count becomes 1, then means we have a new member in the map, so we do count++
-	 *    - i++
+	 * ■ if windowSize < K
 	 *    - j++
+	 * 
+	 * ■ if windowSize == K
+	 *    ■ ANSWER CALCULATION
+	 *       - if COUNTER is 0, that means current window is an anagram of the given pattern. Hence increment the COUNTER.
+	 *    
+	 *    ■ REVERT CALCULATION FOR i
+	 *       As A[i] will be removed in next window,
+	 *       - if the map contains A[i], increment its count (-> it's just the reverse of what we did in first step)
+	 *       - after incrementing, if the count becomes 1, then means we have a new member in the map, so we do COUNTER++
+	 *    
+	 *    ■ SLIDE AHEAD
+	 *       - i++
+	 *       - j++
 	 * 
 	 * 
 	 * -------------
@@ -76,9 +90,8 @@ public class A03_countOccurenesOfAnagram {
 	}
 	
 	
-	private static final Map<Character, Integer> map = new HashMap<>();
-	
 	private static void solution(char A[], String pat) {
+		Map<Character, Integer> map = new HashMap<>();
 		for (char ch : pat.toCharArray()) {					// store the count of each characters in a map
 			if (map.containsKey(ch))
 				map.put(ch, map.get(ch)+1);
@@ -92,9 +105,10 @@ public class A03_countOccurenesOfAnagram {
 		int K = pat.length();
 		
 		while (j < A.length) {
-			if (map.containsKey(A[j])) {
-				map.put(A[j], map.get(A[j])-1);
-				if (map.get(A[j]) == 0)
+			char ch = A[j];
+			if (map.containsKey(ch)) {
+				map.put(ch, map.get(ch)-1);
+				if (map.get(ch) == 0)
 					counter--;
 			}
 			
@@ -105,9 +119,10 @@ public class A03_countOccurenesOfAnagram {
 				if (counter == 0)
 					ans++;
 				
-				if (map.containsKey(A[i])) {
-					map.put(A[i], map.get(A[i])+1);
-					if (map.get(A[i]) == 1)
+				char chh = A[i];
+				if (map.containsKey(chh)) {
+					map.put(chh, map.get(chh)+1);
+					if (map.get(chh) == 1)
 						counter++;
 				}
 				i++;

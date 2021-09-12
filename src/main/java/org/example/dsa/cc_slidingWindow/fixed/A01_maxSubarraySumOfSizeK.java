@@ -2,14 +2,14 @@ package org.example.dsa.cc_slidingWindow.fixed;
 
 /**
  * ***************************************************************************************
- * Find the maximum subarray of size K
+ * Find the maximum subarray sum  of size K
  * ***************************************************************************************
  * Input:  { 2, 5, 1, 8, 2, 9, 1 }		K=3
  * Output: 19									//8+2+9 = 19
  * ***************************************************************************************
  */
 
-public class A01_maxSubarrayOfSizeK {
+public class A01_maxSubarraySumOfSizeK {
 	/*
 	 * --------------------
 	 * This is a fixed sliding window problem
@@ -19,19 +19,24 @@ public class A01_maxSubarrayOfSizeK {
 	 * 
 	 * 
 	 * -------------
-	 * ■ Initial Calculation
-	 * For each "j",
-	 *    - we will keep on adding A[j] to a variable SUM
+	 * ■ INDEPENDENT CALCULATION
+	 *    For each "j",
+	 *    - we will keep on adding A[j] to a variable SUM which denotes the sum of current window.
 	 * 
-	 * ■ Answer Calculation
-	 * As soon as we hit window size,
-	 *    - we check if the current sum is greater than maxSoFar. If yes we update maxSoFar.
-	 * 
-	 * ■ Slide Ahead
-	 * As A[i] will be removed in next window,
-	 *    - remove A[i] from sum
-	 *    - i++
+	 * ■ if windowSize < K
 	 *    - j++
+	 * 
+	 * ■ if windowSize == K
+	 * 	  ■ ANSWER CALCULATION
+	 * 	     - we check if the current sum is greater than maxSoFar. If yes we update maxSoFar.
+	 *    
+	 *    ■ REVERT CALCULATION FOR i
+	 *       As A[i] will be removed in next window,
+	 *       - remove A[i] from sum
+	 *    
+	 * 	  ■ SLIDE AHEAD
+	 *    	 - i++
+	 *    	 - j++
 	 * 
 	 * 
 	 * -------------

@@ -22,22 +22,27 @@ public class A04_maxOfAllSubarrayOfSizeK {
 	 * 
 	 * 
 	 * -------------
-	 * ■ Initial Calculation
-	 * For each "j",
+	 * ■ INDEPENDENT CALCULATION
+	 *    For each "j",
 	 *    - if A[j] in greater than refQueue front, then keep polling elements from refQueue as long as these are smaller than A[j]
-	 *    	because the queue elements which are smaller than A[j] will never be used again in future calculations
+	 *    	(because the queue elements which are smaller than A[j] will never be used again in future calculations)
 	 *    - add A[j] to the queue which will eventually be at front because all smaller elements are already removed.
 	 * 
-	 * ■ Answer Calculation
-	 * As soon as we hit window size,
-	 *    - front element of refQueue is to be added in the answer list. 
-	 * 
-	 * ■ Slide Ahead
-	 * As A[i] will be removed in next window,
-	 *    - if A[i] exists at the front of the refQueue, then we have to remove it 
-	 *    	(NOTE: if A[i] is not at front, then it will never be anywhere because we add elements sequentially in queue)
-	 *    - i++
+	 * ■ If windowSize < K
 	 *    - j++
+	 * 
+	 * ■ If windowSize == K
+	 *    ■ ANSWER CALCULATION
+	 *       - front element of refQueue is to be added in the answer list.
+	 *    
+	 *    ■ REVERT CALCULATION FOR i
+	 *       As A[i] will be removed in next window,
+	 *       - if A[i] exists at the front of the refQueue, then we have to remove it 
+	 *    	 - (NOTE: if A[i] is not at front, then it will never be anywhere because we add elements sequentially in queue)
+	 *    
+	 *    ■ SLIDE AHEAD
+	 *       - i++
+	 *       - j++
 	 * 
 	 * 
 	 * -------------
