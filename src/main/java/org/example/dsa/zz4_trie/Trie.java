@@ -2,89 +2,93 @@ package org.example.dsa.zz4_trie;
 
 
 public class Trie {
-	class Node {
-		char ch;
-		boolean isWord;
-		Node[] children;
-		int count;
-
-		Node(char ch) {
-			this.ch = ch;
-			this.children = new Node[26];
-			this.isWord = false;
-			this.count = 0;
-		}
-	}
-
-	private Node root;
+	
+	private TrieNode root;
+	
 	public Trie() {
-		root = new Node('\0');
+		this.root = new TrieNode();
 	}
 	
 	
 	
-	/** Inserts a word into the trie */
+	
+	/*
+	 * Inserts a word into the trie
+	 * (if ch is lowercase, (ch-'a') always gives a number from 0 to 25
+	 */
 	public void insert(String word) {
-		Node curr = root;
+		TrieNode curr = root;
 		for (int i = 0; i < word.length(); i++) {
 			char ch = word.charAt(i);
-			if (curr.children[ch - 'a'] == null) 			// if ch = lowercase, (ch-'a') always gives a number from 0 to 25
-				curr.children[ch - 'a'] = new Node(ch);
-			curr = curr.children[ch - 'a']; 				// proceed forward to next character of the word
+			if (curr.children[ch - 'a'] == null) {			// if current character is not present
+				curr.children[ch - 'a'] = new TrieNode();	// put a TrieNode in current character's slot
+			}
+			curr = curr.children[ch - 'a']; 				// go to the next node
 			curr.count += 1;
 		}
 		curr.isWord = true;
 	}
 	
-	
-	
-	/** Returns if the word is in the trie */
+	/*
+	 * Returns if this "word" exists
+	 */
 	public boolean search(String word) {
-		Node node = getNode(word);
+		TrieNode node = findNode(word);
 		return (node != null && node.isWord);
 	}
 	
-	/** Returns if the word is in the trie */
+	/*
+	 * Returns if there are words starting with this "prefix"
+	 */
 	public boolean startsWith(String prefix) {
-		Node node = getNode(prefix);
+		TrieNode node = findNode(prefix);
 		return (node != null);
 	}
 
-	private Node getNode(String word) {
-		Node curr = root;
-		for (int i = 0; i < word.length(); i++) {
+	/*
+	 * Returns the total number of words present in the trie
+	 */
+	public int getWordCountsInTrie() {
+		return count(root);
+	}
+	
+	/*
+	 * Returns the number of words in the trie which has the prefix
+	 */
+	public int getWordsCountHavingPrefix(String prefix) {
+		TrieNode node = findNode(prefix);
+		return (node == null ? 0 : node.count);
+	}
+	
+	
+	
+	
+	private TrieNode findNode(String word) {
+		TrieNode curr = root;
+		for (int i=0; i<word.length(); i++) {
 			char ch = word.charAt(i);
-			if (curr.children[ch - 'a'] == null)
+			if (curr.children[ch - 'a'] == null) {
 				return null;
-			curr = curr.children[ch - 'a'];
+			}
+			else {
+				curr = curr.children[ch - 'a'];
+			}
 		}
 		return curr;
 	}
 	
-	
-	
-	/** Returns the total number of words present in the trie */
-	public int getWordCountsInTrie() {
-		return count(root);
-	}
-
-	private int count(Node node) {
+	private int count(TrieNode node) {
+		if (node == null)
+			return 0;
+		
 		int result = 0;
 		if (node.isWord)
 			result++;
-		for (int i = 0; i < 26; i++) {
-			if (node.children[i] != null)
-				result += count(node.children[i]);
+		
+		for (int i=0; i<26; i++) {
+			result += count(node.children[i]);
 		}
 		return result;
-	}
-	
-	
-	
-	/** Returns the number of words in the trie which has the prefix */
-	public int getWordsCountHavingPrefix(String prefix) {
-		Node node = getNode(prefix);
-		return (node == null ? 0 : node.count);
 	}
 	
 }
