@@ -12,6 +12,7 @@ import org.example.dsa.jj_binarytree.TreeUtilA;
  * ***************************************************************************************
  * Print a Binary Tree in Vertical Order
  * ***************************************************************************************
+ * Input:
  *          1
  *        /   \
  *       2     3
@@ -51,15 +52,14 @@ public class E02B_printVerticalOrder_withExtraSpace {
 		if (root == null)
 			return;
 
-		List<Integer> list = map.get(hd);
-		if (list == null) {
-			list = new ArrayList<>();
-			list.add(root.data);
+		if (map.get(hd) != null) {
+			map.get(hd).add(root.data);
 		}
-		else
+		else {
+			List<Integer> list = new ArrayList<>();
 			list.add(root.data);
-		
-		map.put(hd, list);
+			map.put(hd, list);
+		}
 		
 		getVerticalOrder(root.left, hd-1);
 		getVerticalOrder(root.right, hd+1);

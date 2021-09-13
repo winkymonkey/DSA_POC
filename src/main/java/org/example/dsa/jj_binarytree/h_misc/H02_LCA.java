@@ -70,7 +70,11 @@ public class H02_LCA {
 		if (left_lca!=null && right_lca!=null)					// one node is present in left subtree & another node is present is right subtree
 			return root;
 		
-		return (left_lca != null) ? left_lca : right_lca;
+		if (left_lca != null)
+			return left_lca;
+		else
+			return right_lca;
+		
 	}
 	
 }

@@ -26,15 +26,16 @@ import org.example.dsa.jj_binarytree.Node;
  * ***************************************************************************************
  */
 
-public class J11_isBalanced {
+public class J12_isBalanced {
 
 	public static void main(String[] args) {
 		Node root = new Node(1);
 		root.left = new Node(10);
 		root.right = new Node(39);
 		root.left.left = new Node(5);
-
-		System.out.println(isBalanced(root, 0).isBalanced);
+		
+		Result result = isBalanced(root, 0);
+		System.out.println(result.isBalanced);
 	}
 	
 	

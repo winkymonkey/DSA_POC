@@ -24,7 +24,7 @@ import org.example.dsa.jj_binarytree.Node;
  * ***************************************************************************************
  */
 
-public class J09_isSubtreeOfAnotherTree {
+public class J10_isSubtreeOfAnotherTree {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---
@@ -45,9 +45,12 @@ public class J09_isSubtreeOfAnotherTree {
 	 * ------------------------
 	 * ---EFFICIENT APPROACH---
 	 * ------------------------
-	 * If "root1" & "root2" are identical, then both the trees are identical.
-	 * Otherwise compare "root2" with "root1.left" and "root1.right" to decide whether they are identical or not.
-	 * While checking for identity, both the subtrees must be equal by each nodes.
+	 * First check if both the trees are same or not (by comparing root nodes and children one by one).
+	 * If yes, return true
+	 * If no, then
+	 * 		if (subtree from root1.left == subtree from root2) then return true
+	 * 		if (subtree from root1 == subtree from root2.right)  then return true
+	 * 		otherwise return false
 	 * 
 	 */
 
@@ -73,20 +76,22 @@ public class J09_isSubtreeOfAnotherTree {
 	
 	
 	private static boolean isSubtree(Node root1, Node root2) {
-		if (root2 == null)
+		if (root2 == null) {
 			return true;
-
-		if (root1 == null)
+		}
+		else if (root1 == null) {
 			return false;
-
-		if (areIdentical(root1, root2))
+		}
+		else if (isSameTree(root1, root2)) {
 			return true;
-		else
+		}
+		else {
 			return isSubtree(root1.left, root2) || isSubtree(root1.right, root2);
+		}
 	}
 	
 	
-	private static boolean areIdentical(Node root1, Node root2) {
+	private static boolean isSameTree(Node root1, Node root2) {
 		if (root1 == null && root2 == null)
 			return true;
 
@@ -94,8 +99,8 @@ public class J09_isSubtreeOfAnotherTree {
 			return false;
 
 		return (root1.data == root2.data 
-				&& areIdentical(root1.left, root2.left)
-				&& areIdentical(root1.right, root2.right));
+				&& isSameTree(root1.left, root2.left)
+				&& isSameTree(root1.right, root2.right));
 	}
 
 }

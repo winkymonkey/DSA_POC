@@ -91,18 +91,18 @@ public class B01_inorderSuccessor_ofOneNode {
 	
 	
 	private static Node leftMostNode(Node node) {
-		while (node != null && node.left != null)
+		while (node != null && node.left != null) {
 			node = node.left;
+		}
 		return node;
 	}
 	private static Node rightMostNode(Node node) {
-		while (node != null && node.right != null)
+		while (node != null && node.right != null) {
 			node = node.right;
+		}
 		return node;
 	}
 	
-	
-	private static Node temp;
 	
 	private static Node find(Node root, Node X) {
 		if (root == null)
@@ -111,8 +111,11 @@ public class B01_inorderSuccessor_ofOneNode {
 		if (root == X)
 			return root;
 		
-		if ( (temp = find(root.left, X)) != null || (temp = find(root.right, X)) != null ) {
-			if (root.left == temp) {
+		Node temp1 = find(root.left, X);
+		Node temp2 = find(root.right, X);
+		
+		if (temp1 !=null || temp2 !=null) {
+			if (root.left == temp1 || root.left == temp2) {
 				System.out.println("Inorder Successor of " + X.data + " is " + root.data);
 				return null;
 			}
@@ -122,4 +125,5 @@ public class B01_inorderSuccessor_ofOneNode {
 		}
 		return null;				// when neither leftChild nor rightChild contains X
 	}
+	
 }

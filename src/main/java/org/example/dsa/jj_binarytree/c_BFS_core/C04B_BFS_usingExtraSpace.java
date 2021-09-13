@@ -23,7 +23,20 @@ import org.example.dsa.jj_binarytree.TreeUtilA;
  * ***************************************************************************************
  */
 
-public class C04A_BFS_withExtraSpace {
+public class C04B_BFS_usingExtraSpace {
+	/*
+	 * --------------------
+	 * - add root in queue
+	 * - as long as queue is not empty
+	 *    - for (i=1 to queue size)
+	 *       - poll queue & print
+	 *       - add left child (if any)
+	 *       - add right child (if any)
+	 * 
+	 * TIME --- O(n)
+	 * SPACE -- O(n)
+	 * 
+	 */
 	
 	public static void main(String[] args) {
 		Node root = TreeUtilA.createNewTreeA2();
@@ -32,7 +45,7 @@ public class C04A_BFS_withExtraSpace {
 	
 	
 	private static void printBFS(Node root) {
-		Queue<Node> queue = new LinkedList<Node>();
+		Queue<Node> queue = new LinkedList<>();
 		queue.add(root);
 		
 		while (!queue.isEmpty()) {

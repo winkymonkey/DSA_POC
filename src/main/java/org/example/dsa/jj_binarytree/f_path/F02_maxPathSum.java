@@ -47,11 +47,11 @@ public class F02_maxPathSum {
 		root.right.right.right = new Node(4);
 		
 		findMax(root);
-		System.out.println("maximum path sum is "+maxSum);
+		System.out.println("maximum path sum is "+maxSoFar);
 	}
 	
 	
-	private static int maxSum = Integer.MIN_VALUE;
+	private static int maxSoFar = Integer.MIN_VALUE;
 	
 	
 	private static int findMax(Node node) {
@@ -62,8 +62,8 @@ public class F02_maxPathSum {
 		int rsum = findMax(node.right);
 
 		int max1 = Math.max(Math.max(lsum,rsum)+node.data, node.data);
-		int max2 = Math.max(max1, lsum+rsum+node.data);
-		maxSum = Math.max(maxSum, max2);
+		int max2 = Math.max(Math.max(Math.max(lsum,rsum)+node.data, node.data), lsum+rsum+node.data);
+		maxSoFar = Math.max(maxSoFar, max2);
 		
 		return max1;
 	}

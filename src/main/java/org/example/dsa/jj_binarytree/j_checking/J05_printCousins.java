@@ -24,7 +24,7 @@ public class J05_printCousins {
 	/*
 	 * ------------------
 	 * Find the level of the given node & Find its sibling node
-	 * print all nodes (except its sibling) at a given level
+	 * print all nodes in that level (except its sibling)
 	 * ------------------
 	 */
 }

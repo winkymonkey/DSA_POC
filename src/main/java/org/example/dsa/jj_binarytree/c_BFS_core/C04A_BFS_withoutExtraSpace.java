@@ -13,14 +13,20 @@ import org.example.dsa.jj_binarytree.TreeUtilA;
  *    / \   / \
  *   4   5 6   7
  *    \       /
- *    8      9
+ *     8     9
  * 
  * BFS:   1 2 3 4 5 6 7 8 9
  * 
  * ***************************************************************************************
  */
 
-public class C04B_BFS_withoutExtraSpace {
+public class C04A_BFS_withoutExtraSpace {
+	/*
+	 * --------------------
+	 * TIME --- O(n^2)			// printThisLevel takes O(n) which is called for each levels. In skewed tree, for n nodes there is n levels
+	 * SAPCE -- O(1)
+	 * 
+	 */
 	
 	public static void main(String[] args) {
 		Node root = TreeUtilA.createNewTreeA2();
@@ -29,10 +35,10 @@ public class C04B_BFS_withoutExtraSpace {
 	
 	
 	private static void printBFS(Node root) {
-		int maxLevel = getMaxLevel(root);				//get the Maximum Level Of the Tree.
+		int maxLevel = getMaxLevel(root);				// get the maximum level of the tree
 		
 		for (int i=1; i<=maxLevel; i++) {
-			printThisLevel(root, 1, i);					//print Current Level
+			printThisLevel(root, 1, i);					// print each level
 		}
 	}
 	

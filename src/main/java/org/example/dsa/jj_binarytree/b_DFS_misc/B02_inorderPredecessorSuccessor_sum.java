@@ -34,7 +34,7 @@ public class B02_inorderPredecessorSuccessor_sum {
 	 * 		A[n]	= 0							// because inorder successor of rightmost leaf is not present
 	 * 
 	 * 
-	 * Now traverse the array from index 1
+	 * Now traverse the array from index 1 to 2nd last
 	 * For each index i, the sum of inorder predecessor & inorder successor will be A[i-1] + A[i+1]
 	 * ------------------
 	 */

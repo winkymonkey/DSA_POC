@@ -24,7 +24,7 @@ import org.example.dsa.jj_binarytree.Node;
  * ***************************************************************************************
  */
 
-public class J10_isSymmetric {
+public class J11_isSymmetric {
 	
 	public static void main(String[] args) {
 		Node root = new Node(1);
