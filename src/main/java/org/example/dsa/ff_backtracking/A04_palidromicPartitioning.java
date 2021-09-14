@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * ***************************************************************************************
- * Palindromic Partitioning
+ * Palindromic Partition
  * ***************************************************************************************
  * Partition a give string such that every substring of the partition is a palindrome.
  * Return all possible palindrome partitioning of the given string.
@@ -19,7 +19,7 @@ import java.util.List;
  * ***************************************************************************************
  */
 
-public class A03_palidromicPartitioning {
+public class A04_palidromicPartitioning {
 	/*
 	 * --------------------
 	 * In a given string, we can partition the string at i-th index (0th, 1st, 2nd, 3rd, ...... (n-1)th)

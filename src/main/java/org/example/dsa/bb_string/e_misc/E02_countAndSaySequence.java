@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.f_misc;
+package org.example.dsa.bb_string.e_misc;
 
 /**
  * ***************************************************************************************
@@ -17,7 +17,7 @@ package org.example.dsa.bb_string.f_misc;
  * ***************************************************************************************
  */
 
-public class F02_countAndSaySequence {
+public class E02_countAndSaySequence {
 	
 	public static void main(String[] args) {
 		String number = "1";

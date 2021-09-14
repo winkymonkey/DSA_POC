@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.f_misc;
+package org.example.dsa.bb_string.e_misc;
 
 /**
  * ***************************************************************************************
@@ -11,7 +11,7 @@ package org.example.dsa.bb_string.f_misc;
  * ***************************************************************************************
  */
 
-public class F03_mobileKeypadSequence {
+public class E03_mobileKeypadSequence {
 	/*
 	 * For each character, pre-populate the sequence in an array
 	 */

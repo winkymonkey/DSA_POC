@@ -1,4 +1,4 @@
-package org.example.dsa.bb_string.f_misc;
+package org.example.dsa.bb_string.e_misc;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,7 +19,7 @@ import java.util.Map;
  * ***************************************************************************************
  */
 
-public class F04_romanToInteger {
+public class E04_romanToInteger {
 	/*
 	 * Integer representation
 	 * 		I = 1

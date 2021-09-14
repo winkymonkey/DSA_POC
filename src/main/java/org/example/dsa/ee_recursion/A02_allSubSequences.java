@@ -2,7 +2,9 @@ package org.example.dsa.ee_recursion;
 
 /**
  * ***************************************************************************************
- * Find all Subsequences of a string
+ * All SubSequences
+ * ***************************************************************************************
+ * Find all SubSequences of a string
  * ***************************************************************************************
  * Input:	abc
  * Output:	a, b, c, ab, bc, ac, abc
@@ -13,7 +15,7 @@ package org.example.dsa.ee_recursion;
  * ***************************************************************************************
  */
 
-public class A02_allSubsequences {
+public class A02_allSubSequences {
 	/*
 	 * --------------------
 	 * STR = "abc"
@@ -38,9 +40,9 @@ public class A02_allSubsequences {
 	 * TIME --- O(2^n)
 	 * SPACE -- O(1)
 	 * 
-	 * ---------------
+	 * --------------
 	 * Recursion Tree
-	 * ---------------
+	 * --------------
 	 *                                 [abc],''
 	 *                   _________________|_________________
 	 *                  /                                   \

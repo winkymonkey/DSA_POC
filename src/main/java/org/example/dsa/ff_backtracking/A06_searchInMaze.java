@@ -28,8 +28,10 @@ import java.util.*;
 
 public class A06_searchInMaze {
 	/*
-	 * Form a recursive function which will follow a path and check if the path reaches the destination or not.
+	 * --------------------
+	 * Create a recursive function which will follow a path and check if the path reaches the destination or not.
 	 * If the path does not reach the destination then backtrack and try other paths.
+	 * --------------------
 	 */
 	
 	private static Vector<String> possiblePaths = new Vector<>();

@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 /**
  * ***************************************************************************************
- * Word Break problem
+ * Word Break problem --- possible or not
  * ***************************************************************************************
  * Given an input string and a dictionary of words,
  * find out if the input string can be segmented into a space-separated sequence of dictionary words
@@ -19,8 +19,7 @@ import java.util.stream.Collectors;
  * Output: TRUE						// i like
  * 
  * Input:  ilikesamsung
- * Output: TRUE						// i like sam sung
- * 									// i like samsung
+ * Output: TRUE						// i like sam sung, i like samsung
  * 
  * ------------------
  * Dictionary: { c, od, e, x }
@@ -31,7 +30,7 @@ import java.util.stream.Collectors;
  * ***************************************************************************************
  */
 
-public class A07_wordBreakProblem {
+public class A07_wordBreakProblem_isPossible {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---

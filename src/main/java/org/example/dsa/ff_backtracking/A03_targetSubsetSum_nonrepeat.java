@@ -2,12 +2,11 @@ package org.example.dsa.ff_backtracking;
 
 /**
  * ***************************************************************************************
- * Combination Sum - can be picked once
+ * Target Subset Sum --- can be picked once
  * ***************************************************************************************
  * An array of distinct integers (candidates) and a target integer (target) is given.
  * You should return a list of all unique combinations of "candidates" where their sum equals to "target".
  * The same candidate can be chosen only once.
- * the output must be in sorted order & it should not contain duplicates
  * ***************************************************************************************
  * Input:  candidates = [12,1,2,7,6,1,5] 		target = 7
  * Output: [[1,1,6],[1,2,5],[1,7],[2,6]]
@@ -15,17 +14,17 @@ package org.example.dsa.ff_backtracking;
  * ***************************************************************************************
  */
 
-public class A02_combinationSum_nonrepeat {
+public class A03_targetSubsetSum_nonrepeat {
 	/*
 	 * --------------------
-	 * In the previous problem, when we were picking A[i] we were not incrementing "i" as the same A[i] once again.
-	 * But in this problem, as we can pick A[i] only once, we must increment "i"
+	 * This problem is almost same the previous problem.
+	 * The only difference is that --- we can PICK an element only once.
 	 * 
-	 * In the previous problem, we were using a LIST data structure
-	 * But here we have to use Set data structure which will remove duplicates
+	 * In previous problem, when we were picking A[i] we were not incrementing "i" as the same A[i] once again.
+	 * But in this problem, irrespective of whether we pick or don't pick "i", we must increment "i"
 	 * 
-	 * But when the ask is to print the results in sorted order, then it is concern.
-	 * That's why, you should sort the array and then start the recursion.
+	 * If the output is required to be in sorted order, we should sort the array before starting the process.
+	 * If the output is required to be unique, we should use set instead of list.
 	 * --------------------
 	 */
 }

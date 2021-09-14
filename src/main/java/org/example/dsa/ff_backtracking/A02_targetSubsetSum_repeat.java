@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * ***************************************************************************************
- * Combination Sum - can be picked multiple times
+ * Target Subset Sum --- can be picked multiple times
  * ***************************************************************************************
  * An array of distinct integers (candidates) and a target integer (target) is given.
  * You should return a list of all unique combinations of "candidates" where their sum equals to "target".
@@ -20,26 +20,33 @@ import java.util.List;
  * ***************************************************************************************
  */
 
-public class A01_combinationSum_repeat {
+public class A02_targetSubsetSum_repeat {
 	/*
 	 * --------------------
-	 * When we need to prepare a combination from a set of elements, the obvious way to follow is -- PICK or NOT PICK
+	 * When we need to find all possible combinations from a set of elements, we should go for -- PICK or NOT PICK
+	 * 
+	 * So in each recursion call, we can PICK (if A[i]<target) or NOT PICK
+	 * Each time we pick, we add it in a LIST and pass it down through the recursion tree.
+	 * 
 	 * But here the catch is one element can be chosen multiple times.
-	 * Hence after picking a number, we again get the option of PICK or NOT PICK the same number.
+	 * Hence after picking an element, we again get the option of PICK or NOT PICK the same element.
 	 * 
+	 * If the output is required to be in sorted order, we should sort the array before starting the process.
+	 * If the output is required to be unique, we should use set instead of list.
+	 * 
+	 * --------------
+	 * Recursion Tree
+	 * --------------
 	 * A[] = { 2, 3, 6, 7 }
-	 * //      0  1  2  3
-	 * 
-	 * f(i, target)
-	 * 
+	 *         0  1  2  3
 	 *                        f(0,7)
 	 *                      ____|____
-	 *                     /         \                ---> when we pick A[i], "i" is not incremented as we can still choose A[i] once again. However target is updated as target-A[i] 
-	 *                  f(0,5)      f(1,7)            ---> when we don't pick A[i], "i" is incremented. However the target remains same
+	 *                     /         \          ---> when we pick A[i], "i" is not incremented as we can still choose A[i] once again. But target is updated as target-A[i] 
+	 *                  f(0,5)      f(1,7)      ---> when we don't pick A[i], "i" is incremented. bBut the target remains same
 	 *                 ___|___
 	 *                /       \
 	 *             f(0,3)   f(1,5)
-	 *            ___|___
+	 *            ___|___                       f(i, target)
 	 *           /       \
 	 *        f(0,1)   f(1,3)
 	 *        __|__      |
@@ -55,7 +62,7 @@ public class A01_combinationSum_repeat {
 	 *                  /     \
 	 *                 X    f(4,1)
 	 * 
-	 * This recursion tree will grow big
+	 * It will grow big
 	 * 
 	 * 
 	 * --------------------

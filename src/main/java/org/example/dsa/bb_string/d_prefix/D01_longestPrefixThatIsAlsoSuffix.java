@@ -1,8 +1,8 @@
-package org.example.dsa.bb_string.e_prefix;
+package org.example.dsa.bb_string.d_prefix;
 
 /**
  * ***************************************************************************************
- * For a string, find the length of the longest proper prefix which is also a proper suffix
+ * Find the length of the longest proper prefix which is also a proper suffix
  * (the prefix and suffix should not overlap)
  * ***************************************************************************************
  * Input:	"abab"
@@ -14,12 +14,13 @@ package org.example.dsa.bb_string.e_prefix;
  * ***************************************************************************************
  */
 
-public class E01_longestPrefixThatIsAlsoSuffix {
+public class D01_longestPrefixThatIsAlsoSuffix {
 	/*
+	 * --------------------
 	 * As the prefix and suffix should not overlap,
 	 * We can break the string from the middle and start matching left and right strings (by each character)
 	 * If they are equal return size of one string, else they try for shorter lengths on both sides
-	 * 
+	 * --------------------
 	 */
 	
 	public static void main(String[] args) {
@@ -27,13 +28,14 @@ public class E01_longestPrefixThatIsAlsoSuffix {
 		System.out.println(longestPrefixSuffix(str));
 	}
 	
+	
 	private static int longestPrefixSuffix(String str) {
-		if (str.length() < 2) {
+		int n = str.length();
+		if (n < 2)
 			return 0;
-		}
 
 		int start = 0;
-		int mid = (str.length()+1) / 2;
+		int mid = (n+1) / 2;
 
 		while (mid < str.length()) {
 			if (str.charAt(start) == str.charAt(mid)) {
@@ -41,11 +43,18 @@ public class E01_longestPrefixThatIsAlsoSuffix {
 				++mid;
 			}
 			else {
-				mid = mid-start+1;
-				start = 0;
+				if (start == 0)			// if start reaches at 0, we keep it there and increase mid
+					++mid;
+				else					// otherwise we decrease start to check for smaller length
+					--start;
 			}
 		}
-		return start;
+		return start;					// at the end, the start will point to the last matching character
 	}
 	
+	
+	private static int longestPrefixSuffix_usingKMP(String str) {
+		// TODO
+		return -1;
+	}
 }
