@@ -14,7 +14,7 @@ package org.example.dsa.aa_array.g_nge_nse;
  * ***************************************************************************************
  */
 
-public class G10_stockSpanProblem {
+public class G09_stockSpanProblem {
 	/*
 	 * --------------------
 	 * ---NAIVE SOLUTION---
