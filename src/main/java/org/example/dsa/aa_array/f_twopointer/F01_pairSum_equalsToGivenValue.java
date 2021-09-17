@@ -2,6 +2,8 @@ package org.example.dsa.aa_array.f_twopointer;
 
 /**
  * ***************************************************************************************
+ * Pair sum ---------- equals to a given value
+ * ***************************************************************************************
  * Find a pair whose sum is equal to a given value
  * ***************************************************************************************
  * Input:  { 1, 4, 45, 6, 10, -8 }		SUM = 16
@@ -13,7 +15,7 @@ package org.example.dsa.aa_array.f_twopointer;
  * ***************************************************************************************
  */
 
-public class F01_findPairSum_equalsToGivenValue {
+public class F01_pairSum_equalsToGivenValue {
 	/*
 	 * -----------------------------
 	 * ---USE TWO POINTER APROACH---

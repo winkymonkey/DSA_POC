@@ -18,7 +18,7 @@ import java.util.Arrays;
  * ***************************************************************************************
  */
 
-public class G05_findNextHigherPermutation {
+public class G07_findNextHigherPermutation {
 	/*
 	 * ------------------------
 	 * Any dictionary word always look like this where from right hand side there is an increasing sequence.

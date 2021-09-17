@@ -10,7 +10,7 @@ package org.example.dsa.aa_array.g_nge_nse;
  * ***************************************************************************************
  */
 
-public class G06_largestRectangleInHistogram {
+public class G08_largestRectangleInHistogram {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---

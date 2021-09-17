@@ -16,7 +16,7 @@ package org.example.dsa.bb_string.a_basics;
  * ***************************************************************************************
  */
 
-public class A05_longestPalindromicSubstring {
+public class A06_longestPalindromicSubstring {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---
@@ -96,7 +96,6 @@ public class A05_longestPalindromicSubstring {
 				end = i + (maxLen)/2;
 			}
 		}
-		
 		return str.substring(start, end+1);
 	}
 	
@@ -105,7 +104,7 @@ public class A05_longestPalindromicSubstring {
 		if (str == null || left > right)
 			return 0;
 		
-		while ( (left >= 0)  &&  (right < str.length())  &&  (str.charAt(left)==str.charAt(right)) ) {
+		while ( (left >= 0)  &&  (right < str.length())  &&  (str.charAt(left) == str.charAt(right)) ) {
 			left--;
 			right++;
 		}

@@ -2,6 +2,8 @@ package org.example.dsa.aa_array.f_twopointer;
 
 /**
  * ***************************************************************************************
+ * Pair difference ----- equal to a given value
+ * ***************************************************************************************
  * Find a pair whose difference is equals to a given value
  * ***************************************************************************************
  * Input:  { 5, 20, 3, 2, 50, 80 }		DIFF = 78
@@ -13,7 +15,7 @@ package org.example.dsa.aa_array.f_twopointer;
  * ***************************************************************************************
  */
 
-public class F07_findPairDifference_ofGivenValue {
+public class F07_pairDifference_ofGivenValue {
 	/*
 	 * -----------------
 	 * ---USE HASHING---

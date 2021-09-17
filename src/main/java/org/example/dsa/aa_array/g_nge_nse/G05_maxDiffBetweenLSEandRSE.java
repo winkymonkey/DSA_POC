@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  * ***************************************************************************************
  * Find maximum absolute difference between LSE & RSE of every element in the array
- * If there is no smaller element on right/left side of any element then we take 0 as the smaller element.
+ * (If there is no smaller element on right/left side of any element then we take 0 as the smaller element.)
  * ***************************************************************************************
  * Input:	{2, 1, 8}
  * Output:	1						// Left smaller  LS[] = {0, 0, 1}
@@ -18,7 +18,7 @@ import java.util.Stack;
  * ***************************************************************************************
  */
 
-public class G03_maxDiffBetweenLSEandRSE {
+public class G05_maxDiffBetweenLSEandRSE {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---
@@ -68,7 +68,7 @@ public class G03_maxDiffBetweenLSEandRSE {
 				stack.push(A[i]);
 			}
 			else {
-				while (!stack.isEmpty() && stack.peek() > A[i]) {
+				while (!stack.isEmpty() && stack.peek() >= A[i]) {
 					//System.out.println("NGE of "+stack.peek()+" is "+A[i]);
 					stack.pop();
 				}
@@ -86,7 +86,7 @@ public class G03_maxDiffBetweenLSEandRSE {
 	private static int findMax(int LSE[], int RSE[]) {
 		int result = -1;
 		for (int i=0; i<LSE.length; i++) {
-			result = Math.max(result, Math.abs(LSE[i] - RSE[LSE.length- 1- i]));
+			result = Math.max( result, Math.abs(LSE[i] - RSE[LSE.length-1-i]) );
 		}
 		return result;
 	}

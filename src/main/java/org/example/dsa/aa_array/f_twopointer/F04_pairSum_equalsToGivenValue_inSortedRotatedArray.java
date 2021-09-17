@@ -2,6 +2,8 @@ package org.example.dsa.aa_array.f_twopointer;
 
 /**
  * ***************************************************************************************
+ * Pair sum ---------- equal to a given value in a sorted and rotated array
+ * ***************************************************************************************
  * Find a pair whose sum is equal to a given value in a sorted and rotated array
  * ***************************************************************************************
  * Input:  { 11, 15, 6, 8, 9, 10 }		SUM=16
@@ -13,7 +15,7 @@ package org.example.dsa.aa_array.f_twopointer;
  * ***************************************************************************************
  */
 
-public class F04_findPairSum_equalsToGivenValue_inSortedRotatedArray {
+public class F04_pairSum_equalsToGivenValue_inSortedRotatedArray {
 	/*
 	 * --------------------
 	 * If it's a regular sorted array, we already know how to solve (using 2-pointer approach)

@@ -19,7 +19,7 @@ package org.example.dsa.aa_array.g_nge_nse;
  * ***************************************************************************************
  */
 
-public class G04_findNSEofNGE {
+public class G06_findNSEofNGE {
 	/*
 	 * -------------------
 	 * For all elements in the array, find the NGE & store their index in an array NGE[]

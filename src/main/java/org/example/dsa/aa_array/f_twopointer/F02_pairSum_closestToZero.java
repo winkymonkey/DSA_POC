@@ -4,20 +4,22 @@ import java.util.Arrays;
 
 /**
  * ***************************************************************************************
- * Find a pair whose sum is closest to a given value
+ * Pair sum ---------- closest to zero
  * ***************************************************************************************
- * Input:  { 10, 22, 28, 29, 30, 40 }		X = 54
- * Output: 22 and 30
+ * Find a pair whose sum is closest to zero
+ * ***************************************************************************************
+ * Input:  { 1, 60, -10, 70, -80, 85, -72 }
+ * Output: -72 and 70
  * 
  * ***************************************************************************************
  */
 
-public class F03_findPairSum_closestToGivenValue {
+public class F02_pairSum_closestToZero {
 	/*
 	 * -----------------------------
 	 * ---USE TWO POINTER APROACH---
 	 * -----------------------------
-	 * Sort the array ----- { 10, 22, 28, 29, 30, 40 }
+	 * Sort the array ----- { -80, -72, -10, 1, 60, 70, 85 }
 	 * Now use two pointer approach
 	 * 
 	 * 
@@ -27,14 +29,14 @@ public class F03_findPairSum_closestToGivenValue {
 	 */
 	
 	public static void main(String[] args) {
-		int A[] = { 10, 22, 28, 29, 30, 40 };
-		int x = 54;
-		minPairSumClosestToZero(A, x);
+		int A[] = { 1, 60, -10, 70, -80, 85, -72 };
+		
+		minPairSumClosestToZero(A);
 	}
 	
 	
-	private static void minPairSumClosestToZero(int A[], int x) {
-		Arrays.sort(A);												// 10, 22, 28, 29, 30, 40
+	private static void minPairSumClosestToZero(int A[]) {
+		Arrays.sort(A);												// { -80, -72, -10, 1, 60, 70, 85 }
 		int n = A.length;
 		
 		int minDist = Integer.MAX_VALUE;
@@ -45,13 +47,13 @@ public class F03_findPairSum_closestToGivenValue {
 		int minRight = n-1;
 		
 		while (l < r) {
-			int dist = A[l] + A[r] - x;								// dist = distance from pivot (=0)
+			int dist = A[l] + A[r];									// dist = distance from pivot (=0)
 			if (Math.abs(dist) < Math.abs(minDist)) {				// if current sum closer to pivot (=0) than the previous
 				minDist = dist;
 				minLeft = l;
 				minRight = r;
 			}
-			if (dist < x)
+			if (dist < 0)
 				l++;
 			else
 				r--;

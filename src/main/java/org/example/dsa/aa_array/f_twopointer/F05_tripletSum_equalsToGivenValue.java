@@ -2,6 +2,8 @@ package org.example.dsa.aa_array.f_twopointer;
 
 /**
  * ***************************************************************************************
+ * Triplet sum -------- equals to a given value
+ * ***************************************************************************************
  * Given an array A[], find a triplet whose sum is equals to a given value
  * ***************************************************************************************
  * Input:  {12, 3, 4, 1, 6, 9}		SUM = 24
@@ -10,7 +12,7 @@ package org.example.dsa.aa_array.f_twopointer;
  * ***************************************************************************************
  */
 
-public class F05_findTripletSum_equalsToGivenValue {
+public class F05_tripletSum_equalsToGivenValue {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---

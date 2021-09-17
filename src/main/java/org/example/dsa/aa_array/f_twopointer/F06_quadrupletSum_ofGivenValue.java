@@ -2,6 +2,8 @@ package org.example.dsa.aa_array.f_twopointer;
 
 /**
  * ***************************************************************************************
+ * Quadruple sum --- equals to a given value
+ * ***************************************************************************************
  * Given an array A[], find a quadruples whose sum is equals to a given value
  * ***************************************************************************************
  * Input:  {10, 2, 3, 4, 5, 9, 7, 8}		SUM = 23
@@ -10,7 +12,7 @@ package org.example.dsa.aa_array.f_twopointer;
  * ***************************************************************************************
  */
 
-public class F06_findQuadrupletSum_ofGivenValue {
+public class F06_quadrupletSum_ofGivenValue {
 	/*
 	 * --------------------
 	 * ---NAIVE APPROACH---
