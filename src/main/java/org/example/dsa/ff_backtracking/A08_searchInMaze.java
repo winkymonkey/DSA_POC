@@ -26,7 +26,7 @@ import java.util.*;
  * ***************************************************************************************
  */
 
-public class A06_searchInMaze {
+public class A08_searchInMaze {
 	/*
 	 * --------------------
 	 * Create a recursive function which will follow a path and check if the path reaches the destination or not.

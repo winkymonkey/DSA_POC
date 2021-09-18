@@ -6,10 +6,8 @@ package org.example.dsa.ff_backtracking;
  * ***************************************************************************************
  */
 
-public class A05_NqueenProblem {
-	
-	public static void main(String[] args) {
-		
-	}
-	
+public class A07_NqueenProblem {
+	/*
+	 * 
+	 */
 }

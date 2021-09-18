@@ -13,13 +13,13 @@ import java.util.stream.Collectors;
  * Given an input string and a dictionary of words,
  * find out if the input string can be segmented into a space-separated sequence of dictionary words
  * ***************************************************************************************
- * Dictionary: { i, like, sam, sung, samsung, mobile, ice, cream, icecream, man, go, mango }
+ * Dictionary: { i, like, sam, sung, samsung, mobile, and, ice, cream, icecream, man, go, mango }
  * 
  * Input:  ilike
  * Output: TRUE						// i like
  * 
- * Input:  ilikesamsung
- * Output: TRUE						// i like sam sung, i like samsung
+ * Input:  ilikemango
+ * Output: TRUE						// i like man go, i like mango
  * 
  * ------------------
  * Dictionary: { c, od, e, x }
@@ -46,9 +46,11 @@ public class A07_wordBreakProblem_isPossible {
 	 * then we consider first n characters to be prefix and rest 0 characters to be suffix.
 	 * 
 	 * 
-	 * At each step we consider each prefix and search it in dictionary.
-	 * If the prefix is present in dictionary, we recursively search the suffix in the dictionary.
-	 * As soon as both prefix & suffix is found in the dictionary, we can say that the word exists in the dictionary, hence we return TRUE.
+	 * At each step,
+	 *  - we directly check if prefix exists in the dictionary
+	 *  - we recursively check if suffix exists in the dictionary
+	 *  - if both exists we return true
+	 *  - After complete traversal if no such occurrence is found, it's considered to be not found
 	 * 
 	 * 
 	 * --------------
@@ -113,12 +115,12 @@ public class A07_wordBreakProblem_isPossible {
 	
 	public static void main(String[] args) {
 		String arr[] = {"mobile","samsung","sam","sung", "man","mango","icecream","and", "go","i","like","ice","cream"};
-		Set<String> dictionary = Arrays.stream(arr).collect(Collectors.toSet());
+		Set<String> set = Arrays.stream(arr).collect(Collectors.toSet());
 		
-		boolean isPossible = wordBreak("ilikemango", dictionary);
+		boolean isPossible = wordBreak("ilikemango", set);
 		System.out.println(isPossible);
 		
-		boolean isPossible2 = wordBreak_dynamic("ilikemango", dictionary);
+		boolean isPossible2 = wordBreak_dynamic("ilikemango", set);
 		System.out.println(isPossible2);
 	}
 	
@@ -129,8 +131,12 @@ public class A07_wordBreakProblem_isPossible {
 			return true;
 		
 		for (int i=1; i<=len; i++) {
-			if (set.contains(str.substring(0,i)) && wordBreak(str.substring(i,len), set)) {
-				return true;
+			String prefix = str.substring(0, i);
+			String suffix = str.substring(i, len);
+			if (set.contains(prefix)) {
+				if (wordBreak(suffix, set)) {
+					return true;
+				}
 			}
 		}
 		return false;
@@ -139,6 +145,11 @@ public class A07_wordBreakProblem_isPossible {
 	
 	
 	
+	/*
+	 * --------------------
+	 * Dynamic Programming solution
+	 * --------------------
+	 */
 	private static final Map<String, Boolean> map = new HashMap<>();			// lookup for memoization
 	
 	private static boolean wordBreak_dynamic(String str, Set<String> set) {
@@ -151,7 +162,9 @@ public class A07_wordBreakProblem_isPossible {
 		}
 		else {
 			for (int i=1; i<=len; i++) {
-				if (set.contains(str.substring(0,i)) && wordBreak(str.substring(i,len), set)) {
+				String prefix = str.substring(0, i);
+				String suffix = str.substring(i, len);
+				if (set.contains(prefix) && wordBreak(suffix, set)) {
 					map.put(str.substring(i,len), true);
 					return true;
 				}

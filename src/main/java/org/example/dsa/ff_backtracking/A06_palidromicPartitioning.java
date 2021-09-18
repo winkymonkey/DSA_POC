@@ -19,7 +19,7 @@ import java.util.List;
  * ***************************************************************************************
  */
 
-public class A04_palidromicPartitioning {
+public class A06_palidromicPartitioning {
 	/*
 	 * --------------------
 	 * In a given string, we can partition the string at i-th index (0th, 1st, 2nd, 3rd, ...... (n-1)th)
@@ -37,16 +37,16 @@ public class A04_palidromicPartitioning {
 	
 	private static List<List<String>> ans = new ArrayList<>();
 	
-	private static void findSubstring(String str, int i, List<String> ds) {		// i = partitioning index
+	private static void findSubstring(String str, int i, List<String> temp) {	// i = partitioning index
 		if (i == str.length()) {												// we reached the end
-			ans.add(new ArrayList<>(ds));
+			ans.add(new ArrayList<>(temp));
 			return;
 		}
 		for (int k=i; k<str.length(); ++k) {
-			if (isPalindrome(str, i, k)) {										// if S[index..k] is palindrome
-				ds.add(str.substring(i, k+1));									// add S[index..k] in a temp data structure
-				findSubstring(str, k+1, ds);									// recursively find valid substring in S[k+1...end]
-				ds.remove(ds.size()-1);											// after the recursive call, clear out the temp data structure
+			if (isPalindrome(str, i, k)) {										// if S[i..k] is palindrome
+				temp.add(str.substring(i, k+1));								// add S[i..k] in a temp data structure
+				findSubstring(str, k+1, temp);									// recursively find valid substring in S[k+1...end]
+				temp.remove(temp.size()-1);										// after the recursive call, clear out the temp data structure
 			}
 		}
 	}

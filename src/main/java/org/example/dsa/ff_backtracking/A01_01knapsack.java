@@ -1,5 +1,7 @@
 package org.example.dsa.ff_backtracking;
 
+import java.util.Arrays;
+
 /**
  * ***************************************************************************************
  * 0-1 Knapsack Problem
@@ -24,14 +26,7 @@ public class A01_01knapsack {
 	 *  	- we may pick the item
 	 *  	- we may not pick the item
 	 * 
-	 * Depending upon the above, a decision tree appears.
-	 * 
-	 * So we can start from the last element and go through the above 3 scenarios.
-	 * After that we can move to the 2nd last element.
-	 * After that we can move to the 3rd last element.
-	 * ....
-	 * ....
-	 * In this was we traverse all elements
+	 * We start from the last element.
 	 * --------------------
 	 */
 	
@@ -41,24 +36,58 @@ public class A01_01knapsack {
 		int capacity = 7;
 		int n = weights.length;
 		
-		int maxProfit = knapsack(weights, profits, capacity, n);
+		int maxProfit = knapsack(weights, n, capacity, profits);
 		System.out.println(maxProfit);
+		
+		int maxProfit2 = knapsack_dynamic(weights, n, capacity, profits);
+		System.out.println(maxProfit2);
 	}
 	
 	
-	// returns maximum profit
-	private static int knapsack(int weights[], int profits[], int capacity, int n) {
+	private static int knapsack(int weights[], int n, int capacity, int profits[]) {
 		if (capacity == 0 || n == 0)
 			return 0;
 		
 		if (weights[n-1] <= capacity) {
-			int profitIfPick = profits[n-1] + knapsack(weights, profits, capacity-weights[n-1], n-1);
-			int profitIfNotPick = knapsack(weights, profits, capacity, n-1);
+			int profit1 = profits[n-1] + knapsack(weights, n-1, capacity-weights[n-1], profits);	// PICK weight[n-1] element
+			int profit2 = knapsack(weights, n-1, capacity, profits);								// NOT PICK weight[n-1] element
 			
-			return Math.max(profitIfPick, profitIfNotPick);
+			return Math.max(profit1, profit2);
 		}
 		else {
-			return knapsack(weights, profits, capacity, n-1);
+			return knapsack(weights, n-1, capacity, profits);
+		}
+	}
+	
+	
+	/*
+	 * --------------------
+	 * Dynamic Programming solution
+	 * --------------------
+	 */
+	private static int lookup[][] = new int[100][100];												// should be 'n'*'capacity' size
+	static {
+		for (int i=0; i<lookup.length; i++) {
+			Arrays.fill(lookup[i], -1);
+		}
+	}
+	
+	private static int knapsack_dynamic(int weights[], int n, int capacity, int profits[]) {
+		if (capacity == 0 || n == 0)
+			return 0;
+		
+		if (lookup[n][capacity] != -1) {
+			return lookup[n][capacity];
+		}
+		
+		if (weights[n-1] <= capacity) {
+			int profit1 = profits[n-1] + knapsack(weights, n-1, capacity-weights[n-1], profits);	// PICK weight[n-1] element
+			int profit2 = knapsack(weights, n-1, capacity, profits);								// NOT PICK weight[n-1] element
+			
+			return lookup[n][capacity] = Math.max(profit1, profit2);
+		}
+		else {
+			return lookup[n][capacity] = knapsack(weights, n-1, capacity, profits);
 		}
 	}
 	
