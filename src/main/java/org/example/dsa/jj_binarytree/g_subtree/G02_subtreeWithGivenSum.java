@@ -44,8 +44,8 @@ public class G02_subtreeWithGivenSum {
 	}
 	
 	
-	private static boolean isFound = false;
 	
+	private static boolean isFound = false;
 	
 	private static int findSum(Node root, int sumToFind) {
 		if (root == null)

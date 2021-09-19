@@ -36,9 +36,9 @@ import org.example.dsa.jj_binarytree.Node;
 
 public class J13_isHeap {
 	/*
+	 * --------------------
 	 * isHeap() = isComplete() + each node value should be greater than all of its child
-	 * 
-	 * 
+	 * --------------------
 	 */
 	
 	public static void main(String[] args) {
@@ -61,14 +61,12 @@ public class J13_isHeap {
 	
 	
 	
-	
 	private static int countNodes(Node node) {
 		if (node == null)
 			return 0;
 		
 		return 1 + countNodes(node.left) + countNodes(node.right);
 	}
-	
 	
 	private static boolean isComplete(Node node, int i, int totalNodes) {
 		if (node == null)
@@ -83,7 +81,6 @@ public class J13_isHeap {
 	
 	
 	
-	
 	private static boolean hasHeapProperty(Node node) {
 		if (node == null)
 			return true;
@@ -94,7 +91,7 @@ public class J13_isHeap {
 		if (node.right == null)
 			return node.data >= node.left.data;
 		
-		if (node.data >= node.left.data && node.data >= node.right.data)
+		if (node.left.data <= node.data  &&  node.data >= node.right.data)
 			return hasHeapProperty(node.left) && hasHeapProperty(node.right);
 		
 		return false;

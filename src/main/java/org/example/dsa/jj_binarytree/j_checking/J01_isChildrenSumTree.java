@@ -18,7 +18,7 @@ package org.example.dsa.jj_binarytree.j_checking;
  * ***************************************************************************************
  */
 
-public class J01_hasChildrenSumProperty {
+public class J01_isChildrenSumTree {
 	/*
 	 * ------------------
 	 * Traverse the given Binary Tree.

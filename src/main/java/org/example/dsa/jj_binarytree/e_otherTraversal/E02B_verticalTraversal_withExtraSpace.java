@@ -35,7 +35,7 @@ import org.example.dsa.jj_binarytree.TreeUtilA;
  * ***************************************************************************************
  */
 
-public class E02B_printVerticalOrder_withExtraSpace {
+public class E02B_verticalTraversal_withExtraSpace {
 	
 	private static Map<Integer, List<Integer>> map = new TreeMap<>();		// map: {KEY=hd, VALUE=list of elements at that distance}
 	

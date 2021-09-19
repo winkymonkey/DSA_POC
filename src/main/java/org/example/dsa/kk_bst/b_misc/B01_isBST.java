@@ -17,7 +17,7 @@ import org.example.dsa.kk_bst.Node;
  * ***************************************************************************************
  */
 
-public class B01_checkIfBST {
+public class B01_isBST {
 	/*
 	 * ---------------
 	 * Write a function that recursively checks whether the left & right subtrees are BST or not.

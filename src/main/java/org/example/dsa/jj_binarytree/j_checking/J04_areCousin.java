@@ -5,9 +5,9 @@ import org.example.dsa.jj_binarytree.TreeUtilA;
 
 /**
  * ***************************************************************************************
- * Check if two nodes are siblings in a Binary Tree
+ * Check if two nodes are cousins in a Binary Tree
  * ***************************************************************************************
- * Sibling Nodes -- if two nodes are at same level and have different parents
+ * Cousin Nodes -- if two nodes are at same level and have different parents
  * ***************************************************************************************
  * 
  * 		     1
@@ -18,19 +18,49 @@ import org.example.dsa.jj_binarytree.TreeUtilA;
  *    \   / \   / \   /
  *     8 9  10 11 12 13
  * 
- * isSibling(4,6) = FALSE
- * isSibling(6,7) = TRUE
+ * isCousin(8,9) = TRUE
+ * isCousin(6,7) = FALSE
+ * isCousin(8,6) = FALSE
  * 
  * ***************************************************************************************
  */
 
-public class J03_isSibling {
+public class J04_areCousin {
+	/*
+	 * ------------------
+	 * isCousin = if both the nodes are at the same level && nodes are not sibling
+	 * ------------------
+	 */
 	
 	public static void main(String[] args) {
 		Node root = TreeUtilA.createNewTreeA3();
 		
-		boolean isSibling = isSibling(root, 10, 11);
-		System.out.println(isSibling);
+		boolean isCousin = isCousin(root, 10, 11);
+		System.out.println(isCousin);
+	}
+	
+	
+	private static boolean isCousin(Node node, int a, int b) {
+		return ((getLevel(node, 1, a) == getLevel(node, 1, b)) && (!isSibling(node, a, b)));
+	}
+	
+	
+	private static int getLevel(Node node, int level, int num) {
+		if (node == null)
+			return 0;
+		
+		if (node.data == num)
+			return level;
+		
+		int levelViaLeft = getLevel(node.left, level+1, num);
+		int levelViaRight = getLevel(node.right, level+1, num);
+		
+		if (levelViaLeft != 0)
+			return levelViaLeft;
+		else if (levelViaRight != 0)
+			return levelViaRight;
+		else
+			return 0;
 	}
 	
 	
@@ -43,5 +73,4 @@ public class J03_isSibling {
 		
 		return (isSibling(node.left, a, b) || isSibling(node.right, a, b));			// if the siblings(a,b) exist in left subtree OR in right subtree	
 	}
-	
 }

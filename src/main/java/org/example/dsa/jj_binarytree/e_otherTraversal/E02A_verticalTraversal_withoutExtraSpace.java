@@ -30,7 +30,7 @@ import org.example.dsa.jj_binarytree.TreeUtilA;
  * ***************************************************************************************
  */
 
-public class E02A_printVerticalOrder_withoutExtraSpace {
+public class E02A_verticalTraversal_withoutExtraSpace {
 	
 	private static int MIN = 0;			//min horizontal distance from root
 	private static int MAX = 0;			//max horizontal distance from root

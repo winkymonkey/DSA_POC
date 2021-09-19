@@ -30,7 +30,7 @@ import org.example.dsa.jj_binarytree.Node;
  * ***************************************************************************************
  */
 
-public class G01_largestSubtreeSum {
+public class G01_subtreeWithLargestSum {
 	/*
 	 * ------------------
 	 * maxTillNow = 0
@@ -57,8 +57,8 @@ public class G01_largestSubtreeSum {
 	}
 	
 	
-	private static int maxTillNow = 0;
 	
+	private static int maxTillNow = 0;
 	
 	private static int findSum(Node root) {
 		if (root == null)

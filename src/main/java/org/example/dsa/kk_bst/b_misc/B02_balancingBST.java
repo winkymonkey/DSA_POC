@@ -30,7 +30,7 @@ public class B02_balancingBST {
 		Node root = BSTutil.createNewBST3();
 		
 		List<Node> nodeList = new ArrayList<Node>();
-		storeNodesInList(root, nodeList);
+		storeInorderInList(root, nodeList);
 		
 		int n = nodeList.size();
 		root = buildTree(nodeList, 0, n-1);
@@ -38,14 +38,14 @@ public class B02_balancingBST {
 	}
 	
 	
-	// store the tree's InOrder sequence in a list (it is always the SORTED order for BST)
-	private static void storeNodesInList(Node root, List<Node> nodeList) {
+	// store the InOrder sequence of the BST in a list (it is always SORTED)
+	private static void storeInorderInList(Node root, List<Node> nodeList) {
 		if (root == null)
 			return;
 		
-		storeNodesInList(root.left, nodeList);
+		storeInorderInList(root.left, nodeList);
 		nodeList.add(root);
-		storeNodesInList(root.right, nodeList);
+		storeInorderInList(root.right, nodeList);
 	}
 	
 	

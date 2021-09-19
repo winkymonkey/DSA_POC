@@ -32,7 +32,7 @@ import org.example.dsa.jj_binarytree.TreeUtilA;
  * ***************************************************************************************
  */
 
-public class H02_LCA {
+public class H02_findLCA {
 	/*
 	 * ------------------
 	 * Traverse the tree starting from the root.

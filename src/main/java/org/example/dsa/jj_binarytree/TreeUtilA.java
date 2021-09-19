@@ -283,4 +283,43 @@ public class TreeUtilA {
 		
 		return root;
 	}
+	
+	
+	
+	/**
+	 * *********************************
+	 * TREE STRUCTURE
+	 * 		  1
+	 *      /   \
+	 *     2     5
+	 *    / \   / \
+	 *   3  19 6   10
+	 *  /       \   \
+	 * 12        7   9
+	 *          /     \
+	 *         8      11
+	 * *********************************
+	 */
+	public static Node createNewTreeA9() {
+		Node root = new Node(1);
+		root.left = new Node(2);
+		root.right = new Node(5);
+		
+		root.left.left = new Node(3);
+		root.left.right = new Node(19);
+		
+		root.right.left = new Node(6);
+		root.right.right = new Node(10);
+		
+		root.left.left.left = new Node(12);
+		
+		root.right.left.right = new Node(7);
+		
+		root.right.right.right = new Node(9);
+		
+		root.right.left.right.left = new Node(8);
+		root.right.right.right.right = new Node(11);
+		
+		return root;
+	}
 }

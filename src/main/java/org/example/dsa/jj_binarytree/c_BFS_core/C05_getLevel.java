@@ -22,26 +22,26 @@ import org.example.dsa.jj_binarytree.TreeUtilA;
  * ***************************************************************************************
  */
 
-public class C05_findLevelOfNode {
+public class C05_getLevel {
 	
 	public static void main(String[] args) {
 		Node root = TreeUtilA.createNewTreeA2();
 		
-		System.out.println(getLevel(root, 6, 1));
-		System.out.println(getLevel(root, 8, 1));
-		System.out.println(getLevel(root, 10, 1));
+		System.out.println(getLevel(root, 1, 6));
+		System.out.println(getLevel(root, 1, 8));
+		System.out.println(getLevel(root, 1, 10));
 	}
 	
 	
-	private static int getLevel(Node node, int num, int level) {
+	private static int getLevel(Node node, int level, int num) {
 		if (node == null)
 			return 0;
 		
 		if (node.data == num)
 			return level;
 		
-		int levelViaLeft = getLevel(node.left, num, level+1);
-		int levelViaRight = getLevel(node.right, num, level+1);
+		int levelViaLeft = getLevel(node.left, level+1, num);
+		int levelViaRight = getLevel(node.right, level+1, num);
 		
 		if (levelViaLeft != 0) {			// node found in left subtree
 			return levelViaLeft;
