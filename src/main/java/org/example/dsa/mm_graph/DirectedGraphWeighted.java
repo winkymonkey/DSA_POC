@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 
 @SuppressWarnings("unchecked")
-public class DirectedWeightedGraph {
+public class DirectedGraphWeighted {
 	
 	public ArrayList<Node> adj[];
 	
-	public DirectedWeightedGraph(int vertices) {
+	public DirectedGraphWeighted(int vertices) {
 		adj = new ArrayList[vertices];
 		for (int i=0; i<vertices; i++) {
 			adj[i] = new ArrayList<>();

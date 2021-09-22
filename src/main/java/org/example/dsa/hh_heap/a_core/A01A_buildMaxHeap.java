@@ -14,8 +14,10 @@ import java.util.Arrays;
 
 public class A01A_buildMaxHeap {
 	/*
+	 * --------------------
 	 * A given array may not have all its elements in Heap structure.
 	 * To convert an array to Max Heap we need some algorithm where 'max_heapify()' is the heart of it.
+	 * --------------------
 	 */
 
 	public static void main(String[] args) {

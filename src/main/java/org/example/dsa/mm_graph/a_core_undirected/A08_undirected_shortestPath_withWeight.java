@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 
 import org.example.dsa.mm_graph.Node;
-import org.example.dsa.mm_graph.UndirectedWeightedGraph;
+import org.example.dsa.mm_graph.UndirectedGraphWeighted;
 
 /**
  * ***************************************************************************************
@@ -28,7 +28,7 @@ public class A08_undirected_shortestPath_withWeight {
 	
 	
 	public static void main(String[] args) {
-		UndirectedWeightedGraph graph = new UndirectedWeightedGraph(vertices);
+		UndirectedGraphWeighted graph = new UndirectedGraphWeighted(vertices);
 		graph.addEdge(0,1, 2);
 		graph.addEdge(1,2, 4);
 		graph.addEdge(0,3, 1);

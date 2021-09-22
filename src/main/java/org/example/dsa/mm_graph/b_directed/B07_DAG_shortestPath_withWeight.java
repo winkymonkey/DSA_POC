@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Stack;
 
-import org.example.dsa.mm_graph.DirectedWeightedGraph;
+import org.example.dsa.mm_graph.DirectedGraphWeighted;
 import org.example.dsa.mm_graph.Node;
 
 /**
@@ -20,7 +20,7 @@ public class B07_DAG_shortestPath_withWeight {
 	
 	
 	public static void main(String[] args) {
-		DirectedWeightedGraph graph = new DirectedWeightedGraph(vertices);
+		DirectedGraphWeighted graph = new DirectedGraphWeighted(vertices);
 		graph.addEdge(0,1, 2);
 		graph.addEdge(0,4, 1);
 		graph.addEdge(1,2, 3);
